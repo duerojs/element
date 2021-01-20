@@ -45,7 +45,7 @@ $typeMap: (
   }
     
     
-  &.el-link--default  {
+  &.d-link--default  {
     color: $--link-default-font-color;
     &:hover {
       color: $--link-default-active-color
@@ -59,7 +59,7 @@ $typeMap: (
   }
 
   @each $type, $primaryColor in $typeMap {
-    &.el-link--#{$type} {
+    &.d-link--#{$type} {
       color: $primaryColor;
       &:hover {
         color: mix($primaryColor, $--color-white, 80%)

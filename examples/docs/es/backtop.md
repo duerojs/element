@@ -10,7 +10,7 @@ Desplácese hacia abajo para ver el botón en el lado inferior derecho.
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+  <el-backtop target=".page-component__scroll .d-scrollbar__wrap"></el-backtop>
 </template>
 ```
 
@@ -24,7 +24,7 @@ Desplácese hacia abajo para ver el botón en el lado inferior derecho.
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
+  <el-backtop target=".page-component__scroll .d-scrollbar__wrap" :bottom="100">
     <div
       style="{
         height: 100%;

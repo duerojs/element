@@ -3,7 +3,7 @@
     height: calc(100% - 80px);
     margin-top: 80px;
 
-    > .el-scrollbar__wrap {
+    > .d-scrollbar__wrap {
       overflow-x: auto;
     }
   }
@@ -24,7 +24,7 @@
       margin-top: 80px;
       transition: padding-top .3s;
 
-      > .el-scrollbar__wrap {
+      > .d-scrollbar__wrap {
         height: 100%;
         overflow-x: auto;
       }
@@ -141,7 +141,7 @@
     </div>
     <el-backtop 
       v-if="showBackToTop"
-      target=".page-component__scroll .el-scrollbar__wrap"
+      target=".page-component__scroll .d-scrollbar__wrap"
       :right="100"
       :bottom="150"
     ></el-backtop>
@@ -224,7 +224,7 @@
     },
     mounted() {
       this.componentScrollBar = this.$refs.componentScrollBar;
-      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.el-scrollbar__wrap');
+      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.d-scrollbar__wrap');
       this.throttledScrollHandler = throttle(300, this.handleScroll);
       this.componentScrollBox.addEventListener('scroll', this.throttledScrollHandler);
       this.renderAnchorHref();

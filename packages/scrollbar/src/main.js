@@ -66,7 +66,7 @@ export default {
         ref="wrap"
         style={ style }
         onScroll={ this.handleScroll }
-        class={ [this.wrapClass, 'el-scrollbar__wrap', gutter ? '' : 'el-scrollbar__wrap--hidden-default'] }>
+        class={ [this.wrapClass, 'd-scrollbar__wrap', gutter ? '' : 'd-scrollbar__wrap--hidden-default'] }>
         { [view] }
       </div>
     );
@@ -87,7 +87,7 @@ export default {
       nodes = ([
         <div
           ref="wrap"
-          class={ [this.wrapClass, 'el-scrollbar__wrap'] }
+          class={ [this.wrapClass, 'd-scrollbar__wrap'] }
           style={ style }>
           { [view] }
         </div>

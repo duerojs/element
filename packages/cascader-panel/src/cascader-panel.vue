@@ -340,7 +340,7 @@ export default {
       menus.forEach(menu => {
         const menuElement = menu.$el;
         if (menuElement) {
-          const container = menuElement.querySelector('.el-scrollbar__wrap');
+          const container = menuElement.querySelector('.d-scrollbar__wrap');
           const activeNode = menuElement.querySelector('.el-cascader-node.is-active') ||
             menuElement.querySelector('.el-cascader-node.in-active-path');
           scrollIntoView(container, activeNode);

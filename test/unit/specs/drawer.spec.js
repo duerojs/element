@@ -39,8 +39,8 @@ describe('Drawer', () => {
         template: `
           <el-drawer :title='title' :visible='visible'>
             <span>这是一段信息</span>
-            <el-button @click.native='dialogVisible = false'>取消</el-button>
-            <el-button type='primary' @click.native='dialogVisible = false'>确定</el-button>
+            <d-button @click.native='dialogVisible = false'>取消</d-button>
+            <d-button type='primary' @click.native='dialogVisible = false'>确定</d-button>
           </el-drawer>
       `,
 
@@ -57,7 +57,7 @@ describe('Drawer', () => {
     expect(vm.$el.querySelector('.el-drawer__body span').textContent).to.equal(
       '这是一段信息'
     );
-    const footerBtns = vm.$el.querySelectorAll('.el-button');
+    const footerBtns = vm.$el.querySelectorAll('.d-button');
     expect(footerBtns.length).to.equal(2);
     expect(footerBtns[0].querySelector('span').textContent).to.equal('取消');
     expect(footerBtns[1].querySelector('span').textContent).to.equal('确定');

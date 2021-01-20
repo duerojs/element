@@ -126,17 +126,17 @@ Show a full screen animation while loading data.
 
 ```html
 <template>
-  <el-button
+  <d-button
     type="primary"
     @click="openFullScreen1"
     v-loading.fullscreen.lock="fullscreenLoading">
     As a directive
-  </el-button>
-  <el-button
+  </d-button>
+  <d-button
     type="primary"
     @click="openFullScreen2">
     As a service
-  </el-button>
+  </d-button>
 </template>
 
 <script>

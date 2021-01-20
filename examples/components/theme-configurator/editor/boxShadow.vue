@@ -4,14 +4,14 @@
       <el-tooltip :content="displayName" placement="top">
         <span>{{displayKeyName}}</span>
       </el-tooltip>
-      <el-button 
+      <d-button 
         class="plus-button" 
         size="mini" 
         round 
         icon="d-icon-plus"
         @click.stop="onAddShadow"
       >
-      </el-button>
+      </d-button>
     </div>
     <div class="config-content" v-for="(each, key) in valueArr" :key="key">
       <div class="content-10">
@@ -61,12 +61,12 @@
         <span class="content-tip">Blur</span>
       </div>
       <div class="content-10">
-        <el-button 
+        <d-button 
           size="mini" 
           round 
           icon="d-icon-minus"
           @click.stop="val => onMinusShadow(key)"
-        ></el-button>
+        ></d-button>
       </div>
     </div>
   </section>
@@ -98,7 +98,7 @@
   padding: 5px 0;
 }
 /* Element buton style override */
-.el-button--mini.is-round {
+.d-button--mini.is-round {
   padding: 3px 3px;  
 }
 </style>

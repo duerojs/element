@@ -316,11 +316,11 @@ Certains noeuds peuvent être ouverts et/ou sélectionnés par défaut.
 </el-tree>
 
 <div class="buttons">
-  <el-button @click="getCheckedNodes">Récupération par noeud</el-button>
-  <el-button @click="getCheckedKeys">Récupération par clé</el-button>
-  <el-button @click="setCheckedNodes">Sélection par noeud</el-button>
-  <el-button @click="setCheckedKeys">Sélection par clé</el-button>
-  <el-button @click="resetChecked">Reset</el-button>
+  <d-button @click="getCheckedNodes">Récupération par noeud</d-button>
+  <d-button @click="getCheckedKeys">Récupération par clé</d-button>
+  <d-button @click="setCheckedNodes">Sélection par noeud</d-button>
+  <d-button @click="setCheckedKeys">Sélection par clé</d-button>
+  <d-button @click="resetChecked">Reset</d-button>
 </div>
 
 <script>
@@ -426,18 +426,18 @@ Le contenu des noeuds peut être personnalisé, afin de pouvoir ajouter des icô
       <span class="custom-tree-node" slot-scope="{ node, data }">
         <span>{{ node.label }}</span>
         <span>
-          <el-button
+          <d-button
             type="text"
             size="mini"
             @click="() => append(data)">
             Ajouter
-          </el-button>
-          <el-button
+          </d-button>
+          <d-button
             type="text"
             size="mini"
             @click="() => remove(node, data)">
             Supprimer
-          </el-button>
+          </d-button>
         </span>
       </span>
     </el-tree>
@@ -511,8 +511,8 @@ Le contenu des noeuds peut être personnalisé, afin de pouvoir ajouter des icô
           <span class="custom-tree-node">
             <span>{node.label}</span>
             <span>
-              <el-button size="mini" type="text" on-click={ () => this.append(data) }>Ajouter</el-button>
-              <el-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Supprimer</el-button>
+              <d-button size="mini" type="text" on-click={ () => this.append(data) }>Ajouter</d-button>
+              <d-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Supprimer</d-button>
             </span>
           </span>);
       }

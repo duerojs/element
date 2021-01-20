@@ -15,20 +15,20 @@
       {{title}}
     </p>
     <div class="el-popconfirm__action">
-      <el-button 
+      <d-button 
         size="mini" 
         :type="cancelButtonType" 
         @click="cancel"
       >
         {{ displayCancelButtonText }}
-      </el-button>
-      <el-button 
+      </d-button>
+      <d-button 
         size="mini" 
         :type="confirmButtonType" 
         @click="confirm"
       >
         {{ displayConfirmButtonText }}
-      </el-button>
+      </d-button>
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>

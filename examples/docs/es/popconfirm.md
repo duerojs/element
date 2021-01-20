@@ -12,7 +12,7 @@ Popconfirm es parecido a Popover. Para algunos atributos duplicados, por favor c
 <el-popconfirm
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
+  <d-button slot="reference">Delete</d-button>
 </el-popconfirm>
 </template>
 ````
@@ -31,7 +31,7 @@ Se puede personalizar Popconfirm así:
   icon-color="red"
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
+  <d-button slot="reference">Delete</d-button>
 </el-popconfirm>
 </template>
 ```

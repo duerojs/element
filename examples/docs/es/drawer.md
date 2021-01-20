@@ -16,9 +16,9 @@ Llamada de un drawer temporal, desde varias direcciones
   <el-radio label="btt">bottom to top</el-radio>
 </el-radio-group>
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<d-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</d-button>
 
 <el-drawer
   title="I am the title"
@@ -57,9 +57,9 @@ Si no necesitas el titulo lo puedes eliminar del drawer.
 :::demo Asigne **false** al atributo `withHeader`, se puede eliminar el atributo title del drawer, de esa manera el drawer tendrá mas espacio para el contenido. Por razones de accesibilidad se recomienda asignar siempre un contenido valido al atributo `title`.
 
 ```html
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<d-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</d-button>
 
 <el-drawer
   title="I am the title"
@@ -87,8 +87,8 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
 :::demo
 
 ```html
-<el-button type="text" @click="table = true">Open Drawer with nested table</el-button>
-<el-button type="text" @click="dialog = true">Open Drawer with nested form</el-button>
+<d-button type="text" @click="table = true">Open Drawer with nested table</d-button>
+<d-button type="text" @click="dialog = true">Open Drawer with nested form</d-button>
 <el-drawer
   title="I have a nested table inside!"
   :visible.sync="table"
@@ -122,8 +122,8 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
       </el-form-item>
     </el-form>
     <div class="demo-drawer__footer">
-      <el-button @click="cancelForm">Cancel</el-button>
-      <el-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? 'Submitting ...' : 'Submit' }}</el-button>
+      <d-button @click="cancelForm">Cancel</d-button>
+      <d-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? 'Submitting ...' : 'Submit' }}</d-button>
     </div>
   </div>
 </el-drawer>
@@ -202,16 +202,16 @@ También puede tener varias capas de `Drawer` al igual que con `Dialog`.
 
 ```html
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<d-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</d-button>
 
 <el-drawer
   title="I'm outer Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
-   <el-button @click="innerDrawer = true">Click me!</el-button>
+   <d-button @click="innerDrawer = true">Click me!</d-button>
    <el-drawer
      title="I'm inner Drawer"
      :append-to-body="true"

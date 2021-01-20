@@ -208,12 +208,12 @@ Solo las pestañas de tipo tarjeta soportan adición y cierre.
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <d-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </el-button>
+  </d-button>
 </div>
 <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
   <el-tab-pane

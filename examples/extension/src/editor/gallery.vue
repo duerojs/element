@@ -22,8 +22,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="closeCopyForm">取消</el-button>
-        <el-button type="primary" @click="copyToUser">确认</el-button>
+        <d-button @click="closeCopyForm">取消</d-button>
+        <d-button type="primary" @click="copyToUser">确认</d-button>
       </div>
     </el-dialog>
   </div>

@@ -1,13 +1,13 @@
 <template>
   <button
-    class="el-button"
+    class="d-button"
     @click="handleClick"
     :disabled="buttonDisabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
-      type ? 'el-button--' + type : '',
-      buttonSize ? 'el-button--' + buttonSize : '',
+      type ? 'd-button--' + type : '',
+      buttonSize ? 'd-button--' + buttonSize : '',
       {
         'is-disabled': buttonDisabled,
         'is-loading': loading,
@@ -24,7 +24,7 @@
 </template>
 <script>
   export default {
-    name: 'ElButton',
+    name: 'DButton',
 
     inject: {
       elForm: {

@@ -15,7 +15,7 @@ Simple step bar.
   <el-step title="Step 3"></el-step>
 </el-steps>
 
-<el-button style="margin-top: 12px;" @click="next">Next step</el-button>
+<d-button style="margin-top: 12px;" @click="next">Next step</d-button>
 
 <script>
   export default {

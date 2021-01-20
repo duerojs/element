@@ -16,7 +16,7 @@
           />
         </el-tooltip>
         <div class="button-group">
-          <el-button 
+          <d-button 
             class="reset"
             type="primary" 
             round 
@@ -25,8 +25,8 @@
             @click="onReset"
           >
             {{getActionDisplayName('reset-theme')}}
-          </el-button>
-          <el-button 
+          </d-button>
+          <d-button 
             class="download"
             type="primary" 
             round 
@@ -35,7 +35,7 @@
             @click="onDownload"
           >
             {{getActionDisplayName('download-theme')}}
-          </el-button>
+          </d-button>
         </div>
       </div>
       <el-select v-model="selectedComponent" class="selector">
@@ -72,7 +72,7 @@
     }
     .button-group {
       float: right;
-      .el-button {
+      .d-button {
         padding: 6px 15px;
         &.is-disabled {
           color: #C0C4CC;

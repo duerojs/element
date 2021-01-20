@@ -42,9 +42,9 @@ Utilizando un botón para activar la lista desplegable.
 
 ```html
 <el-dropdown>
-  <el-button type="primary">
+  <d-button type="primary">
     Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
-  </el-button>
+  </d-button>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
     <el-dropdown-item>Action 2</el-dropdown-item>

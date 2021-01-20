@@ -40,42 +40,42 @@
   <div class="component-preview">
     <h4>Button</h4>
     <d-row class="demo-line">
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
+      <d-button>Default</d-button>
+      <d-button type="primary">Primary</d-button>
+      <d-button type="success">Success</d-button>
+      <d-button type="info">Info</d-button>
+      <d-button type="warning">Warning</d-button>
+      <d-button type="danger">Danger</d-button>
     </d-row>
     <d-row class="demo-line">
-      <el-button plain>Plain</el-button>
-      <el-button type="primary" plain>Primary</el-button>
-      <el-button type="success" plain>Success</el-button>
-      <el-button type="info" plain>Info</el-button>
-      <el-button type="warning" plain>Warning</el-button>
-      <el-button type="danger" plain>Danger</el-button>
+      <d-button plain>Plain</d-button>
+      <d-button type="primary" plain>Primary</d-button>
+      <d-button type="success" plain>Success</d-button>
+      <d-button type="info" plain>Info</d-button>
+      <d-button type="warning" plain>Warning</d-button>
+      <d-button type="danger" plain>Danger</d-button>
     </d-row>
     <d-row class="demo-line">
-      <el-button round>Round</el-button>
-      <el-button type="primary" round>Primary</el-button>
-      <el-button type="success" round>Success</el-button>
-      <el-button type="info" round>Info</el-button>
-      <el-button type="warning" round>Warning</el-button>
-      <el-button type="danger" round>Danger</el-button>
+      <d-button round>Round</d-button>
+      <d-button type="primary" round>Primary</d-button>
+      <d-button type="success" round>Success</d-button>
+      <d-button type="info" round>Info</d-button>
+      <d-button type="warning" round>Warning</d-button>
+      <d-button type="danger" round>Danger</d-button>
     </d-row>
     <d-row class="demo-line">
-      <el-button icon="d-icon-search" circle></el-button>
-      <el-button type="primary" icon="d-icon-edit" circle></el-button>
-      <el-button type="success" icon="d-icon-check" circle></el-button>
-      <el-button type="info" icon="d-icon-message" circle></el-button>
-      <el-button type="warning" icon="d-icon-star-off" circle></el-button>
-      <el-button type="danger" icon="d-icon-delete" circle></el-button>
+      <d-button icon="d-icon-search" circle></d-button>
+      <d-button type="primary" icon="d-icon-edit" circle></d-button>
+      <d-button type="success" icon="d-icon-check" circle></d-button>
+      <d-button type="info" icon="d-icon-message" circle></d-button>
+      <d-button type="warning" icon="d-icon-star-off" circle></d-button>
+      <d-button type="danger" icon="d-icon-delete" circle></d-button>
     </d-row>
     <d-row class="demo-line">
-      <el-button>Default</el-button>
-      <el-button size="medium">Medium</el-button>
-      <el-button size="small">Small</el-button>
-      <el-button size="mini">Mini</el-button>
+      <d-button>Default</d-button>
+      <d-button size="medium">Medium</d-button>
+      <d-button size="small">Small</d-button>
+      <d-button size="mini">Mini</d-button>
     </d-row>
     <h4>Radio</h4>
     <d-row class="demo-line">
@@ -161,8 +161,8 @@
     <h4>Transfer</h4>
     <d-row>
       <el-transfer v-model="transfer" filterable :data="transferData">
-        <el-button class="transfer-footer" slot="left-footer" size="small">Operation</el-button>
-        <el-button class="transfer-footer" slot="right-footer" size="small">Operation</el-button>
+        <d-button class="transfer-footer" slot="left-footer" size="small">Operation</d-button>
+        <d-button class="transfer-footer" slot="right-footer" size="small">Operation</d-button>
       </el-transfer>
     </d-row>
     <h4>Table</h4>
@@ -198,16 +198,16 @@
     <h4>Badge</h4>
     <d-row>
       <el-badge :value="12" class="demo-item">
-        <el-button size="small">comments</el-button>
+        <d-button size="small">comments</d-button>
       </el-badge>
       <el-badge :value="3" class="demo-item">
-        <el-button size="small">replies</el-button>
+        <d-button size="small">replies</d-button>
       </el-badge>
       <el-badge :value="1" class="demo-item" type="primary">
-        <el-button size="small">comments</el-button>
+        <d-button size="small">comments</d-button>
       </el-badge>
       <el-badge :value="2" class="demo-item" type="warning">
-        <el-button size="small">replies</el-button>
+        <d-button size="small">replies</d-button>
       </el-badge>
     </d-row>
     <h4>Alert</h4>
@@ -240,9 +240,9 @@
     </d-row>
     <h4>MessageBox</h4>
     <d-row>
-      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close d-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status d-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="el-button el-button--default el-button--small"><!----><!----><span>
+      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close d-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status d-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="d-button d-button--default d-button--small"><!----><!----><span>
           Cancel
-        </span></button><button type="button" class="el-button el-button--default el-button--small el-button--primary "><!----><!----><span>
+        </span></button><button type="button" class="d-button d-button--default d-button--small d-button--primary "><!----><!----><span>
           OK
         </span></button></div></div>
     </d-row>
@@ -323,7 +323,7 @@
     </d-row>
     <h4>Dialog</h4>
     <d-row>
-      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close d-icon d-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
+      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close d-icon d-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="d-button d-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="d-button d-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
     </d-row>
     <h4>Tooltip</h4>
     <d-row>

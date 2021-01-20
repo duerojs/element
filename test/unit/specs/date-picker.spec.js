@@ -1300,7 +1300,7 @@ describe('DatePicker', () => {
           vm.$refs.compo.picker.$el.querySelector('td.available').click();
           setTimeout(_ => {
             expect(spy.called).to.equal(false);
-            vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .el-button--default').click();
+            vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .d-button--default').click();
             setTimeout(_ => {
               expect(vm.value).is.a('date');
               expect(spy.calledOnce).to.equal(true);
@@ -1429,7 +1429,7 @@ describe('DatePicker', () => {
       vm.$refs.compo.$el.querySelector('input').focus();
       setTimeout(_ => {
         // click now button
-        vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .el-button--text').click();
+        vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .d-button--text').click();
         setTimeout(_ => {
           expect(vm.value).to.equal('');
           done();
@@ -1487,7 +1487,7 @@ describe('DatePicker', () => {
           vm.$refs.compo.picker.$el.querySelector('.el-date-picker__header .el-icon-d-arrow-right').click();
           setTimeout(_ => {
             // click confirm button
-            vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .el-button--default').click();
+            vm.$refs.compo.picker.$el.querySelector('.el-picker-panel__footer .d-button--default').click();
             setTimeout(_ => {
               expect(vm.value.getFullYear()).to.equal(2000);
               expect(vm.value.getMonth()).to.equal(9);

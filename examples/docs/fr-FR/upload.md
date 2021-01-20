@@ -16,7 +16,7 @@ Permet d'uploader des fichiers en cliquant ou en les déplaçant sur le composan
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <d-button size="small" type="primary">Cliquer pour envoyer</d-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -234,7 +234,7 @@ Use `scoped-slot` to change default thumbnail template.
   :on-remove="handleRemove"
   :file-list="fileList"
   list-type="picture">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <d-button size="small" type="primary">Cliquer pour envoyer</d-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -268,7 +268,7 @@ Utilisez `on-change` pour contrôler le comportement de la liste de fichiers.
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <d-button size="small" type="primary">Cliquer pour envoyer</d-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -324,8 +324,8 @@ Vous pouvez déposer les fichiers par drag'n drop sur l'espace dédié.
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
   :auto-upload="false">
-  <el-button slot="trigger" size="small" type="primary">Choisir un fichier</el-button>
-  <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Envoyer au serveur</el-button>
+  <d-button slot="trigger" size="small" type="primary">Choisir un fichier</d-button>
+  <d-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Envoyer au serveur</d-button>
   <div class="el-upload__tip" slot="tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>

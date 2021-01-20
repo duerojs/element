@@ -10,7 +10,7 @@ Dialog abre una caja de diálogo, y es bastante personalizable.
 
 
 ```html
-<el-button type="text" @click="dialogVisible = true">click to open the Dialog</el-button>
+<d-button type="text" @click="dialogVisible = true">click to open the Dialog</d-button>
 
 <el-dialog
   title="Tips"
@@ -19,8 +19,8 @@ Dialog abre una caja de diálogo, y es bastante personalizable.
   :before-close="handleClose">
   <span>This is a message</span>
   <span slot="footer" class="dialog-footer">
-    <el-button @click="dialogVisible = false">Cancel</el-button>
-    <el-button type="primary" @click="dialogVisible = false">Confirm</el-button>
+    <d-button @click="dialogVisible = false">Cancel</d-button>
+    <d-button type="primary" @click="dialogVisible = false">Confirm</d-button>
   </span>
 </el-dialog>
 
@@ -60,7 +60,7 @@ El contenido del Diálogo puede ser cualquier cosa, incluso una tabla o un formu
 
 ```html
 <!-- Table -->
-<el-button type="text" @click="dialogTableVisible = true">open a Table nested Dialog</el-button>
+<d-button type="text" @click="dialogTableVisible = true">open a Table nested Dialog</d-button>
 
 <el-dialog title="Shipping address" :visible.sync="dialogTableVisible">
   <el-table :data="gridData">
@@ -71,7 +71,7 @@ El contenido del Diálogo puede ser cualquier cosa, incluso una tabla o un formu
 </el-dialog>
 
 <!-- Form -->
-<el-button type="text" @click="dialogFormVisible = true">open a Form nested Dialog</el-button>
+<d-button type="text" @click="dialogFormVisible = true">open a Form nested Dialog</d-button>
 
 <el-dialog title="Shipping address" :visible.sync="dialogFormVisible">
   <el-form :model="form">
@@ -86,8 +86,8 @@ El contenido del Diálogo puede ser cualquier cosa, incluso una tabla o un formu
     </el-form-item>
   </el-form>
   <span slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">Cancel</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">Confirm</el-button>
+    <d-button @click="dialogFormVisible = false">Cancel</d-button>
+    <d-button type="primary" @click="dialogFormVisible = false">Confirm</d-button>
   </span>
 </el-dialog>
 
@@ -139,7 +139,7 @@ Si un diálogo está anidado en otro diálogo, se requiere append-to-body.
 
 ```html
 <template>
-  <el-button type="text" @click="outerVisible = true">open the outer Dialog</el-button>
+  <d-button type="text" @click="outerVisible = true">open the outer Dialog</d-button>
   
   <el-dialog title="Outer Dialog" :visible.sync="outerVisible">
     <el-dialog
@@ -149,8 +149,8 @@ Si un diálogo está anidado en otro diálogo, se requiere append-to-body.
         append-to-body>
     </el-dialog>
     <div slot="footer" class="dialog-footer">
-      <el-button @click="outerVisible = false">Cancel</el-button>
-      <el-button type="primary" @click="innerVisible = true">open the inner Dialog</el-button>
+      <d-button @click="outerVisible = false">Cancel</d-button>
+      <d-button type="primary" @click="innerVisible = true">open the inner Dialog</d-button>
     </div>
   </el-dialog>
 </template>
@@ -174,7 +174,7 @@ El contenido de Diálogo se puede centrar.
 :::demo Ajuste `center` en `true` para centrar el encabezado y el pie de página del cuadro de diálogo horizontalmente. `center` sólo afecta al encabezado y pie de página de Dialog. El cuerpo de Dialog puede ser cualquier cosa, así que a veces no se ve bien cuando está centrado. Necesitas escribir algún CSS si deseas centrar el cuerpo también.
 
 ```html
-<el-button type="text" @click="centerDialogVisible = true">Click to open the Dialog</el-button>
+<d-button type="text" @click="centerDialogVisible = true">Click to open the Dialog</d-button>
 
 <el-dialog
   title="Warning"
@@ -183,8 +183,8 @@ El contenido de Diálogo se puede centrar.
   center>
   <span>It should be noted that the content will not be aligned in center by default</span>
   <span slot="footer" class="dialog-footer">
-    <el-button @click="centerDialogVisible = false">Cancel</el-button>
-    <el-button type="primary" @click="centerDialogVisible = false">Confirm</el-button>
+    <d-button @click="centerDialogVisible = false">Cancel</d-button>
+    <d-button type="primary" @click="centerDialogVisible = false">Confirm</d-button>
   </span>
 </el-dialog>
 

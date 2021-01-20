@@ -11,7 +11,7 @@ Muestra información dentro de un contenedor `card`
 <el-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
-    <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
+    <d-button style="float: right; padding: 3px 0" type="text">Operation button</d-button>
   </div>
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
@@ -86,7 +86,7 @@ Muestre un contenido más rico añadiendo algunas configuraciones.
         <span>Yummy hamburger</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">Operating</el-button>
+          <d-button type="text" class="button">Operating</d-button>
         </div>
       </div>
     </el-card>

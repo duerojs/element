@@ -568,7 +568,7 @@ describe('Tree', () => {
         renderContent(h, node) {
           return (
             <span class="custom-content">
-              <el-button>{ node.node.label }</el-button>
+              <d-button>{ node.node.label }</d-button>
             </span>
           );
         }
@@ -576,7 +576,7 @@ describe('Tree', () => {
     });
     const firstNode = document.querySelector('.el-tree-node__content');
     expect(firstNode.querySelector('.custom-content')).to.exist;
-    const button = firstNode.querySelector('.custom-content .el-button');
+    const button = firstNode.querySelector('.custom-content .d-button');
     expect(button).to.exist;
     expect(button.querySelector('span').textContent).to.equal('一级 1');
   });
@@ -587,7 +587,7 @@ describe('Tree', () => {
         <el-tree ref="tree" :data="data">
           <div slot-scope="scope" class="custom-tree-template">
             <span>{{ scope.node.label }}</span>
-            <el-button></el-button>
+            <d-button></d-button>
           </div>
         </el-tree>
         `,
@@ -632,7 +632,7 @@ describe('Tree', () => {
     const firstNode = document.querySelector('.custom-tree-template');
     expect(firstNode).to.exist;
     const span = firstNode.querySelector('span');
-    const button = firstNode.querySelector('.el-button');
+    const button = firstNode.querySelector('.d-button');
     expect(span).to.exist;
     expect(span.innerText).to.equal('一级 1');
     expect(button).to.exist;

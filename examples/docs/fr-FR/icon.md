@@ -12,7 +12,7 @@ Il vous suffit d'assigner le nom de classe `d-icon-iconName` à une balise `<i>`
 <i class="d-icon-edit"></i>
 <i class="d-icon-share"></i>
 <i class="d-icon-delete"></i>
-<el-button type="primary" icon="d-icon-search">Chercher</el-button>
+<d-button type="primary" icon="d-icon-search">Chercher</d-button>
 
 ```
 :::

@@ -131,7 +131,7 @@ describe('Dropdown', () => {
     var callback = sinon.spy();
 
     dropdown.$on('click', callback);
-    dropdownElm.querySelector('.el-button').click();
+    dropdownElm.querySelector('.d-button').click();
 
     setTimeout(_ => {
       expect(callback.called).to.be.true;

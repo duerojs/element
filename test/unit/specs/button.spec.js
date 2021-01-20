@@ -12,7 +12,7 @@ describe('Button', () => {
       type: 'primary'
     }, true);
     let buttonElm = vm.$el;
-    expect(buttonElm.classList.contains('el-button--primary')).to.be.true;
+    expect(buttonElm.classList.contains('d-button--primary')).to.be.true;
   });
   it('icon', () => {
     vm = createTest(Button, {
@@ -48,7 +48,7 @@ describe('Button', () => {
       size: 'medium'
     }, true);
     let buttonElm = vm.$el;
-    expect(buttonElm.classList.contains('el-button--medium')).to.be.true;
+    expect(buttonElm.classList.contains('d-button--medium')).to.be.true;
   });
   it('plain', () => {
     vm = createTest(Button, {
@@ -75,7 +75,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button @click="handleClick"></el-button>
+        <d-button @click="handleClick"></d-button>
       `,
       methods: {
         handleClick(evt) {
@@ -95,7 +95,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button @click="handleClick"><span class="inner-slot"></span></el-button>
+        <d-button @click="handleClick"><span class="inner-slot"></span></d-button>
       `,
       methods: {
         handleClick(evt) {
@@ -115,7 +115,7 @@ describe('Button', () => {
     let result;
     vm = createVue({
       template: `
-        <el-button loading @click="handleClick"><span class="inner-slot"></span></el-button>
+        <d-button loading @click="handleClick"><span class="inner-slot"></span></d-button>
       `,
       methods: {
         handleClick(evt) {

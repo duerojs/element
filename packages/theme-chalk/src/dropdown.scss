@@ -9,9 +9,9 @@
   color: $--color-text-regular;
   font-size: $--font-size-base;
 
-  .el-button-group {
+  .d-button-group {
     display: block;
-    .el-button {
+    .d-button {
       float: none;
     }
   }
@@ -35,7 +35,7 @@
       background: mix(white, transparent, 50%);
     }
 
-    &.el-button--default::before {
+    &.d-button--default::before {
       background: mix($--button-default-border-color, transparent, 50%);
     }
 

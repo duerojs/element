@@ -7,26 +7,26 @@
       <div
         class="el-calendar__button-group"
         v-if="validatedRange.length === 0">
-        <el-button-group>
-          <el-button
+        <d-button-group>
+          <d-button
             type="plain"
             size="mini"
             @click="selectDate('prev-month')">
             {{ t('el.datepicker.prevMonth') }}
-          </el-button>
-          <el-button
+          </d-button>
+          <d-button
             type="plain"
             size="mini"
             @click="selectDate('today')">
             {{ t('el.datepicker.today') }}
-          </el-button>
-          <el-button
+          </d-button>
+          <d-button
             type="plain"
             size="mini"
             @click="selectDate('next-month')">
             {{ t('el.datepicker.nextMonth') }}
-          </el-button>
-        </el-button-group>
+          </d-button>
+        </d-button-group>
       </div>
     </div>
     <div

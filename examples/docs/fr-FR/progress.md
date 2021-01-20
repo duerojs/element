@@ -50,10 +50,10 @@ Vous pouvez utiliser l'attribut `color` pour définir la couleur de la barre de 
 
 <el-progress :percentage="percentage" :color="customColors"></el-progress>
 <div>
-  <el-button-group>
-    <el-button icon="d-icon-minus" @click="decrease"></el-button>
-    <el-button icon="d-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <d-button-group>
+    <d-button icon="d-icon-minus" @click="decrease"></d-button>
+    <d-button icon="d-icon-plus" @click="increase"></d-button>
+  </d-button-group>
 </div>
 
 <script>
@@ -120,10 +120,10 @@ Vous pouvez également spécifier l'attribut `type` de `dashboard` pour utiliser
 ```html
 <el-progress type="dashboard" :percentage="percentage" :color="colors"></el-progress>
 <div>
-  <el-button-group>
-    <el-button icon="d-icon-minus" @click="decrease"></el-button>
-    <el-button icon="d-icon-plus" @click="increase"></el-button>
-  </el-button-group>
+  <d-button-group>
+    <d-button icon="d-icon-minus" @click="decrease"></d-button>
+    <d-button icon="d-icon-plus" @click="increase"></d-button>
+  </d-button-group>
 </div>
 
 <script>

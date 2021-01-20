@@ -70,7 +70,7 @@ You can use the `close` event to add and remove tag dynamically.
   @blur="handleInputConfirm"
 >
 </el-input>
-<el-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</el-button>
+<d-button v-else class="button-new-tag" size="small" @click="showInput">+ New Tag</d-button>
 
 <style>
   .el-tag + .el-tag {

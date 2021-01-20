@@ -41,9 +41,9 @@ Utilisez le bouton pour ouvrir le menu déroulant.
 :::demo Utilisez `split-button` pour séparer le déclencheur du reste du bouton, ce dernier devenant la partie gauche et le déclencheur la partie droite.
 ```html
 <el-dropdown>
-  <el-button type="primary">
+  <d-button type="primary">
     Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
-  </el-button>
+  </d-button>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
     <el-dropdown-item>Action 2</el-dropdown-item>

@@ -8,39 +8,39 @@ Bouton communément utilisé.
 
 ```html
 <d-row>
-  <el-button>Défaut</el-button>
-  <el-button type="primary">Primary</el-button>
-  <el-button type="success">Success</el-button>
-  <el-button type="info">Info</el-button>
-  <el-button type="warning">Warning</el-button>
-  <el-button type="danger">Danger</el-button>
+  <d-button>Défaut</d-button>
+  <d-button type="primary">Primary</d-button>
+  <d-button type="success">Success</d-button>
+  <d-button type="info">Info</d-button>
+  <d-button type="warning">Warning</d-button>
+  <d-button type="danger">Danger</d-button>
 </d-row>
 
 <d-row>
-  <el-button plain>Plein</el-button>
-  <el-button type="primary" plain>Primary</el-button>
-  <el-button type="success" plain>Success</el-button>
-  <el-button type="info" plain>Info</el-button>
-  <el-button type="warning" plain>Warning</el-button>
-  <el-button type="danger" plain>Danger</el-button>
+  <d-button plain>Plein</d-button>
+  <d-button type="primary" plain>Primary</d-button>
+  <d-button type="success" plain>Success</d-button>
+  <d-button type="info" plain>Info</d-button>
+  <d-button type="warning" plain>Warning</d-button>
+  <d-button type="danger" plain>Danger</d-button>
 </d-row>
 
 <d-row>
-  <el-button round>Arrondi</el-button>
-  <el-button type="primary" round>Primary</el-button>
-  <el-button type="success" round>Success</el-button>
-  <el-button type="info" round>Info</el-button>
-  <el-button type="warning" round>Warning</el-button>
-  <el-button type="danger" round>Danger</el-button>
+  <d-button round>Arrondi</d-button>
+  <d-button type="primary" round>Primary</d-button>
+  <d-button type="success" round>Success</d-button>
+  <d-button type="info" round>Info</d-button>
+  <d-button type="warning" round>Warning</d-button>
+  <d-button type="danger" round>Danger</d-button>
 </d-row>
 
 <d-row>
-  <el-button icon="d-icon-search" circle></el-button>
-  <el-button type="primary" icon="d-icon-edit" circle></el-button>
-  <el-button type="success" icon="d-icon-check" circle></el-button>
-  <el-button type="info" icon="d-icon-message" circle></el-button>
-  <el-button type="warning" icon="d-icon-star-off" circle></el-button>
-  <el-button type="danger" icon="d-icon-delete" circle></el-button>
+  <d-button icon="d-icon-search" circle></d-button>
+  <d-button type="primary" icon="d-icon-edit" circle></d-button>
+  <d-button type="success" icon="d-icon-check" circle></d-button>
+  <d-button type="info" icon="d-icon-message" circle></d-button>
+  <d-button type="warning" icon="d-icon-star-off" circle></d-button>
+  <d-button type="danger" icon="d-icon-delete" circle></d-button>
 </d-row>
 ```
 :::
@@ -53,21 +53,21 @@ L'attribut `disabled` détermine si le bouton est désactivé.
 
 ```html
 <d-row>
-  <el-button disabled>Défaut</el-button>
-  <el-button type="primary" disabled>Principal</el-button>
-  <el-button type="success" disabled>Succès</el-button>
-  <el-button type="info" disabled>Info</el-button>
-  <el-button type="warning" disabled>Attention</el-button>
-  <el-button type="danger" disabled>Danger</el-button>
+  <d-button disabled>Défaut</d-button>
+  <d-button type="primary" disabled>Principal</d-button>
+  <d-button type="success" disabled>Succès</d-button>
+  <d-button type="info" disabled>Info</d-button>
+  <d-button type="warning" disabled>Attention</d-button>
+  <d-button type="danger" disabled>Danger</d-button>
 </d-row>
 
 <d-row>
-  <el-button plain disabled>Plein</el-button>
-  <el-button type="primary" plain disabled>Principal</el-button>
-  <el-button type="success" plain disabled>Succès</el-button>
-  <el-button type="info" plain disabled>Info</el-button>
-  <el-button type="warning" plain disabled>Attention</el-button>
-  <el-button type="danger" plain disabled>Danger</el-button>
+  <d-button plain disabled>Plein</d-button>
+  <d-button type="primary" plain disabled>Principal</d-button>
+  <d-button type="success" plain disabled>Succès</d-button>
+  <d-button type="info" plain disabled>Info</d-button>
+  <d-button type="warning" plain disabled>Attention</d-button>
+  <d-button type="danger" plain disabled>Danger</d-button>
 </d-row>
 ```
 :::
@@ -78,8 +78,8 @@ Bouton sans bordure ni fond.
 
 :::demo
 ```html
-<el-button type="text">Bouton texte</el-button>
-<el-button type="text" disabled>Bouton texte</el-button>
+<d-button type="text">Bouton texte</d-button>
+<d-button type="text" disabled>Bouton texte</d-button>
 ```
 :::
 
@@ -90,11 +90,11 @@ Utilisez des icônes pour ajouter plus de sens aux boutons. Vous pouvez utiliser
 :::demo Utilisez l'attribut `icon` pour ajouter une icône. Vous pourrez trouver la liste des icônes dans le composant Icon d'Element. Ajouter des icônes sur le coté droit du texte est possible grâce à la balise `<i>`. Des icônes personnalisées peuvent également être utilisées.
 
 ```html
-<el-button type="primary" icon="d-icon-edit"></el-button>
-<el-button type="primary" icon="d-icon-share"></el-button>
-<el-button type="primary" icon="d-icon-delete"></el-button>
-<el-button type="primary" icon="d-icon-search">Recherche</el-button>
-<el-button type="primary">Upload<i class="d-icon-upload d-icon-right"></i></el-button>
+<d-button type="primary" icon="d-icon-edit"></d-button>
+<d-button type="primary" icon="d-icon-share"></d-button>
+<d-button type="primary" icon="d-icon-delete"></d-button>
+<d-button type="primary" icon="d-icon-search">Recherche</d-button>
+<d-button type="primary">Upload<i class="d-icon-upload d-icon-right"></i></d-button>
 ```
 :::
 
@@ -102,18 +102,18 @@ Utilisez des icônes pour ajouter plus de sens aux boutons. Vous pouvez utiliser
 
 Affiche un groupe de bouton. Peut être utilisé pour grouper un ensemble d'opérations similaires.
 
-:::demo Utilisez la balise `<el-button-group>` pour grouper vos boutons.
+:::demo Utilisez la balise `<d-button-group>` pour grouper vos boutons.
 
 ```html
-<el-button-group>
-  <el-button type="primary" icon="d-icon-arrow-left">Page précédente</el-button>
-  <el-button type="primary">Page suivante<i class="d-icon-arrow-right d-icon-right"></i></el-button>
-</el-button-group>
-<el-button-group>
-  <el-button type="primary" icon="d-icon-edit"></el-button>
-  <el-button type="primary" icon="d-icon-share"></el-button>
-  <el-button type="primary" icon="d-icon-delete"></el-button>
-</el-button-group>
+<d-button-group>
+  <d-button type="primary" icon="d-icon-arrow-left">Page précédente</d-button>
+  <d-button type="primary">Page suivante<i class="d-icon-arrow-right d-icon-right"></i></d-button>
+</d-button-group>
+<d-button-group>
+  <d-button type="primary" icon="d-icon-edit"></d-button>
+  <d-button type="primary" icon="d-icon-share"></d-button>
+  <d-button type="primary" icon="d-icon-delete"></d-button>
+</d-button-group>
 ```
 :::
 
@@ -124,7 +124,7 @@ Cliquez sur le bouton pour charger des données et il affichera un état de char
 :::demo Configurez l'attribut `loading` à `true` pour afficher un état de chargement.
 
 ```html
-<el-button type="primary" :loading="true">Chargement</el-button>
+<d-button type="primary" :loading="true">Chargement</d-button>
 ```
 :::
 
@@ -136,16 +136,16 @@ En plus de la taille par défaut, le composant Button fournit trois tailles supp
 
 ```html
 <d-row>
-  <el-button>Défaut</el-button>
-  <el-button size="medium">Medium</el-button>
-  <el-button size="small">Small</el-button>
-  <el-button size="mini">Mini</el-button>
+  <d-button>Défaut</d-button>
+  <d-button size="medium">Medium</d-button>
+  <d-button size="small">Small</d-button>
+  <d-button size="mini">Mini</d-button>
 </d-row>
 <d-row>
-  <el-button round>Défaut</el-button>
-  <el-button size="medium" round>Medium</el-button>
-  <el-button size="small" round>Small</el-button>
-  <el-button size="mini" round>Mini</el-button>
+  <d-button round>Défaut</d-button>
+  <d-button size="medium" round>Medium</d-button>
+  <d-button size="small" round>Small</d-button>
+  <d-button size="mini" round>Mini</d-button>
 </d-row>
 ```
 :::

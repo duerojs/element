@@ -125,17 +125,17 @@
 
 ```html
 <template>
-  <el-button
+  <d-button
     type="primary"
     @click="openFullScreen1"
     v-loading.fullscreen.lock="fullscreenLoading">
     指令方式
-  </el-button>
-  <el-button
+  </d-button>
+  <d-button
     type="primary"
     @click="openFullScreen2">
     服务方式
-  </el-button>
+  </d-button>
 </template>
 
 <script>

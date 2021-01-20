@@ -41,9 +41,9 @@ Use the button to trigger the dropdown list.
 :::demo Use `split-button` to split the triggering element into a button group with the left button being a normal button and right one the actual triggering target. If you wanna insert a separator line between item three and item four, just add a class `divider` to item four.
 ```html
 <el-dropdown>
-  <el-button type="primary">
+  <d-button type="primary">
     Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
-  </el-button>
+  </d-button>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
     <el-dropdown-item>Action 2</el-dropdown-item>

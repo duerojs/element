@@ -10,8 +10,8 @@ Displays at the top, and disappears after 3 seconds.
 
 ```html
 <template>
-  <el-button :plain="true" @click="open">Show message</el-button>
-  <el-button :plain="true" @click="openVn">VNode</el-button>
+  <d-button :plain="true" @click="open">Show message</d-button>
+  <d-button :plain="true" @click="openVn">VNode</d-button>
 </template>
 
 <script>
@@ -43,10 +43,10 @@ Used to show the feedback of Success, Warning, Message and Error activities.
 :::demo When you need more customizations, Message component can also take an object as parameter. For example, setting value of `type` can define different types, and its default is `info`. In such cases the main body is passed in as the value of `message`. Also, we have registered methods for different types, so you can directly call it without passing a type like `open4`.
 ```html
 <template>
-  <el-button :plain="true" @click="open2">success</el-button>
-  <el-button :plain="true" @click="open3">warning</el-button>
-  <el-button :plain="true" @click="open1">message</el-button>
-  <el-button :plain="true" @click="open4">error</el-button>
+  <d-button :plain="true" @click="open2">success</d-button>
+  <d-button :plain="true" @click="open3">warning</d-button>
+  <d-button :plain="true" @click="open1">message</d-button>
+  <d-button :plain="true" @click="open4">error</d-button>
 </template>
 
 <script>
@@ -85,10 +85,10 @@ A close button can be added.
 :::demo A default Message cannot be closed manually. If you need a closable message, you can set `showClose` field. Besides, same as notification, message has a controllable `duration`. Default duration is 3000 ms, and it won't disappear when set to `0`.
 ```html
 <template>
-  <el-button :plain="true" @click="open1">message</el-button>
-  <el-button :plain="true" @click="open2">success</el-button>
-  <el-button :plain="true" @click="open3">warning</el-button>
-  <el-button :plain="true" @click="open4">error</el-button>
+  <d-button :plain="true" @click="open1">message</d-button>
+  <d-button :plain="true" @click="open2">success</d-button>
+  <d-button :plain="true" @click="open3">warning</d-button>
+  <d-button :plain="true" @click="open4">error</d-button>
 </template>
 
 <script>
@@ -137,7 +137,7 @@ Use the `center` attribute to center the text.
 
 ```html
 <template>
-  <el-button :plain="true" @click="openCenter">Centered text</el-button>
+  <d-button :plain="true" @click="openCenter">Centered text</d-button>
 </template>
 
 <script>
@@ -162,7 +162,7 @@ Use the `center` attribute to center the text.
 
 ```html
 <template>
-  <el-button :plain="true" @click="openHTML">Use HTML String</el-button>
+  <d-button :plain="true" @click="openHTML">Use HTML String</d-button>
 </template>
 
 <script>

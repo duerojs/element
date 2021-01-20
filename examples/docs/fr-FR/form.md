@@ -49,8 +49,8 @@ Il peut contenir toutes sortes de champs tels que `input`, `select`, `radio` et 
     <el-input type="textarea" v-model="form.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Créer</el-button>
-    <el-button>Annuler</el-button>
+    <d-button type="primary" @click="onSubmit">Créer</d-button>
+    <d-button>Annuler</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -104,7 +104,7 @@ Lorsque l'espace vertical est limité et que le formulaire est relativement simp
     </el-select>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Query</el-button>
+    <d-button type="primary" @click="onSubmit">Query</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -219,8 +219,8 @@ Le composant Form vous permet d'effectuer des vérifications, afin de détecter 
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Créer</el-button>
-    <el-button @click="resetForm('ruleForm')">Réinitialiser</el-button>
+    <d-button type="primary" @click="submitForm('ruleForm')">Créer</d-button>
+    <d-button @click="resetForm('ruleForm')">Réinitialiser</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -300,8 +300,8 @@ Cet exemple montre comment vous pouvez personnaliser vos règles de validation p
     <el-input v-model.number="ruleForm.age"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Submit</el-button>
-    <el-button @click="resetForm('ruleForm')">Réinitialiser</el-button>
+    <d-button type="primary" @click="submitForm('ruleForm')">Submit</d-button>
+    <d-button @click="resetForm('ruleForm')">Réinitialiser</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -409,12 +409,12 @@ Les callback de validations personnalisées doivent être appelées. Un usage pl
       required: true, message: 'domain ne peut pas être null', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">Supprimer</el-button>
+    <el-input v-model="domain.value"></el-input><d-button @click.prevent="removeDomain(domain)">Supprimer</d-button>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">Soumettre</el-button>
-    <el-button @click="addDomain">Nouveau domaine</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">Réinitialiser</el-button>
+    <d-button type="primary" @click="submitForm('dynamicValidateForm')">Soumettre</d-button>
+    <d-button @click="addDomain">Nouveau domaine</d-button>
+    <d-button @click="resetForm('dynamicValidateForm')">Réinitialiser</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -478,8 +478,8 @@ Les callback de validations personnalisées doivent être appelées. Un usage pl
     <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">Soumettre</el-button>
-    <el-button @click="resetForm('numberValidateForm')">Réinitialiser</el-button>
+    <d-button type="primary" @click="submitForm('numberValidateForm')">Soumettre</d-button>
+    <d-button @click="resetForm('numberValidateForm')">Réinitialiser</d-button>
   </el-form-item>
 </el-form>
 <script>
@@ -553,8 +553,8 @@ Tout les composants d'un formulaire héritent leur attribut `size` de ce formula
     </el-radio-group>
   </el-form-item>
   <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">Créer</el-button>
-    <el-button>Annuler</el-button>
+    <d-button type="primary" @click="onSubmit">Créer</d-button>
+    <d-button>Annuler</d-button>
   </el-form-item>
 </el-form>
 

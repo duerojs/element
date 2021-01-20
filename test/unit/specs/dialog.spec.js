@@ -37,8 +37,8 @@ describe('Dialog', () => {
           <el-dialog :title="title" :visible="visible">
             <span>这是一段信息</span>
             <span slot="footer" class="dialog-footer">
-              <el-button @click.native="dialogVisible = false">取消</el-button>
-              <el-button type="primary" @click.native="dialogVisible = false">确定</el-button>
+              <d-button @click.native="dialogVisible = false">取消</d-button>
+              <d-button type="primary" @click.native="dialogVisible = false">确定</d-button>
             </span>
           </el-dialog>
         </div>
@@ -52,7 +52,7 @@ describe('Dialog', () => {
       }
     }, true);
     setTimeout(() => {
-      const footerBtns = vm.$el.querySelectorAll('.el-dialog__footer .el-button');
+      const footerBtns = vm.$el.querySelectorAll('.el-dialog__footer .d-button');
       expect(vm.$el.querySelector('.el-dialog__body span').textContent).to.equal('这是一段信息');
       expect(footerBtns.length).to.equal(2);
       expect(footerBtns[0].querySelector('span').textContent).to.equal('取消');

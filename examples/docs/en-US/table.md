@@ -359,8 +359,8 @@ When there are too many columns, you can fix some of them.
       label="Operations"
       width="120">
       <template slot-scope="scope">
-        <el-button @click="handleClick" type="text" size="small">Detail</el-button>
-        <el-button type="text" size="small">Edit</el-button>
+        <d-button @click="handleClick" type="text" size="small">Detail</d-button>
+        <d-button type="text" size="small">Edit</d-button>
       </template>
     </el-table-column>
   </el-table>
@@ -568,12 +568,12 @@ When the the data is dynamically changed, you might want the table to have a max
       label="Operations"
       width="120">
       <template slot-scope="scope">
-        <el-button
+        <d-button
           @click.native.prevent="deleteRow(scope.$index, tableData)"
           type="text"
           size="small">
           Remove
-        </el-button>
+        </d-button>
       </template>
     </el-table-column>
   </el-table>
@@ -786,8 +786,8 @@ Single row selection is supported.
     </el-table-column>
   </el-table>
   <div style="margin-top: 20px">
-    <el-button @click="setCurrent(tableData[1])">Select second row</el-button>
-    <el-button @click="setCurrent()">Clear selection</el-button>
+    <d-button @click="setCurrent(tableData[1])">Select second row</d-button>
+    <d-button @click="setCurrent()">Clear selection</d-button>
   </div>
 </template>
 
@@ -862,8 +862,8 @@ You can also select multiple rows.
     </el-table-column>
   </el-table>
   <div style="margin-top: 20px">
-    <el-button @click="toggleSelection([tableData[1], tableData[2]])">Toggle selection status of second and third rows</el-button>
-    <el-button @click="toggleSelection()">Clear selection</el-button>
+    <d-button @click="toggleSelection([tableData[1], tableData[2]])">Toggle selection status of second and third rows</d-button>
+    <d-button @click="toggleSelection()">Clear selection</d-button>
   </div>
 </template>
 
@@ -993,8 +993,8 @@ Filter the table to find desired data.
 :::demo Set attribute `filters` and `filter-method` in `el-table-column` makes this column filterable. `filters` is an array, and `filter-method` is a function deciding which rows are displayed. It has three parameters: `value`, `row` and `column`.
 ```html
 <template>
-  <el-button @click="resetDateFilter">reset date filter</el-button>
-  <el-button @click="clearFilter">reset all filters</el-button>
+  <d-button @click="resetDateFilter">reset date filter</d-button>
+  <d-button @click="clearFilter">reset all filters</d-button>
   <el-table
     ref="filterTable"
     :data="tableData"
@@ -1118,13 +1118,13 @@ Customize table column so it can be integrated with other components.
     <el-table-column
       label="Operations">
       <template slot-scope="scope">
-        <el-button
+        <d-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">Edit</d-button>
+        <d-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+          @click="handleDelete(scope.$index, scope.row)">Delete</d-button>
       </template>
     </el-table-column>
   </el-table>
@@ -1192,13 +1192,13 @@ Customize table header so it can be even more customized.
           placeholder="Type to search"/>
       </template>
       <template slot-scope="scope">
-        <el-button
+        <d-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">Edit</d-button>
+        <d-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+          @click="handleDelete(scope.$index, scope.row)">Delete</d-button>
       </template>
     </el-table-column>
   </el-table>

@@ -75,8 +75,8 @@ Vertical NavMenu with sub-menus.
 
 :::demo You can use the el-menu-item-group component to create a menu group, and the name of the group is determined by the title prop or a named slot.
 ```html
-<el-row class="tac">
-  <el-col :span="12">
+<d-row class="tac">
+  <d-col :span="12">
     <h5>Default colors</h5>
     <el-menu
       default-active="2"
@@ -113,8 +113,8 @@ Vertical NavMenu with sub-menus.
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <h5>Custom colors</h5>
     <el-menu
       default-active="2"
@@ -154,8 +154,8 @@ Vertical NavMenu with sub-menus.
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <script>
   export default {

@@ -10,8 +10,8 @@ utilisez les prop `shape` et` size` pour définir la forme et la taille de l'ava
 :::demo
 ```html
 <template>
-  <el-row class="demo-avatar demo-basic">
-    <el-col :span="12">
+  <d-row class="demo-avatar demo-basic">
+    <d-col :span="12">
       <div class="sub-title">cercle</div>
       <div class="demo-basic--circle">
         <div class="block"><el-avatar :size="50" :src="circleUrl"></el-avatar></div>
@@ -19,8 +19,8 @@ utilisez les prop `shape` et` size` pour définir la forme et la taille de l'ava
           <el-avatar :size="size" :src="circleUrl"></el-avatar>
         </div>
       </div>
-    </el-col>  
-    <el-col :span="12">
+    </d-col>  
+    <d-col :span="12">
       <div class="sub-title">carré</div>
       <div class="demo-basic--circle">
         <div class="block"><el-avatar shape="square" :size="50" :src="squareUrl"></el-avatar></div>
@@ -28,8 +28,8 @@ utilisez les prop `shape` et` size` pour définir la forme et la taille de l'ava
           <el-avatar shape="square" :size="size" :src="squareUrl"></el-avatar>
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </d-col>
+  </d-row>
 </template>
 <script>
   export default {

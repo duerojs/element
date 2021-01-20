@@ -7,41 +7,41 @@ Botones comúnmente usados.
 :::demo Use `type`, `plain`,`round` y `circle` para definir estilos a los botones.
 
 ```html
-<el-row>
+<d-row>
   <el-button>Default</el-button>
   <el-button type="primary">Primary</el-button>
   <el-button type="success">Success</el-button>
   <el-button type="info">Info</el-button>
   <el-button type="warning">Warning</el-button>
   <el-button type="danger">Danger</el-button>
-</el-row>
+</d-row>
 
-<el-row>
+<d-row>
   <el-button plain>Plain</el-button>
   <el-button type="primary" plain>Primary</el-button>
   <el-button type="success" plain>Success</el-button>
   <el-button type="info" plain>Info</el-button>
   <el-button type="warning" plain>Warning</el-button>
   <el-button type="danger" plain>Danger</el-button>
-</el-row>
+</d-row>
 
-<el-row>
+<d-row>
   <el-button round>Round</el-button>
   <el-button type="primary" round>Primary</el-button>
   <el-button type="success" round>Success</el-button>
   <el-button type="info" round>Info</el-button>
   <el-button type="warning" round>Warning</el-button>
   <el-button type="danger" round>Danger</el-button>
-</el-row>
+</d-row>
 
-<el-row>
+<d-row>
   <el-button icon="d-icon-search" circle></el-button>
   <el-button type="primary" icon="d-icon-edit" circle></el-button>
   <el-button type="success" icon="d-icon-check" circle></el-button>
   <el-button type="info" icon="d-icon-message" circle></el-button>
   <el-button type="warning" icon="d-icon-star-off" circle></el-button>
   <el-button type="danger" icon="d-icon-delete" circle></el-button>
-</el-row>
+</d-row>
 ```
 :::
 
@@ -52,23 +52,23 @@ El atributo `disabled` determina su un botón esta deshabilitado.
 :::demo Use el atributo `disabled` para determinar si un botón esta deshabilitado. Acepta un valor `Boolean`.
 
 ```html
-<el-row>
+<d-row>
   <el-button disabled>Default</el-button>
   <el-button type="primary" disabled>Primary</el-button>
   <el-button type="success" disabled>Success</el-button>
   <el-button type="info" disabled>Info</el-button>
   <el-button type="warning" disabled>Warning</el-button>
   <el-button type="danger" disabled>Danger</el-button>
-</el-row>
+</d-row>
 
-<el-row>
+<d-row>
   <el-button plain disabled>Plain</el-button>
   <el-button type="primary" plain disabled>Primary</el-button>
   <el-button type="success" plain disabled>Success</el-button>
   <el-button type="info" plain disabled>Info</el-button>
   <el-button type="warning" plain disabled>Warning</el-button>
   <el-button type="danger" plain disabled>Danger</el-button>
-</el-row>
+</d-row>
 ```
 :::
 
@@ -135,18 +135,18 @@ Además del tamaño por defecto, el componente Button provee tres tamaños adici
 :::demo Use el atributo `size` para setear tamaños adicionales con `medium`, `small` o `mini`.
 
 ```html
-<el-row>
+<d-row>
   <el-button>Default</el-button>
   <el-button size="medium">Medium</el-button>
   <el-button size="small">Small</el-button>
   <el-button size="mini">Mini</el-button>
-</el-row>
-<el-row>
+</d-row>
+<d-row>
   <el-button round>Default</el-button>
   <el-button size="medium" round>Medium</el-button>
   <el-button size="small" round>Small</el-button>
   <el-button size="mini" round>Mini</el-button>
-</el-row>
+</d-row>
 ```
 :::
 

@@ -77,8 +77,8 @@ NavMenu vertical con sub-menús.
 :::demo Puede utilizar el componente `el-menu-item-group` para crear un grupo de menú, y el nombre del grupo estará determinado por la propiedad `title` o la propiedad `slot`.
 
 ```html
-<el-row class="tac">
-  <el-col :span="12">
+<d-row class="tac">
+  <d-col :span="12">
     <h5>Default colors</h5>
     <el-menu
       default-active="2"
@@ -115,8 +115,8 @@ NavMenu vertical con sub-menús.
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <h5>Custom colors</h5>
     <el-menu
       default-active="2"
@@ -156,8 +156,8 @@ NavMenu vertical con sub-menús.
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <script>
   export default {

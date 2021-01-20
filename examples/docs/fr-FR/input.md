@@ -307,8 +307,8 @@ Vous pouvez obtenir de l'aide ou des suggestions basées sur ce que vous entrez.
 
 :::demo Le composant d'autocomplétion fournit des suggestions d'entrées. L'attribut `fetch-suggestions` est une méthode qui retourne les suggestions. Dans cet exemple, `querySearch(queryString, cb)` renvoie des suggestions à l'autocomplétion via `cb(data)` quand elles sont prêtes.
 ```html
-<el-row class="demo-autocomplete">
-  <el-col :span="12">
+<d-row class="demo-autocomplete">
+  <d-col :span="12">
     <div class="sub-title">Liste des suggestions au focus</div>
     <el-autocomplete
       class="inline-input"
@@ -317,8 +317,8 @@ Vous pouvez obtenir de l'aide ou des suggestions basées sur ce que vous entrez.
       placeholder="Entrez quelque chose"
       @select="handleSelect"
     ></el-autocomplete>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <div class="sub-title">Liste des suggestions à l'écriture</div>
     <el-autocomplete
       class="inline-input"
@@ -328,8 +328,8 @@ Vous pouvez obtenir de l'aide ou des suggestions basées sur ce que vous entrez.
       :trigger-on-focus="false"
       @select="handleSelect"
     ></el-autocomplete>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 <script>
   export default {
     data() {

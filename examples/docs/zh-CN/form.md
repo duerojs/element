@@ -19,13 +19,13 @@
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间">
-    <el-col :span="11">
+    <d-col :span="11">
       <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="即时配送">
     <el-switch v-model="form.delivery"></el-switch>
@@ -182,17 +182,17 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间" required>
-    <el-col :span="11">
+    <d-col :span="11">
       <el-form-item prop="date1">
         <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
       </el-form-item>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-form-item prop="date2">
         <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
       </el-form-item>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="即时配送" prop="delivery">
     <el-switch v-model="ruleForm.delivery"></el-switch>
@@ -527,13 +527,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-select>
   </el-form-item>
   <el-form-item label="活动时间">
-    <el-col :span="11">
+    <d-col :span="11">
       <el-date-picker type="date" placeholder="选择日期" v-model="sizeForm.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-time-picker placeholder="选择时间" v-model="sizeForm.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="活动性质">
     <el-checkbox-group v-model="sizeForm.type">

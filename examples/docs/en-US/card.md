@@ -74,10 +74,10 @@ The header part can be omitted.
 
 Display richer content by adding some configs.
 
-:::demo The `body-style` attribute defines CSS style of custom `body`. This example also uses `el-col` for layout.
+:::demo The `body-style` attribute defines CSS style of custom `body`. This example also uses `d-col` for layout.
 ```html
-<el-row>
-  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+<d-row>
+  <d-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
@@ -88,8 +88,8 @@ Display richer content by adding some configs.
         </div>
       </div>
     </el-card>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <style>
   .time {
@@ -141,23 +141,23 @@ You can define when to show the card shadows
 
 :::demo The `shadow` attribute determines when the card shadows are displayed. It can be `always`, `hover` or `never`.
 ```html
-<el-row :gutter="12">
-  <el-col :span="8">
+<d-row :gutter="12">
+  <d-col :span="8">
     <el-card shadow="always">
       Always
     </el-card>
-  </el-col>
-  <el-col :span="8">
+  </d-col>
+  <d-col :span="8">
     <el-card shadow="hover">
       Hover
     </el-card>
-  </el-col>
-  <el-col :span="8">
+  </d-col>
+  <d-col :span="8">
     <el-card shadow="never">
       Never
     </el-card>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 ```
 :::
 

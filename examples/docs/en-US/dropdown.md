@@ -94,8 +94,8 @@ Click the triggering element or hover on it.
 :::demo Use the attribute `trigger`. By default, it is `hover`.
 
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<d-row class="block-col-2">
+  <d-col :span="12">
     <span class="demonstration">hover to trigger</span>
     <el-dropdown>
       <span class="el-dropdown-link">
@@ -109,8 +109,8 @@ Click the triggering element or hover on it.
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <span class="demonstration">click to trigger</span>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
@@ -124,8 +124,8 @@ Click the triggering element or hover on it.
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <style>
   .el-dropdown-link {

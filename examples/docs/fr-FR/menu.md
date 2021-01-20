@@ -75,8 +75,8 @@ Menu vertical avec sous-menus.
 
 :::demo Vous pouvez utiliser le composant el-menu-item-group pour créer un groupe dans le menu dont le nom sera déterminé par celui de la propriété title ou d'un slot.
 ```html
-<el-row class="tac">
-  <el-col :span="12">
+<d-row class="tac">
+  <d-col :span="12">
     <h5>Couleurs par défaut</h5>
     <el-menu
       default-active="2"
@@ -113,8 +113,8 @@ Menu vertical avec sous-menus.
         <span>Navigateur Quatre</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <h5>Couleurs personnalisées</h5>
     <el-menu
       default-active="2"
@@ -154,8 +154,8 @@ Menu vertical avec sous-menus.
         <span>Navigateur Quatre</span>
       </el-menu-item>
     </el-menu>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <script>
   export default {

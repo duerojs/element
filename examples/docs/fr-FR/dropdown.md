@@ -94,8 +94,8 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
 :::demo Utilisez l'attribut `trigger`. Par défaut, il est à `hover`.
 
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<d-row class="block-col-2">
+  <d-col :span="12">
     <span class="demonstration">En passant la souris</span>
     <el-dropdown>
       <span class="el-dropdown-link">
@@ -109,8 +109,8 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <span class="demonstration">En cliquant</span>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
@@ -124,8 +124,8 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <style>
   .el-dropdown-link {

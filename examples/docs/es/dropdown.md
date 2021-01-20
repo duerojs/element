@@ -95,8 +95,8 @@ Haga clic en el elemento detonante o sobre él.
 :::demo Utilice el atributo `trigger`. Por defecto, es `hover`.
 
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<d-row class="block-col-2">
+  <d-col :span="12">
     <span class="demonstration">hover to trigger</span>
     <el-dropdown>
       <span class="el-dropdown-link">
@@ -110,8 +110,8 @@ Haga clic en el elemento detonante o sobre él.
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <span class="demonstration">click to trigger</span>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
@@ -125,8 +125,8 @@ Haga clic en el elemento detonante o sobre él.
         <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 
 <style>
   .el-dropdown-link {

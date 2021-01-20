@@ -20,13 +20,13 @@ It includes all kinds of input items, such as `input`, `select`, `radio` and `ch
     </el-select>
   </el-form-item>
   <el-form-item label="Activity time">
-    <el-col :span="11">
+    <d-col :span="11">
       <el-date-picker type="date" placeholder="Pick a date" v-model="form.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-time-picker placeholder="Pick a time" v-model="form.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="Instant delivery">
     <el-switch v-model="form.delivery"></el-switch>
@@ -186,17 +186,17 @@ Form component allows you to verify your data, helping you find and correct erro
     </el-select>
   </el-form-item>
   <el-form-item label="Activity time" required>
-    <el-col :span="11">
+    <d-col :span="11">
       <el-form-item prop="date1">
         <el-date-picker type="date" placeholder="Pick a date" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
       </el-form-item>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-form-item prop="date2">
         <el-time-picker placeholder="Pick a time" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
       </el-form-item>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="Instant delivery" prop="delivery">
     <el-switch v-model="ruleForm.delivery"></el-switch>
@@ -533,13 +533,13 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
     </el-select>
   </el-form-item>
   <el-form-item label="Activity time">
-    <el-col :span="11">
+    <d-col :span="11">
       <el-date-picker type="date" placeholder="Pick a date" v-model="sizeForm.date1" style="width: 100%;"></el-date-picker>
-    </el-col>
-    <el-col class="line" :span="2">-</el-col>
-    <el-col :span="11">
+    </d-col>
+    <d-col class="line" :span="2">-</d-col>
+    <d-col :span="11">
       <el-time-picker placeholder="Pick a time" v-model="sizeForm.date2" style="width: 100%;"></el-time-picker>
-    </el-col>
+    </d-col>
   </el-form-item>
   <el-form-item label="Activity type">
     <el-checkbox-group v-model="sizeForm.type">

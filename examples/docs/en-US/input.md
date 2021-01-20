@@ -308,8 +308,8 @@ You can get some recommended tips based on the current input.
 
 :::demo Autocomplete component provides input suggestions. The `fetch-suggestions` attribute is a method that returns suggested input. In this example, `querySearch(queryString, cb)` returns suggestions to Autocomplete via `cb(data)` when suggestions are ready.
 ```html
-<el-row class="demo-autocomplete">
-  <el-col :span="12">
+<d-row class="demo-autocomplete">
+  <d-col :span="12">
     <div class="sub-title">list suggestions when activated</div>
     <el-autocomplete
       class="inline-input"
@@ -318,8 +318,8 @@ You can get some recommended tips based on the current input.
       placeholder="Please Input"
       @select="handleSelect"
     ></el-autocomplete>
-  </el-col>
-  <el-col :span="12">
+  </d-col>
+  <d-col :span="12">
     <div class="sub-title">list suggestions on input</div>
     <el-autocomplete
       class="inline-input"
@@ -329,8 +329,8 @@ You can get some recommended tips based on the current input.
       :trigger-on-focus="false"
       @select="handleSelect"
     ></el-autocomplete>
-  </el-col>
-</el-row>
+  </d-col>
+</d-row>
 <script>
   export default {
     data() {

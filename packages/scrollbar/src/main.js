@@ -7,7 +7,7 @@ import Bar from './bar';
 
 /* istanbul ignore next */
 export default {
-  name: 'ElScrollbar',
+  name: 'DScrollbar',
 
   components: { Bar },
 
@@ -93,7 +93,7 @@ export default {
         </div>
       ]);
     }
-    return h('div', { class: 'el-scrollbar' }, nodes);
+    return h('div', { class: 'd-scrollbar' }, nodes);
   },
 
   methods: {

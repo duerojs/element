@@ -108,7 +108,7 @@
         ref="popper"
         :append-to-body="popperAppendToBody"
         v-show="visible && emptyText !== false">
-        <el-scrollbar
+        <d-scrollbar
           tag="ul"
           wrap-class="el-select-dropdown__wrap"
           view-class="el-select-dropdown__list"
@@ -121,7 +121,7 @@
             v-if="showNewOption">
           </el-option>
           <slot></slot>
-        </el-scrollbar>
+        </d-scrollbar>
         <template v-if="emptyText && (!allowCreate || loading || (allowCreate && options.length === 0 ))">
           <slot name="empty" v-if="$slots.empty"></slot>
           <p class="el-select-dropdown__empty" v-else>

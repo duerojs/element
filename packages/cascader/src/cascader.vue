@@ -80,7 +80,7 @@
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
           @close="toggleDropDownVisible(false)"></el-cascader-panel>
-        <el-scrollbar
+        <d-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
@@ -105,7 +105,7 @@
           <slot v-else name="empty">
             <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
-        </el-scrollbar>
+        </d-scrollbar>
       </div>
     </transition>
   </div>

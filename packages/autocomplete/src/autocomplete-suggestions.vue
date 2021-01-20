@@ -6,14 +6,14 @@
       :class="{ 'is-loading': !parent.hideLoading && parent.loading }"
       :style="{ width: dropdownWidth }"
       role="region">
-      <el-scrollbar
+      <d-scrollbar
         tag="ul"
         wrap-class="el-autocomplete-suggestion__wrap"
         view-class="el-autocomplete-suggestion__list">
         <li v-if="!parent.hideLoading && parent.loading"><i class="d-icon-loading"></i></li>
         <slot v-else>
         </slot>
-      </el-scrollbar>
+      </d-scrollbar>
     </div>
   </transition>
 </template>

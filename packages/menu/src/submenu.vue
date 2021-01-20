@@ -313,7 +313,7 @@
       const submenuTitleIcon = (
         rootMenu.mode === 'horizontal' && isFirstLevel ||
         rootMenu.mode === 'vertical' && !rootMenu.collapse
-      ) ? 'el-icon-arrow-down' : 'el-icon-arrow-right';
+      ) ? 'd-icon-arrow-down' : 'd-icon-arrow-right';
 
       return (
         <li

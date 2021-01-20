@@ -22,14 +22,14 @@
               <button
                 type="button"
                 @click="leftPrevYear"
-                class="el-picker-panel__icon-btn el-icon-d-arrow-left"></button>
+                class="el-picker-panel__icon-btn d-icon-d-arrow-left"></button>
               <button
                 type="button"
                 v-if="unlinkPanels"
                 @click="leftNextYear"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
+                class="el-picker-panel__icon-btn d-icon-d-arrow-right"></button>
               <div>{{ leftLabel }}</div>
             </div>
             <month-table
@@ -52,11 +52,11 @@
                 @click="rightPrevYear"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="el-picker-panel__icon-btn el-icon-d-arrow-left"></button>
+                class="el-picker-panel__icon-btn d-icon-d-arrow-left"></button>
               <button
                 type="button"
                 @click="rightNextYear"
-                class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
+                class="el-picker-panel__icon-btn d-icon-d-arrow-right"></button>
               <div>{{ rightLabel }}</div>
             </div>
             <month-table

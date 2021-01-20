@@ -29,7 +29,7 @@
       }
     }
 
-    .el-icon-arrow-down {
+    .d-icon-arrow-down {
       transition: transform .3s;
       font-size: 14px;
 
@@ -38,7 +38,7 @@
       }
     }
 
-    .el-icon-circle-close:hover {
+    .d-icon-circle-close:hover {
       color: $--input-clear-hover-color;
     }
 
@@ -110,7 +110,7 @@
         text-overflow: ellipsis;
       }
 
-      .el-icon-close {
+      .d-icon-close {
         flex: none;
         background-color: $--color-text-placeholder;
         color: $--color-white;

@@ -30,7 +30,7 @@
         :class="[
           { 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded },
           'el-tree-node__expand-icon',
-          tree.iconClass ? tree.iconClass : 'el-icon-caret-right'
+          tree.iconClass ? tree.iconClass : 'd-icon-caret-right'
         ]"
       >
       </span>
@@ -45,7 +45,7 @@
       </el-checkbox>
       <span
         v-if="node.loading"
-        class="el-tree-node__loading-icon el-icon-loading">
+        class="el-tree-node__loading-icon d-icon-loading">
       </span>
       <node-content :node="node"></node-content>
     </div>

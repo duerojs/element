@@ -78,7 +78,7 @@ export const cellForced = {
       };
       return (<div class={ classes }
         on-click={callback}>
-        <i class='el-icon el-icon-arrow-right'></i>
+        <i class='d-icon d-icon-arrow-right'></i>
       </div>);
     },
     sortable: false,
@@ -108,9 +108,9 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
   }
   if (typeof treeNode.expanded === 'boolean' && !treeNode.noLazyChildren) {
     const expandClasses = ['el-table__expand-icon', treeNode.expanded ? 'el-table__expand-icon--expanded' : ''];
-    let iconClasses = ['el-icon-arrow-right'];
+    let iconClasses = ['d-icon-arrow-right'];
     if (treeNode.loading) {
-      iconClasses = ['el-icon-loading'];
+      iconClasses = ['d-icon-loading'];
     }
     ele.push(<div class={ expandClasses }
       on-click={ callback }>

@@ -34,7 +34,7 @@
               type="button"
               v-if="showClose"
               @click="closeDrawer">
-              <i class="el-dialog__close el-icon el-icon-close"></i>
+              <i class="el-dialog__close d-icon d-icon-close"></i>
             </button>
           </header>
           <section class="el-drawer__body" v-if="rendered">

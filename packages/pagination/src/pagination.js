@@ -122,7 +122,7 @@ export default {
             {
               this.$parent.prevText
                 ? <span>{ this.$parent.prevText }</span>
-                : <i class="el-icon el-icon-arrow-left"></i>
+                : <i class="d-icon d-icon-arrow-left"></i>
             }
           </button>
         );
@@ -140,7 +140,7 @@ export default {
             {
               this.$parent.nextText
                 ? <span>{ this.$parent.nextText }</span>
-                : <i class="el-icon el-icon-arrow-right"></i>
+                : <i class="d-icon d-icon-arrow-right"></i>
             }
           </button>
         );

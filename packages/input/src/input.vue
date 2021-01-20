@@ -60,12 +60,12 @@
             </i>
           </template>
           <i v-if="showClear"
-            class="el-input__icon el-icon-circle-close el-input__clear"
+            class="el-input__icon d-icon-circle-close el-input__clear"
             @mousedown.prevent
             @click="clear"
           ></i>
           <i v-if="showPwdVisible"
-            class="el-input__icon el-icon-view el-input__clear"
+            class="el-input__icon d-icon-view el-input__clear"
             @click="handlePasswordVisible"
           ></i>
           <span v-if="isWordLimitVisible" class="el-input__count">
@@ -204,9 +204,9 @@
       },
       validateIcon() {
         return {
-          validating: 'el-icon-loading',
-          success: 'el-icon-circle-check',
-          error: 'el-icon-circle-close'
+          validating: 'd-icon-loading',
+          success: 'd-icon-circle-check',
+          error: 'd-icon-circle-close'
         }[this.validateState];
       },
       textareaStyle() {

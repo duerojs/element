@@ -131,7 +131,7 @@
             tabindex="0"
             on-keydown={ (ev) => { if (ev.keyCode === 13) { handleTabAdd(); }} }
           >
-            <i class="el-icon-plus"></i>
+            <i class="d-icon-plus"></i>
           </span>
         )
         : null;

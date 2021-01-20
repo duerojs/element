@@ -62,7 +62,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'el-icon-question'
+      default: 'd-icon-question'
     },
     iconColor: {
       type: String,

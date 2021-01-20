@@ -55,8 +55,8 @@
       <div
         @mouseenter="emitSelectRange('hours')"
         class="el-time-spinner__wrapper is-arrow">
-        <i v-repeat-click="decrease" class="el-time-spinner__arrow el-icon-arrow-up"></i>
-        <i v-repeat-click="increase" class="el-time-spinner__arrow el-icon-arrow-down"></i>
+        <i v-repeat-click="decrease" class="el-time-spinner__arrow d-icon-arrow-up"></i>
+        <i v-repeat-click="increase" class="el-time-spinner__arrow d-icon-arrow-down"></i>
         <ul class="el-time-spinner__list" ref="hours">
           <li
             class="el-time-spinner__item"
@@ -68,8 +68,8 @@
       <div
         @mouseenter="emitSelectRange('minutes')"
         class="el-time-spinner__wrapper is-arrow">
-        <i v-repeat-click="decrease" class="el-time-spinner__arrow el-icon-arrow-up"></i>
-        <i v-repeat-click="increase" class="el-time-spinner__arrow el-icon-arrow-down"></i>
+        <i v-repeat-click="decrease" class="el-time-spinner__arrow d-icon-arrow-up"></i>
+        <i v-repeat-click="increase" class="el-time-spinner__arrow d-icon-arrow-down"></i>
         <ul class="el-time-spinner__list" ref="minutes">
           <li
             class="el-time-spinner__item"
@@ -84,8 +84,8 @@
         @mouseenter="emitSelectRange('seconds')"
         class="el-time-spinner__wrapper is-arrow"
         v-if="showSeconds">
-        <i v-repeat-click="decrease" class="el-time-spinner__arrow el-icon-arrow-up"></i>
-        <i v-repeat-click="increase" class="el-time-spinner__arrow el-icon-arrow-down"></i>
+        <i v-repeat-click="decrease" class="el-time-spinner__arrow d-icon-arrow-up"></i>
+        <i v-repeat-click="increase" class="el-time-spinner__arrow d-icon-arrow-down"></i>
         <ul class="el-time-spinner__list" ref="seconds">
           <li
             v-for="(second, key) in arrowSecondList"

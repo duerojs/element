@@ -24,7 +24,7 @@
             v-if="showClose"
             @click="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')"
             @keydown.enter="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')">
-            <i class="el-message-box__close el-icon-close"></i>
+            <i class="el-message-box__close d-icon-close"></i>
           </button>
         </div>
         <div class="el-message-box__content">
@@ -136,7 +136,7 @@
     computed: {
       icon() {
         const { type, iconClass } = this;
-        return iconClass || (type && typeMap[type] ? `el-icon-${ typeMap[type] }` : '');
+        return iconClass || (type && typeMap[type] ? `d-icon-${ typeMap[type] }` : '');
       },
 
       confirmButtonClasses() {

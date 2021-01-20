@@ -1,54 +1,54 @@
 @import "./common/var.scss";
 @import "./mixins/mixins.scss";
 
-[class*="el-col-"] {
+[class*="d-col-"] {
   float: left;
   box-sizing: border-box;
 }
 
-.el-col-0 {
+.d-col-0 {
   display: none;
 }
 
 @for $i from 0 through 24 {
-  .el-col-#{$i} {
+  .d-col-#{$i} {
     width: (1 / 24 * $i * 100) * 1%;
   }
 
-  .el-col-offset-#{$i} {
+  .d-col-offset-#{$i} {
     margin-left: (1 / 24 * $i * 100) * 1%;
   }
 
-  .el-col-pull-#{$i} {
+  .d-col-pull-#{$i} {
     position: relative;
     right: (1 / 24 * $i * 100) * 1%;
   }
 
-  .el-col-push-#{$i} {
+  .d-col-push-#{$i} {
     position: relative;
     left: (1 / 24 * $i * 100) * 1%;
   }
 }
 
 @include res(xs) {
-  .el-col-xs-0 {
+  .d-col-xs-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-xs-#{$i} {
+    .d-col-xs-#{$i} {
       width: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xs-offset-#{$i} {
+    .d-col-xs-offset-#{$i} {
       margin-left: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xs-pull-#{$i} {
+    .d-col-xs-pull-#{$i} {
       position: relative;
       right: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xs-push-#{$i} {
+    .d-col-xs-push-#{$i} {
       position: relative;
       left: (1 / 24 * $i * 100) * 1%;
     }
@@ -56,24 +56,24 @@
 }
 
 @include res(sm) {
-  .el-col-sm-0 {
+  .d-col-sm-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-sm-#{$i} {
+    .d-col-sm-#{$i} {
       width: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-sm-offset-#{$i} {
+    .d-col-sm-offset-#{$i} {
       margin-left: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-sm-pull-#{$i} {
+    .d-col-sm-pull-#{$i} {
       position: relative;
       right: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-sm-push-#{$i} {
+    .d-col-sm-push-#{$i} {
       position: relative;
       left: (1 / 24 * $i * 100) * 1%;
     }
@@ -81,24 +81,24 @@
 }
 
 @include res(md) {
-  .el-col-md-0 {
+  .d-col-md-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-md-#{$i} {
+    .d-col-md-#{$i} {
       width: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-md-offset-#{$i} {
+    .d-col-md-offset-#{$i} {
       margin-left: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-md-pull-#{$i} {
+    .d-col-md-pull-#{$i} {
       position: relative;
       right: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-md-push-#{$i} {
+    .d-col-md-push-#{$i} {
       position: relative;
       left: (1 / 24 * $i * 100) * 1%;
     }
@@ -106,24 +106,24 @@
 }
 
 @include res(lg) {
-  .el-col-lg-0 {
+  .d-col-lg-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-lg-#{$i} {
+    .d-col-lg-#{$i} {
       width: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-lg-offset-#{$i} {
+    .d-col-lg-offset-#{$i} {
       margin-left: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-lg-pull-#{$i} {
+    .d-col-lg-pull-#{$i} {
       position: relative;
       right: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-lg-push-#{$i} {
+    .d-col-lg-push-#{$i} {
       position: relative;
       left: (1 / 24 * $i * 100) * 1%;
     }
@@ -131,24 +131,24 @@
 }
 
 @include res(xl) {
-  .el-col-xl-0 {
+  .d-col-xl-0 {
     display: none;
   }
   @for $i from 0 through 24 {
-    .el-col-xl-#{$i} {
+    .d-col-xl-#{$i} {
       width: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xl-offset-#{$i} {
+    .d-col-xl-offset-#{$i} {
       margin-left: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xl-pull-#{$i} {
+    .d-col-xl-pull-#{$i} {
       position: relative;
       right: (1 / 24 * $i * 100) * 1%;
     }
 
-    .el-col-xl-push-#{$i} {
+    .d-col-xl-push-#{$i} {
       position: relative;
       left: (1 / 24 * $i * 100) * 1%;
     }

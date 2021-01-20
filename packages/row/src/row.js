@@ -1,7 +1,7 @@
 export default {
-  name: 'ElRow',
+  name: 'DRow',
 
-  componentName: 'ElRow',
+  componentName: 'DRow',
 
   props: {
     tag: {
@@ -36,10 +36,10 @@ export default {
   render(h) {
     return h(this.tag, {
       class: [
-        'el-row',
+        'd-row',
         this.justify !== 'start' ? `is-justify-${this.justify}` : '',
         this.align !== 'top' ? `is-align-${this.align}` : '',
-        { 'el-row--flex': this.type === 'flex' }
+        { 'd-row--flex': this.type === 'flex' }
       ],
       style: this.style
     }, this.$slots.default);

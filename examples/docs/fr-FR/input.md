@@ -104,12 +104,12 @@ Ajoutez une icône pour indiquer le type d'input.
   <span class="demo-input-label">Avec les attributs</span>
   <el-input
     placeholder="Entrez une date"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input1">
   </el-input>
   <el-input
     placeholder="Entrez du texte"
-    prefix-icon="el-icon-search"
+    prefix-icon="d-icon-search"
     v-model="input2">
   </el-input>
 </div>
@@ -118,12 +118,12 @@ Ajoutez une icône pour indiquer le type d'input.
   <el-input
     placeholder="Entrez une date"
     v-model="input3">
-    <i slot="suffix" class="el-input__icon el-icon-date"></i>
+    <i slot="suffix" class="el-input__icon d-icon-date"></i>
   </el-input>
   <el-input
     placeholder="Entrez du texte"
     v-model="input4">
-    <i slot="prefix" class="el-input__icon el-icon-search"></i>
+    <i slot="prefix" class="el-input__icon d-icon-search"></i>
   </el-input>
 </div>
 
@@ -233,7 +233,7 @@ Ajouter un élément avant ou après l'input, généralement du texte ou un bout
       <el-option label="Num. Commande" value="2"></el-option>
       <el-option label="Tel" value="3"></el-option>
     </el-select>
-    <el-button slot="append" icon="el-icon-search"></el-button>
+    <el-button slot="append" icon="d-icon-search"></el-button>
   </el-input>
 </div>
 
@@ -387,7 +387,7 @@ Vous pouvez personnaliser la manière dont les suggestions sont affichées.
   placeholder="Entrez quelque chose"
   @select="handleSelect">
   <i
-    class="el-icon-edit el-input__icon"
+    class="d-icon-edit el-input__icon"
     slot="suffix"
     @click="handleIconClick">
   </i>

@@ -64,12 +64,12 @@
       <el-button type="danger" round>Danger</el-button>
     </el-row>
     <el-row class="demo-line">
-      <el-button icon="el-icon-search" circle></el-button>
-      <el-button type="primary" icon="el-icon-edit" circle></el-button>
-      <el-button type="success" icon="el-icon-check" circle></el-button>
-      <el-button type="info" icon="el-icon-message" circle></el-button>
-      <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-      <el-button type="danger" icon="el-icon-delete" circle></el-button>
+      <el-button icon="d-icon-search" circle></el-button>
+      <el-button type="primary" icon="d-icon-edit" circle></el-button>
+      <el-button type="success" icon="d-icon-check" circle></el-button>
+      <el-button type="info" icon="d-icon-message" circle></el-button>
+      <el-button type="warning" icon="d-icon-star-off" circle></el-button>
+      <el-button type="danger" icon="d-icon-delete" circle></el-button>
     </el-row>
     <el-row class="demo-line">
       <el-button>Default</el-button>
@@ -233,14 +233,14 @@
     </el-row>
     <h4>Message</h4>
     <el-row>
-      <div role="alert" class="demo-item el-message el-message--success el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-success"></i><p class="el-message__content">Congrats, this is a success message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--warning el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-warning"></i><p class="el-message__content">Warning, this is a warning message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--info el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-info"></i><p class="el-message__content">This is a message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--error is-closable el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><i class="el-message__closeBtn el-icon-close"></i></div>
+      <div role="alert" class="demo-item el-message el-message--success el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon d-icon-success"></i><p class="el-message__content">Congrats, this is a success message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--warning el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon d-icon-warning"></i><p class="el-message__content">Warning, this is a warning message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--info el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon d-icon-info"></i><p class="el-message__content">This is a message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--error is-closable el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon d-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><i class="el-message__closeBtn d-icon-close"></i></div>
     </el-row>
     <h4>MessageBox</h4>
     <el-row>
-      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close el-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="el-button el-button--default el-button--small"><!----><!----><span>
+      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close d-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status d-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="el-button el-button--default el-button--small"><!----><!----><span>
           Cancel
         </span></button><button type="button" class="el-button el-button--default el-button--small el-button--primary "><!----><!----><span>
           OK
@@ -248,7 +248,7 @@
     </el-row>
     <h4>Notification</h4>
     <el-row>
-      <div role="alert" class="el-notification right" style="position: relative; left: 0;"><!----><div class="el-notification__group"><span class="el-notification__title">Notification</span><div class="el-notification__content"><div>This is a message </div></div><div class="el-notification__closeBtn el-icon-close"></div></div></div>
+      <div role="alert" class="el-notification right" style="position: relative; left: 0;"><!----><div class="el-notification__group"><span class="el-notification__title">Notification</span><div class="el-notification__content"><div>This is a message </div></div><div class="el-notification__closeBtn d-icon-close"></div></div></div>
     </el-row>
     <h4>Menu</h4>
     <el-row>
@@ -277,7 +277,7 @@
       >
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <i class="d-icon-location"></i>
             <span>Navigator One</span>
           </template>
           <el-menu-item-group title="Group One">
@@ -293,15 +293,15 @@
           </el-submenu>
         </el-submenu>
         <el-menu-item index="2">
-          <i class="el-icon-menu"></i>
+          <i class="d-icon-menu"></i>
           <span>Navigator Two</span>
         </el-menu-item>
         <el-menu-item index="3" disabled>
-          <i class="el-icon-document"></i>
+          <i class="d-icon-document"></i>
           <span>Navigator Three</span>
         </el-menu-item>
         <el-menu-item index="4">
-          <i class="el-icon-setting"></i>
+          <i class="d-icon-setting"></i>
           <span>Navigator Four</span>
         </el-menu-item>
       </el-menu>
@@ -323,7 +323,7 @@
     </el-row>
     <h4>Dialog</h4>
     <el-row>
-      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
+      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close d-icon d-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="el-button el-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="el-button el-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
     </el-row>
     <h4>Tooltip</h4>
     <el-row>
@@ -365,7 +365,7 @@
     </el-row>
     <h4>Avatar</h4>
     <el-row class="demo-line avatar-demo">
-      <el-avatar icon="el-icon-user-solid"/>
+      <el-avatar icon="d-icon-user-solid"/>
       <el-avatar> avatar </el-avatar>
       <el-avatar shape="square" fit="contain" :src="avatarData.url"></el-avatar>
       <el-avatar size="large"> large </el-avatar>

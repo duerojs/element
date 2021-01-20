@@ -58,7 +58,7 @@
   :on-success="handleAvatarSuccess"
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
-  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  <i v-else class="d-icon-plus avatar-uploader-icon"></i>
 </el-upload>
 
 <style>
@@ -127,7 +127,7 @@
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
-  <i class="el-icon-plus"></i>
+  <i class="d-icon-plus"></i>
 </el-upload>
 <el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
@@ -164,7 +164,7 @@
   action="#"
   list-type="picture-card"
   :auto-upload="false">
-    <i slot="default" class="el-icon-plus"></i>
+    <i slot="default" class="d-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
         class="el-upload-list__item-thumbnail"
@@ -175,21 +175,21 @@
           class="el-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
-          <i class="el-icon-zoom-in"></i>
+          <i class="d-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleDownload(file)"
         >
-          <i class="el-icon-download"></i>
+          <i class="d-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleRemove(file)"
         >
-          <i class="el-icon-delete"></i>
+          <i class="d-icon-delete"></i>
         </span>
       </span>
     </div>
@@ -303,7 +303,7 @@
   drag
   action="https://jsonplaceholder.typicode.com/posts/"
   multiple>
-  <i class="el-icon-upload"></i>
+  <i class="d-icon-upload"></i>
   <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
   <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
 </el-upload>

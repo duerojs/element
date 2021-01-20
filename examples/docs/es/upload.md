@@ -54,7 +54,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
   :on-success="handleAvatarSuccess"
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
-  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  <i v-else class="d-icon-plus avatar-uploader-icon"></i>
 </el-upload>
 
 <style>
@@ -123,7 +123,7 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
-  <i class="el-icon-plus"></i>
+  <i class="d-icon-plus"></i>
 </el-upload>
 <el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
@@ -160,7 +160,7 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
   action="#"
   list-type="picture-card"
   :auto-upload="false">
-    <i slot="default" class="el-icon-plus"></i>
+    <i slot="default" class="d-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
         class="el-upload-list__item-thumbnail"
@@ -171,21 +171,21 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
           class="el-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
-          <i class="el-icon-zoom-in"></i>
+          <i class="d-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleDownload(file)"
         >
-          <i class="el-icon-download"></i>
+          <i class="d-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleRemove(file)"
         >
-          <i class="el-icon-delete"></i>
+          <i class="d-icon-delete"></i>
         </span>
       </span>
     </div>
@@ -304,7 +304,7 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
   :on-remove="handleRemove"
   :file-list="fileList"
   multiple>
-  <i class="el-icon-upload"></i>
+  <i class="d-icon-upload"></i>
   <div class="el-upload__text">Suelta tu archivo aquí o <em>haz clic para cargar</em></div>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>

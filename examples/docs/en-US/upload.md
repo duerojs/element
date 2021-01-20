@@ -58,7 +58,7 @@ Use `before-upload` hook to limit the upload file format and size.
   :on-success="handleAvatarSuccess"
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
-  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  <i v-else class="d-icon-plus avatar-uploader-icon"></i>
 </el-upload>
 
 <style>
@@ -127,7 +127,7 @@ Use `list-type` to change the fileList style.
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
-  <i class="el-icon-plus"></i>
+  <i class="d-icon-plus"></i>
 </el-upload>
 <el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
@@ -164,7 +164,7 @@ Use `scoped-slot` to change default thumbnail template.
   action="#"
   list-type="picture-card"
   :auto-upload="false">
-    <i slot="default" class="el-icon-plus"></i>
+    <i slot="default" class="d-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
         class="el-upload-list__item-thumbnail"
@@ -175,21 +175,21 @@ Use `scoped-slot` to change default thumbnail template.
           class="el-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
-          <i class="el-icon-zoom-in"></i>
+          <i class="d-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleDownload(file)"
         >
-          <i class="el-icon-download"></i>
+          <i class="d-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleRemove(file)"
         >
-          <i class="el-icon-delete"></i>
+          <i class="d-icon-delete"></i>
         </span>
       </span>
     </div>
@@ -308,7 +308,7 @@ You can drag your file to a certain area to upload it.
   :on-remove="handleRemove"
   :file-list="fileList"
   multiple>
-  <i class="el-icon-upload"></i>
+  <i class="d-icon-upload"></i>
   <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
   <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
 </el-upload>

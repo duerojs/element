@@ -1099,7 +1099,7 @@ Vous pouvez customiser le contenu des colonnes afin de pouvoir utiliser d'autres
       label="Date"
       width="180">
       <template slot-scope="scope">
-        <i class="el-icon-time"></i>
+        <i class="d-icon-time"></i>
         <span style="margin-left: 10px">{{ scope.row.date }}</span>
       </template>
     </el-table-column>

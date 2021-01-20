@@ -73,7 +73,7 @@ Además de las características nativas de img, soporte de carga perezosa, marca
     <span class="demonstration">Custom</span>
     <el-image>
       <div slot="error" class="image-slot">
-        <i class="el-icon-picture-outline"></i>
+        <i class="d-icon-picture-outline"></i>
       </div>
     </el-image>
   </div>

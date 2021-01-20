@@ -103,12 +103,12 @@ export default {
   属性方式：
   <el-input
     placeholder="请选择日期"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input1">
   </el-input>
   <el-input
     placeholder="请输入内容"
-    prefix-icon="el-icon-search"
+    prefix-icon="d-icon-search"
     v-model="input2">
   </el-input>
 </div>
@@ -117,12 +117,12 @@ export default {
   <el-input
     placeholder="请选择日期"
     v-model="input3">
-    <i slot="suffix" class="el-input__icon el-icon-date"></i>
+    <i slot="suffix" class="el-input__icon d-icon-date"></i>
   </el-input>
   <el-input
     placeholder="请输入内容"
     v-model="input4">
-    <i slot="prefix" class="el-input__icon el-icon-search"></i>
+    <i slot="prefix" class="el-input__icon d-icon-search"></i>
   </el-input>
 </div>
 
@@ -222,7 +222,7 @@ export default {
       <el-option label="订单号" value="2"></el-option>
       <el-option label="用户电话" value="3"></el-option>
     </el-select>
-    <el-button slot="append" icon="el-icon-search"></el-button>
+    <el-button slot="append" icon="d-icon-search"></el-button>
   </el-input>
 </div>
 <style>
@@ -255,25 +255,25 @@ export default {
 <div class="demo-input-size">
   <el-input
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input1">
   </el-input>
   <el-input
     size="medium"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input2">
   </el-input>
   <el-input
     size="small"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input3">
   </el-input>
   <el-input
     size="mini"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="d-icon-date"
     v-model="input4">
   </el-input>
 </div>
@@ -420,7 +420,7 @@ export default {
   placeholder="请输入内容"
   @select="handleSelect">
   <i
-    class="el-icon-edit el-input__icon"
+    class="d-icon-edit el-input__icon"
     slot="suffix"
     @click="handleIconClick">
   </i>

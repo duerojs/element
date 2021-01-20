@@ -59,8 +59,8 @@ Link with icon
 
 ```html
 <div>
-  <el-link icon="el-icon-edit">Edit</el-link>
-  <el-link>Check<i class="el-icon-view el-icon--right"></i> </el-link>
+  <el-link icon="d-icon-edit">Edit</el-link>
+  <el-link>Check<i class="d-icon-view d-icon--right"></i> </el-link>
 </div>
 ```
 

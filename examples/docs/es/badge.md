@@ -24,7 +24,7 @@ Muestra la cantidad de mensajes nuevos.
 
 <el-dropdown trigger="click">
   <span class="el-dropdown-link">
-    Click Me<i class="el-icon-caret-bottom el-icon--right"></i>
+    Click Me<i class="d-icon-caret-bottom d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item class="clearfix">
@@ -102,7 +102,7 @@ Puede utilizar un punto rojo para marcar contenido que debe ser notado.
 ```html
 <el-badge is-dot class="item">query</el-badge>
 <el-badge is-dot class="item">
-  <el-button class="share-button" icon="el-icon-share" type="primary"></el-button>
+  <el-button class="share-button" icon="d-icon-share" type="primary"></el-button>
 </el-badge>
 
 <style>

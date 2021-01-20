@@ -50,8 +50,8 @@ Puede utilizar el atributo `color` para establecer el color de la barra de progr
 <el-progress :percentage="percentage" :color="customColors"></el-progress>
 <div>
   <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
+    <el-button icon="d-icon-minus" @click="decrease"></el-button>
+    <el-button icon="d-icon-plus" @click="increase"></el-button>
   </el-button-group>
 </div>
 
@@ -119,8 +119,8 @@ Puede utilizar el atributo `color` para establecer el color de la barra de progr
 
 <div>
   <el-button-group>
-    <el-button icon="el-icon-minus" @click="decrease"></el-button>
-    <el-button icon="el-icon-plus" @click="increase"></el-button>
+    <el-button icon="d-icon-minus" @click="decrease"></el-button>
+    <el-button icon="d-icon-plus" @click="increase"></el-button>
   </el-button-group>
 </div>
 

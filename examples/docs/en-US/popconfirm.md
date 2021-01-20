@@ -26,7 +26,7 @@ You can customise Popconfirm like:
 <el-popconfirm
   confirm-button-text='OK'
   cancel-button-text='No, Thanks'
-  icon="el-icon-info"
+  icon="d-icon-info"
   icon-color="red"
   title="Are you sure to delete this?"
 >
@@ -44,7 +44,7 @@ You can customise Popconfirm like:
 |  cancel-button-text              | Cancel button text | String | — | — |
 |  confirm-button-type              | Confirm button type | String | — | Primary |
 |  cancel-button-type              | Cancel button type | String | — | Text |
-|  icon              | Icon | String | — | el-icon-question |
+|  icon              | Icon | String | — | d-icon-question |
 |  icon-color              | Icon color | String | — | #f90 |
 |  hide-icon              | is hide Icon | Boolean | — | false |
 

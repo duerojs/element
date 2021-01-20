@@ -85,7 +85,7 @@ Menu vertical avec sous-menus.
       @close="handleClose">
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="d-icon-location"></i>
           <span>Navigateur Un</span>
         </template>
         <el-menu-item-group title="Group Un">
@@ -101,15 +101,15 @@ Menu vertical avec sous-menus.
         </el-submenu>
       </el-submenu>
       <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="d-icon-menu"></i>
         <span>Navigateur Deux</span>
       </el-menu-item>
       <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="d-icon-document"></i>
         <span>Navigateur Trois</span>
       </el-menu-item>
       <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="d-icon-setting"></i>
         <span>Navigateur Quatre</span>
       </el-menu-item>
     </el-menu>
@@ -126,7 +126,7 @@ Menu vertical avec sous-menus.
       active-text-color="#ffd04b">
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="d-icon-location"></i>
           <span>Navigateur Un</span>
         </template>
         <el-menu-item-group title="Group Un">
@@ -142,15 +142,15 @@ Menu vertical avec sous-menus.
         </el-submenu>
       </el-submenu>
       <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="d-icon-menu"></i>
         <span>Navigateur Deux</span>
       </el-menu-item>
       <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="d-icon-document"></i>
         <span>Navigateur Trois</span>
       </el-menu-item>
       <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="d-icon-setting"></i>
         <span>Navigateur Quatre</span>
       </el-menu-item>
     </el-menu>
@@ -185,7 +185,7 @@ Le menu vertical peut être réduit.
 <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
   <el-submenu index="1">
     <template slot="title">
-      <i class="el-icon-location"></i>
+      <i class="d-icon-location"></i>
       <span slot="title">Navigateur Un</span>
     </template>
     <el-menu-item-group>
@@ -202,15 +202,15 @@ Le menu vertical peut être réduit.
     </el-submenu>
   </el-submenu>
   <el-menu-item index="2">
-    <i class="el-icon-menu"></i>
+    <i class="d-icon-menu"></i>
     <span slot="title">Navigateur Deux</span>
   </el-menu-item>
   <el-menu-item index="3" disabled>
-    <i class="el-icon-document"></i>
+    <i class="d-icon-document"></i>
     <span slot="title">Navigateur Trois</span>
   </el-menu-item>
   <el-menu-item index="4">
-    <i class="el-icon-setting"></i>
+    <i class="d-icon-setting"></i>
     <span slot="title">Navigateur Quatre</span>
   </el-menu-item>
 </el-menu>

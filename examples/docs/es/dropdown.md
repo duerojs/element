@@ -9,7 +9,7 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
 ```html
 <el-dropdown>
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -25,7 +25,7 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -43,7 +43,7 @@ Utilizando un botón para activar la lista desplegable.
 ```html
 <el-dropdown>
   <el-button type="primary">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </el-button>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -71,7 +71,7 @@ Utilizando un botón para activar la lista desplegable.
   .el-dropdown + .el-dropdown {
     margin-left: 15px;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -100,14 +100,14 @@ Haga clic en el elemento detonante o sobre él.
     <span class="demonstration">hover to trigger</span>
     <el-dropdown>
       <span class="el-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-col>
@@ -115,14 +115,14 @@ Haga clic en el elemento detonante o sobre él.
     <span class="demonstration">click to trigger</span>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-col>
@@ -133,7 +133,7 @@ Haga clic en el elemento detonante o sobre él.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
   .demonstration {
@@ -155,7 +155,7 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
 ```html
 <el-dropdown :hide-on-click="false">
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -171,7 +171,7 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -186,7 +186,7 @@ Al hacer clic en cada elemento desplegable se detona un evento cuyo parámetro e
 ```html
 <el-dropdown @command="handleCommand">
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item command="a">Action 1</el-dropdown-item>
@@ -202,7 +202,7 @@ Al hacer clic en cada elemento desplegable se detona un evento cuyo parámetro e
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>

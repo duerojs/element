@@ -8,7 +8,7 @@
         class="plus-button" 
         size="mini" 
         round 
-        icon="el-icon-plus"
+        icon="d-icon-plus"
         @click.stop="onAddShadow"
       >
       </el-button>
@@ -64,7 +64,7 @@
         <el-button 
           size="mini" 
           round 
-          icon="el-icon-minus"
+          icon="d-icon-minus"
           @click.stop="val => onMinusShadow(key)"
         ></el-button>
       </div>

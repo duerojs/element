@@ -35,12 +35,12 @@ Bouton communément utilisé.
 </el-row>
 
 <el-row>
-  <el-button icon="el-icon-search" circle></el-button>
-  <el-button type="primary" icon="el-icon-edit" circle></el-button>
-  <el-button type="success" icon="el-icon-check" circle></el-button>
-  <el-button type="info" icon="el-icon-message" circle></el-button>
-  <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-  <el-button type="danger" icon="el-icon-delete" circle></el-button>
+  <el-button icon="d-icon-search" circle></el-button>
+  <el-button type="primary" icon="d-icon-edit" circle></el-button>
+  <el-button type="success" icon="d-icon-check" circle></el-button>
+  <el-button type="info" icon="d-icon-message" circle></el-button>
+  <el-button type="warning" icon="d-icon-star-off" circle></el-button>
+  <el-button type="danger" icon="d-icon-delete" circle></el-button>
 </el-row>
 ```
 :::
@@ -90,11 +90,11 @@ Utilisez des icônes pour ajouter plus de sens aux boutons. Vous pouvez utiliser
 :::demo Utilisez l'attribut `icon` pour ajouter une icône. Vous pourrez trouver la liste des icônes dans le composant Icon d'Element. Ajouter des icônes sur le coté droit du texte est possible grâce à la balise `<i>`. Des icônes personnalisées peuvent également être utilisées.
 
 ```html
-<el-button type="primary" icon="el-icon-edit"></el-button>
-<el-button type="primary" icon="el-icon-share"></el-button>
-<el-button type="primary" icon="el-icon-delete"></el-button>
-<el-button type="primary" icon="el-icon-search">Recherche</el-button>
-<el-button type="primary">Upload<i class="el-icon-upload el-icon-right"></i></el-button>
+<el-button type="primary" icon="d-icon-edit"></el-button>
+<el-button type="primary" icon="d-icon-share"></el-button>
+<el-button type="primary" icon="d-icon-delete"></el-button>
+<el-button type="primary" icon="d-icon-search">Recherche</el-button>
+<el-button type="primary">Upload<i class="d-icon-upload d-icon-right"></i></el-button>
 ```
 :::
 
@@ -106,13 +106,13 @@ Affiche un groupe de bouton. Peut être utilisé pour grouper un ensemble d'opé
 
 ```html
 <el-button-group>
-  <el-button type="primary" icon="el-icon-arrow-left">Page précédente</el-button>
-  <el-button type="primary">Page suivante<i class="el-icon-arrow-right el-icon-right"></i></el-button>
+  <el-button type="primary" icon="d-icon-arrow-left">Page précédente</el-button>
+  <el-button type="primary">Page suivante<i class="d-icon-arrow-right d-icon-right"></i></el-button>
 </el-button-group>
 <el-button-group>
-  <el-button type="primary" icon="el-icon-edit"></el-button>
-  <el-button type="primary" icon="el-icon-share"></el-button>
-  <el-button type="primary" icon="el-icon-delete"></el-button>
+  <el-button type="primary" icon="d-icon-edit"></el-button>
+  <el-button type="primary" icon="d-icon-share"></el-button>
+  <el-button type="primary" icon="d-icon-delete"></el-button>
 </el-button-group>
 ```
 :::

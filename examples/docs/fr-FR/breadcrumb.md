@@ -22,7 +22,7 @@ Affiche le chemin de la page actuelle, afin de pouvoir naviguer plus facilement.
 :::demo Configurez `separator-class` pour utiliser `iconfont` en tant que séparateur. Cela remplacera `separator`.
 
 ```html
-<el-breadcrumb separator-class="el-icon-arrow-right">
+<el-breadcrumb separator-class="d-icon-arrow-right">
   <el-breadcrumb-item :to="{ path: '/' }">Accueil</el-breadcrumb-item>
   <el-breadcrumb-item>Gestion promotions</el-breadcrumb-item>
   <el-breadcrumb-item>Liste promotions</el-breadcrumb-item>

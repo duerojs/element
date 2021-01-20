@@ -27,7 +27,7 @@ Se puede personalizar Popconfirm así:
 <el-popconfirm
   confirm-button-text='OK'
   cancel-button-text='No, Thanks'
-  icon="el-icon-info"
+  icon="d-icon-info"
   icon-color="red"
   title="Are you sure to delete this?"
 >
@@ -45,7 +45,7 @@ Se puede personalizar Popconfirm así:
 |  cancel-button-text              | Texto del botón de cancelación | String | — | — |
 |  confirm-button-type              | Tipo del botón de confirmación | String | — | Primary |
 |  cancel-button-type              | Tipo del botón de cancelación | String | — | Text |
-|  icon              | Icono | String | — | el-icon-question |
+|  icon              | Icono | String | — | d-icon-question |
 |  icon-color              | Color icono | String | — | #f90 |
 |  hide-icon              | ¿Es un icono oculto? | Boolean | — | false |
 

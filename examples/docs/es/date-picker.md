@@ -454,8 +454,8 @@ Al seleccionar un intervalo de fechas, puede asignar la hora para la fecha de in
 | value-format      | opcional, formato del valor enlazado. Si no esta especificado, el valor enlazado será un objeto Date. | string            | ver [date formats](#/es/component/date-picker#date-formats) | —                    |
 | name              | igual que `name` en el input nativo      | string            | —                                        | —                    |
 | unlink-panels     | desvincular los dos paneles de fecha en el range-picker | boolean           | —                                        | false                |
-| prefix-icon       | Clase personalizada para el icono prefijado | string            | —                                        | el-icon-date         |
-| clear-icon        | Clase personalizada para el icono `clear` | string            | —                                        | el-icon-circle-close |
+| prefix-icon       | Clase personalizada para el icono prefijado | string            | —                                        | d-icon-date         |
+| clear-icon        | Clase personalizada para el icono `clear` | string            | —                                        | d-icon-circle-close |
 
 ### Opciones del Picker
 | Atributo       | Descripción                                                  | Tipo                           | Valores aceptados | Por defecto |

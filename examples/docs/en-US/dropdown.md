@@ -9,7 +9,7 @@ Hover on the dropdown menu to unfold it for more actions.
 ```html
 <el-dropdown>
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -25,7 +25,7 @@ Hover on the dropdown menu to unfold it for more actions.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -42,7 +42,7 @@ Use the button to trigger the dropdown list.
 ```html
 <el-dropdown>
   <el-button type="primary">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </el-button>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -70,7 +70,7 @@ Use the button to trigger the dropdown list.
   .el-dropdown + .el-dropdown {
     margin-left: 15px;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -99,14 +99,14 @@ Click the triggering element or hover on it.
     <span class="demonstration">hover to trigger</span>
     <el-dropdown>
       <span class="el-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-col>
@@ -114,14 +114,14 @@ Click the triggering element or hover on it.
     <span class="demonstration">click to trigger</span>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
+        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-col>
@@ -132,7 +132,7 @@ Click the triggering element or hover on it.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
   .demonstration {
@@ -153,7 +153,7 @@ Use `hide-on-click` to define if menu closes on clicking.
 ```html
 <el-dropdown :hide-on-click="false">
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>Action 1</el-dropdown-item>
@@ -169,7 +169,7 @@ Use `hide-on-click` to define if menu closes on clicking.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -184,7 +184,7 @@ Clicking each dropdown item fires an event whose parameter is assigned by each i
 ```html
 <el-dropdown @command="handleCommand">
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item command="a">Action 1</el-dropdown-item>
@@ -200,7 +200,7 @@ Clicking each dropdown item fires an event whose parameter is assigned by each i
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .d-icon-arrow-down {
     font-size: 12px;
   }
 </style>

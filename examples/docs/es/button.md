@@ -35,12 +35,12 @@ Botones comúnmente usados.
 </el-row>
 
 <el-row>
-  <el-button icon="el-icon-search" circle></el-button>
-  <el-button type="primary" icon="el-icon-edit" circle></el-button>
-  <el-button type="success" icon="el-icon-check" circle></el-button>
-  <el-button type="info" icon="el-icon-message" circle></el-button>
-  <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-  <el-button type="danger" icon="el-icon-delete" circle></el-button>
+  <el-button icon="d-icon-search" circle></el-button>
+  <el-button type="primary" icon="d-icon-edit" circle></el-button>
+  <el-button type="success" icon="d-icon-check" circle></el-button>
+  <el-button type="info" icon="d-icon-message" circle></el-button>
+  <el-button type="warning" icon="d-icon-star-off" circle></el-button>
+  <el-button type="danger" icon="d-icon-delete" circle></el-button>
 </el-row>
 ```
 :::
@@ -90,11 +90,11 @@ Use iconos para darle mayor significado a Button. Se puede usar simplemente un i
 :::demo Use el atributo `icon` para agregar un icono. Puede encontrar el listado de iconos en el componente de iconos. Agregar iconos a la derecha del texto se puede conseguir con un tag `<i>`. También se pueden usar iconos personalizados.
 
 ```html
-<el-button type="primary" icon="el-icon-edit"></el-button>
-<el-button type="primary" icon="el-icon-share"></el-button>
-<el-button type="primary" icon="el-icon-delete"></el-button>
-<el-button type="primary" icon="el-icon-search">Search</el-button>
-<el-button type="primary">Upload<i class="el-icon-upload el-icon-right"></i></el-button>
+<el-button type="primary" icon="d-icon-edit"></el-button>
+<el-button type="primary" icon="d-icon-share"></el-button>
+<el-button type="primary" icon="d-icon-delete"></el-button>
+<el-button type="primary" icon="d-icon-search">Search</el-button>
+<el-button type="primary">Upload<i class="d-icon-upload d-icon-right"></i></el-button>
 ```
 :::
 
@@ -106,13 +106,13 @@ Mostrar un grupo de botones puede ser usado para mostrar un grupo de operaciones
 
 ```html
 <el-button-group>
-  <el-button type="primary" icon="el-icon-arrow-left">Previous Page</el-button>
-  <el-button type="primary">Next Page<i class="el-icon-arrow-right el-icon-right"></i></el-button>
+  <el-button type="primary" icon="d-icon-arrow-left">Previous Page</el-button>
+  <el-button type="primary">Next Page<i class="d-icon-arrow-right d-icon-right"></i></el-button>
 </el-button-group>
 <el-button-group>
-  <el-button type="primary" icon="el-icon-edit"></el-button>
-  <el-button type="primary" icon="el-icon-share"></el-button>
-  <el-button type="primary" icon="el-icon-delete"></el-button>
+  <el-button type="primary" icon="d-icon-edit"></el-button>
+  <el-button type="primary" icon="d-icon-share"></el-button>
+  <el-button type="primary" icon="d-icon-delete"></el-button>
 </el-button-group>
 ```
 :::

@@ -87,9 +87,9 @@ Une grande variété d'icônes peut être utilisée dans la barre d'étapes.
 
 ```html
 <el-steps :active="1">
-  <el-step title="Étape 1" icon="el-icon-edit"></el-step>
-  <el-step title="Étape 2" icon="el-icon-upload"></el-step>
-  <el-step title="Étape 3" icon="el-icon-picture"></el-step>
+  <el-step title="Étape 1" icon="d-icon-edit"></el-step>
+  <el-step title="Étape 2" icon="d-icon-upload"></el-step>
+  <el-step title="Étape 3" icon="d-icon-picture"></el-step>
 </el-steps>
 ```
 :::
@@ -119,9 +119,9 @@ La barre peut être simplifiée de manière à ce que `align-center`, `descripti
 ```html
 
 <el-steps :space="200" :active="1" simple>
-  <el-step title="Étape 1" icon="el-icon-edit"></el-step>
-  <el-step title="Étape 2" icon="el-icon-upload"></el-step>
-  <el-step title="Étape 3" icon="el-icon-picture"></el-step>
+  <el-step title="Étape 1" icon="d-icon-edit"></el-step>
+  <el-step title="Étape 2" icon="d-icon-upload"></el-step>
+  <el-step title="Étape 3" icon="d-icon-picture"></el-step>
 </el-steps>
 
 <el-steps :active="1" finish-status="success" simple style="margin-top: 20px">

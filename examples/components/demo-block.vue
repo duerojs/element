@@ -264,7 +264,7 @@
       },
 
       iconClass() {
-        return this.isExpanded ? 'el-icon-caret-top' : 'el-icon-caret-bottom';
+        return this.isExpanded ? 'd-icon-caret-top' : 'd-icon-caret-bottom';
       },
 
       controlText() {

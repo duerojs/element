@@ -220,7 +220,7 @@
             <span class="right" v-if="isOfficial">by {{config.author}}</span>
             <span class="right more" v-else>
               <el-dropdown @command="actionClick">
-                <i class="el-icon-more"></i>
+                <i class="d-icon-more"></i>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</el-dropdown-item>
                   <el-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</el-dropdown-item>

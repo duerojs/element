@@ -53,12 +53,12 @@ describe('MessageBox', () => {
   it('custom icon', done => {
     MessageBox({
       type: 'warning',
-      iconClass: 'el-icon-question',
+      iconClass: 'd-icon-question',
       message: '这是一段内容'
     });
     setTimeout(() => {
       const icon = document.querySelector('.el-message-box__status');
-      expect(icon.classList.contains('el-icon-question')).to.true;
+      expect(icon.classList.contains('d-icon-question')).to.true;
       done();
     }, 300);
   });

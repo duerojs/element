@@ -51,14 +51,14 @@ describe('Avatar', () => {
   it('icon avatar', () => {
     vm = createVue({
       template: `
-        <el-avatar icon="el-icon-user-solid">
+        <el-avatar icon="d-icon-user-solid">
         </el-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
     const iconELm = avatarElm.children[0];
     expect(avatarElm.classList.contains('el-avatar--icon')).to.be.true;
-    expect(iconELm.classList.contains('el-icon-user-solid')).to.be.true;
+    expect(iconELm.classList.contains('d-icon-user-solid')).to.be.true;
   });
 
   it('image avatar', () => {

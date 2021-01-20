@@ -185,7 +185,7 @@ describe('CascaderPanel', () => {
     expect(getMenus(el).length).to.equal(3);
     expect(getOptions(el, 0)[0].className).to.includes('in-active-path');
     expect(getOptions(el, 2)[0].className).to.includes('is-active');
-    expect(getOptions(el, 2)[0].querySelector('.el-icon-check')).to.exist;
+    expect(getOptions(el, 2)[0].querySelector('.d-icon-check')).to.exist;
   });
 
   it('disabled options', async() => {
@@ -273,7 +273,7 @@ describe('CascaderPanel', () => {
 
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('.el-icon-check')).to.exist;
+    expect(getOptions(el, 2)[0].querySelector('.d-icon-check')).to.exist;
 
     getOptions(el, 1)[1].click();
     await waitImmediate();
@@ -539,9 +539,9 @@ describe('CascaderPanel', () => {
     const firstOption = getOptions(el, 0)[0];
     firstOption.click();
     await waitImmediate();
-    expect(firstOption.querySelector('i').className).to.includes('el-icon-loading');
+    expect(firstOption.querySelector('i').className).to.includes('d-icon-loading');
     await wait(1000);
-    expect(firstOption.querySelector('i').className).to.includes('el-icon-arrow-right');
+    expect(firstOption.querySelector('i').className).to.includes('d-icon-arrow-right');
     expect(getMenus(el).length).to.equal(2);
     getOptions(el, 1)[0].click();
     await wait(1000);

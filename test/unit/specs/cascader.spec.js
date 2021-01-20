@@ -107,7 +107,7 @@ describe('Cascader', () => {
     await waitImmediate();
     expect(changeHandler.calledOnceWith(selectedValue)).to.be.true;
     expect(vm.value).to.deep.equal(selectedValue);
-    expect(checkedOption.querySelector('i.el-icon-check')).to.exist;
+    expect(checkedOption.querySelector('i.d-icon-check')).to.exist;
     expect(vm.$el.querySelector('input').value).to.equal('Zhejiang / Hangzhou / West Lake');
   });
 
@@ -139,7 +139,7 @@ describe('Cascader', () => {
     const el = vm.$el;
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('el-icon-check');
+    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('d-icon-check');
     expect(vm.$el.querySelector('input').value).to.equal('Zhejiang / Hangzhou / West Lake');
   });
 
@@ -162,7 +162,7 @@ describe('Cascader', () => {
     vm.value = selectedValue;
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('el-icon-check');
+    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('d-icon-check');
     expect(vm.$el.querySelector('input').value).to.equal('Zhejiang / Hangzhou / West Lake');
   });
 
@@ -185,7 +185,7 @@ describe('Cascader', () => {
     vm.options = options;
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('el-icon-check');
+    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('d-icon-check');
     expect(vm.$el.querySelector('input').value).to.equal('Zhejiang / Hangzhou / West Lake');
   });
 
@@ -233,7 +233,7 @@ describe('Cascader', () => {
     const el = vm.$el;
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('el-icon-check');
+    expect(getOptions(el, 2)[0].querySelector('i').className).to.includes('d-icon-check');
     expect(vm.$el.querySelector('input').value).to.equal('West Lake');
   });
 

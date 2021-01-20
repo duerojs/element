@@ -285,7 +285,7 @@ describe('Select', () => {
     vm.value = '选项1';
     select.inputHovering = true;
     setTimeout(() => {
-      const iconClear = vm.$el.querySelector('.el-input__icon.el-icon-circle-close');
+      const iconClear = vm.$el.querySelector('.el-input__icon.d-icon-circle-close');
       expect(iconClear).to.exist;
       iconClear.click();
       expect(vm.value).to.equal('');
@@ -342,7 +342,7 @@ describe('Select', () => {
               :key="item.value"
               :value="item.value">
             </el-option>
-            <i slot="prefix" class="el-input__icon el-icon-search"></i>
+            <i slot="prefix" class="el-input__icon d-icon-search"></i>
           </el-select>
         </div>
       `,
@@ -354,7 +354,7 @@ describe('Select', () => {
         };
       }
     });
-    expect(vm.$el.querySelector('.el-input__icon').classList.contains('el-icon-search')).to.be.true;
+    expect(vm.$el.querySelector('.el-input__icon').classList.contains('d-icon-search')).to.be.true;
   });
 
   it('custom el-option template', () => {

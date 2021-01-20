@@ -196,7 +196,7 @@ describe('Input', () => {
           <el-option label="订单号" value="2"></el-option>
           <el-option label="用户电话" value="3"></el-option>
         </el-select>
-        <d-button slot="append" icon="el-icon-search"></d-button>
+        <d-button slot="append" icon="d-icon-search"></d-button>
       </el-input>
       `,
       data() {

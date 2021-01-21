@@ -5,7 +5,7 @@
   import { addClass, removeClass, hasClass } from 'element-ui/src/utils/dom';
 
   export default {
-    name: 'ElMenu',
+    name: 'DMenu',
 
     render (h) {
       const component = (
@@ -14,9 +14,9 @@
           key={ +this.collapse }
           style={{ backgroundColor: this.backgroundColor || '' }}
           class={{
-            'el-menu--horizontal': this.mode === 'horizontal',
-            'el-menu--collapse': this.collapse,
-            "el-menu": true
+            'd-menu--horizontal': this.mode === 'horizontal',
+            'd-menu--collapse': this.collapse,
+            "d-menu": true
           }}
         >
           { this.$slots.default }
@@ -25,16 +25,16 @@
 
       if (this.collapseTransition) {
         return (
-          <el-menu-collapse-transition>
+          <d-menu-collapse-transition>
             { component }
-          </el-menu-collapse-transition>
+          </d-menu-collapse-transition>
         );
       } else {
         return component;
       }
     },
 
-    componentName: 'ElMenu',
+    componentName: 'DMenu',
 
     mixins: [emitter, Migrating],
 
@@ -45,7 +45,7 @@
     },
 
     components: {
-      'el-menu-collapse-transition': {
+      'd-menu-collapse-transition': {
         functional: true,
         render(createElement, context) {
           const data = {
@@ -58,28 +58,28 @@
               },
 
               enter(el) {
-                addClass(el, 'el-opacity-transition');
+                addClass(el, 'd-opacity-transition');
                 el.style.opacity = 1;
               },
 
               afterEnter(el) {
-                removeClass(el, 'el-opacity-transition');
+                removeClass(el, 'd-opacity-transition');
                 el.style.opacity = '';
               },
 
               beforeLeave(el) {
                 if (!el.dataset) el.dataset = {};
 
-                if (hasClass(el, 'el-menu--collapse')) {
-                  removeClass(el, 'el-menu--collapse');
+                if (hasClass(el, 'd-menu--collapse')) {
+                  removeClass(el, 'd-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  addClass(el, 'el-menu--collapse');
+                  addClass(el, 'd-menu--collapse');
                 } else {
-                  addClass(el, 'el-menu--collapse');
+                  addClass(el, 'd-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  removeClass(el, 'el-menu--collapse');
+                  removeClass(el, 'd-menu--collapse');
                 }
 
                 el.style.width = el.scrollWidth + 'px';

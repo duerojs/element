@@ -98,7 +98,7 @@ You can use Element's built-in transitions directly. Before that, please read th
 
 ### collapse
 
-For collapse effect, use the `el-collapse-transition` component.
+For collapse effect, use the `d-collapse-transition` component.
 
 :::demo
 ```html
@@ -107,12 +107,12 @@ For collapse effect, use the `el-collapse-transition` component.
     <d-button @click="show3 = !show3">Click Me</d-button>
 
     <div style="margin-top: 20px; height: 200px;">
-      <el-collapse-transition>
+      <d-collapse-transition>
         <div v-show="show3">
-          <div class="transition-box">el-collapse-transition</div>
-          <div class="transition-box">el-collapse-transition</div>
+          <div class="transition-box">d-collapse-transition</div>
+          <div class="transition-box">d-collapse-transition</div>
         </div>
-      </el-collapse-transition>
+      </d-collapse-transition>
     </div>
   </div>
 </template>

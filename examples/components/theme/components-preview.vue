@@ -252,59 +252,59 @@
     </d-row>
     <h4>Menu</h4>
     <d-row>
-      <el-menu :default-active="menu" class="el-menu-demo" mode="horizontal">
-        <el-menu-item index="1">Processing Center</el-menu-item>
-        <el-submenu index="2">
+      <d-menu :default-active="menu" class="d-menu-demo" mode="horizontal">
+        <d-menu-item index="1">Processing Center</d-menu-item>
+        <d-submenu index="2">
           <template slot="title">Workspace</template>
-          <el-menu-item index="2-1">item one</el-menu-item>
-          <el-menu-item index="2-2">item two</el-menu-item>
-          <el-menu-item index="2-3">item three</el-menu-item>
-          <el-submenu index="2-4">
+          <d-menu-item index="2-1">item one</d-menu-item>
+          <d-menu-item index="2-2">item two</d-menu-item>
+          <d-menu-item index="2-3">item three</d-menu-item>
+          <d-submenu index="2-4">
             <template slot="title">item four</template>
-            <el-menu-item index="2-4-1">item one</el-menu-item>
-            <el-menu-item index="2-4-2">item two</el-menu-item>
-            <el-menu-item index="2-4-3">item three</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="3" disabled>Info</el-menu-item>
-        <el-menu-item index="4">
+            <d-menu-item index="2-4-1">item one</d-menu-item>
+            <d-menu-item index="2-4-2">item two</d-menu-item>
+            <d-menu-item index="2-4-3">item three</d-menu-item>
+          </d-submenu>
+        </d-submenu>
+        <d-menu-item index="3" disabled>Info</d-menu-item>
+        <d-menu-item index="4">
           <a href="https://www.ele.me" target="_blank">Orders</a>
-        </el-menu-item>
-      </el-menu>
-      <el-menu
+        </d-menu-item>
+      </d-menu>
+      <d-menu
         default-active="2"
         class="demo-line"
       >
-        <el-submenu index="1">
+        <d-submenu index="1">
           <template slot="title">
             <i class="d-icon-location"></i>
             <span>Navigator One</span>
           </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item one</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
-          <el-submenu index="1-4">
+          <d-menu-item-group title="Group One">
+            <d-menu-item index="1-1">item one</d-menu-item>
+            <d-menu-item index="1-2">item one</d-menu-item>
+          </d-menu-item-group>
+          <d-menu-item-group title="Group Two">
+            <d-menu-item index="1-3">item three</d-menu-item>
+          </d-menu-item-group>
+          <d-submenu index="1-4">
             <template slot="title">item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="2">
+            <d-menu-item index="1-4-1">item one</d-menu-item>
+          </d-submenu>
+        </d-submenu>
+        <d-menu-item index="2">
           <i class="d-icon-menu"></i>
           <span>Navigator Two</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
+        </d-menu-item>
+        <d-menu-item index="3" disabled>
           <i class="d-icon-document"></i>
           <span>Navigator Three</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        </d-menu-item>
+        <d-menu-item index="4">
           <i class="d-icon-setting"></i>
           <span>Navigator Four</span>
-        </el-menu-item>
-      </el-menu>
+        </d-menu-item>
+      </d-menu>
     </d-row>
     <h4>Tabs</h4>
     <d-row>

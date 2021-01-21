@@ -16,8 +16,8 @@ describe('Avatar', () => {
   it('size is number', () => {
     vm = createVue({
       template: `
-        <el-avatar :size="50">
-        </el-avatar>
+        <d-avatar :size="50">
+        </d-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
@@ -27,44 +27,44 @@ describe('Avatar', () => {
   it('size is string', () => {
     vm = createVue({
       template: `
-        <el-avatar size="small">
+        <d-avatar size="small">
           user
-        </el-avatar>
+        </d-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
-    expect(avatarElm.classList.contains('el-avatar--small')).to.be.true;
+    expect(avatarElm.classList.contains('d-avatar--small')).to.be.true;
   });
 
   it('shape', () => {
     vm = createVue({
       template: `
-        <el-avatar size="small" shape="square">
+        <d-avatar size="small" shape="square">
           user
-        </el-avatar>
+        </d-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
-    expect(avatarElm.classList.contains('el-avatar--square')).to.be.true;
+    expect(avatarElm.classList.contains('d-avatar--square')).to.be.true;
   });
 
   it('icon avatar', () => {
     vm = createVue({
       template: `
-        <el-avatar icon="d-icon-user-solid">
-        </el-avatar>
+        <d-avatar icon="d-icon-user-solid">
+        </d-avatar>
       `
     }, true);
     const avatarElm = vm.$el;
     const iconELm = avatarElm.children[0];
-    expect(avatarElm.classList.contains('el-avatar--icon')).to.be.true;
+    expect(avatarElm.classList.contains('d-avatar--icon')).to.be.true;
     expect(iconELm.classList.contains('d-icon-user-solid')).to.be.true;
   });
 
   it('image avatar', () => {
     vm = createVue({
       template: `
-        <el-avatar src="${IMAGE_SUCCESS}"></el-avatar>
+        <d-avatar src="${IMAGE_SUCCESS}"></d-avatar>
       `
     }, true);
     const imgElm = vm.$el.children[0];
@@ -75,9 +75,9 @@ describe('Avatar', () => {
   it('image fallback', async() => {
     vm = createVue({
       template: `
-        <el-avatar src="${IMAGE_FAIL}" @error="errorHandler">
+        <d-avatar src="${IMAGE_FAIL}" @error="errorHandler">
           fallback
-        </el-avatar>
+        </d-avatar>
       `,
       methods: {
         errorHandler() {
@@ -94,8 +94,8 @@ describe('Avatar', () => {
     vm = createVue({
       template: `
         <div>
-          <el-avatar :src="url"></el-avatar>
-          <el-avatar :src="url" v-for="fit in fits" :fit="fit" :key="fit"></el-avatar>
+          <d-avatar :src="url"></d-avatar>
+          <d-avatar :src="url" v-for="fit in fits" :fit="fit" :key="fit"></d-avatar>
         </div>
         
       `,

@@ -23,16 +23,16 @@ describe('Tabs', () => {
   it('create', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理" ref="pane-click">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
-    let paneList = vm.$el.querySelector('.el-tabs__content').children;
+    let paneList = vm.$el.querySelector('.d-tabs__content').children;
     let spy = sinon.spy();
 
     vm.$refs.tabs.$on('tab-click', spy);
@@ -54,12 +54,12 @@ describe('Tabs', () => {
   it('active-name', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" :active-name="activeName" @click="handleClick">
-          <el-tab-pane name="tab-A" label="用户管理">A</el-tab-pane>
-          <el-tab-pane name="tab-B" label="配置管理">B</el-tab-pane>
-          <el-tab-pane name="tab-C" label="角色管理">C</el-tab-pane>
-          <el-tab-pane name="tab-D" label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" :active-name="activeName" @click="handleClick">
+          <d-tab-pane name="tab-A" label="用户管理">A</d-tab-pane>
+          <d-tab-pane name="tab-B" label="配置管理">B</d-tab-pane>
+          <d-tab-pane name="tab-C" label="角色管理">C</d-tab-pane>
+          <d-tab-pane name="tab-D" label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -73,7 +73,7 @@ describe('Tabs', () => {
       }
     }, true);
     setTimeout(_ => {
-      const paneList = vm.$el.querySelector('.el-tabs__content').children;
+      const paneList = vm.$el.querySelector('.d-tabs__content').children;
       const tabList = vm.$refs.tabs.$refs.nav.$refs.tabs;
 
       expect(tabList[1].classList.contains('is-active')).to.be.true;
@@ -91,37 +91,37 @@ describe('Tabs', () => {
   it('card', () => {
     vm = createVue({
       template: `
-        <el-tabs type="card">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs type="card">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
-    expect(vm.$el.classList.contains('el-tabs--card')).to.be.true;
+    expect(vm.$el.classList.contains('d-tabs--card')).to.be.true;
   });
   it('border card', () => {
     vm = createVue({
       template: `
-        <el-tabs type="border-card">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs type="border-card">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
-    expect(vm.$el.classList.contains('el-tabs--border-card')).to.be.true;
+    expect(vm.$el.classList.contains('d-tabs--border-card')).to.be.true;
   });
   it('dynamic', (done) => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane :label="tab.label" :name="tab.name" v-for="tab in tabs" :key="tab.name">Test Content</el-tab-pane>
-        </el-tabs>
+        <d-tabs type="card" ref="tabs">
+          <d-tab-pane :label="tab.label" :name="tab.name" v-for="tab in tabs" :key="tab.name">Test Content</d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -143,13 +143,13 @@ describe('Tabs', () => {
     }, true);
 
     setTimeout(() => {
-      expect(vm.$el.querySelectorAll('.el-tab-pane').length).to.equal(4);
+      expect(vm.$el.querySelectorAll('.d-tab-pane').length).to.equal(4);
       vm.tabs.push({
         label: 'tab5',
         name: 'tab5'
       });
       setTimeout(() => {
-        expect(vm.$el.querySelectorAll('.el-tab-pane').length).to.equal(5);
+        expect(vm.$el.querySelectorAll('.d-tab-pane').length).to.equal(5);
         done();
       });
     }, 100);
@@ -157,16 +157,16 @@ describe('Tabs', () => {
   it('editable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-          <el-tab-pane
+        <d-tabs ref="tabs" v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+          <d-tab-pane
             v-for="(item, index) in editableTabs"
             :key="item.name"
             :label="item.title"
             :name="item.name"
           >
             {{item.content}}
-          </el-tab-pane>
-        </el-tabs>
+          </d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -220,7 +220,7 @@ describe('Tabs', () => {
 
     setTimeout(_ => {
       const tabList = vm.$refs.tabs.$refs.nav.$refs.tabs;
-      const paneList = vm.$el.querySelector('.el-tabs__content').children;
+      const paneList = vm.$el.querySelector('.d-tabs__content').children;
 
       tabList[1].querySelector('.d-icon-close').click();
       setTimeout(_ => {
@@ -228,7 +228,7 @@ describe('Tabs', () => {
         expect(paneList.length).to.be.equal(2);
         expect(tabList[1].classList.contains('is-active')).to.be.true;
 
-        vm.$refs.tabs.$el.querySelector('.el-tabs__new-tab').click();
+        vm.$refs.tabs.$el.querySelector('.d-tabs__new-tab').click();
         setTimeout(_ => {
           expect(tabList.length).to.be.equal(3);
           expect(paneList.length).to.be.equal(3);
@@ -241,7 +241,7 @@ describe('Tabs', () => {
   it('addable & closable', done => {
     vm = createVue({
       template: `
-        <el-tabs
+        <d-tabs
           ref="tabs"
           v-model="editableTabsValue"
           type="card"
@@ -250,15 +250,15 @@ describe('Tabs', () => {
           @tab-add="addTab"
           @tab-remove="removeTab"
         >
-          <el-tab-pane
+          <d-tab-pane
             v-for="(item, index) in editableTabs"
             :label="item.title"
             :key="item.name"
             :name="item.name"
           >
             {{item.content}}
-          </el-tab-pane>
-        </el-tabs>
+          </d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -306,9 +306,9 @@ describe('Tabs', () => {
 
     setTimeout(_ => {
       const tabList = vm.$refs.tabs.$refs.nav.$refs.tabs;
-      const paneList = vm.$el.querySelector('.el-tabs__content').children;
+      const paneList = vm.$el.querySelector('.d-tabs__content').children;
 
-      vm.$refs.tabs.$el.querySelector('.el-tabs__new-tab').click();
+      vm.$refs.tabs.$el.querySelector('.d-tabs__new-tab').click();
 
       setTimeout(_ => {
         expect(tabList.length).to.be.equal(3);
@@ -328,12 +328,12 @@ describe('Tabs', () => {
   it('closable in tab-pane', (done) => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane label="用户管理" closable>A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" closable>C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs type="card" ref="tabs">
+          <d-tab-pane label="用户管理" closable>A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理" closable>C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
@@ -345,12 +345,12 @@ describe('Tabs', () => {
   it('disabled', done => {
     vm = createVue({
       template: `
-        <el-tabs type="card" ref="tabs">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane disabled label="配置管理" ref="disabled">B</el-tab-pane>
-          <el-tab-pane label="角色管理">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs type="card" ref="tabs">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane disabled label="配置管理" ref="disabled">B</d-tab-pane>
+          <d-tab-pane label="角色管理">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
@@ -367,16 +367,16 @@ describe('Tabs', () => {
   it('tab-position', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" tab-position="left">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" tab-position="left">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理" ref="pane-click">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
-    let paneList = vm.$el.querySelector('.el-tabs__content').children;
+    let paneList = vm.$el.querySelector('.d-tabs__content').children;
     let spy = sinon.spy();
 
     vm.$refs.tabs.$on('tab-click', spy);
@@ -398,12 +398,12 @@ describe('Tabs', () => {
   it('stretch', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" stretch :tab-position="tabPosition">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="角色管理" ref="pane-click">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" stretch :tab-position="tabPosition">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="角色管理" ref="pane-click">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -426,26 +426,26 @@ describe('Tabs', () => {
   it('horizonal-scrollable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" style="width: 200px;">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" style="width: 200px;">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
     setTimeout(_ => {
-      const btnPrev = vm.$el.querySelector('.el-tabs__nav-prev');
+      const btnPrev = vm.$el.querySelector('.d-tabs__nav-prev');
       btnPrev.click();
       vm.$nextTick(_ => {
-        const tabNav = vm.$el.querySelector('.el-tabs__nav-wrap');
+        const tabNav = vm.$el.querySelector('.d-tabs__nav-wrap');
         expect(tabNav.__vue__.navOffset).to.be.equal(0);
 
-        const btnNext = vm.$el.querySelector('.el-tabs__nav-next');
+        const btnNext = vm.$el.querySelector('.d-tabs__nav-next');
         btnNext.click();
 
         vm.$nextTick(_ => {
@@ -464,26 +464,26 @@ describe('Tabs', () => {
   it('vertical-scrollable', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" tab-position="left" style="height: 200px;">
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="用户管理">A</el-tab-pane>
-          <el-tab-pane label="配置管理">B</el-tab-pane>
-          <el-tab-pane label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" tab-position="left" style="height: 200px;">
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="用户管理">A</d-tab-pane>
+          <d-tab-pane label="配置管理">B</d-tab-pane>
+          <d-tab-pane label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
     setTimeout(_ => {
-      const btnPrev = vm.$el.querySelector('.el-tabs__nav-prev');
+      const btnPrev = vm.$el.querySelector('.d-tabs__nav-prev');
       btnPrev.click();
       vm.$nextTick(_ => {
-        const tabNav = vm.$el.querySelector('.el-tabs__nav-wrap');
+        const tabNav = vm.$el.querySelector('.d-tabs__nav-wrap');
         expect(tabNav.__vue__.navOffset).to.be.equal(0);
 
-        const btnNext = vm.$el.querySelector('.el-tabs__nav-next');
+        const btnNext = vm.$el.querySelector('.d-tabs__nav-next');
         btnNext.click();
 
         vm.$nextTick(_ => {
@@ -502,28 +502,28 @@ describe('Tabs', () => {
   it('should work with lazy', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs">
-          <el-tab-pane label="用户管理" name="A">A</el-tab-pane>
-          <el-tab-pane label="配置管理" name="B">B</el-tab-pane>
-          <el-tab-pane label="角色管理" name="C">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿" lazy name="D">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs">
+          <d-tab-pane label="用户管理" name="A">A</d-tab-pane>
+          <d-tab-pane label="配置管理" name="B">B</d-tab-pane>
+          <d-tab-pane label="角色管理" name="C">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿" lazy name="D">D</d-tab-pane>
+        </d-tabs>
       `
     }, true);
 
-    expect(vm.$el.querySelector('.el-tabs__content').children.length).to.be.equal(3);
-    expect(vm.$el.querySelector('.el-tabs__content > #pane-D')).to.be.equal(null);
+    expect(vm.$el.querySelector('.d-tabs__content').children.length).to.be.equal(3);
+    expect(vm.$el.querySelector('.d-tabs__content > #pane-D')).to.be.equal(null);
 
     setTimeout(_ => {
-      vm.$el.querySelector('.el-tabs__nav > #tab-D').click();
+      vm.$el.querySelector('.d-tabs__nav > #tab-D').click();
       vm.$nextTick(() => {
-        expect(vm.$el.querySelector('.el-tabs__content').children.length).to.be.equal(4);
-        expect(vm.$el.querySelector('.el-tabs__content > #pane-D')).not.to.be.equal(null);
+        expect(vm.$el.querySelector('.d-tabs__content').children.length).to.be.equal(4);
+        expect(vm.$el.querySelector('.d-tabs__content > #pane-D')).not.to.be.equal(null);
 
-        vm.$el.querySelector('.el-tabs__nav > #tab-A').click();
+        vm.$el.querySelector('.d-tabs__nav > #tab-A').click();
         vm.$nextTick(() => {
-          expect(vm.$el.querySelector('.el-tabs__content').children.length).to.be.equal(4);
-          expect(vm.$el.querySelector('.el-tabs__content > #pane-D')).not.to.be.equal(null);
+          expect(vm.$el.querySelector('.d-tabs__content').children.length).to.be.equal(4);
+          expect(vm.$el.querySelector('.d-tabs__content > #pane-D')).not.to.be.equal(null);
           done();
         });
       });
@@ -532,12 +532,12 @@ describe('Tabs', () => {
   it('before leave', done => {
     vm = createVue({
       template: `
-        <el-tabs ref="tabs" v-model="activeName" :before-leave="beforeLeave">
-          <el-tab-pane name="tab-A" label="用户管理">A</el-tab-pane>
-          <el-tab-pane name="tab-B" label="配置管理">B</el-tab-pane>
-          <el-tab-pane name="tab-C" label="角色管理">C</el-tab-pane>
-          <el-tab-pane name="tab-D" label="定时任务补偿">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs ref="tabs" v-model="activeName" :before-leave="beforeLeave">
+          <d-tab-pane name="tab-A" label="用户管理">A</d-tab-pane>
+          <d-tab-pane name="tab-B" label="配置管理">B</d-tab-pane>
+          <d-tab-pane name="tab-C" label="角色管理">C</d-tab-pane>
+          <d-tab-pane name="tab-D" label="定时任务补偿">D</d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {
@@ -553,7 +553,7 @@ describe('Tabs', () => {
       }
     }, true);
     setTimeout(_ => {
-      const paneList = vm.$el.querySelector('.el-tabs__content').children;
+      const paneList = vm.$el.querySelector('.d-tabs__content').children;
       const tabList = vm.$refs.tabs.$refs.nav.$refs.tabs;
 
       expect(tabList[1].classList.contains('is-active')).to.be.true;
@@ -573,12 +573,12 @@ describe('Tabs', () => {
   it('keyboard event', done => {
     vm = createVue({
       template: `
-        <el-tabs v-model="activeName">
-          <el-tab-pane label="用户管理" name="first">A</el-tab-pane>
-          <el-tab-pane label="配置管理" name="second">B</el-tab-pane>
-          <el-tab-pane label="角色管理" name="third">C</el-tab-pane>
-          <el-tab-pane label="定时任务补偿" name="fourth">D</el-tab-pane>
-        </el-tabs>
+        <d-tabs v-model="activeName">
+          <d-tab-pane label="用户管理" name="first">A</d-tab-pane>
+          <d-tab-pane label="配置管理" name="second">B</d-tab-pane>
+          <d-tab-pane label="角色管理" name="third">C</d-tab-pane>
+          <d-tab-pane label="定时任务补偿" name="fourth">D</d-tab-pane>
+        </d-tabs>
       `,
       data() {
         return {

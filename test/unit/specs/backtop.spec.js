@@ -11,9 +11,9 @@ describe('Backtop', () => {
       template: `
         <div ref="scrollTarget" class="test-scroll"  style="height: 100px; overflow: auto">
           <div style="height: 10000px; width: 100%">
-            <el-backtop target=".test-scroll">
+            <d-backtop target=".test-scroll">
               <span>test_up_text</span>
-            </el-backtop>
+            </d-backtop>
           </div>
         </div>
       `

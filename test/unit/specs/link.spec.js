@@ -12,7 +12,7 @@ describe('Link', () => {
       type: 'primary'
     }, true);
     let linkElm = vm.$el;
-    expect(linkElm.classList.contains('el-link--primary')).to.be.true;
+    expect(linkElm.classList.contains('d-link--primary')).to.be.true;
   });
   it('icon', () => {
     vm = createTest(Link, {
@@ -30,9 +30,9 @@ describe('Link', () => {
   });
   it('target', () => {
     vm = createVue(`
-    <el-link href="https://element.eleme.io" target="_blank">
+    <d-link href="https://element.eleme.io" target="_blank">
       default
-    </el-link>
+    </d-link>
     `);
     let linkElm = vm.$el;
     expect(linkElm.getAttribute('target')).to.be.equal('_blank');
@@ -49,7 +49,7 @@ describe('Link', () => {
     let result;
     vm = createVue({
       template: `
-        <el-link @click="handleClick"></el-link>
+        <d-link @click="handleClick"></d-link>
       `,
       methods: {
         handleClick(evt) {

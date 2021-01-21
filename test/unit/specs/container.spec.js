@@ -19,10 +19,10 @@ describe('Container', () => {
   it('vertical', () => {
     vm = createVue({
       template: `
-        <el-container>
-          <el-header></el-header>
-          <el-main></el-main>
-        </el-container>
+        <d-container>
+          <d-header></d-header>
+          <d-main></d-main>
+        </d-container>
       `
     }, true);
     expect(vm.$children[0].$el.classList.contains('is-vertical')).to.true;
@@ -31,10 +31,10 @@ describe('Container', () => {
   it('direction', done => {
     vm = createVue({
       template: `
-        <el-container :direction="direction">
-          <el-header></el-header>
-          <el-main></el-main>
-        </el-container>
+        <d-container :direction="direction">
+          <d-header></d-header>
+          <d-main></d-main>
+        </d-container>
       `,
       data() {
         return {
@@ -65,7 +65,7 @@ describe('Header', () => {
   it('height', () => {
     vm = createVue({
       template: `
-        <el-header height="100px"></el-header>
+        <d-header height="100px"></d-header>
       `
     }, true);
     expect(vm.$children[0].$el.style.height).to.equal('100px');
@@ -86,7 +86,7 @@ describe('Aside', () => {
   it('width', () => {
     vm = createVue({
       template: `
-        <el-aside width="200px"></el-aside>
+        <d-aside width="200px"></d-aside>
       `
     }, true);
     expect(vm.$children[0].$el.style.width).to.equal('200px');
@@ -119,7 +119,7 @@ describe('Footer', () => {
   it('height', () => {
     vm = createVue({
       template: `
-        <el-footer height="100px"></el-footer>
+        <d-footer height="100px"></d-footer>
       `
     }, true);
     expect(vm.$children[0].$el.style.height).to.equal('100px');

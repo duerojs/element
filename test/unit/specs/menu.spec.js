@@ -9,10 +9,10 @@ describe('Menu', () => {
   it('create', done => {
     vm = createVue({
       template: `
-        <el-menu>
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <d-menu>
+          <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+          <d-menu-item index="2" ref="item2">订单管理</d-menu-item>
+        </d-menu>
       `
     }, true);
     var item1 = vm.$refs.item1;
@@ -30,13 +30,13 @@ describe('Menu', () => {
   it('background-color', done => {
     vm = createVue({
       template: `
-        <el-menu default-active="2"
+        <d-menu default-active="2"
           background-color="#f00"
           text-color="#000"
           active-text-color="#0f0">
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+          <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+          <d-menu-item index="2" ref="item2">订单管理</d-menu-item>
+        </d-menu>
       `
     }, true);
     expect(vm.$el.style.backgroundColor).to.equal('rgb(255, 0, 0)');
@@ -52,10 +52,10 @@ describe('Menu', () => {
   it('menu-item click', done => {
     vm = createVue({
       template: `
-        <el-menu>
-          <el-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <d-menu>
+          <d-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</d-menu-item>
+          <d-menu-item index="2" ref="item2">订单管理</d-menu-item>
+        </d-menu>
       `,
       methods: {
         onMenuItemClick(el) {
@@ -81,10 +81,10 @@ describe('Menu', () => {
   it('menu-item disabled', done => {
     vm = createVue({
       template: `
-        <el-menu default-active="2">
-          <el-menu-item index="1" ref="item1" disabled>处理中心</el-menu-item>
-          <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-        </el-menu>
+        <d-menu default-active="2">
+          <d-menu-item index="1" ref="item1" disabled>处理中心</d-menu-item>
+          <d-menu-item index="2" ref="item2">订单管理</d-menu-item>
+        </d-menu>
       `
     }, true);
     expect(vm.$refs.item2.$el.classList.contains('is-active')).to.be.true;
@@ -98,10 +98,10 @@ describe('Menu', () => {
     it('normal active', done => {
       vm = createVue({
         template: `
-          <el-menu default-active="2">
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-            <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-          </el-menu>
+          <d-menu default-active="2">
+            <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+            <d-menu-item index="2" ref="item2">订单管理</d-menu-item>
+          </d-menu>
         `
       }, true);
       expect(vm.$refs.item2.$el.classList.contains('is-active')).to.be.true;
@@ -114,10 +114,10 @@ describe('Menu', () => {
     it('dynamic active', done => {
       vm = createVue({
         template: `
-          <el-menu :default-active="active">
-            <el-menu-item index="1" ref="item1">active watch处理中心</el-menu-item>
-            <el-menu-item index="2" ref="item2">active watch订单管理</el-menu-item>
-          </el-menu>
+          <d-menu :default-active="active">
+            <d-menu-item index="1" ref="item1">active watch处理中心</d-menu-item>
+            <d-menu-item index="2" ref="item2">active watch订单管理</d-menu-item>
+          </d-menu>
         `,
         data() {
           return {
@@ -137,16 +137,16 @@ describe('Menu', () => {
       vm = createVue({
         template: `
           <div>
-            <el-menu default-active="2-2">
-              <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-              <el-submenu index="2" ref="submenu">
+            <d-menu default-active="2-2">
+              <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+              <d-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
-              </el-submenu>
-              <el-menu-item index="3">订单管理</el-menu-item>
-            </el-menu>
+                <d-menu-item index="2-1">选项1</d-menu-item>
+                <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+                <d-menu-item index="2-3">选项3</d-menu-item>
+              </d-submenu>
+              <d-menu-item index="3">订单管理</d-menu-item>
+            </d-menu>
           </div>
         `
       }, true);
@@ -162,16 +162,16 @@ describe('Menu', () => {
       vm = createVue({
         template: `
           <div>
-            <el-menu default-active="2-2">
-              <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-              <el-submenu index="2" ref="submenu">
+            <d-menu default-active="2-2">
+              <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+              <d-submenu index="2" ref="submenu">
                 <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
-              </el-submenu>
-              <el-menu-item index="3">订单管理</el-menu-item>
-            </el-menu>
+                <d-menu-item index="2-1">选项1</d-menu-item>
+                <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+                <d-menu-item index="2-3">选项3</d-menu-item>
+              </d-submenu>
+              <d-menu-item index="3">订单管理</d-menu-item>
+            </d-menu>
           </div>
         `
       }, true);
@@ -188,16 +188,16 @@ describe('Menu', () => {
     it('toggle', done => {
       vm = createVue({
         template: `
-          <el-menu>
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-            <el-submenu index="2" ref="submenu">
+          <d-menu>
+            <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+            <d-submenu index="2" ref="submenu">
               <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-submenu>
-            <el-menu-item index="3">订单管理</el-menu-item>
-          </el-menu>
+              <d-menu-item index="2-1">选项1</d-menu-item>
+              <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+              <d-menu-item index="2-3">选项3</d-menu-item>
+            </d-submenu>
+            <d-menu-item index="3">订单管理</d-menu-item>
+          </d-menu>
         `,
         data() {
           return {
@@ -206,13 +206,13 @@ describe('Menu', () => {
       }, true);
       var submenuItem2 = vm.$refs.submenuItem2;
       var submenu = vm.$refs.submenu;
-      submenu.$el.querySelector('.el-submenu__title').click();
+      submenu.$el.querySelector('.d-submenu__title').click();
       setTimeout(_ => {
         expect(submenu.$el.classList.contains('is-opened')).to.be.true;
         submenuItem2.$el.click();
         setTimeout(_ => {
           expect(submenuItem2.$el.classList.contains('is-active')).to.be.true;
-          submenu.$el.querySelector('.el-submenu__title').click();
+          submenu.$el.querySelector('.d-submenu__title').click();
           setTimeout(_ => {
             expect(submenu.$el.classList.contains('is-opened')).to.not.true;
             done();
@@ -223,21 +223,21 @@ describe('Menu', () => {
     it('default opened', done => {
       vm = createVue({
         template: `
-          <el-menu :default-openeds="defaultOpeneds">
-            <el-menu-item index="1">default opened处理中心</el-menu-item>
-            <el-submenu index="2" ref="submenu1">
+          <d-menu :default-openeds="defaultOpeneds">
+            <d-menu-item index="1">default opened处理中心</d-menu-item>
+            <d-submenu index="2" ref="submenu1">
               <template slot="title">default opened我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-submenu>
-            <el-submenu index="3" ref="submenu2">
+              <d-menu-item index="2-1">选项1</d-menu-item>
+              <d-menu-item index="2-2" ref="submenu1Item2">选项2</d-menu-item>
+              <d-menu-item index="2-3">选项3</d-menu-item>
+            </d-submenu>
+            <d-submenu index="3" ref="submenu2">
               <template slot="title">default opened订单管理</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-              <el-menu-item index="3-3">选项3</el-menu-item>
-            </el-submenu>
-          </el-menu>
+              <d-menu-item index="3-1">选项1</d-menu-item>
+              <d-menu-item index="3-2" ref="submenu2Item2">选项2</d-menu-item>
+              <d-menu-item index="3-3">选项3</d-menu-item>
+            </d-submenu>
+          </d-menu>
         `,
         data() {
           return {
@@ -257,20 +257,20 @@ describe('Menu', () => {
     it('disabled', done => {
       vm = createVue({
         template: `
-          <el-menu>
-            <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-            <el-submenu index="2" ref="submenu" disabled>
+          <d-menu>
+            <d-menu-item index="1" ref="item1">处理中心</d-menu-item>
+            <d-submenu index="2" ref="submenu" disabled>
               <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-submenu>
-            <el-menu-item index="3">订单管理</el-menu-item>
-          </el-menu>
+              <d-menu-item index="2-1">选项1</d-menu-item>
+              <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+              <d-menu-item index="2-3">选项3</d-menu-item>
+            </d-submenu>
+            <d-menu-item index="3">订单管理</d-menu-item>
+          </d-menu>
         `
       }, true);
       var submenu = vm.$refs.submenu;
-      submenu.$el.querySelector('.el-submenu__title').click();
+      submenu.$el.querySelector('.d-submenu__title').click();
       setTimeout(_ => {
         expect(submenu.$el.classList.contains('is-opened')).to.be.false;
         done();
@@ -280,28 +280,28 @@ describe('Menu', () => {
   it('unique-opened', done => {
     vm = createVue({
       template: `
-        <el-menu unique-opened default-active="2-2">
-          <el-menu-item index="1">处理中心</el-menu-item>
-          <el-submenu index="2" ref="submenu1">
+        <d-menu unique-opened default-active="2-2">
+          <d-menu-item index="1">处理中心</d-menu-item>
+          <d-submenu index="2" ref="submenu1">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-submenu index="3" ref="submenu2">
+            <d-menu-item index="2-1">选项1</d-menu-item>
+            <d-menu-item index="2-2" ref="submenu1Item2">选项2</d-menu-item>
+            <d-menu-item index="2-3">选项3</d-menu-item>
+          </d-submenu>
+          <d-submenu index="3" ref="submenu2">
             <template slot="title">订单管理</template>
-            <el-menu-item index="3-1">选项1</el-menu-item>
-            <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-            <el-menu-item index="3-3">选项3</el-menu-item>
-          </el-submenu>
-        </el-menu>
+            <d-menu-item index="3-1">选项1</d-menu-item>
+            <d-menu-item index="3-2" ref="submenu2Item2">选项2</d-menu-item>
+            <d-menu-item index="3-3">选项3</d-menu-item>
+          </d-submenu>
+        </d-menu>
       `,
       data() {
         return {
         };
       }
     }, true);
-    vm.$refs.submenu2.$el.querySelector('.el-submenu__title').click();
+    vm.$refs.submenu2.$el.querySelector('.d-submenu__title').click();
     setTimeout(_ => {
       expect(vm.$refs.submenu1.$el.classList.contains('is-opened')).to.not.true;
       done();
@@ -310,61 +310,61 @@ describe('Menu', () => {
   it('horizontal mode', done => {
     vm = createVue({
       template: `
-        <el-menu mode="horizontal">
-          <el-menu-item index="1">处理中心</el-menu-item>
-          <el-submenu index="2" ref="submenu">
+        <d-menu mode="horizontal">
+          <d-menu-item index="1">处理中心</d-menu-item>
+          <d-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+            <d-menu-item index="2-1">选项1</d-menu-item>
+            <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+            <d-menu-item index="2-3">选项3</d-menu-item>
+          </d-submenu>
+          <d-menu-item index="3">订单管理</d-menu-item>
+        </d-menu>
       `,
       data() {
         return {
         };
       }
     }, true);
-    expect(vm.$el.classList.contains('el-menu--horizontal')).to.be.true;
+    expect(vm.$el.classList.contains('d-menu--horizontal')).to.be.true;
     var submenu = vm.$refs.submenu;
     triggerEvent(submenu.$el, 'mouseenter');
     setTimeout(_ => {
-      expect(document.body.querySelector('.el-menu--popup').parentElement.style.display).to.not.ok;
+      expect(document.body.querySelector('.d-menu--popup').parentElement.style.display).to.not.ok;
       done();
     }, 500);
   });
   it('menu trigger click', done => {
     vm = createVue({
       template: `
-        <el-menu mode="horizontal" menu-trigger="click">
-          <el-menu-item index="1">处理中心</el-menu-item>
-          <el-submenu index="2" ref="submenu">
+        <d-menu mode="horizontal" menu-trigger="click">
+          <d-menu-item index="1">处理中心</d-menu-item>
+          <d-submenu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+            <d-menu-item index="2-1">选项1</d-menu-item>
+            <d-menu-item index="2-2" ref="submenuItem2">选项2</d-menu-item>
+            <d-menu-item index="2-3">选项3</d-menu-item>
+          </d-submenu>
+          <d-menu-item index="3">订单管理</d-menu-item>
+        </d-menu>
       `,
       data() {
         return {
         };
       }
     }, true);
-    expect(vm.$el.classList.contains('el-menu--horizontal')).to.be.true;
+    expect(vm.$el.classList.contains('d-menu--horizontal')).to.be.true;
     var submenu = vm.$refs.submenu;
-    var triggerElm = submenu.$el.querySelector('.el-submenu__title');
+    var triggerElm = submenu.$el.querySelector('.d-submenu__title');
 
     triggerEvent(submenu.$el, 'mouseenter');
     triggerElm.click();
 
     setTimeout(_ => {
-      expect(document.body.querySelector('.el-menu--popup').parentElement.style.display).to.not.ok;
+      expect(document.body.querySelector('.d-menu--popup').parentElement.style.display).to.not.ok;
       triggerElm.click();
       setTimeout(_ => {
-        expect(document.body.querySelector('.el-menu--popup').parentElement.style.display).to.be.equal('none');
+        expect(document.body.querySelector('.d-menu--popup').parentElement.style.display).to.be.equal('none');
         done();
       }, 1000);
     }, 500);
@@ -372,34 +372,34 @@ describe('Menu', () => {
   it('menu group', () => {
     vm = createVue({
       template: `
-        <el-menu mode="vertical" default-active="1">
-          <el-menu-item-group title="分组一" ref="group1">
-            <el-menu-item index="1"><i class="d-icon-message"></i>导航一</el-menu-item>
-            <el-menu-item index="2"><i class="d-icon-message"></i>导航二</el-menu-item>
-          </el-menu-item-group>
-          <el-submenu index="5">
+        <d-menu mode="vertical" default-active="1">
+          <d-menu-item-group title="分组一" ref="group1">
+            <d-menu-item index="1"><i class="d-icon-message"></i>导航一</d-menu-item>
+            <d-menu-item index="2"><i class="d-icon-message"></i>导航二</d-menu-item>
+          </d-menu-item-group>
+          <d-submenu index="5">
             <template slot="title">导航五</template>
-            <el-menu-item-group title="分组二">
-              <el-menu-item index="5-1">选项1</el-menu-item>
-              <el-menu-item index="5-2">选项2</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
-        </el-menu>
+            <d-menu-item-group title="分组二">
+              <d-menu-item index="5-1">选项1</d-menu-item>
+              <d-menu-item index="5-2">选项2</d-menu-item>
+            </d-menu-item-group>
+          </d-submenu>
+        </d-menu>
       `
     }, true);
-    expect(vm.$refs.group1.$el.querySelector('.el-menu-item-group__title').innerText).to.be.equal('分组一');
+    expect(vm.$refs.group1.$el.querySelector('.d-menu-item-group__title').innerText).to.be.equal('分组一');
   });
   it('dynamic menus, issue 9092', done => {
     vm = createVue({
       template: `
-          <el-menu :default-active="active">
-            <el-menu-item
+          <d-menu :default-active="active">
+            <d-menu-item
               v-for="menu in menus"
               :index="menu.name"
               :key="menu.name">
               {{menu.description}}
-            </el-menu-item>
-          </el-menu>
+            </d-menu-item>
+          </d-menu>
         `,
       data() {
         return {
@@ -416,7 +416,7 @@ describe('Menu', () => {
         {name: '3', description: 'year'}
       ];
       setTimeout(_ => {
-        expect(vm.$el.querySelector('.el-menu-item.is-active').innerText).to.equal('new');
+        expect(vm.$el.querySelector('.d-menu-item.is-active').innerText).to.equal('new');
         done();
       }, 20);
     }, 100);

@@ -7,21 +7,21 @@ Passez sur le menu avec la souris pour dérouler son contenu.
 :::demo L'élément déclencheur est généré par le `slot` par défaut, et le menu déroulant est généré par le `slot` appelé `dropdown`. Par défaut le menu apparaît simplement en passant la souris sur l'élément déclencheur, sans avoir à cliquer.
 
 ```html
-<el-dropdown>
-  <span class="el-dropdown-link">
+<d-dropdown>
+  <span class="d-dropdown-link">
     Menu déroulant<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item disabled>Action 4</d-dropdown-item>
+    <d-dropdown-item divided>Action 5</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .d-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -40,34 +40,34 @@ Utilisez le bouton pour ouvrir le menu déroulant.
 
 :::demo Utilisez `split-button` pour séparer le déclencheur du reste du bouton, ce dernier devenant la partie gauche et le déclencheur la partie droite.
 ```html
-<el-dropdown>
+<d-dropdown>
   <d-button type="primary">
     Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
   </d-button>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
-<el-dropdown split-button type="primary" @click="handleClick">
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item>Action 4</d-dropdown-item>
+    <d-dropdown-item>Action 5</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
+<d-dropdown split-button type="primary" @click="handleClick">
   Liste déroulante
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item>Action 4</d-dropdown-item>
+    <d-dropdown-item>Action 5</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
-  .el-dropdown {
+  .d-dropdown {
     vertical-align: top;
   }
-  .el-dropdown + .el-dropdown {
+  .d-dropdown + .d-dropdown {
     margin-left: 15px;
   }
   .d-icon-arrow-down {
@@ -97,38 +97,38 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
 <d-row class="block-col-2">
   <d-col :span="12">
     <span class="demonstration">En passant la souris</span>
-    <el-dropdown>
-      <span class="el-dropdown-link">
+    <d-dropdown>
+      <span class="d-dropdown-link">
         Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
+      <d-dropdown-menu slot="dropdown">
+        <d-dropdown-item icon="d-icon-plus">Action 1</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-plus">Action 2</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-plus-outline">Action 3</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-check">Action 4</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-check">Action 5</d-dropdown-item>
+      </d-dropdown-menu>
+    </d-dropdown>
   </d-col>
   <d-col :span="12">
     <span class="demonstration">En cliquant</span>
-    <el-dropdown trigger="click">
-      <span class="el-dropdown-link">
+    <d-dropdown trigger="click">
+      <span class="d-dropdown-link">
         Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="d-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="d-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
+      <d-dropdown-menu slot="dropdown">
+        <d-dropdown-item icon="d-icon-plus">Action 1</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-plus">Action 2</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-plus-outline">Action 3</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-check">Action 4</d-dropdown-item>
+        <d-dropdown-item icon="d-icon-circle-check">Action 5</d-dropdown-item>
+      </d-dropdown-menu>
+    </d-dropdown>
   </d-col>
 </d-row>
 
 <style>
-  .el-dropdown-link {
+  .d-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -151,21 +151,21 @@ Utilisez l'attribut `hide-on-click` pour déterminer si le menu se ferme après 
 
 :::demo Par défaut le menu se ferme après avoir cliqué dans la liste. Vous pouvez changer cette option en mettant `hide-on-click` à `false`.
 ```html
-<el-dropdown :hide-on-click="false">
-  <span class="el-dropdown-link">
+<d-dropdown :hide-on-click="false">
+  <span class="d-dropdown-link">
     Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item disabled>Action 4</d-dropdown-item>
+    <d-dropdown-item divided>Action 5</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .d-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -183,21 +183,21 @@ Le paramètre de cet évènement peut être assigné à chaque élément de la l
 
 :::demo
 ```html
-<el-dropdown @command="handleCommand">
-  <span class="el-dropdown-link">
+<d-dropdown @command="handleCommand">
+  <span class="d-dropdown-link">
     Liste déroulante<i class="d-icon-arrow-down d-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item command="a">Action 1</el-dropdown-item>
-    <el-dropdown-item command="b">Action 2</el-dropdown-item>
-    <el-dropdown-item command="c">Action 3</el-dropdown-item>
-    <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item command="a">Action 1</d-dropdown-item>
+    <d-dropdown-item command="b">Action 2</d-dropdown-item>
+    <d-dropdown-item command="c">Action 3</d-dropdown-item>
+    <d-dropdown-item command="d" disabled>Action 4</d-dropdown-item>
+    <d-dropdown-item command="e" divided>Action 5</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .d-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -225,45 +225,45 @@ En plus de la taille par défaut, le composant Dropdown propose trois autres tai
 :::demo Utilisez `size` pour déterminer une autre taille parmi `medium`, `small` ou `mini`.
 
 ```html
-<el-dropdown split-button type="primary">
+<d-dropdown split-button type="primary">
   Défaut
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item>Action 4</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
-<el-dropdown size="medium" split-button type="primary">
+<d-dropdown size="medium" split-button type="primary">
   Medium
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item>Action 4</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
-<el-dropdown size="small" split-button type="primary">
+<d-dropdown size="small" split-button type="primary">
   Small
-  <el-dropdown-menu slot="dropdown">
-   <el-dropdown-item>Action 1</el-dropdown-item>
-   <el-dropdown-item>Action 2</el-dropdown-item>
-   <el-dropdown-item>Action 3</el-dropdown-item>
-   <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+   <d-dropdown-item>Action 1</d-dropdown-item>
+   <d-dropdown-item>Action 2</d-dropdown-item>
+   <d-dropdown-item>Action 3</d-dropdown-item>
+   <d-dropdown-item>Action 4</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
-<el-dropdown size="mini" split-button type="primary">
+<d-dropdown size="mini" split-button type="primary">
   Mini
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item>Action 1</d-dropdown-item>
+    <d-dropdown-item>Action 2</d-dropdown-item>
+    <d-dropdown-item>Action 3</d-dropdown-item>
+    <d-dropdown-item>Action 4</d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 ```
 :::
 
@@ -286,8 +286,8 @@ En plus de la taille par défaut, le composant Dropdown propose trois autres tai
 
 | Nom | Description |
 |------|--------|
-| — | Contenu du Dropdown. Note: doit être un élément du DOM valide (ex. `<span>, <button> etc.`) ou `el-component`, pour y attacher un évènement.  |
-| dropdown | Contenu du menu du Dropdown, en général un élément `<el-dropdown-menu>`. |
+| — | Contenu du Dropdown. Note: doit être un élément du DOM valide (ex. `<span>, <button> etc.`) ou `d-component`, pour y attacher un évènement.  |
+| dropdown | Contenu du menu du Dropdown, en général un élément `<d-dropdown-menu>`. |
 
 ### Évènements du Dropdown
 

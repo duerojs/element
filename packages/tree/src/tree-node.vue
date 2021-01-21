@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-tree-node"
+    class="d-tree-node"
     @click.stop="handleClick"
     @contextmenu="($event) => this.handleContextMenu($event)"
     v-show="node.visible"
@@ -23,18 +23,18 @@
     @drop.stop="handleDrop"
     ref="node"
   >
-    <div class="el-tree-node__content"
+    <div class="d-tree-node__content"
       :style="{ 'padding-left': (node.level - 1) * tree.indent + 'px' }">
       <span
         @click.stop="handleExpandIconClick"
         :class="[
           { 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded },
-          'el-tree-node__expand-icon',
+          'd-tree-node__expand-icon',
           tree.iconClass ? tree.iconClass : 'd-icon-caret-right'
         ]"
       >
       </span>
-      <el-checkbox
+      <d-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -42,22 +42,22 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </el-checkbox>
+      </d-checkbox>
       <span
         v-if="node.loading"
-        class="el-tree-node__loading-icon d-icon-loading">
+        class="d-tree-node__loading-icon d-icon-loading">
       </span>
       <node-content :node="node"></node-content>
     </div>
     <d-collapse-transition>
       <div
-        class="el-tree-node__children"
+        class="d-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
         v-show="expanded"
         role="group"
         :aria-expanded="expanded"
       >
-        <el-tree-node
+        <d-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"
           :render-after-expand="renderAfterExpand"
@@ -65,22 +65,22 @@
           :key="getNodeKey(child)"
           :node="child"
           @node-expand="handleChildNodeExpand">
-        </el-tree-node>
+        </d-tree-node>
       </div>
     </d-collapse-transition>
   </div>
 </template>
 
 <script type="text/jsx">
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import ElCheckbox from 'element-ui/packages/checkbox';
+  import DCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import DCheckbox from 'element-ui/packages/checkbox';
   import emitter from 'element-ui/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {
-    name: 'ElTreeNode',
+    name: 'DTreeNode',
 
-    componentName: 'ElTreeNode',
+    componentName: 'DTreeNode',
 
     mixins: [emitter],
 
@@ -103,8 +103,8 @@
     },
 
     components: {
-      ElCollapseTransition,
-      ElCheckbox,
+      DCollapseTransition,
+      DCheckbox,
       NodeContent: {
         props: {
           node: {
@@ -121,7 +121,7 @@
               ? parent.renderContent.call(parent._renderProxy, h, { _self: tree.$vnode.context, node, data, store })
               : tree.$scopedSlots.default
                 ? tree.$scopedSlots.default({ node, data })
-                : <span class="el-tree-node__label">{ node.label }</span>
+                : <span class="d-tree-node__label">{ node.label }</span>
           );
         }
       }
@@ -216,7 +216,7 @@
       },
 
       handleChildNodeExpand(nodeData, node, instance) {
-        this.broadcast('ElTreeNode', 'tree-node-expand', node);
+        this.broadcast('DTreeNode', 'tree-node-expand', node);
         this.tree.$emit('node-expand', nodeData, node, instance);
       },
 

@@ -12,16 +12,16 @@
   line-height: $--input-height;
 
   &:not(.is-disabled):hover {
-    .el-input__inner {
+    .d-input__inner {
       cursor: pointer;
       border-color: $--input-hover-border;
     }
   }
 
-  .el-input {
+  .d-input {
     cursor: pointer;
 
-    .el-input__inner {
+    .d-input__inner {
       text-overflow: ellipsis;
 
       &:focus {
@@ -43,7 +43,7 @@
     }
 
     @include when(focus) {
-      .el-input__inner {
+      .d-input__inner {
         border-color: $--input-focus-border;
       }
     }
@@ -65,7 +65,7 @@
   }
 
   @include when(disabled) {
-    .el-cascader__label {
+    .d-cascader__label {
       z-index: #{$--index-normal + 1};
       color: $--disabled-color-base;
     }
@@ -92,7 +92,7 @@
     text-align: left;
     box-sizing: border-box;
 
-    .el-tag {
+    .d-tag {
       display: inline-flex;
       align-items: center;
       max-width: 100%;

@@ -8,7 +8,7 @@
   width: 180px;
   line-height: #{$--input-height - 2};
 
-  .el-input {
+  .d-input {
     display: block;
 
     &__inner {
@@ -34,7 +34,7 @@
     &:hover {
       color: $--color-primary;
 
-      &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
+      &:not(.is-disabled) ~ .d-input .d-input__inner:not(.is-disabled) {
         border-color: $--input-focus-border;
       }
     }
@@ -78,7 +78,7 @@
       font-size: $--input-medium-font-size;
     }
 
-    .el-input__inner {
+    .d-input__inner {
       padding-left: #{$--input-medium-height + 7};
       padding-right: #{$--input-medium-height + 7};
     }
@@ -97,7 +97,7 @@
       }
     }
 
-    .el-input__inner {
+    .d-input__inner {
       padding-left: #{$--input-small-height + 7};
       padding-right: #{$--input-small-height + 7};
     }
@@ -116,21 +116,21 @@
       }
     }
 
-    .el-input__inner {
+    .d-input__inner {
       padding-left: #{$--input-mini-height + 7};
       padding-right: #{$--input-mini-height + 7};
     }
   }
 
   @include when(without-controls) {
-    .el-input__inner {
+    .d-input__inner {
       padding-left: 15px;
       padding-right: 15px;
     }
   }
 
   @include when(controls-right) {
-    .el-input__inner {
+    .d-input__inner {
       padding-left: 15px;
       padding-right: #{$--input-height + 10};
     }

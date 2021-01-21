@@ -1,8 +1,8 @@
-import ElProgress from './src/progress';
+import DProgress from './src/progress';
 
 /* istanbul ignore next */
-ElProgress.install = function(Vue) {
-  Vue.component(ElProgress.name, ElProgress);
+DProgress.install = function(Vue) {
+  Vue.component(DProgress.name, DProgress);
 };
 
-export default ElProgress;
+export default DProgress;

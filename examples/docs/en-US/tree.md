@@ -8,7 +8,7 @@ Basic tree structure.
 
 :::demo
 ```html
-<el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+<d-tree :data="data" :props="defaultProps" @node-click="handleNodeClick"></d-tree>
 
 <script>
   export default {
@@ -71,13 +71,13 @@ Used for node selection.
 
 :::demo This example also shows how to load node data asynchronously.
 ```html
-<el-tree
+<d-tree
   :props="props"
   :load="loadNode"
   lazy
   show-checkbox
   @check-change="handleCheckChange">
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -137,12 +137,12 @@ Used for node selection.
 
 :::demo A node's data is not fetched until it is clicked, so the Tree cannot predict whether a node is a leaf node. That's why a drop-down button is added to each node, and if it is a leaf node, the drop-down button will disappear when clicked. That being said, you can also tell the Tree in advance whether the node is a leaf node, avoiding the render of the drop-down button before a leaf node.
 ```html
-<el-tree
+<d-tree
   :props="props"
   :load="loadNode"
   lazy
   show-checkbox>
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -185,12 +185,12 @@ The checkbox of a node can be set as disabled.
 
 :::demo In the example, 'disabled' property is declared in defaultProps, and some nodes are set as 'disabled:true'. The corresponding checkboxes are disabled and can't be clicked.
 ```html
-<el-tree
+<d-tree
   :data="data"
   :props="defaultProps"
   show-checkbox
   @check-change="handleCheckChange">
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -241,14 +241,14 @@ Tree nodes can be initially expanded or checked
 
 :::demo Use `default-expanded-keys` and `default-checked-keys` to set initially expanded and initially checked nodes respectively. Note that for them to work, `node-key` is required. Its value is the name of a key in the data object, and the value of that key should be unique across the whole tree.
 ```html
-<el-tree
+<d-tree
   :data="data"
   show-checkbox
   node-key="id"
   :default-expanded-keys="[2, 3]"
   :default-checked-keys="[5]"
   :props="defaultProps">
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -304,7 +304,7 @@ Tree nodes can be initially expanded or checked
 
 :::demo This example shows how to get and set checked nodes. They both can be done in two approaches: node and key. If you are taking the key approach, `node-key` is required.
 ```html
-<el-tree
+<d-tree
   :data="data"
   show-checkbox
   default-expand-all
@@ -312,7 +312,7 @@ Tree nodes can be initially expanded or checked
   ref="tree"
   highlight-current
   :props="defaultProps">
-</el-tree>
+</d-tree>
 
 <div class="buttons">
   <d-button @click="getCheckedNodes">get by node</d-button>
@@ -404,18 +404,18 @@ The content of tree nodes can be customized, so you can add icons or buttons as 
 <div class="custom-tree-container">
   <div class="block">
     <p>Using render-content</p>
-    <el-tree
+    <d-tree
       :data="data"
       show-checkbox
       node-key="id"
       default-expand-all
       :expand-on-click-node="false"
       :render-content="renderContent">
-    </el-tree>
+    </d-tree>
   </div>
   <div class="block">
     <p>Using scoped slot</p>
-    <el-tree
+    <d-tree
       :data="data"
       show-checkbox
       node-key="id"
@@ -438,7 +438,7 @@ The content of tree nodes can be customized, so you can add icons or buttons as 
           </d-button>
         </span>
       </span>
-    </el-tree>
+    </d-tree>
   </div>
 </div>
 
@@ -536,19 +536,19 @@ Tree nodes can be filtered
 
 :::demo Invoke the `filter` method of the Tree instance to filter tree nodes. Its parameter is the filtering keyword. Note that for it to work, `filter-node-method` is required, and its value is the filtering method.
 ```html
-<el-input
+<d-input
   placeholder="Filter keyword"
   v-model="filterText">
-</el-input>
+</d-input>
 
-<el-tree
+<d-tree
   class="filter-tree"
   :data="data"
   :props="defaultProps"
   default-expand-all
   :filter-node-method="filterNode"
   ref="tree">
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -620,12 +620,12 @@ Only one node among the same level can be expanded at one time.
 
 :::demo
 ```html
-<el-tree
+<d-tree
   :data="data"
   :props="defaultProps"
   accordion
   @node-click="handleNodeClick">
-</el-tree>
+</d-tree>
 
 <script>
   export default {
@@ -688,7 +688,7 @@ You can drag and drop Tree nodes by adding a `draggable` attribute.
 
 :::demo
 ```html
-<el-tree
+<d-tree
   :data="data"
   node-key="id"
   default-expand-all
@@ -701,7 +701,7 @@ You can drag and drop Tree nodes by adding a `draggable` attribute.
   draggable
   :allow-drop="allowDrop"
   :allow-drag="allowDrag">
-</el-tree>
+</d-tree>
 
 <script>
   export default {

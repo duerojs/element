@@ -5,15 +5,15 @@ Displays the location of the current page, making it easier to browser back.
 ### Basic usage
 
 
-:::demo In `el-breadcrumb`, each `el-breadcrumb-item` is a tag that stands for every level starting from homepage. This component has a `String` attribute `separator`, and it determines the separator. Its default value is '/'.
+:::demo In `d-breadcrumb`, each `d-breadcrumb-item` is a tag that stands for every level starting from homepage. This component has a `String` attribute `separator`, and it determines the separator. Its default value is '/'.
 
 ```html
-<el-breadcrumb separator="/">
-  <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-  <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
-  <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-</el-breadcrumb>
+<d-breadcrumb separator="/">
+  <d-breadcrumb-item :to="{ path: '/' }">homepage</d-breadcrumb-item>
+  <d-breadcrumb-item><a href="/">promotion management</a></d-breadcrumb-item>
+  <d-breadcrumb-item>promotion list</d-breadcrumb-item>
+  <d-breadcrumb-item>promotion detail</d-breadcrumb-item>
+</d-breadcrumb>
 ```
 :::
 
@@ -22,12 +22,12 @@ Displays the location of the current page, making it easier to browser back.
 :::demo Set `separator-class` to use `iconfont` as the separator，it will cover `separator`
 
 ```html
-<el-breadcrumb separator-class="d-icon-arrow-right">
-  <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion management</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-  <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-</el-breadcrumb>
+<d-breadcrumb separator-class="d-icon-arrow-right">
+  <d-breadcrumb-item :to="{ path: '/' }">homepage</d-breadcrumb-item>
+  <d-breadcrumb-item>promotion management</d-breadcrumb-item>
+  <d-breadcrumb-item>promotion list</d-breadcrumb-item>
+  <d-breadcrumb-item>promotion detail</d-breadcrumb-item>
+</d-breadcrumb>
 ```
 :::
 

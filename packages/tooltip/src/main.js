@@ -5,7 +5,7 @@ import { generateId } from 'element-ui/src/utils/util';
 import Vue from 'vue';
 
 export default {
-  name: 'ElTooltip',
+  name: 'DTooltip',
 
   mixins: [Popper],
 
@@ -31,7 +31,7 @@ export default {
     },
     transition: {
       type: String,
-      default: 'el-fade-in-linear'
+      default: 'd-fade-in-linear'
     },
     popperOptions: {
       default() {
@@ -57,7 +57,7 @@ export default {
 
   data() {
     return {
-      tooltipId: `el-tooltip-${generateId()}`,
+      tooltipId: `d-tooltip-${generateId()}`,
       timeoutPending: null,
       focusing: false
     };
@@ -90,7 +90,7 @@ export default {
             aria-hidden={ (this.disabled || !this.showPopper) ? 'true' : 'false' }
             v-show={!this.disabled && this.showPopper}
             class={
-              ['el-tooltip__popper', 'is-' + this.effect, this.popperClass]
+              ['d-tooltip__popper', 'is-' + this.effect, this.popperClass]
             }>
             { this.$slots.content || this.content }
           </div>
@@ -170,9 +170,9 @@ export default {
 
     addTooltipClass(prev) {
       if (!prev) {
-        return 'el-tooltip';
+        return 'd-tooltip';
       } else {
-        return 'el-tooltip ' + prev.replace('el-tooltip', '');
+        return 'd-tooltip ' + prev.replace('d-tooltip', '');
       }
     },
 

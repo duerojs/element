@@ -1,6 +1,6 @@
 <script>
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElRadio from 'element-ui/packages/radio';
+  import DCheckbox from 'element-ui/packages/checkbox';
+  import DRadio from 'element-ui/packages/radio';
   import { isEqual } from 'element-ui/src/utils/util';
 
   const stopPropagation = e => e.stopPropagation();
@@ -9,8 +9,8 @@
     inject: ['panel'],
 
     components: {
-      ElCheckbox,
-      ElRadio
+      DCheckbox,
+      DRadio
     },
 
     props: {
@@ -130,12 +130,12 @@
         }
 
         return (
-          <el-checkbox
+          <d-checkbox
             value={ node.checked }
             indeterminate={ node.indeterminate }
             disabled={ isDisabled }
             { ...events }
-          ></el-checkbox>
+          ></d-checkbox>
         );
       },
 
@@ -148,7 +148,7 @@
         }
 
         return (
-          <el-radio
+          <d-radio
             value={ checkedValue }
             label={ value }
             disabled={ isDisabled }
@@ -156,25 +156,25 @@
             nativeOnClick={ stopPropagation }>
             {/* add an empty element to avoid render label */}
             <span></span>
-          </el-radio>
+          </d-radio>
         );
       },
 
       renderCheckIcon(h) {
         return (
-          <i class="d-icon-check el-cascader-node__prefix"></i>
+          <i class="d-icon-check d-cascader-node__prefix"></i>
         );
       },
 
       renderLoadingIcon(h) {
         return (
-          <i class="d-icon-loading el-cascader-node__postfix"></i>
+          <i class="d-icon-loading d-cascader-node__postfix"></i>
         );
       },
 
       renderExpandIcon(h) {
         return (
-          <i class="d-icon-arrow-right el-cascader-node__postfix"></i>
+          <i class="d-icon-arrow-right d-cascader-node__postfix"></i>
         );
       },
 
@@ -186,7 +186,7 @@
           : null;
 
         return (
-          <span class="el-cascader-node__label">{ vnode || node.label }</span>
+          <span class="d-cascader-node__label">{ vnode || node.label }</span>
         );
       }
     },
@@ -228,7 +228,7 @@
           aria-expanded={ inActivePath }
           tabindex={ disabled ? null : -1 }
           class={{
-            'el-cascader-node': true,
+            'd-cascader-node': true,
             'is-selectable': checkStrictly,
             'in-active-path': inActivePath,
             'in-checked-path': inCheckedPath,

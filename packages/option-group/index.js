@@ -1,8 +1,8 @@
-import ElOptionGroup from '../select/src/option-group';
+import DOptionGroup from '../select/src/option-group';
 
 /* istanbul ignore next */
-ElOptionGroup.install = function(Vue) {
-  Vue.component(ElOptionGroup.name, ElOptionGroup);
+DOptionGroup.install = function(Vue) {
+  Vue.component(DOptionGroup.name, DOptionGroup);
 };
 
-export default ElOptionGroup;
+export default DOptionGroup;

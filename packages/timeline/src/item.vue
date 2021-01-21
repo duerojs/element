@@ -1,38 +1,38 @@
 <template>
-  <li class="el-timeline-item">
-    <div class="el-timeline-item__tail"></div>
+  <li class="d-timeline-item">
+    <div class="d-timeline-item__tail"></div>
 
     <div v-if="!$slots.dot"
-      class="el-timeline-item__node"
+      class="d-timeline-item__node"
       :class="[
-        `el-timeline-item__node--${size || ''}`,
-        `el-timeline-item__node--${type || ''}`
+        `d-timeline-item__node--${size || ''}`,
+        `d-timeline-item__node--${type || ''}`
       ]"
       :style="{
         backgroundColor: color
       }"
     >
       <i v-if="icon"
-        class="el-timeline-item__icon"
+        class="d-timeline-item__icon"
         :class="icon"
       ></i>
     </div>
-    <div v-if="$slots.dot" class="el-timeline-item__dot">
+    <div v-if="$slots.dot" class="d-timeline-item__dot">
       <slot name="dot"></slot>
     </div>
 
-    <div class="el-timeline-item__wrapper">
+    <div class="d-timeline-item__wrapper">
       <div v-if="!hideTimestamp && placement === 'top'"
-        class="el-timeline-item__timestamp is-top">
+        class="d-timeline-item__timestamp is-top">
         {{timestamp}}
       </div>
 
-      <div class="el-timeline-item__content">
+      <div class="d-timeline-item__content">
         <slot></slot>
       </div>
 
       <div v-if="!hideTimestamp && placement === 'bottom'"
-        class="el-timeline-item__timestamp is-bottom">
+        class="d-timeline-item__timestamp is-bottom">
         {{timestamp}}
       </div>
     </div>
@@ -41,7 +41,7 @@
 
 <script>
   export default {
-    name: 'ElTimelineItem',
+    name: 'DTimelineItem',
 
     inject: ['timeline'],
 

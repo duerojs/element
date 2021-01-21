@@ -9,7 +9,7 @@ export const cellStarts = {
     minWidth: 48,
     realWidth: 48,
     order: '',
-    className: 'el-table-column--selection'
+    className: 'd-table-column--selection'
   },
   expand: {
     width: 48,
@@ -29,14 +29,14 @@ export const cellStarts = {
 export const cellForced = {
   selection: {
     renderHeader: function(h, { store }) {
-      return <el-checkbox
+      return <d-checkbox
         disabled={ store.states.data && store.states.data.length === 0 }
         indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
         nativeOn-click={ this.toggleAllSelection }
         value={ this.isAllSelected } />;
     },
     renderCell: function(h, { row, column, store, $index }) {
-      return <el-checkbox
+      return <d-checkbox
         nativeOn-click={ (event) => event.stopPropagation() }
         value={ store.isSelected(row) }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }
@@ -68,9 +68,9 @@ export const cellForced = {
       return column.label || '';
     },
     renderCell: function(h, { row, store }) {
-      const classes = ['el-table__expand-icon'];
+      const classes = ['d-table__expand-icon'];
       if (store.states.expandRows.indexOf(row) > -1) {
-        classes.push('el-table__expand-icon--expanded');
+        classes.push('d-table__expand-icon--expanded');
       }
       const callback = function(e) {
         e.stopPropagation();
@@ -83,7 +83,7 @@ export const cellForced = {
     },
     sortable: false,
     resizable: false,
-    className: 'el-table__expand-column'
+    className: 'd-table__expand-column'
   }
 };
 
@@ -104,10 +104,10 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
     store.loadOrToggle(row);
   };
   if (treeNode.indent) {
-    ele.push(<span class="el-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
+    ele.push(<span class="d-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
   }
   if (typeof treeNode.expanded === 'boolean' && !treeNode.noLazyChildren) {
-    const expandClasses = ['el-table__expand-icon', treeNode.expanded ? 'el-table__expand-icon--expanded' : ''];
+    const expandClasses = ['d-table__expand-icon', treeNode.expanded ? 'd-table__expand-icon--expanded' : ''];
     let iconClasses = ['d-icon-arrow-right'];
     if (treeNode.loading) {
       iconClasses = ['d-icon-loading'];
@@ -117,7 +117,7 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
       <i class={ iconClasses }></i>
     </div>);
   } else {
-    ele.push(<span class="el-table__placeholder"></span>);
+    ele.push(<span class="d-table__placeholder"></span>);
   }
   return ele;
 }

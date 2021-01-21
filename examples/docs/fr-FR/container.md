@@ -166,26 +166,26 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
 
   <d-container>
     <d-header style="text-align: right; font-size: 12px">
-      <el-dropdown>
+      <d-dropdown>
         <i class="d-icon-setting" style="margin-right: 15px"></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>View</el-dropdown-item>
-          <el-dropdown-item>Add</el-dropdown-item>
-          <el-dropdown-item>Delete</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+        <d-dropdown-menu slot="dropdown">
+          <d-dropdown-item>View</d-dropdown-item>
+          <d-dropdown-item>Add</d-dropdown-item>
+          <d-dropdown-item>Delete</d-dropdown-item>
+        </d-dropdown-menu>
+      </d-dropdown>
       <span>Tom</span>
     </d-header>
 
     <d-main>
-      <el-table :data="tableData">
-        <el-table-column prop="date" label="Date" width="140">
-        </el-table-column>
-        <el-table-column prop="name" label="Name" width="120">
-        </el-table-column>
-        <el-table-column prop="address" label="Address">
-        </el-table-column>
-      </el-table>
+      <d-table :data="tableData">
+        <d-table-column prop="date" label="Date" width="140">
+        </d-table-column>
+        <d-table-column prop="name" label="Name" width="120">
+        </d-table-column>
+        <d-table-column prop="address" label="Address">
+        </d-table-column>
+      </d-table>
     </d-main>
   </d-container>
 </d-container>

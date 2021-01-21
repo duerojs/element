@@ -9,11 +9,11 @@ Popconfirm is similar to Popover. So for some duplicated attributes, please refe
 :::demo Only `title` attribute is avaliable in Popconfirm, `content` will be ignored.
 ```html
 <template>
-<el-popconfirm
+<d-popconfirm
   title="Are you sure to delete this?"
 >
   <d-button slot="reference">Delete</d-button>
-</el-popconfirm>
+</d-popconfirm>
 </template>
 ````
 :::
@@ -23,7 +23,7 @@ You can customise Popconfirm like:
 :::demo
 ```html
 <template>
-<el-popconfirm
+<d-popconfirm
   confirm-button-text='OK'
   cancel-button-text='No, Thanks'
   icon="d-icon-info"
@@ -31,7 +31,7 @@ You can customise Popconfirm like:
   title="Are you sure to delete this?"
 >
   <d-button slot="reference">Delete</d-button>
-</el-popconfirm>
+</d-popconfirm>
 </template>
 ```
 :::

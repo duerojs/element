@@ -1,32 +1,32 @@
 <template>
-  <div class="el-form-item" :class="[{
-      'el-form-item--feedback': elForm && elForm.statusIcon,
+  <div class="d-form-item" :class="[{
+      'd-form-item--feedback': elForm && elForm.statusIcon,
       'is-error': validateState === 'error',
       'is-validating': validateState === 'validating',
       'is-success': validateState === 'success',
       'is-required': isRequired || required,
       'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
     },
-    sizeClass ? 'el-form-item--' + sizeClass : ''
+    sizeClass ? 'd-form-item--' + sizeClass : ''
   ]">
     <label-wrap
       :is-auto-width="labelStyle && labelStyle.width === 'auto'"
       :update-all="form.labelWidth === 'auto'">
-      <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
+      <label :for="labelFor" class="d-form-item__label" :style="labelStyle" v-if="label || $slots.label">
         <slot name="label">{{label + form.labelSuffix}}</slot>
       </label>
     </label-wrap>
-    <div class="el-form-item__content" :style="contentStyle">
+    <div class="d-form-item__content" :style="contentStyle">
       <slot></slot>
-      <transition name="el-zoom-in-top">
+      <transition name="d-zoom-in-top">
         <slot
           v-if="validateState === 'error' && showMessage && form.showMessage"
           name="error"
           :error="validateMessage">
           <div
-            class="el-form-item__error"
+            class="d-form-item__error"
             :class="{
-              'el-form-item__error--inline': typeof inlineMessage === 'boolean'
+              'd-form-item__error--inline': typeof inlineMessage === 'boolean'
                 ? inlineMessage
                 : (elForm && elForm.inlineMessage || false)
             }"
@@ -45,9 +45,9 @@
   import { noop, getPropByPath } from 'element-ui/src/utils/util';
   import LabelWrap from './label-wrap';
   export default {
-    name: 'ElFormItem',
+    name: 'DFormItem',
 
-    componentName: 'ElFormItem',
+    componentName: 'DFormItem',
 
     mixins: [emitter],
 
@@ -130,8 +130,8 @@
       form() {
         let parent = this.$parent;
         let parentName = parent.$options.componentName;
-        while (parentName !== 'ElForm') {
-          if (parentName === 'ElFormItem') {
+        while (parentName !== 'DForm') {
+          if (parentName === 'DFormItem') {
             this.isNested = true;
           }
           parent = parent.$parent;
@@ -247,7 +247,7 @@
           this.validateDisabled = false;
         });
 
-        this.broadcast('ElTimeSelect', 'fieldReset', this.initialValue);
+        this.broadcast('DTimeSelect', 'fieldReset', this.initialValue);
       },
       getRules() {
         let formRules = this.form.rules;
@@ -299,7 +299,7 @@
     },
     mounted() {
       if (this.prop) {
-        this.dispatch('ElForm', 'el.form.addField', [this]);
+        this.dispatch('DForm', 'el.form.addField', [this]);
 
         let initialValue = this.fieldValue;
         if (Array.isArray(initialValue)) {
@@ -313,7 +313,7 @@
       }
     },
     beforeDestroy() {
-      this.dispatch('ElForm', 'el.form.removeField', [this]);
+      this.dispatch('DForm', 'el.form.removeField', [this]);
     }
   };
 </script>

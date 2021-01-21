@@ -10,7 +10,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 ```html
 <d-button type="text" @click="dialogVisible = true">点击打开 Dialog</d-button>
 
-<el-dialog
+<d-dialog
   title="提示"
   :visible.sync="dialogVisible"
   width="30%"
@@ -20,7 +20,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
     <d-button @click="dialogVisible = false">取 消</d-button>
     <d-button type="primary" @click="dialogVisible = false">确 定</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -56,34 +56,34 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 <!-- Table -->
 <d-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</d-button>
 
-<el-dialog title="收货地址" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="日期" width="150"></el-table-column>
-    <el-table-column property="name" label="姓名" width="200"></el-table-column>
-    <el-table-column property="address" label="地址"></el-table-column>
-  </el-table>
-</el-dialog>
+<d-dialog title="收货地址" :visible.sync="dialogTableVisible">
+  <d-table :data="gridData">
+    <d-table-column property="date" label="日期" width="150"></d-table-column>
+    <d-table-column property="name" label="姓名" width="200"></d-table-column>
+    <d-table-column property="address" label="地址"></d-table-column>
+  </d-table>
+</d-dialog>
 
 <!-- Form -->
 <d-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</d-button>
 
-<el-dialog title="收货地址" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="活动名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="活动区域" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="请选择活动区域">
-        <el-option label="区域一" value="shanghai"></el-option>
-        <el-option label="区域二" value="beijing"></el-option>
-      </el-select>
-    </el-form-item>
-  </el-form>
+<d-dialog title="收货地址" :visible.sync="dialogFormVisible">
+  <d-form :model="form">
+    <d-form-item label="活动名称" :label-width="formLabelWidth">
+      <d-input v-model="form.name" autocomplete="off"></d-input>
+    </d-form-item>
+    <d-form-item label="活动区域" :label-width="formLabelWidth">
+      <d-select v-model="form.region" placeholder="请选择活动区域">
+        <d-option label="区域一" value="shanghai"></d-option>
+        <d-option label="区域二" value="beijing"></d-option>
+      </d-select>
+    </d-form-item>
+  </d-form>
   <div slot="footer" class="dialog-footer">
     <d-button @click="dialogFormVisible = false">取 消</d-button>
     <d-button type="primary" @click="dialogFormVisible = false">确 定</d-button>
   </div>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -133,18 +133,18 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 <template>
   <d-button type="text" @click="outerVisible = true">点击打开外层 Dialog</d-button>
   
-  <el-dialog title="外层 Dialog" :visible.sync="outerVisible">
-    <el-dialog
+  <d-dialog title="外层 Dialog" :visible.sync="outerVisible">
+    <d-dialog
       width="30%"
       title="内层 Dialog"
       :visible.sync="innerVisible"
       append-to-body>
-    </el-dialog>
+    </d-dialog>
     <div slot="footer" class="dialog-footer">
       <d-button @click="outerVisible = false">取 消</d-button>
       <d-button type="primary" @click="innerVisible = true">打开内层 Dialog</d-button>
     </div>
-  </el-dialog>
+  </d-dialog>
 </template>
 
 <script>
@@ -169,7 +169,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 ```html
 <d-button type="text" @click="centerDialogVisible = true">点击打开 Dialog</d-button>
 
-<el-dialog
+<d-dialog
   title="提示"
   :visible.sync="centerDialogVisible"
   width="30%"
@@ -179,7 +179,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
     <d-button @click="centerDialogVisible = false">取 消</d-button>
     <d-button type="primary" @click="centerDialogVisible = false">确 定</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {

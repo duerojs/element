@@ -1,12 +1,12 @@
 .demo-block {
-  .el-dropdown {
+  .d-dropdown {
     vertical-align: top;
 
-    & + .el-dropdown {
+    & + .d-dropdown {
       margin-left: 15px;
     }
   }
-  .el-dropdown-link {
+  .d-dropdown-link {
     cursor: pointer;
     color: #409eff;
   }

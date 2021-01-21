@@ -1,18 +1,18 @@
 <script>
 import UploadList from './upload-list';
 import Upload from './upload';
-import ElProgress from 'element-ui/packages/progress';
+import DProgress from 'element-ui/packages/progress';
 import Migrating from 'element-ui/src/mixins/migrating';
 
 function noop() {}
 
 export default {
-  name: 'ElUpload',
+  name: 'DUpload',
 
   mixins: [Migrating],
 
   components: {
-    ElProgress,
+    DProgress,
     UploadList,
     Upload
   },

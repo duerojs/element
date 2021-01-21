@@ -1,45 +1,45 @@
 <template>
   <transition name="viewer-fade">
-    <div tabindex="-1" ref="el-image-viewer__wrapper" class="el-image-viewer__wrapper" :style="{ 'z-index': zIndex }">
-      <div class="el-image-viewer__mask" @click.self="handleMaskClick"></div>
+    <div tabindex="-1" ref="d-image-viewer__wrapper" class="d-image-viewer__wrapper" :style="{ 'z-index': zIndex }">
+      <div class="d-image-viewer__mask" @click.self="handleMaskClick"></div>
       <!-- CLOSE -->
-      <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
+      <span class="d-image-viewer__btn d-image-viewer__close" @click="hide">
         <i class="d-icon-close"></i>
       </span>
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
-          class="el-image-viewer__btn el-image-viewer__prev"
+          class="d-image-viewer__btn d-image-viewer__prev"
           :class="{ 'is-disabled': !infinite && isFirst }"
           @click="prev">
           <i class="d-icon-arrow-left"/>
         </span>
         <span
-          class="el-image-viewer__btn el-image-viewer__next"
+          class="d-image-viewer__btn d-image-viewer__next"
           :class="{ 'is-disabled': !infinite && isLast }"
           @click="next">
           <i class="d-icon-arrow-right"/>
         </span>
       </template>
       <!-- ACTIONS -->
-      <div class="el-image-viewer__btn el-image-viewer__actions">
-        <div class="el-image-viewer__actions__inner">
+      <div class="d-image-viewer__btn d-image-viewer__actions">
+        <div class="d-image-viewer__actions__inner">
           <i class="d-icon-zoom-out" @click="handleActions('zoomOut')"></i>
           <i class="d-icon-zoom-in" @click="handleActions('zoomIn')"></i>
-          <i class="el-image-viewer__actions__divider"></i>
+          <i class="d-image-viewer__actions__divider"></i>
           <i :class="mode.icon" @click="toggleMode"></i>
-          <i class="el-image-viewer__actions__divider"></i>
+          <i class="d-image-viewer__actions__divider"></i>
           <i class="d-icon-refresh-left" @click="handleActions('anticlocelise')"></i>
           <i class="d-icon-refresh-right" @click="handleActions('clocelise')"></i>
         </div>
       </div>
       <!-- CANVAS -->
-      <div class="el-image-viewer__canvas">
+      <div class="d-image-viewer__canvas">
         <img
           v-for="(url, i) in urlList"
           v-if="i === index"
           ref="img"
-          class="el-image-viewer__img"
+          class="d-image-viewer__img"
           :key="url"
           :src="currentImg"
           :style="imgStyle"
@@ -312,7 +312,7 @@ export default {
     }
     // add tabindex then wrapper can be focusable via Javascript
     // focus wrapper so arrow key can't cause inner scroll behavior underneath
-    this.$refs['el-image-viewer__wrapper'].focus();
+    this.$refs['d-image-viewer__wrapper'].focus();
   },
   destroyed() {
     // if appendToBody is true, remove DOM node after destroy

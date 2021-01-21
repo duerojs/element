@@ -1,12 +1,12 @@
 <template>
   <div
-    class="el-progress"
+    class="d-progress"
     :class="[
-      'el-progress--' + type,
+      'd-progress--' + type,
       status ? 'is-' + status : '',
       {
-        'el-progress--without-text': !showText,
-        'el-progress--text-inside': textInside,
+        'd-progress--without-text': !showText,
+        'd-progress--text-inside': textInside,
       }
     ]"
     role="progressbar"
@@ -14,24 +14,24 @@
     aria-valuemin="0"
     aria-valuemax="100"
   >
-    <div class="el-progress-bar" v-if="type === 'line'">
-      <div class="el-progress-bar__outer" :style="{height: strokeWidth + 'px'}">
-        <div class="el-progress-bar__inner" :style="barStyle">
-          <div class="el-progress-bar__innerText" v-if="showText && textInside">{{content}}</div>
+    <div class="d-progress-bar" v-if="type === 'line'">
+      <div class="d-progress-bar__outer" :style="{height: strokeWidth + 'px'}">
+        <div class="d-progress-bar__inner" :style="barStyle">
+          <div class="d-progress-bar__innerText" v-if="showText && textInside">{{content}}</div>
         </div>
       </div>
     </div>
-    <div class="el-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
+    <div class="d-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
       <svg viewBox="0 0 100 100">
         <path
-          class="el-progress-circle__track"
+          class="d-progress-circle__track"
           :d="trackPath"
           stroke="#e5e9f2"
           :stroke-width="relativeStrokeWidth"
           fill="none"
           :style="trailPathStyle"></path>
         <path
-          class="el-progress-circle__path"
+          class="d-progress-circle__path"
           :d="trackPath"
           :stroke="stroke"
           fill="none"
@@ -41,7 +41,7 @@
       </svg>
     </div>
     <div
-      class="el-progress__text"
+      class="d-progress__text"
       v-if="showText && !textInside"
       :style="{fontSize: progressTextSize + 'px'}"
     >
@@ -52,7 +52,7 @@
 </template>
 <script>
   export default {
-    name: 'ElProgress',
+    name: 'DProgress',
     props: {
       type: {
         type: String,

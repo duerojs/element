@@ -1,8 +1,8 @@
-import ElOption from '../select/src/option';
+import DOption from '../select/src/option';
 
 /* istanbul ignore next */
-ElOption.install = function(Vue) {
-  Vue.component(ElOption.name, ElOption);
+DOption.install = function(Vue) {
+  Vue.component(DOption.name, DOption);
 };
 
-export default ElOption;
+export default DOption;

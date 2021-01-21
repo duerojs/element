@@ -14,7 +14,7 @@ Input 为受控组件，它**总会显示 Vue 绑定值**。
 
 :::demo
 ```html
-<el-input v-model="input" placeholder="请输入内容"></el-input>
+<d-input v-model="input" placeholder="请输入内容"></d-input>
 
 <script>
 export default {
@@ -33,11 +33,11 @@ export default {
 
 :::demo 通过 `disabled` 属性指定是否禁用 input 组件
 ```html
-<el-input
+<d-input
   placeholder="请输入内容"
   v-model="input"
   :disabled="true">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -56,11 +56,11 @@ export default {
 :::demo 使用`clearable`属性即可得到一个可清空的输入框
 
 ```html
-<el-input
+<d-input
   placeholder="请输入内容"
   v-model="input"
   clearable>
-</el-input>
+</d-input>
 
 <script>
   export default {
@@ -79,7 +79,7 @@ export default {
 :::demo 使用`show-password`属性即可得到一个可切换显示隐藏的密码框
 
 ```html
-<el-input placeholder="请输入密码" v-model="input" show-password></el-input>
+<d-input placeholder="请输入密码" v-model="input" show-password></d-input>
 
 <script>
   export default {
@@ -101,29 +101,29 @@ export default {
 ```html
 <div class="demo-input-suffix">
   属性方式：
-  <el-input
+  <d-input
     placeholder="请选择日期"
     suffix-icon="d-icon-date"
     v-model="input1">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     placeholder="请输入内容"
     prefix-icon="d-icon-search"
     v-model="input2">
-  </el-input>
+  </d-input>
 </div>
 <div class="demo-input-suffix">
   slot 方式：
-  <el-input
+  <d-input
     placeholder="请选择日期"
     v-model="input3">
-    <i slot="suffix" class="el-input__icon d-icon-date"></i>
-  </el-input>
-  <el-input
+    <i slot="suffix" class="d-input__icon d-icon-date"></i>
+  </d-input>
+  <d-input
     placeholder="请输入内容"
     v-model="input4">
-    <i slot="prefix" class="el-input__icon d-icon-search"></i>
-  </el-input>
+    <i slot="prefix" class="d-input__icon d-icon-search"></i>
+  </d-input>
 </div>
 
 <script>
@@ -147,12 +147,12 @@ export default {
 
 :::demo 文本域高度可通过 `rows` 属性控制
 ```html
-<el-input
+<d-input
   type="textarea"
   :rows="2"
   placeholder="请输入内容"
   v-model="textarea">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -172,19 +172,19 @@ export default {
 
 :::demo
 ```html
-<el-input
+<d-input
   type="textarea"
   autosize
   placeholder="请输入内容"
   v-model="textarea1">
-</el-input>
+</d-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<d-input
   type="textarea"
   :autosize="{ minRows: 2, maxRows: 4}"
   placeholder="请输入内容"
   v-model="textarea2">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -206,30 +206,30 @@ export default {
 :::demo 可通过 slot 来指定在 input 中前置或者后置内容。
 ```html
 <div>
-  <el-input placeholder="请输入内容" v-model="input1">
+  <d-input placeholder="请输入内容" v-model="input1">
     <template slot="prepend">Http://</template>
-  </el-input>
+  </d-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="请输入内容" v-model="input2">
+  <d-input placeholder="请输入内容" v-model="input2">
     <template slot="append">.com</template>
-  </el-input>
+  </d-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="请输入内容" v-model="input3" class="input-with-select">
-    <el-select v-model="select" slot="prepend" placeholder="请选择">
-      <el-option label="餐厅名" value="1"></el-option>
-      <el-option label="订单号" value="2"></el-option>
-      <el-option label="用户电话" value="3"></el-option>
-    </el-select>
+  <d-input placeholder="请输入内容" v-model="input3" class="input-with-select">
+    <d-select v-model="select" slot="prepend" placeholder="请选择">
+      <d-option label="餐厅名" value="1"></d-option>
+      <d-option label="订单号" value="2"></d-option>
+      <d-option label="用户电话" value="3"></d-option>
+    </d-select>
     <d-button slot="append" icon="d-icon-search"></d-button>
-  </el-input>
+  </d-input>
 </div>
 <style>
-  .el-select .el-input {
+  .d-select .d-input {
     width: 130px;
   }
-  .input-with-select .el-input-group__prepend {
+  .input-with-select .d-input-group__prepend {
     background-color: #fff;
   }
 </style>
@@ -253,29 +253,29 @@ export default {
 :::demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、small 和 mini 三种尺寸。
 ```html
 <div class="demo-input-size">
-  <el-input
+  <d-input
     placeholder="请输入内容"
     suffix-icon="d-icon-date"
     v-model="input1">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="medium"
     placeholder="请输入内容"
     suffix-icon="d-icon-date"
     v-model="input2">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="small"
     placeholder="请输入内容"
     suffix-icon="d-icon-date"
     v-model="input3">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="mini"
     placeholder="请输入内容"
     suffix-icon="d-icon-date"
     v-model="input4">
-  </el-input>
+  </d-input>
 </div>
 
 <script>
@@ -302,24 +302,24 @@ export default {
 <d-row class="demo-autocomplete">
   <d-col :span="12">
     <div class="sub-title">激活即列出输入建议</div>
-    <el-autocomplete
+    <d-autocomplete
       class="inline-input"
       v-model="state1"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       @select="handleSelect"
-    ></el-autocomplete>
+    ></d-autocomplete>
   </d-col>
   <d-col :span="12">
     <div class="sub-title">输入后匹配输入建议</div>
-    <el-autocomplete
+    <d-autocomplete
       class="inline-input"
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></el-autocomplete>
+    ></d-autocomplete>
   </d-col>
 </d-row>
 <script>
@@ -413,14 +413,14 @@ export default {
 
 :::demo 使用`scoped slot`自定义输入建议的模板。该 scope 的参数为`item`，表示当前输入建议对象。
 ```html
-<el-autocomplete
+<d-autocomplete
   popper-class="my-autocomplete"
   v-model="state"
   :fetch-suggestions="querySearch"
   placeholder="请输入内容"
   @select="handleSelect">
   <i
-    class="d-icon-edit el-input__icon"
+    class="d-icon-edit d-input__icon"
     slot="suffix"
     @click="handleIconClick">
   </i>
@@ -428,7 +428,7 @@ export default {
     <div class="name">{{ item.value }}</div>
     <span class="addr">{{ item.address }}</span>
   </template>
-</el-autocomplete>
+</d-autocomplete>
 
 <style>
 .my-autocomplete {
@@ -545,12 +545,12 @@ export default {
 
 :::demo
 ```html
-<el-autocomplete
+<d-autocomplete
   v-model="state"
   :fetch-suggestions="querySearchAsync"
   placeholder="请输入内容"
   @select="handleSelect"
-></el-autocomplete>
+></d-autocomplete>
 <script>
   export default {
     data() {
@@ -643,23 +643,23 @@ export default {
 
 :::demo  `maxlength` 和 `minlength` 是原生属性，用来限制输入框的字符长度，其中字符长度是用 Javascript 的字符串长度统计的。对于类型为 `text` 或 `textarea` 的输入框，在使用 `maxlength` 属性限制最大输入长度的同时，可通过设置 `show-word-limit` 属性来展示字数统计。
 ```html
-<el-input
+<d-input
   type="text"
   placeholder="请输入内容"
   v-model="text"
   maxlength="10"
   show-word-limit
 >
-</el-input>
+</d-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<d-input
   type="textarea"
   placeholder="请输入内容"
   v-model="textarea"
   maxlength="30"
   show-word-limit
 >
-</el-input>
+</d-input>
 
 <script>
 export default {

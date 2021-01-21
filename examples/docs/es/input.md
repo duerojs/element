@@ -15,7 +15,7 @@ No admite modificadores `v-model`.
 :::demo
 
 ```html
-<el-input placeholder="Please input" v-model="input"></el-input>
+<d-input placeholder="Please input" v-model="input"></d-input>
 
 <script>
 export default {
@@ -35,11 +35,11 @@ export default {
 :::demo Deshabilite el Input con el atributo `disabled`.
 
 ```html
-<el-input
+<d-input
   placeholder="Please input"
   v-model="input"
   :disabled="true">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -59,11 +59,11 @@ export default {
 :::demo Marque que el input puede ser limpiable con el atributo `clearable`.
 
 ```html
-<el-input
+<d-input
   placeholder="Please input"
   v-model="input"
   clearable>
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -82,7 +82,7 @@ export default {
 :::demo Haga un input de contraseña conmutable con el atributo `show-password`.
 
 ```html
-<el-input placeholder="Please input password" v-model="input" show-password></el-input>
+<d-input placeholder="Please input password" v-model="input" show-password></d-input>
 
 <script>
   export default {
@@ -105,29 +105,29 @@ Añada un icono para indicar el tipo de Input.
 ```html
 <div class="demo-input-suffix">
   <span class="demo-input-label">Using attributes</span>
-  <el-input
+  <d-input
     placeholder="Pick a date"
     suffix-icon="d-icon-date"
     v-model="input1">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     placeholder="Type something"
     prefix-icon="d-icon-search"
     v-model="input2">
-  </el-input>
+  </d-input>
 </div>
 <div class="demo-input-suffix">
   <span class="demo-input-label">Using slots</span>
-  <el-input
+  <d-input
     placeholder="Pick a date"
     v-model="input3">
-    <i slot="suffix" class="el-input__icon d-icon-date"></i>
-  </el-input>
-  <el-input
+    <i slot="suffix" class="d-input__icon d-icon-date"></i>
+  </d-input>
+  <d-input
     placeholder="Type something"
     v-model="input4">
-    <i slot="prefix" class="el-input__icon d-icon-search"></i>
-  </el-input>
+    <i slot="prefix" class="d-input__icon d-icon-search"></i>
+  </d-input>
 </div>
 
 <style>
@@ -160,12 +160,12 @@ Re dimensiona para introducir varias líneas de información de texto. Agregue e
 :::demo Controle la altura ajustando el prop `rows`.
 
 ```html
-<el-input
+<d-input
   type="textarea"
   :rows="2"
   placeholder="Please input"
   v-model="textarea">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -187,19 +187,19 @@ El ajuste del prop `autosize` en el tipo de Input textarea hace que la altura se
 :::demo
 
 ```html
-<el-input
+<d-input
   type="textarea"
   autosize
   placeholder="Please input"
   v-model="textarea1">
-</el-input>
+</d-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<d-input
   type="textarea"
   :autosize="{ minRows: 2, maxRows: 4}"
   placeholder="Please input"
   v-model="textarea2">
-</el-input>
+</d-input>
 
 <script>
 export default {
@@ -223,31 +223,31 @@ Añade un elemento antes o después del input, generalmente una etiqueta o un bo
 
 ```html
 <div>
-  <el-input placeholder="Please input" v-model="input1">
+  <d-input placeholder="Please input" v-model="input1">
     <template slot="prepend">Http://</template>
-  </el-input>
+  </d-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="Please input" v-model="input2">
+  <d-input placeholder="Please input" v-model="input2">
     <template slot="append">.com</template>
-  </el-input>
+  </d-input>
 </div>
 <div style="margin-top: 15px;">
-  <el-input placeholder="Please input" v-model="input3" class="input-with-select">
-    <el-select v-model="select" slot="prepend" placeholder="Select">
-      <el-option label="Restaurant" value="1"></el-option>
-      <el-option label="Order No." value="2"></el-option>
-      <el-option label="Tel" value="3"></el-option>
-    </el-select>
+  <d-input placeholder="Please input" v-model="input3" class="input-with-select">
+    <d-select v-model="select" slot="prepend" placeholder="Select">
+      <d-option label="Restaurant" value="1"></d-option>
+      <d-option label="Order No." value="2"></d-option>
+      <d-option label="Tel" value="3"></d-option>
+    </d-select>
     <d-button slot="append" icon="d-icon-search"></d-button>
-  </el-input>
+  </d-input>
 </div>
 
 <style>
-  .el-select .el-input {
+  .d-select .d-input {
     width: 110px;
   }
-  .input-with-select .el-input-group__prepend {
+  .input-with-select .d-input-group__prepend {
     background-color: #fff;
   }
 </style>
@@ -273,25 +273,25 @@ export default {
 
 ```html
 <div class="demo-input-size">
-  <el-input
+  <d-input
     placeholder="Please Input"
     v-model="input1">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="medium"
     placeholder="Please Input"
     v-model="input2">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="small"
     placeholder="Please Input"
     v-model="input3">
-  </el-input>
-  <el-input
+  </d-input>
+  <d-input
     size="mini"
     placeholder="Please Input"
     v-model="input4">
-  </el-input>
+  </d-input>
 </div>
 
 <script>
@@ -320,24 +320,24 @@ Puede obtener algunas sugerencias basadas en la entrada actual.
 <d-row class="demo-autocomplete">
   <d-col :span="12">
     <div class="sub-title">list suggestions when activated</div>
-    <el-autocomplete
+    <d-autocomplete
       class="inline-input"
       v-model="state1"
       :fetch-suggestions="querySearch"
       placeholder="Please Input"
       @select="handleSelect"
-    ></el-autocomplete>
+    ></d-autocomplete>
   </d-col>
   <d-col :span="12">
     <div class="sub-title">list suggestions on input</div>
-    <el-autocomplete
+    <d-autocomplete
       class="inline-input"
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="Please Input"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></el-autocomplete>
+    ></d-autocomplete>
   </d-col>
 </d-row>
 <script>
@@ -392,14 +392,14 @@ Personalice cómo se muestran las sugerencias.
 :::demo Utilice `scoped slot` para personalizar los elementos de sugerencias. En el scope, puede acceder al objeto de sugerencia mediante la clave `item`.
 
 ```html
-<el-autocomplete
+<d-autocomplete
   popper-class="my-autocomplete"
   v-model="state"
   :fetch-suggestions="querySearch"
   placeholder="Please input"
   @select="handleSelect">
   <i
-    class="d-icon-edit el-input__icon"
+    class="d-icon-edit d-input__icon"
     slot="suffix"
     @click="handleIconClick">
   </i>
@@ -407,7 +407,7 @@ Personalice cómo se muestran las sugerencias.
     <div class="value">{{ item.value }}</div>
     <span class="link">{{ item.link }}</span>
   </template>
-</el-autocomplete>
+</d-autocomplete>
 
 <style>
   .my-autocomplete {
@@ -481,12 +481,12 @@ Búsqueda de datos desde el servidor.
 :::demo
 
 ```html
-<el-autocomplete
+<d-autocomplete
   v-model="state"
   :fetch-suggestions="querySearchAsync"
   placeholder="Please input"
   @select="handleSelect"
-></el-autocomplete>
+></d-autocomplete>
 <script>
   export default {
     data() {
@@ -540,23 +540,23 @@ Búsqueda de datos desde el servidor.
 :::demo `maxlength` y `minlength` son atributos de la entrada nativa, declaran un límite en el número de caracteres que un usuario puede introducir. La configuración de la pro `maxlength` para un tipo de entrada de texto o de área de texto puede limitar la longitud del valor de entrada y le permite mostrar el recuento de palabras al establecer `show-word-limit` a `true` al mismo tiempo.
 
 ```html
-<el-input
+<d-input
   type="text"
   placeholder="Please input"
   v-model="text"
   maxlength="10"
   show-word-limit
 >
-</el-input>
+</d-input>
 <div style="margin: 20px 0;"></div>
-<el-input
+<d-input
   type="textarea"
   placeholder="Please input"
   v-model="textarea"
   maxlength="30"
   show-word-limit
 >
-</el-input>
+</d-input>
 
 <script>
 export default {

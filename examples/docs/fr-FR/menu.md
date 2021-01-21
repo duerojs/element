@@ -178,10 +178,10 @@ Le menu vertical peut être réduit.
 
 :::demo
 ```html
-<el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-  <el-radio-button :label="false">Agrandir</el-radio-button>
-  <el-radio-button :label="true">Réduire</el-radio-button>
-</el-radio-group>
+<d-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+  <d-radio-button :label="false">Agrandir</d-radio-button>
+  <d-radio-button :label="true">Réduire</d-radio-button>
+</d-radio-group>
 <d-menu default-active="2" class="d-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
   <d-submenu index="1">
     <template slot="title">

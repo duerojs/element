@@ -10,12 +10,12 @@ Basic and concise tabs.
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="User" name="first">User</el-tab-pane>
-    <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-    <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-    <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
-  </el-tabs>
+  <d-tabs v-model="activeName" @tab-click="handleClick">
+    <d-tab-pane label="User" name="first">User</d-tab-pane>
+    <d-tab-pane label="Config" name="second">Config</d-tab-pane>
+    <d-tab-pane label="Role" name="third">Role</d-tab-pane>
+    <d-tab-pane label="Task" name="fourth">Task</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -42,12 +42,12 @@ Tabs styled as cards.
 
 ```html
 <template>
-  <el-tabs type="card" @tab-click="handleClick">
-    <el-tab-pane label="User">User</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+  <d-tabs type="card" @tab-click="handleClick">
+    <d-tab-pane label="User">User</d-tab-pane>
+    <d-tab-pane label="Config">Config</d-tab-pane>
+    <d-tab-pane label="Role">Role</d-tab-pane>
+    <d-tab-pane label="Task">Task</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -73,12 +73,12 @@ Border card tabs.
 :::demo Set `type` to `border-card`.
 
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="User">User</el-tab-pane>
-  <el-tab-pane label="Config">Config</el-tab-pane>
-  <el-tab-pane label="Role">Role</el-tab-pane>
-  <el-tab-pane label="Task">Task</el-tab-pane>
-</el-tabs>
+<d-tabs type="border-card">
+  <d-tab-pane label="User">User</d-tab-pane>
+  <d-tab-pane label="Config">Config</d-tab-pane>
+  <d-tab-pane label="Role">Role</d-tab-pane>
+  <d-tab-pane label="Task">Task</d-tab-pane>
+</d-tabs>
 ```
 
 :::
@@ -91,19 +91,19 @@ You can use `tab-position` attribute to set the tab's position.
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <d-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <d-radio-button label="top">top</d-radio-button>
+    <d-radio-button label="right">right</d-radio-button>
+    <d-radio-button label="bottom">bottom</d-radio-button>
+    <d-radio-button label="left">left</d-radio-button>
+  </d-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="User">User</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+  <d-tabs :tab-position="tabPosition" style="height: 200px;">
+    <d-tab-pane label="User">User</d-tab-pane>
+    <d-tab-pane label="Config">Config</d-tab-pane>
+    <d-tab-pane label="Role">Role</d-tab-pane>
+    <d-tab-pane label="Task">Task</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -123,15 +123,15 @@ You can use named slot to customize the tab label content.
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
+<d-tabs type="border-card">
+  <d-tab-pane>
     <span slot="label"><i class="d-icon-date"></i> Route</span>
     Route
-  </el-tab-pane>
-  <el-tab-pane label="Config">Config</el-tab-pane>
-  <el-tab-pane label="Role">Role</el-tab-pane>
-  <el-tab-pane label="Task">Task</el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+  <d-tab-pane label="Config">Config</d-tab-pane>
+  <d-tab-pane label="Role">Role</d-tab-pane>
+  <d-tab-pane label="Task">Task</d-tab-pane>
+</d-tabs>
 ```
 :::
 
@@ -141,16 +141,16 @@ Only card type Tabs support addable & closeable.
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <d-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {
@@ -215,16 +215,16 @@ Only card type Tabs support addable & closeable.
     add tab
   </d-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <d-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {

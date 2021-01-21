@@ -10,25 +10,25 @@ Affiche une animation dans un conteneur (Comme un tableau par exemple) pendant l
 
 ```html
 <template>
-  <el-table
+  <d-table
     v-loading="loading"
     :data="tableData"
     style="width: 100%">
-    <el-table-column
+    <d-table-column
       prop="date"
       label="Date"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </d-table-column>
+    <d-table-column
       prop="name"
       label="Nom"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </d-table-column>
+    <d-table-column
       prop="address"
       label="Adresse">
-    </el-table-column>
-  </el-table>
+    </d-table-column>
+  </d-table>
 </template>
 
 <style>
@@ -69,28 +69,28 @@ Vous pouvez personnaliser le texte, le spinner et la couleur de fond.
 :::demo Ajoutez l'attribut `element-loading-text` à l'élement sur lequel `v-loading` est attaché et sa valeur sera affichée sous le spinner. De la même façon, `element-loading-spinner` et `element-loading-background` permettent de personnaliser le spinner et la couleur de fond.
 ```html
 <template>
-  <el-table
+  <d-table
     v-loading="loading"
     element-loading-text="Loading..."
     element-loading-spinner="d-icon-loading"
     element-loading-background="rgba(0, 0, 0, 0.8)"
     :data="tableData"
     style="width: 100%">
-    <el-table-column
+    <d-table-column
       prop="date"
       label="Date"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </d-table-column>
+    <d-table-column
       prop="name"
       label="Nom"
       width="180">
-    </el-table-column>
-    <el-table-column
+    </d-table-column>
+    <d-table-column
       prop="address"
       label="Adresse">
-    </el-table-column>
-  </el-table>
+    </d-table-column>
+  </d-table>
 </template>
 
 <script>

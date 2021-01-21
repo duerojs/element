@@ -1,15 +1,15 @@
 <template>
   <div
-    class="el-tree"
+    class="d-tree"
     :class="{
-      'el-tree--highlight-current': highlightCurrent,
+      'd-tree--highlight-current': highlightCurrent,
       'is-dragging': !!dragState.draggingNode,
       'is-drop-not-allow': !dragState.allowDrop,
       'is-drop-inner': dragState.dropType === 'inner'
     }"
     role="tree"
   >
-    <el-tree-node
+    <d-tree-node
       v-for="child in root.childNodes"
       :node="child"
       :props="props"
@@ -18,13 +18,13 @@
       :key="getNodeKey(child)"
       :render-content="renderContent"
       @node-expand="handleNodeExpand">
-    </el-tree-node>
-    <div class="el-tree__empty-block" v-if="isEmpty">
-      <span class="el-tree__empty-text">{{ emptyText }}</span>
+    </d-tree-node>
+    <div class="d-tree__empty-block" v-if="isEmpty">
+      <span class="d-tree__empty-text">{{ emptyText }}</span>
     </div>
     <div
       v-show="dragState.showDropIndicator"
-      class="el-tree__drop-indicator"
+      class="d-tree__drop-indicator"
       ref="dropIndicator">
     </div>
   </div>
@@ -33,18 +33,18 @@
 <script>
   import TreeStore from './model/tree-store';
   import { getNodeKey, findNearestComponent } from './model/util';
-  import ElTreeNode from './tree-node.vue';
+  import DTreeNode from './tree-node.vue';
   import {t} from 'element-ui/src/locale';
   import emitter from 'element-ui/src/mixins/emitter';
   import { addClass, removeClass } from 'element-ui/src/utils/dom';
 
   export default {
-    name: 'ElTree',
+    name: 'DTree',
 
     mixins: [emitter],
 
     components: {
-      ElTreeNode
+      DTreeNode
     },
 
     data() {
@@ -271,7 +271,7 @@
       },
 
       handleNodeExpand(nodeData, node, instance) {
-        this.broadcast('ElTreeNode', 'tree-node-expand', node);
+        this.broadcast('DTreeNode', 'tree-node-expand', node);
         this.$emit('node-expand', nodeData, node, instance);
       },
 
@@ -293,7 +293,7 @@
 
       handleKeydown(ev) {
         const currentItem = ev.target;
-        if (currentItem.className.indexOf('el-tree-node') === -1) return;
+        if (currentItem.className.indexOf('d-tree-node') === -1) return;
         const keyCode = ev.keyCode;
         this.treeItems = this.$el.querySelectorAll('.is-focusable[role=treeitem]');
         const currentIndex = this.treeItemArray.indexOf(currentItem);
@@ -359,7 +359,7 @@
       });
 
       this.$on('tree-node-drag-over', (event, treeNode) => {
-        const dropNode = findNearestComponent(event.target, 'ElTreeNode');
+        const dropNode = findNearestComponent(event.target, 'DTreeNode');
         const oldDropNode = dragState.dropNode;
         if (oldDropNode && oldDropNode !== dropNode) {
           removeClass(oldDropNode.$el, 'is-drop-inner');
@@ -422,7 +422,7 @@
           dropType = 'none';
         }
 
-        const iconPosition = dropNode.$el.querySelector('.el-tree-node__expand-icon').getBoundingClientRect();
+        const iconPosition = dropNode.$el.querySelector('.d-tree-node__expand-icon').getBoundingClientRect();
         const dropIndicator = this.$refs.dropIndicator;
         if (dropType === 'before') {
           indicatorTop = iconPosition.top - treePosition.top;

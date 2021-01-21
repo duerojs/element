@@ -7,11 +7,11 @@
 :::demo Progress 组件设置`percentage`属性即可，表示进度条对应的百分比，**必填**，必须在 0-100。通过 `format` 属性来指定进度条文字内容。
 
 ```html
-<el-progress :percentage="50"></el-progress>
-<el-progress :percentage="100" :format="format"></el-progress>
-<el-progress :percentage="100" status="success"></el-progress>
-<el-progress :percentage="100" status="warning"></el-progress>
-<el-progress :percentage="50" status="exception"></el-progress>
+<d-progress :percentage="50"></d-progress>
+<d-progress :percentage="100" :format="format"></d-progress>
+<d-progress :percentage="100" status="success"></d-progress>
+<d-progress :percentage="100" status="warning"></d-progress>
+<d-progress :percentage="50" status="exception"></d-progress>
 
 <script>
   export default {
@@ -32,10 +32,10 @@
 :::demo Progress 组件可通过 `stroke-width` 属性更改进度条的高度，并可通过 `text-inside` 属性来将进度条描述置于进度条内部。
 
 ```html
-<el-progress :text-inside="true" :stroke-width="26" :percentage="70"></el-progress>
-<el-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></el-progress>
-<el-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></el-progress>
-<el-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></el-progress>
+<d-progress :text-inside="true" :stroke-width="26" :percentage="70"></d-progress>
+<d-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></d-progress>
+<d-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></d-progress>
+<d-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -46,11 +46,11 @@
 :::demo
 
 ```html
-<el-progress :percentage="percentage" :color="customColor"></el-progress>
+<d-progress :percentage="percentage" :color="customColor"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColorMethod"></el-progress>
+<d-progress :percentage="percentage" :color="customColorMethod"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColors"></el-progress>
+<d-progress :percentage="percentage" :color="customColors"></d-progress>
 <div>
   <d-button-group>
     <d-button icon="d-icon-minus" @click="decrease"></d-button>
@@ -108,11 +108,11 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 :::demo
 
 ```html
-<el-progress type="circle" :percentage="0"></el-progress>
-<el-progress type="circle" :percentage="25"></el-progress>
-<el-progress type="circle" :percentage="100" status="success"></el-progress>
-<el-progress type="circle" :percentage="70" status="warning"></el-progress>
-<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+<d-progress type="circle" :percentage="0"></d-progress>
+<d-progress type="circle" :percentage="25"></d-progress>
+<d-progress type="circle" :percentage="100" status="success"></d-progress>
+<d-progress type="circle" :percentage="70" status="warning"></d-progress>
+<d-progress type="circle" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -122,7 +122,7 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 
 ```html
 
-<el-progress type="dashboard" :percentage="percentage" :color="colors"></el-progress>
+<d-progress type="dashboard" :percentage="percentage" :color="colors"></d-progress>
 <div>
   <d-button-group>
     <d-button icon="d-icon-minus" @click="decrease"></d-button>

@@ -1,12 +1,12 @@
 <template>
-  <div class="el-page-header">
-    <div class="el-page-header__left" @click="$emit('back')">
+  <div class="d-page-header">
+    <div class="d-page-header__left" @click="$emit('back')">
       <i class="d-icon-back"></i>
-      <div class="el-page-header__title">
+      <div class="d-page-header__title">
         <slot name="title">{{ title }}</slot>
       </div>
     </div>
-    <div class="el-page-header__content">
+    <div class="d-page-header__content">
       <slot name="content">{{ content }}</slot>
     </div>
   </div>
@@ -15,7 +15,7 @@
 <script>
 import { t } from 'element-ui/src/locale';
 export default {
-  name: 'ElPageHeader',
+  name: 'DPageHeader',
 
   props: {
     title: {

@@ -1,8 +1,8 @@
-import ElForm from './src/form';
+import DForm from './src/form';
 
 /* istanbul ignore next */
-ElForm.install = function(Vue) {
-  Vue.component(ElForm.name, ElForm);
+DForm.install = function(Vue) {
+  Vue.component(DForm.name, DForm);
 };
 
-export default ElForm;
+export default DForm;

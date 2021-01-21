@@ -166,7 +166,7 @@ export default {
     return (
       <table
         class={{
-          'el-calendar-table': true,
+          'd-calendar-table': true,
           'is-range': this.isInRange
         }}
         cellspacing="0"
@@ -178,15 +178,15 @@ export default {
           {
             this.rows.map((row, index) => <tr
               class={{
-                'el-calendar-table__row': true,
-                'el-calendar-table__row--hide-border': index === 0 && this.hideHeader
+                'd-calendar-table__row': true,
+                'd-calendar-table__row--hide-border': index === 0 && this.hideHeader
               }}
               key={index}>
               {
                 row.map((cell, key) => <td key={key}
                   class={ this.getCellClass(cell) }
                   onClick={this.pickDay.bind(this, cell)}>
-                  <div class="el-calendar-day">
+                  <div class="d-calendar-day">
                     {
                       this.cellRenderProxy(cell)
                     }

@@ -11,7 +11,7 @@ Le Dialog ouvre un modal personnalisable.
 ```html
 <d-button type="text" @click="dialogVisible = true">Cliquez pour ouvrir le modal</d-button>
 
-<el-dialog
+<d-dialog
   title="Tips"
   :visible.sync="dialogVisible"
   width="30%"
@@ -21,7 +21,7 @@ Le Dialog ouvre un modal personnalisable.
     <d-button @click="dialogVisible = false">Annuler</d-button>
     <d-button type="primary" @click="dialogVisible = false">Confirmer</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -58,34 +58,34 @@ Le contenu du modal peut être n'importe quoi, tableau ou formulaire compris.
 <!-- Table -->
 <d-button type="text" @click="dialogTableVisible = true">Ouvrir un modal avec tableau</d-button>
 
-<el-dialog title="Adresse d'expédition" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="Date" width="150"></el-table-column>
-    <el-table-column property="name" label="Nom" width="200"></el-table-column>
-    <el-table-column property="address" label="Adresse"></el-table-column>
-  </el-table>
-</el-dialog>
+<d-dialog title="Adresse d'expédition" :visible.sync="dialogTableVisible">
+  <d-table :data="gridData">
+    <d-table-column property="date" label="Date" width="150"></d-table-column>
+    <d-table-column property="name" label="Nom" width="200"></d-table-column>
+    <d-table-column property="address" label="Adresse"></d-table-column>
+  </d-table>
+</d-dialog>
 
 <!-- Form -->
 <d-button type="text" @click="dialogFormVisible = true">Ouvrir un modal avec formulaire</d-button>
 
-<el-dialog title="Adresse d'expédition" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="Nom de promotion" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="Zones" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="Sélectionnez une zone">
-        <el-option label="Zone No.1" value="shanghai"></el-option>
-        <el-option label="Zone No.2" value="beijing"></el-option>
-      </el-select>
-    </el-form-item>
-  </el-form>
+<d-dialog title="Adresse d'expédition" :visible.sync="dialogFormVisible">
+  <d-form :model="form">
+    <d-form-item label="Nom de promotion" :label-width="formLabelWidth">
+      <d-input v-model="form.name" autocomplete="off"></d-input>
+    </d-form-item>
+    <d-form-item label="Zones" :label-width="formLabelWidth">
+      <d-select v-model="form.region" placeholder="Sélectionnez une zone">
+        <d-option label="Zone No.1" value="shanghai"></d-option>
+        <d-option label="Zone No.2" value="beijing"></d-option>
+      </d-select>
+    </d-form-item>
+  </d-form>
   <span slot="footer" class="dialog-footer">
     <d-button @click="dialogFormVisible = false">Annuler</d-button>
     <d-button type="primary" @click="dialogFormVisible = false">Confirmer</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -137,18 +137,18 @@ Si un Dialog est imbriqué dans un autre Dialog, `append-to-body` est requis.
 <template>
   <d-button type="text" @click="outerVisible = true">Ouvrir le modal extérieur</d-button>
 
-  <el-dialog title="Modal extérieur" :visible.sync="outerVisible">
-    <el-dialog
+  <d-dialog title="Modal extérieur" :visible.sync="outerVisible">
+    <d-dialog
         width="30%"
         title="Modal intérieur"
         :visible.sync="innerVisible"
         append-to-body>
-    </el-dialog>
+    </d-dialog>
     <div slot="footer" class="dialog-footer">
       <d-button @click="outerVisible = false">Annuler</d-button>
       <d-button type="primary" @click="innerVisible = true">Ouvrir le modal intérieur</d-button>
     </div>
-  </el-dialog>
+  </d-dialog>
 </template>
 
 <script>
@@ -173,7 +173,7 @@ Le contenu du modal peut être centré.
 ```html
 <d-button type="text" @click="centerDialogVisible = true">Cliquez pour ouvrir le modal</d-button>
 
-<el-dialog
+<d-dialog
   title="Attention"
   :visible.sync="centerDialogVisible"
   width="30%"
@@ -183,7 +183,7 @@ Le contenu du modal peut être centré.
     <d-button @click="centerDialogVisible = false">Annuler</d-button>
     <d-button type="primary" @click="centerDialogVisible = false">Confirmer</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {

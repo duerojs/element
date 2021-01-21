@@ -1,17 +1,17 @@
 <template>
-  <div class="el-collapse-item"
+  <div class="d-collapse-item"
     :class="{'is-active': isActive, 'is-disabled': disabled }">
     <div
       role="tab"
       :aria-expanded="isActive"
-      :aria-controls="`el-collapse-content-${id}`"
-      :aria-describedby ="`el-collapse-content-${id}`"
+      :aria-controls="`d-collapse-content-${id}`"
+      :aria-describedby ="`d-collapse-content-${id}`"
     >
       <div
-        class="el-collapse-item__header"
+        class="d-collapse-item__header"
         @click="handleHeaderClick"
         role="button"
-        :id="`el-collapse-head-${id}`"
+        :id="`d-collapse-head-${id}`"
         :tabindex="disabled ? undefined : 0"
         @keyup.space.enter.stop="handleEnterClick"
         :class="{
@@ -23,21 +23,21 @@
       >
         <slot name="title">{{title}}</slot>
         <i
-          class="el-collapse-item__arrow d-icon-arrow-right"
+          class="d-collapse-item__arrow d-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
       </div>
     </div>
     <d-collapse-transition>
       <div
-        class="el-collapse-item__wrap"
+        class="d-collapse-item__wrap"
         v-show="isActive"
         role="tabpanel"
         :aria-hidden="!isActive"
-        :aria-labelledby="`el-collapse-head-${id}`"
-        :id="`el-collapse-content-${id}`"
+        :aria-labelledby="`d-collapse-head-${id}`"
+        :id="`d-collapse-content-${id}`"
       >
-        <div class="el-collapse-item__content">
+        <div class="d-collapse-item__content">
           <slot></slot>
         </div>
       </div>
@@ -45,18 +45,18 @@
   </div>
 </template>
 <script>
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import DCollapseTransition from 'element-ui/src/transitions/collapse-transition';
   import Emitter from 'element-ui/src/mixins/emitter';
   import { generateId } from 'element-ui/src/utils/util';
 
   export default {
-    name: 'ElCollapseItem',
+    name: 'DCollapseItem',
 
-    componentName: 'ElCollapseItem',
+    componentName: 'DCollapseItem',
 
     mixins: [Emitter],
 
-    components: { ElCollapseTransition },
+    components: { DCollapseTransition },
 
     data() {
       return {
@@ -102,12 +102,12 @@
       },
       handleHeaderClick() {
         if (this.disabled) return;
-        this.dispatch('ElCollapse', 'item-click', this);
+        this.dispatch('DCollapse', 'item-click', this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
-        this.dispatch('ElCollapse', 'item-click', this);
+        this.dispatch('DCollapse', 'item-click', this);
       }
     }
   };

@@ -5,31 +5,31 @@
     @after-leave="afterLeave">
     <div
       v-show="visible"
-      class="el-dialog__wrapper"
+      class="d-dialog__wrapper"
       @click.self="handleWrapperClick">
       <div
         role="dialog"
         :key="key"
         aria-modal="true"
         :aria-label="title || 'dialog'"
-        :class="['el-dialog', { 'is-fullscreen': fullscreen, 'el-dialog--center': center }, customClass]"
+        :class="['d-dialog', { 'is-fullscreen': fullscreen, 'd-dialog--center': center }, customClass]"
         ref="dialog"
         :style="style">
-        <div class="el-dialog__header">
+        <div class="d-dialog__header">
           <slot name="title">
-            <span class="el-dialog__title">{{ title }}</span>
+            <span class="d-dialog__title">{{ title }}</span>
           </slot>
           <button
             type="button"
-            class="el-dialog__headerbtn"
+            class="d-dialog__headerbtn"
             aria-label="Close"
             v-if="showClose"
             @click="handleClose">
-            <i class="el-dialog__close d-icon d-icon-close"></i>
+            <i class="d-dialog__close d-icon d-icon-close"></i>
           </button>
         </div>
-        <div class="el-dialog__body" v-if="rendered"><slot></slot></div>
-        <div class="el-dialog__footer" v-if="$slots.footer">
+        <div class="d-dialog__body" v-if="rendered"><slot></slot></div>
+        <div class="d-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -43,7 +43,7 @@
   import emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElDialog',
+    name: 'DDialog',
 
     mixins: [Popup, emitter, Migrating],
 
@@ -181,8 +181,8 @@
         }
       },
       updatePopper() {
-        this.broadcast('ElSelectDropdown', 'updatePopper');
-        this.broadcast('ElDropdownMenu', 'updatePopper');
+        this.broadcast('DSelectDropdown', 'updatePopper');
+        this.broadcast('DDropdownMenu', 'updatePopper');
       },
       afterEnter() {
         this.$emit('opened');

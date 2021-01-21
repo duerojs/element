@@ -1,18 +1,18 @@
 <script>
-import ElScrollbar from 'element-ui/packages/scrollbar';
+import DScrollbar from 'element-ui/packages/scrollbar';
 import CascaderNode from './cascader-node.vue';
 import Locale from 'element-ui/src/mixins/locale';
 import { generateId } from 'element-ui/src/utils/util';
 
 export default {
-  name: 'ElCascaderMenu',
+  name: 'DCascaderMenu',
 
   mixins: [Locale],
 
   inject: ['panel'],
 
   components: {
-    ElScrollbar,
+    DScrollbar,
     CascaderNode
   },
 
@@ -76,7 +76,7 @@ export default {
 
     renderEmptyText(h) {
       return (
-        <div class="el-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
+        <div class="d-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
       );
     },
     renderNodeList(h) {
@@ -103,7 +103,7 @@ export default {
 
       return [
         ...nodes,
-        isHoverMenu ? <svg ref='hoverZone' class='el-cascader-menu__hover-zone'></svg> : null
+        isHoverMenu ? <svg ref='hoverZone' class='d-cascader-menu__hover-zone'></svg> : null
       ];
     }
   },
@@ -123,10 +123,10 @@ export default {
         tag="ul"
         role="menu"
         id={ menuId }
-        class="el-cascader-menu"
-        wrap-class="el-cascader-menu__wrap"
+        class="d-cascader-menu"
+        wrap-class="d-cascader-menu__wrap"
         view-class={{
-          'el-cascader-menu__list': true,
+          'd-cascader-menu__list': true,
           'is-empty': isEmpty
         }}
         { ...events }>

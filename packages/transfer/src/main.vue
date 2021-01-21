@@ -1,5 +1,5 @@
 <template>
-  <div class="el-transfer">
+  <div class="d-transfer">
     <transfer-panel
       v-bind="$props"
       ref="leftPanel"
@@ -10,10 +10,10 @@
       @checked-change="onSourceCheckedChange">
       <slot name="left-footer"></slot>
     </transfer-panel>
-    <div class="el-transfer__buttons">
+    <div class="d-transfer__buttons">
       <d-button
         type="primary"
-        :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['d-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToLeft"
         :disabled="rightChecked.length === 0">
         <i class="d-icon-arrow-left"></i>
@@ -21,7 +21,7 @@
       </d-button>
       <d-button
         type="primary"
-        :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['d-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToRight"
         :disabled="leftChecked.length === 0">
         <span v-if="buttonTexts[1] !== undefined">{{ buttonTexts[1] }}</span>
@@ -42,20 +42,20 @@
 </template>
 
 <script>
-  import ElButton from 'element-ui/packages/button';
+  import DButton from 'element-ui/packages/button';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Locale from 'element-ui/src/mixins/locale';
   import TransferPanel from './transfer-panel.vue';
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElTransfer',
+    name: 'DTransfer',
 
     mixins: [Emitter, Locale, Migrating],
 
     components: {
       TransferPanel,
-      ElButton
+      DButton
     },
 
     props: {
@@ -162,7 +162,7 @@
 
     watch: {
       value(val) {
-        this.dispatch('ElFormItem', 'el.form.change', val);
+        this.dispatch('DFormItem', 'el.form.change', val);
       }
     },
 

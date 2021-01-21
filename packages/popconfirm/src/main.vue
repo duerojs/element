@@ -1,20 +1,20 @@
 <template>
-  <el-popover
+  <d-popover
     v-bind="$attrs"
     v-model="visible"
     trigger="click"
   >
-  <div class="el-popconfirm">
-    <p class="el-popconfirm__main">
+  <div class="d-popconfirm">
+    <p class="d-popconfirm__main">
     <i
       v-if="!hideIcon"
       :class="icon"
-      class="el-popconfirm__icon"
+      class="d-popconfirm__icon"
       :style="{color: iconColor}"
     ></i>
       {{title}}
     </p>
-    <div class="el-popconfirm__action">
+    <div class="d-popconfirm__action">
       <d-button 
         size="mini" 
         :type="cancelButtonType" 
@@ -32,16 +32,16 @@
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>
-</el-popover>
+</d-popover>
 </template>
 
 <script>
-import ElPopover from 'element-ui/packages/popover';
-import ElButton from 'element-ui/packages/button';
+import DPopover from 'element-ui/packages/popover';
+import DButton from 'element-ui/packages/button';
 import {t} from 'element-ui/src/locale';
 
 export default {
-  name: 'ElPopconfirm',
+  name: 'DPopconfirm',
   props: {
     title: {
       type: String
@@ -74,8 +74,8 @@ export default {
     }
   },
   components: {
-    ElPopover,
-    ElButton
+    DPopover,
+    DButton
   },
   data() {
     return {

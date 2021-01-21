@@ -4,30 +4,30 @@ Presenta una serie de imágenes o textos en un espacio limitado
 
 ### Uso básico
 
-:::demo Combine `el-carousel`  con `el-carousel-item`, para conseguir el carrusel. El contenido de cada diapositiva es completamente personalizable, y sólo tiene que colocarla dentro de la etiqueta  `el-carousel-item` . Por defecto, el carrusel cambia cuando el ratón pasa por encima de un indicador. Fije  `trigger`  para  `click`, si lo que se desea es que el carrusel cambie sólo cuando se haga clic en un indicador.
+:::demo Combine `d-carousel`  con `d-carousel-item`, para conseguir el carrusel. El contenido de cada diapositiva es completamente personalizable, y sólo tiene que colocarla dentro de la etiqueta  `d-carousel-item` . Por defecto, el carrusel cambia cuando el ratón pasa por encima de un indicador. Fije  `trigger`  para  `click`, si lo que se desea es que el carrusel cambie sólo cuando se haga clic en un indicador.
 
 ```html
 <template>
   <div class="block">
     <span class="demonstration">Switch when indicator is hovered (default)</span>
-    <el-carousel height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <d-carousel height="150px">
+      <d-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </d-carousel-item>
+    </d-carousel>
   </div>
   <div class="block">
     <span class="demonstration">Switch when indicator is clicked</span>
-    <el-carousel trigger="click" height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
+    <d-carousel trigger="click" height="150px">
+      <d-carousel-item v-for="item in 4" :key="item">
         <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </d-carousel-item>
+    </d-carousel>
   </div>
 </template>
 
 <style>
-  .el-carousel__item h3 {
+  .d-carousel__item h3 {
     color: #475669;
     font-size: 14px;
     opacity: 0.75;
@@ -35,11 +35,11 @@ Presenta una serie de imágenes o textos en un espacio limitado
     margin: 0;
   }
 
-  .el-carousel__item:nth-child(2n) {
+  .d-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
 
-  .el-carousel__item:nth-child(2n+1) {
+  .d-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
 </style>
@@ -54,15 +54,15 @@ Los indicadores de paginación pueden mostrarse fuera del carrusel
 
 ```html
 <template>
-  <el-carousel indicator-position="outside">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <d-carousel indicator-position="outside">
+    <d-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </d-carousel-item>
+  </d-carousel>
 </template>
 
 <style>
-  .el-carousel__item h3 {
+  .d-carousel__item h3 {
     color: #475669;
     font-size: 18px;
     opacity: 0.75;
@@ -70,11 +70,11 @@ Los indicadores de paginación pueden mostrarse fuera del carrusel
     margin: 0;
   }
 
-  .el-carousel__item:nth-child(2n) {
+  .d-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
 
-  .el-carousel__item:nth-child(2n+1) {
+  .d-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
 </style>
@@ -89,15 +89,15 @@ Puede definir cuando se visualizan las flechas
 
 ```html
 <template>
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <d-carousel :interval="5000" arrow="always">
+    <d-carousel-item v-for="item in 4" :key="item">
       <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </d-carousel-item>
+  </d-carousel>
 </template>
 
 <style>
-  .el-carousel__item h3 {
+  .d-carousel__item h3 {
     color: #475669;
     font-size: 18px;
     opacity: 0.75;
@@ -105,11 +105,11 @@ Puede definir cuando se visualizan las flechas
     margin: 0;
   }
 
-  .el-carousel__item:nth-child(2n) {
+  .d-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
 
-  .el-carousel__item:nth-child(2n+1) {
+  .d-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
 </style>
@@ -124,15 +124,15 @@ Cuando una página es suficientemente ancha pero tiene una altura limitada, pued
 
 ```html
 <template>
-  <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
+  <d-carousel :interval="4000" type="card" height="200px">
+    <d-carousel-item v-for="item in 6" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </d-carousel-item>
+  </d-carousel>
 </template>
 
 <style>
-  .el-carousel__item h3 {
+  .d-carousel__item h3 {
     color: #475669;
     font-size: 14px;
     opacity: 0.75;
@@ -140,11 +140,11 @@ Cuando una página es suficientemente ancha pero tiene una altura limitada, pued
     margin: 0;
   }
 
-  .el-carousel__item:nth-child(2n) {
+  .d-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
 
-  .el-carousel__item:nth-child(2n+1) {
+  .d-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
 </style>
@@ -156,15 +156,15 @@ Por defecto, `direction` es `horizontal`. El carousel puede ser mostrado de form
 :::demo
 ```html
 <template>
-  <el-carousel height="200px" direction="vertical" :autoplay="false">
-    <el-carousel-item v-for="item in 4" :key="item">
+  <d-carousel height="200px" direction="vertical" :autoplay="false">
+    <d-carousel-item v-for="item in 4" :key="item">
       <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </d-carousel-item>
+  </d-carousel>
 </template>
 
 <style>
-  .el-carousel__item h3 {
+  .d-carousel__item h3 {
     color: #475669;
     font-size: 14px;
     opacity: 0.75;
@@ -172,11 +172,11 @@ Por defecto, `direction` es `horizontal`. El carousel puede ser mostrado de form
     margin: 0;
   }
   
-  .el-carousel__item:nth-child(2n) {
+  .d-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
   
-  .el-carousel__item:nth-child(2n+1) {
+  .d-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
 </style>
@@ -205,7 +205,7 @@ Por defecto, `direction` es `horizontal`. El carousel puede ser mostrado de form
 ### Metodos de Carousel
 | Metodos       | Descripción                | Parámetros                                                   |
 | ------------- | -------------------------- | ------------------------------------------------------------ |
-| setActiveItem | Cambio manual de slider    | indice del slider al que se va a cambiar, empezando por 0; o el `name` del `el-carousel-item` correspondiente |
+| setActiveItem | Cambio manual de slider    | indice del slider al que se va a cambiar, empezando por 0; o el `name` del `d-carousel-item` correspondiente |
 | prev          | Cambia al slider anterior  | —                                                            |
 | next          | Cambia al slider siguiente | —                                                            |
 

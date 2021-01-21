@@ -9,8 +9,8 @@ Radio ne devrait pas avoir trop d'options. Dans ce cas utilisez plutôt Select.
 :::demo Créer un composant Radio est facile, vous avez juste besoin de lier les `v-model` des options. Chacun équivaut à la valeur de `label` du radio correspondant. Le type de `label` est `String`, `Number` ou `Boolean`.
 ```html
 <template>
-  <el-radio v-model="radio" label="1">Option A</el-radio>
-  <el-radio v-model="radio" label="2">Option B</el-radio>
+  <d-radio v-model="radio" label="1">Option A</d-radio>
+  <d-radio v-model="radio" label="2">Option B</d-radio>
 </template>
 
 <script>
@@ -32,8 +32,8 @@ L'attribut `disabled` désactive le radio.
 :::demo Ajoutez simplement l'attribut `disabled` au radio.
 ```html
 <template>
-  <el-radio disabled v-model="radio" label="disabled">Option A</el-radio>
-  <el-radio disabled v-model="radio" label="selected and disabled">Option B</el-radio>
+  <d-radio disabled v-model="radio" label="disabled">Option A</d-radio>
+  <d-radio disabled v-model="radio" label="selected and disabled">Option B</d-radio>
 </template>
 
 <script>
@@ -52,14 +52,14 @@ L'attribut `disabled` désactive le radio.
 
 Utile pour choisir entre plusieurs groupes d'options mutuellement exclusives.
 
-:::demo Combinez `el-radio-group` avec `el-radio` pour afficher un groupe de radios. Liez une variable au `v-model` de `el-radio-group` et configurez le label dans `el-radio`. Cet élément fournit aussi l'évènement `change` qui a en paramètre la valeur courante.
+:::demo Combinez `d-radio-group` avec `d-radio` pour afficher un groupe de radios. Liez une variable au `v-model` de `d-radio-group` et configurez le label dans `d-radio`. Cet élément fournit aussi l'évènement `change` qui a en paramètre la valeur courante.
 
 ```html
-<el-radio-group v-model="radio">
-  <el-radio :label="3">Option A</el-radio>
-  <el-radio :label="6">Option B</el-radio>
-  <el-radio :label="9">Option C</el-radio>
-</el-radio-group>
+<d-radio-group v-model="radio">
+  <d-radio :label="3">Option A</d-radio>
+  <d-radio :label="6">Option B</d-radio>
+  <d-radio :label="9">Option C</d-radio>
+</d-radio-group>
 
 <script>
   export default {
@@ -77,40 +77,40 @@ Utile pour choisir entre plusieurs groupes d'options mutuellement exclusives.
 
 Des radios affichés comme des boutons standards.
 
-:::demo Changez simplement `el-radio` pour `el-radio-button`. L'attribut `size` permet de régler la taille.
+:::demo Changez simplement `d-radio` pour `d-radio-button`. L'attribut `size` permet de régler la taille.
 ```html
 <template>
   <div>
-    <el-radio-group v-model="radio1">
-      <el-radio-button label="New York"></el-radio-button>
-      <el-radio-button label="Washington"></el-radio-button>
-      <el-radio-button label="Los Angeles"></el-radio-button>
-      <el-radio-button label="Chicago"></el-radio-button>
-    </el-radio-group>
+    <d-radio-group v-model="radio1">
+      <d-radio-button label="New York"></d-radio-button>
+      <d-radio-button label="Washington"></d-radio-button>
+      <d-radio-button label="Los Angeles"></d-radio-button>
+      <d-radio-button label="Chicago"></d-radio-button>
+    </d-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio2" size="medium">
-      <el-radio-button label="New York" ></el-radio-button>
-      <el-radio-button label="Washington"></el-radio-button>
-      <el-radio-button label="Los Angeles"></el-radio-button>
-      <el-radio-button label="Chicago"></el-radio-button>
-    </el-radio-group>
+    <d-radio-group v-model="radio2" size="medium">
+      <d-radio-button label="New York" ></d-radio-button>
+      <d-radio-button label="Washington"></d-radio-button>
+      <d-radio-button label="Los Angeles"></d-radio-button>
+      <d-radio-button label="Chicago"></d-radio-button>
+    </d-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio3" size="small">
-      <el-radio-button label="New York"></el-radio-button>
-      <el-radio-button label="Washington" disabled ></el-radio-button>
-      <el-radio-button label="Los Angeles"></el-radio-button>
-      <el-radio-button label="Chicago"></el-radio-button>
-    </el-radio-group>
+    <d-radio-group v-model="radio3" size="small">
+      <d-radio-button label="New York"></d-radio-button>
+      <d-radio-button label="Washington" disabled ></d-radio-button>
+      <d-radio-button label="Los Angeles"></d-radio-button>
+      <d-radio-button label="Chicago"></d-radio-button>
+    </d-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" disabled size="mini">
-      <el-radio-button label="New York"></el-radio-button>
-      <el-radio-button label="Washington"></el-radio-button>
-      <el-radio-button label="Los Angeles"></el-radio-button>
-      <el-radio-button label="Chicago"></el-radio-button>
-    </el-radio-group>
+    <d-radio-group v-model="radio4" disabled size="mini">
+      <d-radio-button label="New York"></d-radio-button>
+      <d-radio-button label="Washington"></d-radio-button>
+      <d-radio-button label="Los Angeles"></d-radio-button>
+      <d-radio-button label="Chicago"></d-radio-button>
+    </d-radio-group>
   </div>
 </template>
 
@@ -135,24 +135,24 @@ Des radios affichés comme des boutons standards.
 ```html
 <template>
   <div>
-    <el-radio v-model="radio1" label="1" border>Option A</el-radio>
-    <el-radio v-model="radio1" label="2" border>Option B</el-radio>
+    <d-radio v-model="radio1" label="1" border>Option A</d-radio>
+    <d-radio v-model="radio1" label="2" border>Option B</d-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio v-model="radio2" label="1" border size="medium">Option A</el-radio>
-    <el-radio v-model="radio2" label="2" border size="medium">Option B</el-radio>
+    <d-radio v-model="radio2" label="1" border size="medium">Option A</d-radio>
+    <d-radio v-model="radio2" label="2" border size="medium">Option B</d-radio>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio3" size="small">
-      <el-radio label="1" border>Option A</el-radio>
-      <el-radio label="2" border disabled>Option B</el-radio>
-    </el-radio-group>
+    <d-radio-group v-model="radio3" size="small">
+      <d-radio label="1" border>Option A</d-radio>
+      <d-radio label="2" border disabled>Option B</d-radio>
+    </d-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" size="mini" disabled>
-      <el-radio label="1" border>Option A</el-radio>
-      <el-radio label="2" border>Option B</el-radio>
-    </el-radio-group>
+    <d-radio-group v-model="radio4" size="mini" disabled>
+      <d-radio label="1" border>Option A</d-radio>
+      <d-radio label="2" border>Option B</d-radio>
+    </d-radio-group>
   </div>
 </template>
 

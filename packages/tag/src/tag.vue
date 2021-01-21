@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'ElTag',
+    name: 'DTag',
     props: {
       text: String,
       closable: Boolean,
@@ -34,10 +34,10 @@
     render(h) {
       const { type, tagSize, hit, effect } = this;
       const classes = [
-        'el-tag',
-        type ? `el-tag--${type}` : '',
-        tagSize ? `el-tag--${tagSize}` : '',
-        effect ? `el-tag--${effect}` : '',
+        'd-tag',
+        type ? `d-tag--${type}` : '',
+        tagSize ? `d-tag--${tagSize}` : '',
+        effect ? `d-tag--${effect}` : '',
         hit && 'is-hit'
       ];
       const tagEl = (
@@ -47,12 +47,12 @@
           on-click={ this.handleClick }>
           { this.$slots.default }
           {
-            this.closable && <i class="el-tag__close d-icon-close" on-click={ this.handleClose }></i>
+            this.closable && <i class="d-tag__close d-icon-close" on-click={ this.handleClose }></i>
           }
         </span>
       );
 
-      return this.disableTransitions ? tagEl : <transition name="el-zoom-in-center">{ tagEl }</transition>;
+      return this.disableTransitions ? tagEl : <transition name="d-zoom-in-center">{ tagEl }</transition>;
     }
   };
 </script>

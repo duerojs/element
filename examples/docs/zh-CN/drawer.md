@@ -9,24 +9,24 @@
 :::demo 需要设置 `visible` 属性，它的**类型**是 `boolean`,当为 **true** 时显示 Drawer。Drawer 分为两个部分：`title` 和 `body`，`title` 需要具名为 **title** 的 `slot`, 也可以通过 `title` 属性来定义，默认值为空。需要注意的是, Drawer 默认是从右往左打开, 当然可以设置对应的 `direction`, 详细请参考 `direction` 用法 最后，本例还展示了 `before-close` 的用法
 
 ```html
-<el-radio-group v-model="direction">
-  <el-radio label="ltr">从左往右开</el-radio>
-  <el-radio label="rtl">从右往左开</el-radio>
-  <el-radio label="ttb">从上往下开</el-radio>
-  <el-radio label="btt">从下往上开</el-radio>
-</el-radio-group>
+<d-radio-group v-model="direction">
+  <d-radio label="ltr">从左往右开</d-radio>
+  <d-radio label="rtl">从右往左开</d-radio>
+  <d-radio label="ttb">从上往下开</d-radio>
+  <d-radio label="btt">从下往上开</d-radio>
+</d-radio-group>
 
 <d-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
 </d-button>
 
-<el-drawer
+<d-drawer
   title="我是标题"
   :visible.sync="drawer"
   :direction="direction"
   :before-close="handleClose">
   <span>我来啦!</span>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {
@@ -61,12 +61,12 @@
   点我打开
 </d-button>
 
-<el-drawer
+<d-drawer
   title="我是标题"
   :visible.sync="drawer"
   :with-header="false">
   <span>我来啦!</span>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {
@@ -90,19 +90,19 @@
 ```html
 <d-button type="text" @click="table = true">打开嵌套表格的 Drawer</d-button>
 <d-button type="text" @click="dialog = true">打开嵌套 Form 的 Drawer</d-button>
-<el-drawer
+<d-drawer
   title="我嵌套了表格!"
   :visible.sync="table"
   direction="rtl"
   size="50%">
-   <el-table :data="gridData">
-      <el-table-column property="date" label="日期" width="150"></el-table-column>
-      <el-table-column property="name" label="姓名" width="200"></el-table-column>
-      <el-table-column property="address" label="地址"></el-table-column>
-    </el-table>
-</el-drawer>
+   <d-table :data="gridData">
+      <d-table-column property="date" label="日期" width="150"></d-table-column>
+      <d-table-column property="name" label="姓名" width="200"></d-table-column>
+      <d-table-column property="address" label="地址"></d-table-column>
+    </d-table>
+</d-drawer>
 
-<el-drawer
+<d-drawer
   title="我嵌套了 Form !"
   :before-close="handleClose"
   :visible.sync="dialog"
@@ -111,23 +111,23 @@
   ref="drawer"
   >
   <div class="demo-drawer__content">
-    <el-form :model="form">
-      <el-form-item label="活动名称" :label-width="formLabelWidth">
-        <el-input v-model="form.name" autocomplete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="活动区域" :label-width="formLabelWidth">
-        <el-select v-model="form.region" placeholder="请选择活动区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
-        </el-select>
-      </el-form-item>
-    </el-form>
+    <d-form :model="form">
+      <d-form-item label="活动名称" :label-width="formLabelWidth">
+        <d-input v-model="form.name" autocomplete="off"></d-input>
+      </d-form-item>
+      <d-form-item label="活动区域" :label-width="formLabelWidth">
+        <d-select v-model="form.region" placeholder="请选择活动区域">
+          <d-option label="区域一" value="shanghai"></d-option>
+          <d-option label="区域二" value="beijing"></d-option>
+        </d-select>
+      </d-form-item>
+    </d-form>
     <div class="demo-drawer__footer">
       <d-button @click="cancelForm">取 消</d-button>
       <d-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? '提交中 ...' : '确 定' }}</d-button>
     </div>
   </div>
-</el-drawer>
+</d-drawer>
 
 <script>
 export default {
@@ -208,21 +208,21 @@ export default {
   点我打开
 </d-button>
 
-<el-drawer
+<d-drawer
   title="我是外面的 Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
    <d-button @click="innerDrawer = true">打开里面的!</d-button>
-   <el-drawer
+   <d-drawer
      title="我是里面的"
      :append-to-body="true"
      :before-close="handleClose"
      :visible.sync="innerDrawer">
      <p>_(:зゝ∠)_</p>
-   </el-drawer>
+   </d-drawer>
   </div>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {

@@ -1,5 +1,5 @@
 <template>
-  <transition name="el-fade-in">
+  <transition name="d-fade-in">
     <div
       v-if="visible"
       @click.stop="handleClick"
@@ -7,7 +7,7 @@
         'right': styleRight,
         'bottom': styleBottom
       }"
-      class="el-backtop">
+      class="d-backtop">
       <slot>
         <d-icon name="caret-top"></d-icon>
       </slot>
@@ -24,7 +24,7 @@ const easeInOutCubic = value => value < 0.5
   : 1 - cubic((1 - value) * 2) / 2;
 
 export default {
-  name: 'ElBacktop',
+  name: 'DBacktop',
 
   props: {
     visibilityHeight: {

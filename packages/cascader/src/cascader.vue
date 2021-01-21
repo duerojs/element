@@ -2,8 +2,8 @@
   <div
     ref="reference"
     :class="[
-      'el-cascader',
-      realSize && `el-cascader--${realSize}`,
+      'd-cascader',
+      realSize && `d-cascader--${realSize}`,
       { 'is-disabled': isDisabled }
     ]"
     v-clickoutside="() => toggleDropDownVisible(false)"
@@ -12,7 +12,7 @@
     @click="() => toggleDropDownVisible(readonly ? undefined : true)"
     @keydown="handleKeyDown">
 
-    <el-input
+    <d-input
       ref="input"
       v-model="multiple ? presentText : inputValue"
       :size="realSize"
@@ -28,22 +28,22 @@
         <i
           v-if="clearBtnVisible"
           key="clear"
-          class="el-input__icon d-icon-circle-close"
+          class="d-input__icon d-icon-circle-close"
           @click.stop="handleClear"></i>
         <i
           v-else
           key="arrow-down"
           :class="[
-            'el-input__icon',
+            'd-input__icon',
             'd-icon-arrow-down',
             dropDownVisible && 'is-reverse'
           ]"
           @click.stop="toggleDropDownVisible()"></i>
       </template>
-    </el-input>
+    </d-input>
 
-    <div v-if="multiple" class="el-cascader__tags">
-      <el-tag
+    <div v-if="multiple" class="d-cascader__tags">
+      <d-tag
         v-for="(tag, index) in presentTags"
         :key="tag.key"
         type="info"
@@ -53,24 +53,24 @@
         disable-transitions
         @close="deleteTag(index)">
         <span>{{ tag.text }}</span>
-      </el-tag>
+      </d-tag>
       <input
         v-if="filterable && !isDisabled"
         v-model.trim="inputValue"
         type="text"
-        class="el-cascader__search-input"
+        class="d-cascader__search-input"
         :placeholder="presentTags.length ? '' : placeholder"
         @input="e => handleInput(inputValue, e)"
         @click.stop="toggleDropDownVisible(true)"
         @keydown.delete="handleDelete">
     </div>
 
-    <transition name="el-zoom-in-top" @after-leave="handleDropdownLeave">
+    <transition name="d-zoom-in-top" @after-leave="handleDropdownLeave">
       <div
         v-show="dropDownVisible"
         ref="popper"
-        :class="['el-popper', 'el-cascader__dropdown', popperClass]">
-        <el-cascader-panel
+        :class="['d-popper', 'd-cascader__dropdown', popperClass]">
+        <d-cascader-panel
           ref="panel"
           v-show="!filtering"
           v-model="checkedValue"
@@ -79,21 +79,21 @@
           :border="false"
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
-          @close="toggleDropDownVisible(false)"></el-cascader-panel>
+          @close="toggleDropDownVisible(false)"></d-cascader-panel>
         <d-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
           tag="ul"
-          class="el-cascader__suggestion-panel"
-          view-class="el-cascader__suggestion-list"
+          class="d-cascader__suggestion-panel"
+          view-class="d-cascader__suggestion-list"
           @keydown.native="handleSuggestionKeyDown">
           <template v-if="suggestions.length">
             <li
               v-for="(item, index) in suggestions"
               :key="item.uid"
               :class="[
-                'el-cascader__suggestion-item',
+                'd-cascader__suggestion-item',
                 item.checked && 'is-checked'
               ]"
               :tabindex="-1"
@@ -103,7 +103,7 @@
             </li>
           </template>
           <slot v-else name="empty">
-            <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
+            <li class="d-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
         </d-scrollbar>
       </div>
@@ -117,10 +117,10 @@ import Clickoutside from 'element-ui/src/utils/clickoutside';
 import Emitter from 'element-ui/src/mixins/emitter';
 import Locale from 'element-ui/src/mixins/locale';
 import Migrating from 'element-ui/src/mixins/migrating';
-import ElInput from 'element-ui/packages/input';
-import ElTag from 'element-ui/packages/tag';
-import ElScrollbar from 'element-ui/packages/scrollbar';
-import ElCascaderPanel from 'element-ui/packages/cascader-panel';
+import DInput from 'element-ui/packages/input';
+import DTag from 'element-ui/packages/tag';
+import DScrollbar from 'element-ui/packages/scrollbar';
+import DCascaderPanel from 'element-ui/packages/cascader-panel';
 import AriaUtils from 'element-ui/src/utils/aria-utils';
 import { t } from 'element-ui/src/locale';
 import { isEqual, isEmpty, kebabCase } from 'element-ui/src/utils/util';
@@ -173,7 +173,7 @@ const InputSizeMap = {
 };
 
 export default {
-  name: 'ElCascader',
+  name: 'DCascader',
 
   directives: { Clickoutside },
 
@@ -189,10 +189,10 @@ export default {
   },
 
   components: {
-    ElInput,
-    ElTag,
-    ElScrollbar,
-    ElCascaderPanel
+    DInput,
+    DTag,
+    DScrollbar,
+    DCascaderPanel
   },
 
   props: {
@@ -322,7 +322,7 @@ export default {
 
         this.$emit('input', val);
         this.$emit('change', val);
-        this.dispatch('ElFormItem', 'el.form.change', [val]);
+        this.dispatch('DFormItem', 'el.form.change', [val]);
       }
     },
     options: {
@@ -462,10 +462,10 @@ export default {
         let firstNode = null;
 
         if (filtering && suggestionPanel) {
-          firstNode = suggestionPanel.$el.querySelector('.el-cascader__suggestion-item');
+          firstNode = suggestionPanel.$el.querySelector('.d-cascader__suggestion-item');
         } else {
-          const firstMenu = popper.querySelector('.el-cascader-menu');
-          firstNode = firstMenu.querySelector('.el-cascader-node[tabindex="-1"]');
+          const firstMenu = popper.querySelector('.d-cascader-menu');
+          firstNode = firstMenu.querySelector('.d-cascader-node[tabindex="-1"]');
         }
 
         if (firstNode) {
@@ -618,15 +618,15 @@ export default {
       if (this.$isServer || !$el) return;
 
       const { suggestionPanel } = this.$refs;
-      const inputInner = $el.querySelector('.el-input__inner');
+      const inputInner = $el.querySelector('.d-input__inner');
 
       if (!inputInner) return;
 
-      const tags = $el.querySelector('.el-cascader__tags');
+      const tags = $el.querySelector('.d-cascader__tags');
       let suggestionPanelEl = null;
 
       if (suggestionPanel && (suggestionPanelEl = suggestionPanel.$el)) {
-        const suggestionList = suggestionPanelEl.querySelector('.el-cascader__suggestion-list');
+        const suggestionList = suggestionPanelEl.querySelector('.d-cascader__suggestion-list');
         suggestionList.style.minWidth = inputInner.offsetWidth + 'px';
       }
 

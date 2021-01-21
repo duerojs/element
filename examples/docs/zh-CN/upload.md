@@ -6,7 +6,7 @@
 
 :::demo 通过 slot 你可以传入自定义的上传按钮类型和文字提示。可通过设置`limit`和`on-exceed`来限制上传文件的个数和定义超出限制时的行为。可通过设置`before-remove`来阻止文件移除操作。
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -17,8 +17,8 @@
   :on-exceed="handleExceed"
   :file-list="fileList">
   <d-button size="small" type="primary">点击上传</d-button>
-  <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -51,7 +51,7 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="avatar-uploader"
   action="https://jsonplaceholder.typicode.com/posts/"
   :show-file-list="false"
@@ -59,17 +59,17 @@
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
   <i v-else class="d-icon-plus avatar-uploader-icon"></i>
-</el-upload>
+</d-upload>
 
 <style>
-  .avatar-uploader .el-upload {
+  .avatar-uploader .d-upload {
     border: 1px dashed #d9d9d9;
     border-radius: 6px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
   }
-  .avatar-uploader .el-upload:hover {
+  .avatar-uploader .d-upload:hover {
     border-color: #409EFF;
   }
   .avatar-uploader-icon {
@@ -122,16 +122,16 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   action="https://jsonplaceholder.typicode.com/posts/"
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
   <i class="d-icon-plus"></i>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</d-upload>
+<d-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</d-dialog>
 <script>
   export default {
     data() {
@@ -160,43 +160,43 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   action="#"
   list-type="picture-card"
   :auto-upload="false">
     <i slot="default" class="d-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
-        class="el-upload-list__item-thumbnail"
+        class="d-upload-list__item-thumbnail"
         :src="file.url" alt=""
       >
-      <span class="el-upload-list__item-actions">
+      <span class="d-upload-list__item-actions">
         <span
-          class="el-upload-list__item-preview"
+          class="d-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
           <i class="d-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
-          class="el-upload-list__item-delete"
+          class="d-upload-list__item-delete"
           @click="handleDownload(file)"
         >
           <i class="d-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
-          class="el-upload-list__item-delete"
+          class="d-upload-list__item-delete"
           @click="handleRemove(file)"
         >
           <i class="d-icon-delete"></i>
         </span>
       </span>
     </div>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</d-upload>
+<d-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</d-dialog>
 <script>
   export default {
     data() {
@@ -227,7 +227,7 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -235,8 +235,8 @@
   :file-list="fileList"
   list-type="picture">
   <d-button size="small" type="primary">点击上传</d-button>
-  <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -263,14 +263,14 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
   <d-button size="small" type="primary">点击上传</d-button>
-  <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -298,15 +298,15 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   drag
   action="https://jsonplaceholder.typicode.com/posts/"
   multiple>
   <i class="d-icon-upload"></i>
-  <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-  <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+  <div class="d-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+  <div class="d-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+</d-upload>
 ```
 :::
 
@@ -314,7 +314,7 @@
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
@@ -324,8 +324,8 @@
   :auto-upload="false">
   <d-button slot="trigger" size="small" type="primary">选取文件</d-button>
   <d-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</d-button>
-  <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+</d-upload>
 <script>
   export default {
     data() {

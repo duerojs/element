@@ -12,11 +12,11 @@
     width: 100%;
   }
 
-  .el-picker-panel__body {
+  .d-picker-panel__body {
     min-width: 513px;
   }
 
-  .el-picker-panel__content {
+  .d-picker-panel__content {
     margin: 0;
   }
 
@@ -50,7 +50,7 @@
     @include when(left) {
       border-right: 1px solid $--datepicker-inner-border-color;
     }
-    .el-date-range-picker__header {
+    .d-date-range-picker__header {
 
       div {
         margin-left: 50px;
@@ -90,7 +90,7 @@
     display: table-cell;
     padding: 0 5px;
 
-    .el-picker-panel {
+    .d-picker-panel {
       position: absolute;
       top: 13px;
       right: 0;

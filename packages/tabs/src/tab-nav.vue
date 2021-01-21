@@ -211,8 +211,8 @@
       } = this;
       const scrollBtn = scrollable
         ? [
-          <span class={['el-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled']} on-click={scrollPrev}><i class="d-icon-arrow-left"></i></span>,
-          <span class={['el-tabs__nav-next', scrollable.next ? '' : 'is-disabled']} on-click={scrollNext}><i class="d-icon-arrow-right"></i></span>
+          <span class={['d-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled']} on-click={scrollPrev}><i class="d-icon-arrow-left"></i></span>,
+          <span class={['d-tabs__nav-next', scrollable.next ? '' : 'is-disabled']} on-click={scrollNext}><i class="d-icon-arrow-right"></i></span>
         ] : null;
 
       const tabs = this._l(panes, (pane, index) => {
@@ -230,7 +230,7 @@
         return (
           <div
             class={{
-              'el-tabs__item': true,
+              'd-tabs__item': true,
               [`is-${ this.rootTabs.tabPosition }`]: true,
               'is-active': pane.active,
               'is-disabled': pane.disabled,
@@ -256,11 +256,11 @@
         );
       });
       return (
-        <div class={['el-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`]}>
+        <div class={['d-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`]}>
           {scrollBtn}
-          <div class={['el-tabs__nav-scroll']} ref="navScroll">
+          <div class={['d-tabs__nav-scroll']} ref="navScroll">
             <div
-              class={['el-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '']}
+              class={['d-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '']}
               ref="nav"
               style={navStyle}
               role="tablist"

@@ -1,20 +1,20 @@
 import { arrayFindIndex } from 'element-ui/src/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
 import { getStyle, hasClass, removeClass, addClass } from 'element-ui/src/utils/dom';
-import ElCheckbox from 'element-ui/packages/checkbox';
-import ElTooltip from 'element-ui/packages/tooltip';
+import DCheckbox from 'element-ui/packages/checkbox';
+import DTooltip from 'element-ui/packages/tooltip';
 import debounce from 'throttle-debounce/debounce';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
 
 export default {
-  name: 'ElTableBody',
+  name: 'DTableBody',
 
   mixins: [LayoutObserver],
 
   components: {
-    ElCheckbox,
-    ElTooltip
+    DCheckbox,
+    DTooltip
   },
 
   props: {
@@ -33,7 +33,7 @@ export default {
     const data = this.data || [];
     return (
       <table
-        class="el-table__body"
+        class="d-table__body"
         cellspacing="0"
         cellpadding="0"
         border="0">
@@ -48,7 +48,7 @@ export default {
               return acc.concat(this.wrappedRowRender(row, acc.length));
             }, [])
           }
-          <el-tooltip effect={ this.table.tooltipEffect } placement="top" ref="tooltip" content={ this.tooltipContent }></el-tooltip>
+          <d-tooltip effect={ this.table.tooltipEffect } placement="top" ref="tooltip" content={ this.tooltipContent }></d-tooltip>
         </tbody>
       </table>
     );
@@ -86,7 +86,7 @@ export default {
         raf = (fn) => setTimeout(fn, 16);
       }
       raf(() => {
-        const rows = this.$el.querySelectorAll('.el-table__row');
+        const rows = this.$el.querySelectorAll('.d-table__row');
         const oldRow = rows[oldVal];
         const newRow = rows[newVal];
         if (oldRow) {
@@ -162,13 +162,13 @@ export default {
     },
 
     getRowClass(row, rowIndex) {
-      const classes = ['el-table__row'];
+      const classes = ['d-table__row'];
       if (this.table.highlightCurrentRow && row === this.store.states.currentRow) {
         classes.push('current-row');
       }
 
       if (this.stripe && rowIndex % 2 === 1) {
-        classes.push('el-table__row--striped');
+        classes.push('d-table__row--striped');
       }
       const rowClassName = this.table.rowClassName;
       if (typeof rowClassName === 'string') {
@@ -242,7 +242,7 @@ export default {
 
       // 判断是否text-overflow, 如果是就显示tooltip
       const cellChild = event.target.querySelector('.cell');
-      if (!(hasClass(cellChild, 'el-tooltip') && cellChild.childNodes.length)) {
+      if (!(hasClass(cellChild, 'd-tooltip') && cellChild.childNodes.length)) {
         return;
       }
       // use range width instead of scrollWidth to determine whether the text is overflowing
@@ -318,7 +318,7 @@ export default {
       const rowClasses = this.getRowClass(row, $index);
       let display = true;
       if (treeRowData) {
-        rowClasses.push('el-table__row--level-' + treeRowData.level);
+        rowClasses.push('d-table__row--level-' + treeRowData.level);
         display = treeRowData.display;
       }
       // 指令 v-show 会覆盖 row-style 中 display
@@ -404,7 +404,7 @@ export default {
         return [[
           tr,
           <tr key={'expanded-row__' + tr.key}>
-            <td colspan={ this.columnsCount } class="el-table__expanded-cell">
+            <td colspan={ this.columnsCount } class="d-table__expanded-cell">
               { renderExpanded(this.$createElement, { row, $index, store: this.store }) }
             </td>
           </tr>]];

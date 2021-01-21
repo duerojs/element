@@ -21,7 +21,7 @@
       </div>
       <div class="footer-social">
         <p class="footer-social-title">Element {{ version && version.slice(0, 3) }} Fullerene</p>
-        <el-popover
+        <d-popover
           ref="weixin"
           placement="top"
           width="120"
@@ -29,7 +29,7 @@
           trigger="hover">
           <div class="footer-popover-title">{{ langConfig.eleme }} UED</div>
           <img src="../assets/images/qrcode.png" alt="">
-        </el-popover>
+        </d-popover>
         <i class="doc-icon-weixin elementdoc" v-popover:weixin></i>
         <a href="https://github.com/elemefe" target="_blank">
           <i class="doc-icon-github elementdoc"></i>
@@ -118,7 +118,7 @@
     }
   }
 
-  .el-popover.footer-popover {
+  .d-popover.footer-popover {
     padding: 0;
     min-width: 120px;
     line-height: normal;

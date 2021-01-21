@@ -8,11 +8,11 @@
 ```html
 <div class="block">
   <span class="demonstration">有默认值</span>
-  <el-color-picker v-model="color1"></el-color-picker>
+  <d-color-picker v-model="color1"></d-color-picker>
 </div>
 <div class="block">
   <span class="demonstration">无默认值</span>
-  <el-color-picker v-model="color2"></el-color-picker>
+  <d-color-picker v-model="color2"></d-color-picker>
 </div>
 
 <script>
@@ -32,7 +32,7 @@
 
 :::demo ColorPicker 支持普通颜色，也支持带 Alpha 通道的颜色，通过`show-alpha`属性即可控制是否支持透明度的选择。
 ```html
-<el-color-picker v-model="color" show-alpha></el-color-picker>
+<d-color-picker v-model="color" show-alpha></d-color-picker>
 
 <script>
   export default {
@@ -50,11 +50,11 @@
 
 :::demo ColorPicker 支持预定义颜色
 ```html
-<el-color-picker
+<d-color-picker
   v-model="color"
   show-alpha
   :predefine="predefineColors">
-</el-color-picker>
+</d-color-picker>
 
 <script>
   export default {
@@ -88,10 +88,10 @@
 
 :::demo
 ```html
-<el-color-picker v-model="color"></el-color-picker>
-<el-color-picker v-model="color" size="medium"></el-color-picker>
-<el-color-picker v-model="color" size="small"></el-color-picker>
-<el-color-picker v-model="color" size="mini"></el-color-picker>
+<d-color-picker v-model="color"></d-color-picker>
+<d-color-picker v-model="color" size="medium"></d-color-picker>
+<d-color-picker v-model="color" size="small"></d-color-picker>
+<d-color-picker v-model="color" size="mini"></d-color-picker>
 
 <script>
   export default {

@@ -6,11 +6,11 @@ Progreso es usado para mostrar el estado de la operación actual e informar al u
 :::demo Usa el atributo `percentage` para asignar el porcentaje. Este es **requerido** y tiene que ser un valor entre `0-100`. Puede personalizar el formato de texto estableciendo `format`.
 
 ```html
-<el-progress :percentage="50"></el-progress>
-<el-progress :percentage="100" :format="format"></el-progress>
-<el-progress :percentage="100" status="success"></el-progress>
-<el-progress :percentage="100" status="warning"></el-progress>
-<el-progress :percentage="50" status="exception"></el-progress>
+<d-progress :percentage="50"></d-progress>
+<d-progress :percentage="100" :format="format"></d-progress>
+<d-progress :percentage="100" status="success"></d-progress>
+<d-progress :percentage="100" status="warning"></d-progress>
+<d-progress :percentage="50" status="exception"></d-progress>
 
 <script>
   export default {
@@ -29,10 +29,10 @@ En este caso el porcentaje no toma espacio adicional.
 
 :::demo El atributo `stroke-width` decide el ancho de la barra de progreso, y usa el atributo `text-inside` para poner la descripción dentro de la misma.
 ```html
-<el-progress :text-inside="true" :stroke-width="26" :percentage="70"></el-progress>
-<el-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></el-progress>
-<el-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></el-progress>
-<el-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></el-progress>
+<d-progress :text-inside="true" :stroke-width="26" :percentage="70"></d-progress>
+<d-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></d-progress>
+<d-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></d-progress>
+<d-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -43,11 +43,11 @@ Puede utilizar el atributo `color` para establecer el color de la barra de progr
 :::demo
 
 ```html
-<el-progress :percentage="percentage" :color="customColor"></el-progress>
+<d-progress :percentage="percentage" :color="customColor"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColorMethod"></el-progress>
+<d-progress :percentage="percentage" :color="customColorMethod"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColors"></el-progress>
+<d-progress :percentage="percentage" :color="customColors"></d-progress>
 <div>
   <d-button-group>
     <d-button icon="d-icon-minus" @click="decrease"></d-button>
@@ -102,11 +102,11 @@ Puede utilizar el atributo `color` para establecer el color de la barra de progr
 
 :::demo Puede asignar el atributo `type` como `circle` para usar la barra circular de progreso, y usar el atributo `width` para cambiar el tamaño del círculo.
 ```html
-<el-progress type="circle" :percentage="0"></el-progress>
-<el-progress type="circle" :percentage="25"></el-progress>
-<el-progress type="circle" :percentage="100" status="success"></el-progress>
-<el-progress type="circle" :percentage="70" status="warning"></el-progress>
-<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+<d-progress type="circle" :percentage="0"></d-progress>
+<d-progress type="circle" :percentage="25"></d-progress>
+<d-progress type="circle" :percentage="100" status="success"></d-progress>
+<d-progress type="circle" :percentage="70" status="warning"></d-progress>
+<d-progress type="circle" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -115,7 +115,7 @@ Puede utilizar el atributo `color` para establecer el color de la barra de progr
 :::demo También puede especificar el atributo `type` a `dashboard` para usar la barra de progreso del panel de control.
 
 ```html
-<el-progress type="dashboard" :percentage="percentage" :color="colors"></el-progress>
+<d-progress type="dashboard" :percentage="percentage" :color="colors"></d-progress>
 
 <div>
   <d-button-group>

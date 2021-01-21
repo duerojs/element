@@ -58,12 +58,12 @@
               },
 
               enter(el) {
-                addClass(el, 'd-opacity-transition');
+                addClass(el, 'el-opacity-transition');
                 el.style.opacity = 1;
               },
 
               afterEnter(el) {
-                removeClass(el, 'd-opacity-transition');
+                removeClass(el, 'el-opacity-transition');
                 el.style.opacity = '';
               },
 
@@ -154,7 +154,7 @@
 
       collapse(value) {
         if (value) this.openedMenus = [];
-        this.broadcast('ElSubmenu', 'toggle-collapse', value);
+        this.broadcast('DSubmenu', 'toggle-collapse', value);
       }
     },
     methods: {

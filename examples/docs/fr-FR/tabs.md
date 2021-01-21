@@ -10,12 +10,12 @@ Onglets basiques.
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="User" name="first">Utilisateur</el-tab-pane>
-    <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-    <el-tab-pane label="Role" name="third">Rôle</el-tab-pane>
-    <el-tab-pane label="Task" name="fourth">Tâche</el-tab-pane>
-  </el-tabs>
+  <d-tabs v-model="activeName" @tab-click="handleClick">
+    <d-tab-pane label="User" name="first">Utilisateur</d-tab-pane>
+    <d-tab-pane label="Config" name="second">Config</d-tab-pane>
+    <d-tab-pane label="Role" name="third">Rôle</d-tab-pane>
+    <d-tab-pane label="Task" name="fourth">Tâche</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -42,12 +42,12 @@ Les onglets peuvent être stylisés comme des cartes.
 
 ```html
 <template>
-  <el-tabs type="card" @tab-click="handleClick">
-    <el-tab-pane label="User">Utilisateur</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Rôle</el-tab-pane>
-    <el-tab-pane label="Task">Tâche</el-tab-pane>
-  </el-tabs>
+  <d-tabs type="card" @tab-click="handleClick">
+    <d-tab-pane label="User">Utilisateur</d-tab-pane>
+    <d-tab-pane label="Config">Config</d-tab-pane>
+    <d-tab-pane label="Role">Rôle</d-tab-pane>
+    <d-tab-pane label="Task">Tâche</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -73,12 +73,12 @@ Onglets avec style de carte et bordure.
 :::demo Mettez `type` à `border-card`.
 
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="User">Utilisateur</el-tab-pane>
-  <el-tab-pane label="Config">Config</el-tab-pane>
-  <el-tab-pane label="Role">Rôle</el-tab-pane>
-  <el-tab-pane label="Task">Tâche</el-tab-pane>
-</el-tabs>
+<d-tabs type="border-card">
+  <d-tab-pane label="User">Utilisateur</d-tab-pane>
+  <d-tab-pane label="Config">Config</d-tab-pane>
+  <d-tab-pane label="Role">Rôle</d-tab-pane>
+  <d-tab-pane label="Task">Tâche</d-tab-pane>
+</d-tabs>
 ```
 
 :::
@@ -91,19 +91,19 @@ Vous pouvez utiliser `tab-position` pour régler la position des onglets.
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">En haut</el-radio-button>
-    <el-radio-button label="right">À droite</el-radio-button>
-    <el-radio-button label="bottom">En bas</el-radio-button>
-    <el-radio-button label="left">À gauche</el-radio-button>
-  </el-radio-group>
+  <d-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <d-radio-button label="top">En haut</d-radio-button>
+    <d-radio-button label="right">À droite</d-radio-button>
+    <d-radio-button label="bottom">En bas</d-radio-button>
+    <d-radio-button label="left">À gauche</d-radio-button>
+  </d-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="User">Utilisateur</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Rôle</el-tab-pane>
-    <el-tab-pane label="Task">Tâche</el-tab-pane>
-  </el-tabs>
+  <d-tabs :tab-position="tabPosition" style="height: 200px;">
+    <d-tab-pane label="User">Utilisateur</d-tab-pane>
+    <d-tab-pane label="Config">Config</d-tab-pane>
+    <d-tab-pane label="Role">Rôle</d-tab-pane>
+    <d-tab-pane label="Task">Tâche</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -123,15 +123,15 @@ Vous pouvez utiliser un slot pour customiser le label d'un onglet.
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
+<d-tabs type="border-card">
+  <d-tab-pane>
     <span slot="label"><i class="d-icon-date"></i> Route</span>
     Route
-  </el-tab-pane>
-  <el-tab-pane label="Config">Config</el-tab-pane>
-  <el-tab-pane label="Role">Rôle</el-tab-pane>
-  <el-tab-pane label="Task">Tâche</el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+  <d-tab-pane label="Config">Config</d-tab-pane>
+  <d-tab-pane label="Role">Rôle</d-tab-pane>
+  <d-tab-pane label="Task">Tâche</d-tab-pane>
+</d-tabs>
 ```
 :::
 
@@ -141,16 +141,16 @@ Seuls les onglets de type carte supportent l'ajout et la suppression.
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <d-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {
@@ -215,16 +215,16 @@ Seuls les onglets de type carte supportent l'ajout et la suppression.
     Ajouter un onglet
   </d-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <d-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {

@@ -1,25 +1,25 @@
 <template>
   <div
     :class="[
-      'el-color-picker',
+      'd-color-picker',
       colorDisabled ? 'is-disabled' : '',
-      colorSize ? `el-color-picker--${ colorSize }` : ''
+      colorSize ? `d-color-picker--${ colorSize }` : ''
     ]"
     v-clickoutside="hide">
-    <div class="el-color-picker__mask" v-if="colorDisabled"></div>
-    <div class="el-color-picker__trigger" @click="handleTrigger">
-      <span class="el-color-picker__color" :class="{ 'is-alpha': showAlpha }">
-        <span class="el-color-picker__color-inner"
+    <div class="d-color-picker__mask" v-if="colorDisabled"></div>
+    <div class="d-color-picker__trigger" @click="handleTrigger">
+      <span class="d-color-picker__color" :class="{ 'is-alpha': showAlpha }">
+        <span class="d-color-picker__color-inner"
           :style="{
             backgroundColor: displayedColor
           }"></span>
-        <span class="el-color-picker__empty d-icon-close" v-if="!value && !showPanelColor"></span>
+        <span class="d-color-picker__empty d-icon-close" v-if="!value && !showPanelColor"></span>
       </span>
-      <span class="el-color-picker__icon d-icon-arrow-down" v-show="value || showPanelColor"></span>
+      <span class="d-color-picker__icon d-icon-arrow-down" v-show="value || showPanelColor"></span>
     </div>
     <picker-dropdown
        ref="dropdown"
-       :class="['el-color-picker__panel', popperClass || '']"
+       :class="['d-color-picker__panel', popperClass || '']"
        v-model="showPicker"
        @pick="confirmValue"
        @clear="clearValue"
@@ -37,7 +37,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElColorPicker',
+    name: 'DColorPicker',
 
     mixins: [Emitter],
 
@@ -122,14 +122,14 @@
         const value = this.color.value;
         this.$emit('input', value);
         this.$emit('change', value);
-        this.dispatch('ElFormItem', 'el.form.change', value);
+        this.dispatch('DFormItem', 'el.form.change', value);
         this.showPicker = false;
       },
       clearValue() {
         this.$emit('input', null);
         this.$emit('change', null);
         if (this.value !== null) {
-          this.dispatch('ElFormItem', 'el.form.change', null);
+          this.dispatch('DFormItem', 'el.form.change', null);
         }
         this.showPanelColor = false;
         this.showPicker = false;

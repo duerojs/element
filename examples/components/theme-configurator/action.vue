@@ -1,20 +1,20 @@
 <template>
   <div class="configurator-action">
       <div class="action-group">
-        <el-tooltip :content="getActionDisplayName('undo')">
+        <d-tooltip :content="getActionDisplayName('undo')">
           <img 
             src="../../assets/images/icon-undo.svg"
             @click="onUndo"
             :class="{ 'active': userConfigHistory.length > 0 }"
           />
-        </el-tooltip>
-        <el-tooltip :content="getActionDisplayName('redo')">
+        </d-tooltip>
+        <d-tooltip :content="getActionDisplayName('redo')">
           <img 
             src="../../assets/images/icon-redo.svg"
             @click="onRedo"
             :class="{ 'active': userConfigRedoHistory.length > 0 }"
           />
-        </el-tooltip>
+        </d-tooltip>
         <div class="button-group">
           <d-button 
             class="reset"
@@ -38,14 +38,14 @@
           </d-button>
         </div>
       </div>
-      <el-select v-model="selectedComponent" class="selector">
-        <el-option
+      <d-select v-model="selectedComponent" class="selector">
+        <d-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </d-option>
+      </d-select>
       <div class="line"></div>
     </div>
 </template>

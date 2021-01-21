@@ -26,11 +26,11 @@ export default {
 
     return (
       <div
-        class={ ['el-scrollbar__bar', 'is-' + bar.key] }
+        class={ ['d-scrollbar__bar', 'is-' + bar.key] }
         onMousedown={ this.clickTrackHandler } >
         <div
           ref="thumb"
-          class="el-scrollbar__thumb"
+          class="d-scrollbar__thumb"
           onMousedown={ this.clickThumbHandler }
           style={ renderThumbStyle({ size, move, bar }) }>
         </div>

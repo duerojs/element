@@ -1,13 +1,13 @@
 <template>
   <div
-    class="el-autocomplete"
+    class="d-autocomplete"
     v-clickoutside="close"
     aria-haspopup="listbox"
     role="combobox"
     :aria-expanded="suggestionVisible"
     :aria-owns="id"
   >
-    <el-input
+    <d-input
       ref="input"
       v-bind="[$props, $attrs]"
       @input="handleInput"
@@ -32,8 +32,8 @@
       <template slot="suffix" v-if="$slots.suffix">
         <slot name="suffix"></slot>
       </template>
-    </el-input>
-    <el-autocomplete-suggestions
+    </d-input>
+    <d-autocomplete-suggestions
       visible-arrow
       :class="[popperClass ? popperClass : '']"
       :popper-options="popperOptions"
@@ -54,31 +54,31 @@
           {{ item[valueKey] }}
         </slot>
       </li>
-    </el-autocomplete-suggestions>
+    </d-autocomplete-suggestions>
   </div>
 </template>
 <script>
   import debounce from 'throttle-debounce/debounce';
-  import ElInput from 'element-ui/packages/input';
+  import DInput from 'element-ui/packages/input';
   import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import ElAutocompleteSuggestions from './autocomplete-suggestions.vue';
+  import DAutocompleteSuggestions from './autocomplete-suggestions.vue';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Migrating from 'element-ui/src/mixins/migrating';
   import { generateId } from 'element-ui/src/utils/util';
   import Focus from 'element-ui/src/mixins/focus';
 
   export default {
-    name: 'ElAutocomplete',
+    name: 'DAutocomplete',
 
     mixins: [Emitter, Focus('input'), Migrating],
 
     inheritAttrs: false,
 
-    componentName: 'ElAutocomplete',
+    componentName: 'DAutocomplete',
 
     components: {
-      ElInput,
-      ElAutocompleteSuggestions
+      DInput,
+      DAutocompleteSuggestions
     },
 
     directives: { Clickoutside },
@@ -149,14 +149,14 @@
         return (isValidData || this.loading) && this.activated;
       },
       id() {
-        return `el-autocomplete-${generateId()}`;
+        return `d-autocomplete-${generateId()}`;
       }
     },
     watch: {
       suggestionVisible(val) {
         let $input = this.getInput();
         if ($input) {
-          this.broadcast('ElAutocompleteSuggestions', 'visible', [val, $input.offsetWidth]);
+          this.broadcast('DAutocompleteSuggestions', 'visible', [val, $input.offsetWidth]);
         }
       }
     },
@@ -246,8 +246,8 @@
         if (index >= this.suggestions.length) {
           index = this.suggestions.length - 1;
         }
-        const suggestion = this.$refs.suggestions.$el.querySelector('.el-autocomplete-suggestion__wrap');
-        const suggestionList = suggestion.querySelectorAll('.el-autocomplete-suggestion__list li');
+        const suggestion = this.$refs.suggestions.$el.querySelector('.d-autocomplete-suggestion__wrap');
+        const suggestionList = suggestion.querySelectorAll('.d-autocomplete-suggestion__list li');
 
         let highlightItem = suggestionList[index];
         let scrollTop = suggestion.scrollTop;

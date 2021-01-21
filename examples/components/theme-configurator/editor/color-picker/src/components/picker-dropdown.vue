@@ -1,28 +1,28 @@
 <template>
-  <transition name="el-zoom-in-top" @after-leave="doDestroy">
+  <transition name="d-zoom-in-top" @after-leave="doDestroy">
     <div
-      class="el-color-dropdown"
+      class="d-color-dropdown"
       v-show="showPopper">
-      <div class="el-color-dropdown__main-wrapper">
+      <div class="d-color-dropdown__main-wrapper">
         <hue-slider ref="hue" :color="color" vertical style="float: right;"></hue-slider>
         <sv-panel ref="sl" :color="color"></sv-panel>
       </div>
       <alpha-slider v-if="showAlpha" ref="alpha" :color="color"></alpha-slider>
       <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
-      <div class="el-color-dropdown__btns">
-        <span class="el-color-dropdown__value">
-          <el-input
+      <div class="d-color-dropdown__btns">
+        <span class="d-color-dropdown__value">
+          <d-input
             v-model="customInput"
             @keyup.native.enter="handleConfirm"
             @blur="handleConfirm"
             :validate-event="false"
             size="mini">
-          </el-input>
+          </d-input>
         </span>
         <!-- <d-button
           size="mini"
           type="text"
-          class="el-color-dropdown__link-btn"
+          class="d-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
         </d-button> -->
@@ -30,7 +30,7 @@
           plain
           size="mini"
           type="primary"
-          class="el-color-dropdown__btn"
+          class="d-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
         </d-button>
@@ -57,7 +57,7 @@
   import ElButton from 'element-ui/packages/button';
 
   export default {
-    name: 'el-color-picker-dropdown',
+    name: 'd-color-picker-dropdown',
 
     mixins: [Popper, Locale],
 

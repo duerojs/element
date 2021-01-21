@@ -8,7 +8,7 @@ Muestra información dentro de un contenedor `card`
 :::demo Card se compone de cabecera y cuerpo. La cabecera es opcional y la colocación de su  contenido depende de un slot con nombre.
 
 ```html
-<el-card class="box-card">
+<d-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
     <d-button style="float: right; padding: 3px 0" type="text">Operation button</d-button>
@@ -16,7 +16,7 @@ Muestra información dentro de un contenedor `card`
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</d-card>
 
 <style>
   .text {
@@ -49,11 +49,11 @@ La parte de la cabecera puede omitirse.
 
 :::demo
 ```html
-<el-card class="box-card">
+<d-card class="box-card">
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</d-card>
 
 <style>
   .text {
@@ -80,7 +80,7 @@ Muestre un contenido más rico añadiendo algunas configuraciones.
 ```html
 <d-row>
   <d-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card :body-style="{ padding: '0px' }">
+    <d-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
         <span>Yummy hamburger</span>
@@ -89,7 +89,7 @@ Muestre un contenido más rico añadiendo algunas configuraciones.
           <d-button type="text" class="button">Operating</d-button>
         </div>
       </div>
-    </el-card>
+    </d-card>
   </d-col>
 </d-row>
 
@@ -146,19 +146,19 @@ Puede definir cuándo mostrar las sombras.
 ```html
 <d-row :gutter="12">
   <d-col :span="8">
-    <el-card shadow="always">
+    <d-card shadow="always">
       Always
-    </el-card>
+    </d-card>
   </d-col>
   <d-col :span="8">
-    <el-card shadow="hover">
+    <d-card shadow="hover">
       Hover
-    </el-card>
+    </d-card>
   </d-col>
   <d-col :span="8">
-    <el-card shadow="never">
+    <d-card shadow="never">
       Never
-    </el-card>
+    </d-card>
   </d-col>
 </d-row>
 ```

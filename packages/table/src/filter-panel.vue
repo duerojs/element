@@ -1,21 +1,21 @@
 <template>
-  <transition name="el-zoom-in-top">
+  <transition name="d-zoom-in-top">
     <div
-      class="el-table-filter"
+      class="d-table-filter"
       v-if="multiple"
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <div class="el-table-filter__content">
-        <d-scrollbar wrap-class="el-table-filter__wrap">
-          <el-checkbox-group class="el-table-filter__checkbox-group" v-model="filteredValue">
-            <el-checkbox
+      <div class="d-table-filter__content">
+        <d-scrollbar wrap-class="d-table-filter__wrap">
+          <d-checkbox-group class="d-table-filter__checkbox-group" v-model="filteredValue">
+            <d-checkbox
               v-for="filter in filters"
               :key="filter.value"
-              :label="filter.value">{{ filter.text }}</el-checkbox>
-          </el-checkbox-group>
+              :label="filter.value">{{ filter.text }}</d-checkbox>
+          </d-checkbox-group>
         </d-scrollbar>
       </div>
-      <div class="el-table-filter__bottom">
+      <div class="d-table-filter__bottom">
         <button @click="handleConfirm"
           :class="{ 'is-disabled': filteredValue.length === 0 }"
           :disabled="filteredValue.length === 0">{{ t('el.table.confirmFilter') }}</button>
@@ -23,15 +23,15 @@
       </div>
     </div>
     <div
-      class="el-table-filter"
+      class="d-table-filter"
       v-else
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <ul class="el-table-filter__list">
-        <li class="el-table-filter__list-item"
+      <ul class="d-table-filter__list">
+        <li class="d-table-filter__list-item"
             :class="{ 'is-active': filterValue === undefined || filterValue === null }"
             @click="handleSelect(null)">{{ t('el.table.clearFilter') }}</li>
-        <li class="el-table-filter__list-item"
+        <li class="d-table-filter__list-item"
             v-for="filter in filters"
             :label="filter.value"
             :key="filter.value"
@@ -48,12 +48,12 @@
   import Locale from 'element-ui/src/mixins/locale';
   import Clickoutside from 'element-ui/src/utils/clickoutside';
   import Dropdown from './dropdown';
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElCheckboxGroup from 'element-ui/packages/checkbox-group';
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import DCheckbox from 'element-ui/packages/checkbox';
+  import DCheckboxGroup from 'element-ui/packages/checkbox-group';
+  import DScrollbar from 'element-ui/packages/scrollbar';
 
   export default {
-    name: 'ElTableFilterPanel',
+    name: 'DTableFilterPanel',
 
     mixins: [Popper, Locale],
 
@@ -62,9 +62,9 @@
     },
 
     components: {
-      ElCheckbox,
-      ElCheckboxGroup,
-      ElScrollbar
+      DCheckbox,
+      DCheckboxGroup,
+      DScrollbar
     },
 
     props: {

@@ -8,35 +8,35 @@ Similar to Tooltip, Popover is also built with `Vue-popper`. So for some duplica
 
 ```html
 <template>
-  <el-popover
+  <d-popover
     placement="top-start"
     title="Title"
     width="200"
     trigger="hover"
     content="this is content, this is content, this is content">
     <d-button slot="reference">Hover to activate</d-button>
-  </el-popover>
+  </d-popover>
 
-  <el-popover
+  <d-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="click"
     content="this is content, this is content, this is content">
     <d-button slot="reference">Click to activate</d-button>
-  </el-popover>
+  </d-popover>
 
-  <el-popover
+  <d-popover
     ref="popover"
     placement="right"
     title="Title"
     width="200"
     trigger="focus"
     content="this is content, this is content, this is content">
-  </el-popover>
+  </d-popover>
   <d-button v-popover:popover>Focus to activate</d-button>
 
-  <el-popover
+  <d-popover
     placement="bottom"
     title="Title"
     width="200"
@@ -44,7 +44,7 @@ Similar to Tooltip, Popover is also built with `Vue-popper`. So for some duplica
     content="this is content, this is content, this is content"
     v-model="visible">
     <d-button slot="reference" @click="visible = !visible">Manual to activate</d-button>
-  </el-popover>
+  </d-popover>
 </template>
 
 <script>
@@ -66,17 +66,17 @@ Other components can be nested in popover. Following is an example of nested tab
 :::demo replace the `content` attribute with a default `slot`.
 
 ```html
-<el-popover
+<d-popover
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="date"></el-table-column>
-    <el-table-column width="100" property="name" label="name"></el-table-column>
-    <el-table-column width="300" property="address" label="address"></el-table-column>
-  </el-table>
+  <d-table :data="gridData">
+    <d-table-column width="150" property="date" label="date"></d-table-column>
+    <d-table-column width="100" property="name" label="name"></d-table-column>
+    <d-table-column width="300" property="address" label="address"></d-table-column>
+  </d-table>
   <d-button slot="reference">Click to activate</d-button>
-</el-popover>
+</d-popover>
 
 <script>
   export default {
@@ -112,7 +112,7 @@ Of course, you can nest other operations. It's more light-weight than using a di
 
 :::demo
 ```html
-<el-popover
+<d-popover
   placement="top"
   width="160"
   v-model="visible">
@@ -122,7 +122,7 @@ Of course, you can nest other operations. It's more light-weight than using a di
     <d-button type="primary" size="mini" @click="visible = false">confirm</d-button>
   </div>
   <d-button slot="reference">Delete</d-button>
-</el-popover>
+</d-popover>
 
 <script>
   export default {
@@ -147,7 +147,7 @@ Of course, you can nest other operations. It's more light-weight than using a di
 |  disabled       |  whether Popover is disabled  | boolean    | — |  false |
 |  value / v-model        |  whether popover is visible  | Boolean           | — |  false |
 |  offset        |  popover offset  | number           | — |  0 |
-|  transition     |  popover transition animation      | string             | — | el-fade-in-linear |
+|  transition     |  popover transition animation      | string             | — | d-fade-in-linear |
 |  visible-arrow   |  whether a tooltip arrow is displayed or not. For more info, please refer to [Vue-popper](https://github.com/element-component/vue-popper) | boolean | — | true |
 |  popper-options        | parameters for [popper.js](https://popper.js.org/documentation.html) | object            | please refer to [popper.js](https://popper.js.org/documentation.html) | `{ boundariesElement: 'body', gpuAcceleration: false }` |
 |  popper-class        |  custom class name for popover | string | — | — |

@@ -5,15 +5,15 @@ Affiche le chemin de la page actuelle, afin de pouvoir naviguer plus facilement.
 ### Usage
 
 
-:::demo Dans `el-breadcrumb`, chaque `el-breadcrumb-item` est un tag représentant chaque niveau depuis la page d'accueil. Ce Composant possède un attribut de type `String` appelé `separator` qui détermine le séparateur. Sa valeur par défaut est '/'.
+:::demo Dans `d-breadcrumb`, chaque `d-breadcrumb-item` est un tag représentant chaque niveau depuis la page d'accueil. Ce Composant possède un attribut de type `String` appelé `separator` qui détermine le séparateur. Sa valeur par défaut est '/'.
 
 ```html
-<el-breadcrumb separator="/">
-  <el-breadcrumb-item :to="{ path: '/' }">Accueil</el-breadcrumb-item>
-  <el-breadcrumb-item><a href="/">Gestion promotions</a></el-breadcrumb-item>
-  <el-breadcrumb-item>Liste promotions</el-breadcrumb-item>
-  <el-breadcrumb-item>Détail promotion</el-breadcrumb-item>
-</el-breadcrumb>
+<d-breadcrumb separator="/">
+  <d-breadcrumb-item :to="{ path: '/' }">Accueil</d-breadcrumb-item>
+  <d-breadcrumb-item><a href="/">Gestion promotions</a></d-breadcrumb-item>
+  <d-breadcrumb-item>Liste promotions</d-breadcrumb-item>
+  <d-breadcrumb-item>Détail promotion</d-breadcrumb-item>
+</d-breadcrumb>
 ```
 :::
 
@@ -22,12 +22,12 @@ Affiche le chemin de la page actuelle, afin de pouvoir naviguer plus facilement.
 :::demo Configurez `separator-class` pour utiliser `iconfont` en tant que séparateur. Cela remplacera `separator`.
 
 ```html
-<el-breadcrumb separator-class="d-icon-arrow-right">
-  <el-breadcrumb-item :to="{ path: '/' }">Accueil</el-breadcrumb-item>
-  <el-breadcrumb-item>Gestion promotions</el-breadcrumb-item>
-  <el-breadcrumb-item>Liste promotions</el-breadcrumb-item>
-  <el-breadcrumb-item>Détail promotion</el-breadcrumb-item>
-</el-breadcrumb>
+<d-breadcrumb separator-class="d-icon-arrow-right">
+  <d-breadcrumb-item :to="{ path: '/' }">Accueil</d-breadcrumb-item>
+  <d-breadcrumb-item>Gestion promotions</d-breadcrumb-item>
+  <d-breadcrumb-item>Liste promotions</d-breadcrumb-item>
+  <d-breadcrumb-item>Détail promotion</d-breadcrumb-item>
+</d-breadcrumb>
 ```
 :::
 

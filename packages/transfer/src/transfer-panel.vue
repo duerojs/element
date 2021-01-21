@@ -1,18 +1,18 @@
 <template>
-  <div class="el-transfer-panel">
-    <p class="el-transfer-panel__header">
-      <el-checkbox
+  <div class="d-transfer-panel">
+    <p class="d-transfer-panel__header">
+      <d-checkbox
         v-model="allChecked"
         @change="handleAllCheckedChange"
         :indeterminate="isIndeterminate">
         {{ title }}
         <span>{{ checkedSummary }}</span>
-      </el-checkbox>
+      </d-checkbox>
     </p>
     
-    <div :class="['el-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
-      <el-input
-        class="el-transfer-panel__filter"
+    <div :class="['d-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
+      <d-input
+        class="d-transfer-panel__filter"
         v-model="query"
         size="small"
         :placeholder="placeholder"
@@ -20,61 +20,61 @@
         @mouseleave.native="inputHover = false"
         v-if="filterable">
         <i slot="prefix"
-          :class="['el-input__icon', 'd-icon-' + inputIcon]"
+          :class="['d-input__icon', 'd-icon-' + inputIcon]"
           @click="clearQuery"
         ></i>
-      </el-input>
-      <el-checkbox-group
+      </d-input>
+      <d-checkbox-group
         v-model="checked"
         v-show="!hasNoMatch && data.length > 0"
         :class="{ 'is-filterable': filterable }"
-        class="el-transfer-panel__list">
-        <el-checkbox
-          class="el-transfer-panel__item"
+        class="d-transfer-panel__list">
+        <d-checkbox
+          class="d-transfer-panel__item"
           :label="item[keyProp]"
           :disabled="item[disabledProp]"
           :key="item[keyProp]"
           v-for="item in filteredData">
           <option-content :option="item"></option-content>
-        </el-checkbox>
-      </el-checkbox-group>
+        </d-checkbox>
+      </d-checkbox-group>
       <p
-        class="el-transfer-panel__empty"
+        class="d-transfer-panel__empty"
         v-show="hasNoMatch">{{ t('el.transfer.noMatch') }}</p>
       <p
-        class="el-transfer-panel__empty"
+        class="d-transfer-panel__empty"
         v-show="data.length === 0 && !hasNoMatch">{{ t('el.transfer.noData') }}</p>
     </div>
-    <p class="el-transfer-panel__footer" v-if="hasFooter">
+    <p class="d-transfer-panel__footer" v-if="hasFooter">
       <slot></slot>
     </p>
   </div>
 </template>
 
 <script>
-  import ElCheckboxGroup from 'element-ui/packages/checkbox-group';
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElInput from 'element-ui/packages/input';
+  import DCheckboxGroup from 'element-ui/packages/checkbox-group';
+  import DCheckbox from 'element-ui/packages/checkbox';
+  import DInput from 'element-ui/packages/input';
   import Locale from 'element-ui/src/mixins/locale';
 
   export default {
     mixins: [Locale],
 
-    name: 'ElTransferPanel',
+    name: 'DTransferPanel',
 
-    componentName: 'ElTransferPanel',
+    componentName: 'DTransferPanel',
 
     components: {
-      ElCheckboxGroup,
-      ElCheckbox,
-      ElInput,
+      DCheckboxGroup,
+      DCheckbox,
+      DInput,
       OptionContent: {
         props: {
           option: Object
         },
         render(h) {
           const getParent = vm => {
-            if (vm.$options.componentName === 'ElTransferPanel') {
+            if (vm.$options.componentName === 'DTransferPanel') {
               return vm;
             } else if (vm.$parent) {
               return getParent(vm.$parent);

@@ -139,12 +139,12 @@
       <router-view class="content"></router-view>
       <footer-nav></footer-nav>
     </div>
-    <el-backtop 
+    <d-backtop 
       v-if="showBackToTop"
       target=".page-component__scroll .d-scrollbar__wrap"
       :right="100"
       :bottom="150"
-    ></el-backtop>
+    ></d-backtop>
   </div>
   </d-scrollbar>
 </template>

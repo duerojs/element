@@ -9,12 +9,12 @@ Basic text link
 
 ```html
 <div>
-  <el-link href="https://element.eleme.io" target="_blank">default</el-link>
-  <el-link type="primary">primary</el-link>
-  <el-link type="success">success</el-link>
-  <el-link type="warning">warning</el-link>
-  <el-link type="danger">danger</el-link>
-  <el-link type="info">info</el-link>
+  <d-link href="https://element.eleme.io" target="_blank">default</d-link>
+  <d-link type="primary">primary</d-link>
+  <d-link type="success">success</d-link>
+  <d-link type="warning">warning</d-link>
+  <d-link type="danger">danger</d-link>
+  <d-link type="info">info</d-link>
 </div>
 ```
 
@@ -27,12 +27,12 @@ Disabled state of link
 
 ```html
 <div>
-  <el-link disabled>default</el-link>
-  <el-link type="primary" disabled>primary</el-link>
-  <el-link type="success" disabled>success</el-link>
-  <el-link type="warning" disabled>warning</el-link>
-  <el-link type="danger" disabled>danger</el-link>
-  <el-link type="info" disabled>info</el-link>
+  <d-link disabled>default</d-link>
+  <d-link type="primary" disabled>primary</d-link>
+  <d-link type="success" disabled>success</d-link>
+  <d-link type="warning" disabled>warning</d-link>
+  <d-link type="danger" disabled>danger</d-link>
+  <d-link type="info" disabled>info</d-link>
 </div>
 ```
 
@@ -45,8 +45,8 @@ Underline of link
 
 ```html
 <div>
-  <el-link :underline="false">Without Underline</el-link>
-  <el-link>With Underline</el-link>
+  <d-link :underline="false">Without Underline</d-link>
+  <d-link>With Underline</d-link>
 </div>
 ```
 
@@ -59,8 +59,8 @@ Link with icon
 
 ```html
 <div>
-  <el-link icon="d-icon-edit">Edit</el-link>
-  <el-link>Check<i class="d-icon-view d-icon--right"></i> </el-link>
+  <d-link icon="d-icon-edit">Edit</d-link>
+  <d-link>Check<i class="d-icon-view d-icon--right"></i> </d-link>
 </div>
 ```
 

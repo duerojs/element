@@ -10,12 +10,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <d-tabs v-model="activeName" @tab-click="handleClick">
+    <d-tab-pane label="用户管理" name="first">用户管理</d-tab-pane>
+    <d-tab-pane label="配置管理" name="second">配置管理</d-tab-pane>
+    <d-tab-pane label="角色管理" name="third">角色管理</d-tab-pane>
+    <d-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -42,12 +42,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <d-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <d-tab-pane label="用户管理" name="first">用户管理</d-tab-pane>
+    <d-tab-pane label="配置管理" name="second">配置管理</d-tab-pane>
+    <d-tab-pane label="角色管理" name="third">角色管理</d-tab-pane>
+    <d-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -72,12 +72,12 @@
 
 :::demo 将`type`设置为`border-card`。
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-  <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+<d-tabs type="border-card">
+  <d-tab-pane label="用户管理">用户管理</d-tab-pane>
+  <d-tab-pane label="配置管理">配置管理</d-tab-pane>
+  <d-tab-pane label="角色管理">角色管理</d-tab-pane>
+  <d-tab-pane label="定时任务补偿">定时任务补偿</d-tab-pane>
+</d-tabs>
 ```
 :::
 
@@ -89,19 +89,19 @@
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <d-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <d-radio-button label="top">top</d-radio-button>
+    <d-radio-button label="right">right</d-radio-button>
+    <d-radio-button label="bottom">bottom</d-radio-button>
+    <d-radio-button label="left">left</d-radio-button>
+  </d-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <d-tabs :tab-position="tabPosition" style="height: 200px;">
+    <d-tab-pane label="用户管理">用户管理</d-tab-pane>
+    <d-tab-pane label="配置管理">配置管理</d-tab-pane>
+    <d-tab-pane label="角色管理">角色管理</d-tab-pane>
+    <d-tab-pane label="定时任务补偿">定时任务补偿</d-tab-pane>
+  </d-tabs>
 </template>
 <script>
   export default {
@@ -121,15 +121,15 @@
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
+<d-tabs type="border-card">
+  <d-tab-pane>
     <span slot="label"><i class="d-icon-date"></i> 我的行程</span>
     我的行程
-  </el-tab-pane>
-  <el-tab-pane label="消息中心">消息中心</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+  <d-tab-pane label="消息中心">消息中心</d-tab-pane>
+  <d-tab-pane label="角色管理">角色管理</d-tab-pane>
+  <d-tab-pane label="定时任务补偿">定时任务补偿</d-tab-pane>
+</d-tabs>
 ```
 :::
 
@@ -139,16 +139,16 @@
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <d-tab-pane
     :key="item.name"
     v-for="(item, index) in editableTabs"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {
@@ -213,16 +213,16 @@
     add tab
   </d-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<d-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <d-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </d-tab-pane>
+</d-tabs>
 <script>
   export default {
     data() {

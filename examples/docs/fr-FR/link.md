@@ -10,12 +10,12 @@ Lien texte basique.
 
 ```html
 <div>
-  <el-link href="https://element.eleme.io" target="_blank">défaut</el-link>
-  <el-link type="primary">primaire</el-link>
-  <el-link type="success">succès</el-link>
-  <el-link type="warning">avertissement</el-link>
-  <el-link type="danger">danger</el-link>
-  <el-link type="info">info</el-link>
+  <d-link href="https://element.eleme.io" target="_blank">défaut</d-link>
+  <d-link type="primary">primaire</d-link>
+  <d-link type="success">succès</d-link>
+  <d-link type="warning">avertissement</d-link>
+  <d-link type="danger">danger</d-link>
+  <d-link type="info">info</d-link>
 </div>
 ```
 
@@ -29,12 +29,12 @@ Lien désactivé.
 
 ```html
 <div>
-  <el-link disabled>défaut</el-link>
-  <el-link type="primary" disabled>primaire</el-link>
-  <el-link type="success" disabled>succès</el-link>
-  <el-link type="warning" disabled>avertissement</el-link>
-  <el-link type="danger" disabled>danger</el-link>
-  <el-link type="info" disabled>info</el-link>
+  <d-link disabled>défaut</d-link>
+  <d-link type="primary" disabled>primaire</d-link>
+  <d-link type="success" disabled>succès</d-link>
+  <d-link type="warning" disabled>avertissement</d-link>
+  <d-link type="danger" disabled>danger</d-link>
+  <d-link type="info" disabled>info</d-link>
 </div>
 ```
 
@@ -48,8 +48,8 @@ Lien souligné.
 
 ```html
 <div>
-  <el-link :underline="false">non souligné</el-link>
-  <el-link>Souligné</el-link>
+  <d-link :underline="false">non souligné</d-link>
+  <d-link>Souligné</d-link>
 </div>
 ```
 
@@ -63,8 +63,8 @@ Lien avec icône.
 
 ```html
 <div>
-  <el-link icon="d-icon-edit">Éditer</el-link>
-  <el-link>Vérifier<i class="d-icon-view d-icon--right"></i> </el-link>
+  <d-link icon="d-icon-edit">Éditer</d-link>
+  <d-link>Vérifier<i class="d-icon-view d-icon--right"></i> </d-link>
 </div>
 ```
 

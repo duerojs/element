@@ -8,34 +8,34 @@
 :::demo 定义`value`属性，它接受`Number`或者`String`。
 
 ```html
-<el-badge :value="12" class="item">
+<d-badge :value="12" class="item">
   <d-button size="small">评论</d-button>
-</el-badge>
-<el-badge :value="3" class="item">
+</d-badge>
+<d-badge :value="3" class="item">
   <d-button size="small">回复</d-button>
-</el-badge>
-<el-badge :value="1" class="item" type="primary">
+</d-badge>
+<d-badge :value="1" class="item" type="primary">
   <d-button size="small">评论</d-button>
-</el-badge>
-<el-badge :value="2" class="item" type="warning">
+</d-badge>
+<d-badge :value="2" class="item" type="warning">
   <d-button size="small">回复</d-button>
-</el-badge>
+</d-badge>
 
-<el-dropdown trigger="click">
-  <span class="el-dropdown-link">
+<d-dropdown trigger="click">
+  <span class="d-dropdown-link">
     点我查看<i class="d-icon-caret-bottom d-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item class="clearfix">
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item class="clearfix">
       评论
-      <el-badge class="mark" :value="12" />
-    </el-dropdown-item>
-    <el-dropdown-item class="clearfix">
+      <d-badge class="mark" :value="12" />
+    </d-dropdown-item>
+    <d-dropdown-item class="clearfix">
       回复
-      <el-badge class="mark" :value="3" />
-    </el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+      <d-badge class="mark" :value="3" />
+    </d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
 .item {
@@ -52,12 +52,12 @@
 :::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效。
 
 ```html
-<el-badge :value="200" :max="99" class="item">
+<d-badge :value="200" :max="99" class="item">
   <d-button size="small">评论</d-button>
-</el-badge>
-<el-badge :value="100" :max="10" class="item">
+</d-badge>
+<d-badge :value="100" :max="10" class="item">
   <d-button size="small">回复</d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {
@@ -74,12 +74,12 @@
 :::demo 定义`value`为`String`类型是时可以用于显示自定义文本。
 
 ```html
-<el-badge value="new" class="item">
+<d-badge value="new" class="item">
   <d-button size="small">评论</d-button>
-</el-badge>
-<el-badge value="hot" class="item">
+</d-badge>
+<d-badge value="hot" class="item">
   <d-button size="small">回复</d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {
@@ -96,10 +96,10 @@
 :::demo 除了数字外，设置`is-dot`属性，它接受一个`Boolean`。
 
 ```html
-<el-badge is-dot class="item">数据查询</el-badge>
-<el-badge is-dot class="item">
+<d-badge is-dot class="item">数据查询</d-badge>
+<d-badge is-dot class="item">
   <d-button class="share-button" icon="d-icon-share" type="primary"></d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {

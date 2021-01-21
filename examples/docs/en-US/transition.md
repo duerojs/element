@@ -4,18 +4,18 @@ You can use Element's built-in transitions directly. Before that, please read th
 
 ### fade
 
-:::demo We have two fading effects: `el-fade-in-linear` and `el-fade-in`.
+:::demo We have two fading effects: `d-fade-in-linear` and `d-fade-in`.
 ```html
 <template>
   <div>
     <d-button @click="show = !show">Click Me</d-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
-      <transition name="el-fade-in-linear">
-        <div v-show="show" class="transition-box">.el-fade-in-linear</div>
+      <transition name="d-fade-in-linear">
+        <div v-show="show" class="transition-box">.d-fade-in-linear</div>
       </transition>
-      <transition name="el-fade-in">
-        <div v-show="show" class="transition-box">.el-fade-in</div>
+      <transition name="d-fade-in">
+        <div v-show="show" class="transition-box">.d-fade-in</div>
       </transition>
     </div>
   </div>
@@ -48,23 +48,23 @@ You can use Element's built-in transitions directly. Before that, please read th
 
 ### zoom
 
-:::demo `el-zoom-in-center`, `el-zoom-in-top` and `el-zoom-in-bottom` are provided.
+:::demo `d-zoom-in-center`, `d-zoom-in-top` and `d-zoom-in-bottom` are provided.
 ```html
 <template>
   <div>
     <d-button @click="show2 = !show2">Click Me</d-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
-      <transition name="el-zoom-in-center">
-        <div v-show="show2" class="transition-box">.el-zoom-in-center</div>
+      <transition name="d-zoom-in-center">
+        <div v-show="show2" class="transition-box">.d-zoom-in-center</div>
       </transition>
 
-      <transition name="el-zoom-in-top">
-        <div v-show="show2" class="transition-box">.el-zoom-in-top</div>
+      <transition name="d-zoom-in-top">
+        <div v-show="show2" class="transition-box">.d-zoom-in-top</div>
       </transition>
 
-      <transition name="el-zoom-in-bottom">
-        <div v-show="show2" class="transition-box">.el-zoom-in-bottom</div>
+      <transition name="d-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">.d-zoom-in-bottom</div>
       </transition>
     </div>
   </div>

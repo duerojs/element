@@ -8,10 +8,10 @@ Besides the native features of img, support lazy load, custom placeholder and lo
 <div class="demo-image">
   <div class="block" v-for="fit in fits" :key="fit">
     <span class="demonstration">{{ fit }}</span>
-    <el-image
+    <d-image
       style="width: 100px; height: 100px"
       :src="url"
-      :fit="fit"></el-image>
+      :fit="fit"></d-image>
   </div>
 </div>
 
@@ -35,15 +35,15 @@ Besides the native features of img, support lazy load, custom placeholder and lo
 <div class="demo-image__placeholder">
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-image :src="src"></el-image>
+    <d-image :src="src"></d-image>
   </div>
   <div class="block">
     <span class="demonstration">Custom</span>
-    <el-image :src="src">
+    <d-image :src="src">
       <div slot="placeholder" class="image-slot">
         Loading<span class="dot">...</span>
       </div>
-    </el-image>
+    </d-image>
   </div>
 </div>
 
@@ -66,15 +66,15 @@ Besides the native features of img, support lazy load, custom placeholder and lo
 <div class="demo-image__error">
   <div class="block">
     <span class="demonstration">Default</span>
-    <el-image></el-image>
+    <d-image></d-image>
   </div>
   <div class="block">
     <span class="demonstration">Custom</span>
-    <el-image>
+    <d-image>
       <div slot="error" class="image-slot">
         <i class="d-icon-picture-outline"></i>
       </div>
-    </el-image>
+    </d-image>
   </div>
 </div>
 ```
@@ -85,7 +85,7 @@ Besides the native features of img, support lazy load, custom placeholder and lo
 :::demo Use lazy load by `lazy = true`. Image will load until scroll into view when set. You can indicate scroll container that adds scroll listener to by `scroll-container`. If undefined, will be the nearest parent container whose overflow property is auto or scroll.
 ```html
 <div class="demo-image__lazy">
-  <el-image v-for="url in urls" :key="url" :src="url" lazy></el-image>
+  <d-image v-for="url in urls" :key="url" :src="url" lazy></d-image>
 </div>
 
 <script>
@@ -113,11 +113,11 @@ Besides the native features of img, support lazy load, custom placeholder and lo
 :::demo allow big image preview by setting `previewSrcList` prop.
 ```html
 <div class="demo-image__preview">
-  <el-image 
+  <d-image 
     style="width: 100px; height: 100px"
     :src="url" 
     :preview-src-list="srcList">
-  </el-image>
+  </d-image>
 </div>
 
 <script>

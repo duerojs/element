@@ -33,7 +33,7 @@ export default ${ComponentName};`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="el-${componentname}"></div>
+  <div class="d-${componentname}"></div>
 </template>
 
 <script>

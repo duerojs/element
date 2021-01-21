@@ -6,8 +6,8 @@ Si la ruta de la página es simple, se recomienda utilizar  PageHeader en lugar 
 
 :::demo
 ```html
-<el-page-header @back="goBack" content="detail">
-</el-page-header>
+<d-page-header @back="goBack" content="detail">
+</d-page-header>
 
 <script>
   export default {

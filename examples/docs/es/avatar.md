@@ -13,18 +13,18 @@ Use los props `shape` y `size` para establecer la forma y el tamaño del avatar
     <d-col :span="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
-        <div class="block"><el-avatar :size="50" :src="circleUrl"></el-avatar></div>
+        <div class="block"><d-avatar :size="50" :src="circleUrl"></d-avatar></div>
         <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar :size="size" :src="circleUrl"></el-avatar>
+          <d-avatar :size="size" :src="circleUrl"></d-avatar>
         </div>
       </div>
     </d-col>  
     <d-col :span="12">
       <div class="sub-title">square</div>
       <div class="demo-basic--circle">
-        <div class="block"><el-avatar shape="square" :size="50" :src="squareUrl"></el-avatar></div>
+        <div class="block"><d-avatar shape="square" :size="50" :src="squareUrl"></d-avatar></div>
         <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar shape="square" :size="size" :src="squareUrl"></el-avatar>
+          <d-avatar shape="square" :size="size" :src="squareUrl"></d-avatar>
         </div>
       </div>
     </d-col> 
@@ -54,13 +54,13 @@ Soporta imágenes, iconos o caracteres.
 <template>
   <div class="demo-type">
     <div>
-      <el-avatar icon="d-icon-user-solid"></el-avatar>
+      <d-avatar icon="d-icon-user-solid"></d-avatar>
     </div>
     <div>
-      <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+      <d-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></d-avatar>
     </div>
     <div>
-      <el-avatar> user </el-avatar>
+      <d-avatar> user </d-avatar>
     </div>
   </div>
 </template>
@@ -75,9 +75,9 @@ Fallback cuando se produce un error de carga de imagen
 ```html
 <template>
   <div class="demo-type">
-    <el-avatar :size="60" src="https://empty" @error="errorHandler">
+    <d-avatar :size="60" src="https://empty" @error="errorHandler">
       <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"/>
-      </el-avatar>
+      </d-avatar>
   </div>
 </template>
 <script>
@@ -103,7 +103,7 @@ Establezca cómo la imagen se ajusta a su contenedor para un avatar de imagen, i
   <div class="demo-fit">
     <div class="block" v-for="fit in fits" :key="fit">
         <span class="title">{{ fit }}</span>
-        <el-avatar shape="square" :size="100" :fit="fit" :src="url"></el-avatar>
+        <d-avatar shape="square" :size="100" :fit="fit" :src="url"></d-avatar>
     </div>
   </div>
 </template>

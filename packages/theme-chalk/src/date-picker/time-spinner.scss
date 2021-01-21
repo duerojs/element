@@ -2,7 +2,7 @@
 
 @include b(time-spinner) {
   &.has-seconds {
-    .el-time-spinner__wrapper {
+    .d-time-spinner__wrapper {
       width: 33.3%;
     }
   }
@@ -24,11 +24,11 @@
       text-align: center;
       overflow: hidden;
 
-      .el-time-spinner__list {
+      .d-time-spinner__list {
         transform: translateY(-32px);
       }
 
-      .el-time-spinner__item:hover:not(.disabled):not(.active) {
+      .d-time-spinner__item:hover:not(.disabled):not(.active) {
         background: $--color-white;
         cursor: default;
       }
@@ -61,10 +61,10 @@
   }
 
   @include e(input) {
-    &.el-input {
+    &.d-input {
       width: 70%;
 
-      .el-input__inner {
+      .d-input__inner {
         padding: 0;
         text-align: center;
       }

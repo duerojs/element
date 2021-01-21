@@ -1,17 +1,17 @@
 <template>
   <transition
-    name="el-zoom-in-top"
+    name="d-zoom-in-top"
     @after-leave="$emit('dodestroy')">
     <div
       v-show="visible"
-      class="el-time-range-picker el-picker-panel el-popper"
+      class="d-time-range-picker d-picker-panel d-popper"
       :class="popperClass">
-      <div class="el-time-range-picker__content">
-        <div class="el-time-range-picker__cell">
-          <div class="el-time-range-picker__header">{{ t('el.datepicker.startTime') }}</div>
+      <div class="d-time-range-picker__content">
+        <div class="d-time-range-picker__cell">
+          <div class="d-time-range-picker__header">{{ t('el.datepicker.startTime') }}</div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
-            class="el-time-range-picker__body el-time-panel__content">
+            class="d-time-range-picker__body d-time-panel__content">
             <time-spinner
               ref="minSpinner"
               :show-seconds="showSeconds"
@@ -23,11 +23,11 @@
             </time-spinner>
           </div>
         </div>
-        <div class="el-time-range-picker__cell">
-          <div class="el-time-range-picker__header">{{ t('el.datepicker.endTime') }}</div>
+        <div class="d-time-range-picker__cell">
+          <div class="d-time-range-picker__header">{{ t('el.datepicker.endTime') }}</div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
-            class="el-time-range-picker__body el-time-panel__content">
+            class="d-time-range-picker__body d-time-panel__content">
             <time-spinner
               ref="maxSpinner"
               :show-seconds="showSeconds"
@@ -40,14 +40,14 @@
           </div>
         </div>
       </div>
-      <div class="el-time-panel__footer">
+      <div class="d-time-panel__footer">
         <button
           type="button"
-          class="el-time-panel__btn cancel"
+          class="d-time-panel__btn cancel"
           @click="handleCancel()">{{ t('el.datepicker.cancel') }}</button>
         <button
           type="button"
-          class="el-time-panel__btn confirm"
+          class="d-time-panel__btn confirm"
           @click="handleConfirm()"
           :disabled="btnDisabled">{{ t('el.datepicker.confirm') }}</button>
       </div>

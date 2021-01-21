@@ -173,7 +173,7 @@
         </div>
       </div>
       <input
-        class="el-upload__input"
+        class="d-upload__input"
         type="file"
         ref="input"
         @change="uploadAction"
@@ -219,19 +219,19 @@
             <span>{{config.name}}</span>
             <span class="right" v-if="isOfficial">by {{config.author}}</span>
             <span class="right more" v-else>
-              <el-dropdown @command="actionClick">
+              <d-dropdown @command="actionClick">
                 <i class="d-icon-more"></i>
-                <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</el-dropdown-item>
-                  <el-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</el-dropdown-item>
-                  <el-dropdown-item
+                <d-dropdown-menu slot="dropdown">
+                  <d-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</d-dropdown-item>
+                  <d-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</d-dropdown-item>
+                  <d-dropdown-item
                       command="delete"
                       style="color: #F56C6C;"
                     >
                       {{getActionDisplayName('delete-theme')}}
-                    </el-dropdown-item>
-                </el-dropdown-menu>
-              </el-dropdown>
+                    </d-dropdown-item>
+                </d-dropdown-menu>
+              </d-dropdown>
             </span>
           </div>
           <div class="description" v-if="isOfficial">{{getActionDisplayName(getDescriptionKey(config.name))}} </div>

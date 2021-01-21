@@ -57,7 +57,7 @@ export default {
       }
     }
     const view = h(this.tag, {
-      class: ['el-scrollbar__view', this.viewClass],
+      class: ['d-scrollbar__view', this.viewClass],
       style: this.viewStyle,
       ref: 'resize'
     }, this.$slots.default);

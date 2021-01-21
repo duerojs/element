@@ -4,7 +4,7 @@
     @mouseenter.stop="handleMouseEnter"
     @mouseleave.stop="handleMouseLeave">
     <div
-      class="el-carousel__container"
+      class="d-carousel__container"
       :style="{ height: height }">
       <transition
         v-if="arrowDisplay"
@@ -15,7 +15,7 @@
           @mouseenter="handleButtonEnter('left')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex - 1)"
-          class="el-carousel__arrow el-carousel__arrow--left">
+          class="d-carousel__arrow d-carousel__arrow--left">
           <i class="d-icon-arrow-left"></i>
         </button>
       </transition>
@@ -28,7 +28,7 @@
           @mouseenter="handleButtonEnter('right')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex + 1)"
-          class="el-carousel__arrow el-carousel__arrow--right">
+          class="d-carousel__arrow d-carousel__arrow--right">
           <i class="d-icon-arrow-right"></i>
         </button>
       </transition>
@@ -41,12 +41,12 @@
         v-for="(item, index) in items"
         :key="index"
         :class="[
-          'el-carousel__indicator',
-          'el-carousel__indicator--' + direction,
+          'd-carousel__indicator',
+          'd-carousel__indicator--' + direction,
           { 'is-active': index === activeIndex }]"
         @mouseenter="throttledIndicatorHover(index)"
         @click.stop="handleIndicatorClick(index)">
-        <button class="el-carousel__button">
+        <button class="d-carousel__button">
           <span v-if="hasLabel">{{ item.label }}</span>
         </button>
       </li>
@@ -59,7 +59,7 @@ import throttle from 'throttle-debounce/throttle';
 import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
 
 export default {
-  name: 'ElCarousel',
+  name: 'DCarousel',
 
   props: {
     initialIndex: {
@@ -122,20 +122,20 @@ export default {
     },
 
     carouselClasses() {
-      const classes = ['el-carousel', 'el-carousel--' + this.direction];
+      const classes = ['d-carousel', 'd-carousel--' + this.direction];
       if (this.type === 'card') {
-        classes.push('el-carousel--card');
+        classes.push('d-carousel--card');
       }
       return classes;
     },
 
     indicatorsClasses() {
-      const classes = ['el-carousel__indicators', 'el-carousel__indicators--' + this.direction];
+      const classes = ['d-carousel__indicators', 'd-carousel__indicators--' + this.direction];
       if (this.hasLabel) {
-        classes.push('el-carousel__indicators--labels');
+        classes.push('d-carousel__indicators--labels');
       }
       if (this.indicatorPosition === 'outside' || this.type === 'card') {
-        classes.push('el-carousel__indicators--outside');
+        classes.push('d-carousel__indicators--outside');
       }
       return classes;
     }
@@ -202,7 +202,7 @@ export default {
     },
 
     updateItems() {
-      this.items = this.$children.filter(child => child.$options.name === 'ElCarouselItem');
+      this.items = this.$children.filter(child => child.$options.name === 'DCarouselItem');
     },
 
     resetItemPosition(oldIndex) {

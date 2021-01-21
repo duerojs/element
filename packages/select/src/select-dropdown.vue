@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-select-dropdown el-popper"
+    class="d-select-dropdown d-popper"
     :class="[{ 'is-multiple': $parent.multiple }, popperClass]"
     :style="{ minWidth: minWidth }">
     <slot></slot>
@@ -11,9 +11,9 @@
   import Popper from 'element-ui/src/utils/vue-popper';
 
   export default {
-    name: 'ElSelectDropdown',
+    name: 'DSelectDropdown',
 
-    componentName: 'ElSelectDropdown',
+    componentName: 'DSelectDropdown',
 
     mixins: [Popper],
 
@@ -63,8 +63,8 @@
     },
 
     mounted() {
-      this.referenceElm = this.$parent.$refs.reference.$el;
-      this.$parent.popperElm = this.popperElm = this.$el;
+      this.referenceDm = this.$parent.$refs.reference.$el;
+      this.$parent.popperDm = this.popperDm = this.$el;
       this.$on('updatePopper', () => {
         if (this.$parent.visible) this.updatePopper();
       });

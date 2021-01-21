@@ -6,8 +6,8 @@
 
 :::demo
 ```html
-<el-page-header @back="goBack" content="详情页面">
-</el-page-header>
+<d-page-header @back="goBack" content="详情页面">
+</d-page-header>
 
 <script>
   export default {

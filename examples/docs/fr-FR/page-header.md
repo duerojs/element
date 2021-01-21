@@ -6,8 +6,8 @@ Si le chemin de la page est simple, il est recommandé d’utiliser PageHeader a
 
 :::demo
 ```html
-<el-page-header @back="goBack" content="detail">
-</el-page-header>
+<d-page-header @back="goBack" content="detail">
+</d-page-header>
 
 <script>
   export default {

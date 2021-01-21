@@ -2,22 +2,22 @@
   import Clickoutside from 'element-ui/src/utils/clickoutside';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Migrating from 'element-ui/src/mixins/migrating';
-  import ElButton from 'element-ui/packages/button';
-  import ElButtonGroup from 'element-ui/packages/button-group';
+  import DButton from 'element-ui/packages/button';
+  import DButtonGroup from 'element-ui/packages/button-group';
   import { generateId } from 'element-ui/src/utils/util';
 
   export default {
-    name: 'ElDropdown',
+    name: 'DDropdown',
 
-    componentName: 'ElDropdown',
+    componentName: 'DDropdown',
 
     mixins: [Emitter, Migrating],
 
     directives: { Clickoutside },
 
     components: {
-      ElButton,
-      ElButtonGroup
+      DButton,
+      DButtonGroup
     },
 
     provide() {
@@ -87,11 +87,11 @@
 
     watch: {
       visible(val) {
-        this.broadcast('ElDropdownMenu', 'visible', val);
+        this.broadcast('DDropdownMenu', 'visible', val);
         this.$emit('visible-change', val);
       },
       focusing(val) {
-        const selfDefine = this.$el.querySelector('.el-dropdown-selfdefine');
+        const selfDefine = this.$el.querySelector('.d-dropdown-selfdefine');
         if (selfDefine) { // 自定义
           if (val) {
             selfDefine.className += ' focusing';
@@ -196,7 +196,7 @@
         if (!this.splitButton) { // 自定义
           this.triggerElm.setAttribute('role', 'button');
           this.triggerElm.setAttribute('tabindex', this.tabindex);
-          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' el-dropdown-selfdefine'); // 控制
+          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' d-dropdown-selfdefine'); // 控制
         }
       },
       initEvent() {
@@ -263,13 +263,13 @@
           <d-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
             {this.$slots.default}
           </d-button>
-          <d-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
-            <i class="el-dropdown__icon d-icon-arrow-down"></i>
+          <d-button ref="trigger" type={type} size={dropdownSize} class="d-dropdown__caret-button">
+            <i class="d-dropdown__icon d-icon-arrow-down"></i>
           </d-button>
         </d-button-group>);
 
       return (
-        <div class="el-dropdown" v-clickoutside={hide}>
+        <div class="d-dropdown" v-clickoutside={hide}>
           {triggerElm}
           {this.$slots.dropdown}
         </div>

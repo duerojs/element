@@ -1,9 +1,9 @@
-import ElCollapse from './src/collapse';
+import DCollapse from './src/collapse';
 
 /* istanbul ignore next */
-ElCollapse.install = function(Vue) {
-  Vue.component(ElCollapse.name, ElCollapse);
+DCollapse.install = function(Vue) {
+  Vue.component(DCollapse.name, DCollapse);
 };
 
-export default ElCollapse;
+export default DCollapse;
 

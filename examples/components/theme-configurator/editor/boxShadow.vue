@@ -1,9 +1,9 @@
 <template>
   <section class="config" :key="displayName">
     <div class="config-label">
-      <el-tooltip :content="displayName" placement="top">
+      <d-tooltip :content="displayName" placement="top">
         <span>{{displayKeyName}}</span>
-      </el-tooltip>
+      </d-tooltip>
       <d-button 
         class="plus-button" 
         size="mini" 
@@ -81,7 +81,7 @@
 .colorPicker {
   margin-left: 0;
 }
-.content-20 .el-input__suffix-inner span{
+.content-20 .d-input__suffix-inner span{
   line-height: 28px;
 }
 .content-20 {

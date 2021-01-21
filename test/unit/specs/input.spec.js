@@ -9,13 +9,13 @@ describe('Input', () => {
   it('create', async() => {
     vm = createVue({
       template: `
-        <el-input
+        <d-input
           :minlength="3"
           :maxlength="5"
           placeholder="请输入内容"
           @focus="handleFocus"
           :value="input">
-        </el-input>
+        </d-input>
       `,
       data() {
         return {
@@ -44,7 +44,7 @@ describe('Input', () => {
 
   it('default to empty', () => {
     vm = createVue({
-      template: '<el-input/>'
+      template: '<d-input/>'
     }, true);
     let inputElm = vm.$el.querySelector('input');
     expect(inputElm.value).to.equal('');
@@ -53,8 +53,8 @@ describe('Input', () => {
   it('disabled', () => {
     vm = createVue({
       template: `
-        <el-input disabled>
-        </el-input>
+        <d-input disabled>
+        </d-input>
       `
     }, true);
     expect(vm.$el.querySelector('input').getAttribute('disabled')).to.ok;
@@ -63,7 +63,7 @@ describe('Input', () => {
   it('suffixIcon', () => {
     vm = createVue({
       template: `
-        <el-input suffix-icon="time"></el-input>
+        <d-input suffix-icon="time"></d-input>
       `
     }, true);
     var icon = vm.$el.querySelector('.el-input__icon');

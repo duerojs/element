@@ -1,56 +1,56 @@
 <template>
   <transition name="msgbox-fade">
     <div
-      class="el-message-box__wrapper"
+      class="d-message-box__wrapper"
       tabindex="-1"
       v-show="visible"
       @click.self="handleWrapperClick"
       role="dialog"
       aria-modal="true"
       :aria-label="title || 'dialog'">
-      <div class="el-message-box" :class="[customClass, center && 'el-message-box--center']">
-        <div class="el-message-box__header" v-if="title !== null">
-          <div class="el-message-box__title">
+      <div class="d-message-box" :class="[customClass, center && 'd-message-box--center']">
+        <div class="d-message-box__header" v-if="title !== null">
+          <div class="d-message-box__title">
             <div
-              :class="['el-message-box__status', icon]"
+              :class="['d-message-box__status', icon]"
               v-if="icon && center">
             </div>
             <span>{{ title }}</span>
           </div>
           <button
             type="button"
-            class="el-message-box__headerbtn"
+            class="d-message-box__headerbtn"
             aria-label="Close"
             v-if="showClose"
             @click="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')"
             @keydown.enter="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')">
-            <i class="el-message-box__close d-icon-close"></i>
+            <i class="d-message-box__close d-icon-close"></i>
           </button>
         </div>
-        <div class="el-message-box__content">
-          <div class="el-message-box__container">
+        <div class="d-message-box__content">
+          <div class="d-message-box__container">
             <div
-              :class="['el-message-box__status', icon]"
+              :class="['d-message-box__status', icon]"
               v-if="icon && !center && message !== ''">
             </div>
-            <div class="el-message-box__message" v-if="message !== ''">
+            <div class="d-message-box__message" v-if="message !== ''">
               <slot>
                 <p v-if="!dangerouslyUseHTMLString">{{ message }}</p>
                 <p v-else v-html="message"></p>
               </slot>
             </div>
           </div>
-          <div class="el-message-box__input" v-show="showInput">
-            <el-input
+          <div class="d-message-box__input" v-show="showInput">
+            <d-input
               v-model="inputValue"
               :type="inputType"
               @keydown.enter.native="handleInputEnter"
               :placeholder="inputPlaceholder"
-              ref="input"></el-input>
-            <div class="el-message-box__errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+              ref="input"></d-input>
+            <div class="d-message-box__errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
-        <div class="el-message-box__btns">
+        <div class="d-message-box__btns">
           <d-button
             :loading="cancelButtonLoading"
             :class="[ cancelButtonClasses ]"
@@ -81,8 +81,8 @@
 <script type="text/babel">
   import Popup from 'element-ui/src/utils/popup';
   import Locale from 'element-ui/src/mixins/locale';
-  import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import DInput from 'element-ui/packages/input';
+  import DButton from 'element-ui/packages/button';
   import { addClass, removeClass } from 'element-ui/src/utils/dom';
   import { t } from 'element-ui/src/locale';
   import Dialog from 'element-ui/src/utils/aria-dialog';
@@ -129,8 +129,8 @@
     },
 
     components: {
-      ElInput,
-      ElButton
+      DInput,
+      DButton
     },
 
     computed: {
@@ -226,8 +226,8 @@
         return true;
       },
       getFirstFocus() {
-        const btn = this.$el.querySelector('.el-message-box__btns .d-button');
-        const title = this.$el.querySelector('.el-message-box__btns .el-message-box__title');
+        const btn = this.$el.querySelector('.d-message-box__btns .d-button');
+        const title = this.$el.querySelector('.d-message-box__btns .d-message-box__title');
         return btn || title;
       },
       getInputElement() {

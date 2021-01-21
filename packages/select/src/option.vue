@@ -2,7 +2,7 @@
   <li
     @mouseenter="hoverItem"
     @click.stop="selectOptionClick"
-    class="el-select-dropdown__item"
+    class="d-select-dropdown__item"
     v-show="visible"
     :class="{
       'selected': itemSelected,
@@ -22,9 +22,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'ElOption',
+    name: 'DOption',
 
-    componentName: 'ElOption',
+    componentName: 'DOption',
 
     inject: ['select'],
 
@@ -84,7 +84,7 @@
 
     watch: {
       currentLabel() {
-        if (!this.created && !this.select.remote) this.dispatch('ElSelect', 'setSelected');
+        if (!this.created && !this.select.remote) this.dispatch('DSelect', 'setSelected');
       },
       value(val, oldVal) {
         const { remote, valueKey } = this.select;
@@ -92,7 +92,7 @@
           if (valueKey && typeof val === 'object' && typeof oldVal === 'object' && val[valueKey] === oldVal[valueKey]) {
             return;
           }
-          this.dispatch('ElSelect', 'setSelected');
+          this.dispatch('DSelect', 'setSelected');
         }
       }
     },
@@ -130,7 +130,7 @@
 
       selectOptionClick() {
         if (this.disabled !== true && this.groupDisabled !== true) {
-          this.dispatch('ElSelect', 'handleOptionClick', [this, true]);
+          this.dispatch('DSelect', 'handleOptionClick', [this, true]);
         }
       },
 

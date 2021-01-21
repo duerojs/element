@@ -4,18 +4,18 @@ Cuando haya muchas opciones, utilice un menú desplegable para mostrar y selecci
 
 ### Uso básico
 
-:::demo `v-model` es el valor de  `el-option` que está seleccionado actualmente.
+:::demo `v-model` es el valor de  `d-option` que está seleccionado actualmente.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <d-select v-model="value" placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -46,21 +46,21 @@ Cuando haya muchas opciones, utilice un menú desplegable para mostrar y selecci
 ```
 :::
 
-### Disabled en el-option
+### Disabled en d-option
 
-:::demo Establezca el valor de `disabled` en `el-option`  como `true` para deshabilitar esta opción.
+:::demo Establezca el valor de `disabled` en `d-option`  como `true` para deshabilitar esta opción.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <d-select v-model="value" placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
       :disabled="item.disabled">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -92,22 +92,22 @@ Cuando haya muchas opciones, utilice un menú desplegable para mostrar y selecci
 ```
 :::
 
-### Disabled en el-select
+### Disabled en d-select
 
 Desactivar todo el componente.
 
-:::demo Configure `disabled` de `el-select` para deshabilitarla.
+:::demo Configure `disabled` de `d-select` para deshabilitarla.
 
 ```html
 <template>
-  <el-select v-model="value" disabled placeholder="Select">
-    <el-option
+  <d-select v-model="value" disabled placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -142,18 +142,18 @@ Desactivar todo el componente.
 
 Puede limpiar un Select con un icono.
 
-:::demo Establezca el atributo `clearable` para `el-select`  y aparecerá un icono. Tenga en cuenta que la opción `clearable` es sólo para una selección individual.
+:::demo Establezca el atributo `clearable` para `d-select`  y aparecerá un icono. Tenga en cuenta que la opción `clearable` es sólo para una selección individual.
 
 ```html
 <template>
-  <el-select v-model="value" clearable placeholder="Select">
-    <el-option
+  <d-select v-model="value" clearable placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -188,32 +188,32 @@ Puede limpiar un Select con un icono.
 
 Selección múltiple utiliza tags para mostrar las opciones seleccionadas.
 
-:::demo Configure el atributo `multiple` para `el-select` para habilitar el modo múltiple. En este caso, el valor del `v-model` será un array de opciones seleccionadas. De forma predeterminada, las opciones seleccionadas se mostrarán como tags. Se pueden contraer a un texto utilizando el atributo  `collapse-tags`.
+:::demo Configure el atributo `multiple` para `d-select` para habilitar el modo múltiple. En este caso, el valor del `v-model` será un array de opciones seleccionadas. De forma predeterminada, las opciones seleccionadas se mostrarán como tags. Se pueden contraer a un texto utilizando el atributo  `collapse-tags`.
 
 ```html
 <template>
-  <el-select v-model="value1" multiple placeholder="Select">
-    <el-option
+  <d-select v-model="value1" multiple placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 
-  <el-select
+  <d-select
     v-model="value2"
     multiple
     collapse-tags
     style="margin-left: 20px;"
     placeholder="Select">
-    <el-option
+    <d-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -249,20 +249,20 @@ Selección múltiple utiliza tags para mostrar las opciones seleccionadas.
 
 Puede personalizar templates HTML para las opciones.
 
-:::demo Inserte templates HTML personalizados en el slot de `el-option`.
+:::demo Inserte templates HTML personalizados en el slot de `d-option`.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option
+  <d-select v-model="value" placeholder="Select">
+    <d-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
       :value="item.value">
       <span style="float: left">{{ item.label }}</span>
       <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -300,23 +300,23 @@ Puede personalizar templates HTML para las opciones.
 
 Mostrar opciones en grupos.
 
-:::demo Utilice `el-option-group` para agrupar las opciones, y su atributo `label` representa el nombre del grupo.
+:::demo Utilice `d-option-group` para agrupar las opciones, y su atributo `label` representa el nombre del grupo.
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="Select">
-    <el-option-group
+  <d-select v-model="value" placeholder="Select">
+    <d-option-group
       v-for="group in options"
       :key="group.label"
       :label="group.label">
-      <el-option
+      <d-option
         v-for="item in group.options"
         :key="item.value"
         :label="item.label"
         :value="item.value">
-      </el-option>
-    </el-option-group>
-  </el-select>
+      </d-option>
+    </d-option-group>
+  </d-select>
 </template>
 
 <script>
@@ -360,18 +360,18 @@ Mostrar opciones en grupos.
 
 Puede filtrar opciones como lo desee.
 
-:::demo Añadir `filterable` a `el-select` permite filtrar. Por defecto, Select buscará todas las opciones cuyo atributo`label` contenga el valor del input. Si prefiere otras estrategias de filtrado, puede pasar el `filter-method`. `filter-method` es una función que se llama cuando el valor del input cambia, y su parámetro es el valor del input actual.
+:::demo Añadir `filterable` a `d-select` permite filtrar. Por defecto, Select buscará todas las opciones cuyo atributo`label` contenga el valor del input. Si prefiere otras estrategias de filtrado, puede pasar el `filter-method`. `filter-method` es una función que se llama cuando el valor del input cambia, y su parámetro es el valor del input actual.
 
 ```html
 <template>
-  <el-select v-model="value" filterable placeholder="Select">
-    <el-option
+  <d-select v-model="value" filterable placeholder="Select">
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -406,11 +406,11 @@ Puede filtrar opciones como lo desee.
 
 Introduzca palabras y datos para buscar desde el servidor.
 
-:::demo Configure el valor de `filterable` y `remote` con `true` para habilitar la búsqueda remota, y debería pasar el método `remote-method`. `remote-method` es una función que se llama cuando el valor del input cambia, y su parámetro es el valor del input actual. Tenga en cuenta que si `el-option` se presenta con la directiva `v-for`, debe agregar el atributo `key` para `el-option`. Su valor tiene que ser unívoco, como el valor de `item.value` en el ejemplo siguiente.
+:::demo Configure el valor de `filterable` y `remote` con `true` para habilitar la búsqueda remota, y debería pasar el método `remote-method`. `remote-method` es una función que se llama cuando el valor del input cambia, y su parámetro es el valor del input actual. Tenga en cuenta que si `d-option` se presenta con la directiva `v-for`, debe agregar el atributo `key` para `d-option`. Su valor tiene que ser unívoco, como el valor de `item.value` en el ejemplo siguiente.
 
 ```html
 <template>
-  <el-select
+  <d-select
     v-model="value"
     multiple
     filterable
@@ -419,13 +419,13 @@ Introduzca palabras y datos para buscar desde el servidor.
     placeholder="Please enter a keyword"
     :remote-method="remoteMethod"
     :loading="loading">
-    <el-option
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>
@@ -488,19 +488,19 @@ Crear y seleccionar nuevos items que no están incluidas en las opciones de sele
 
 ```html
 <template>
-  <el-select
+  <d-select
     v-model="value"
     multiple
     filterable
     allow-create
     placeholder="Choose tags for your article">
-    <el-option
+    <d-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value">
-    </el-option>
-  </el-select>
+    </d-option>
+  </d-select>
 </template>
 
 <script>

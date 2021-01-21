@@ -8,35 +8,35 @@ Similar a un Tooltip, Popover está construido con `Vue-popper`. Así que para a
 
 ```html
 <template>
-  <el-popover
+  <d-popover
     placement="top-start"
     title="Title"
     width="200"
     trigger="hover"
     content="this is content, this is content, this is content">
     <d-button slot="reference">Hover to activate</d-button>
-  </el-popover>
+  </d-popover>
 
-  <el-popover
+  <d-popover
     placement="bottom"
     title="Title"
     width="200"
     trigger="click"
     content="this is content, this is content, this is content">
     <d-button slot="reference">Click to activate</d-button>
-  </el-popover>
+  </d-popover>
 
-  <el-popover
+  <d-popover
     ref="popover"
     placement="right"
     title="Title"
     width="200"
     trigger="focus"
     content="this is content, this is content, this is content">
-  </el-popover>
+  </d-popover>
   <d-button v-popover:popover>Focus to activate</d-button>
 
-  <el-popover
+  <d-popover
     placement="bottom"
     title="Title"
     width="200"
@@ -44,7 +44,7 @@ Similar a un Tooltip, Popover está construido con `Vue-popper`. Así que para a
     content="this is content, this is content, this is content"
     v-model="visible">
     <d-button slot="reference" @click="visible = !visible">Manual to activate</d-button>
-  </el-popover>
+  </d-popover>
 </template>
 
 <script>
@@ -65,17 +65,17 @@ Otros componentes pueden anidarse dentro de popover. A continuación un ejemplo 
 :::demo Reemplaza el atributo `content` con un `slot`.
 
 ```html
-<el-popover
+<d-popover
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="date"></el-table-column>
-    <el-table-column width="100" property="name" label="name"></el-table-column>
-    <el-table-column width="300" property="address" label="address"></el-table-column>
-  </el-table>
+  <d-table :data="gridData">
+    <d-table-column width="150" property="date" label="date"></d-table-column>
+    <d-table-column width="100" property="name" label="name"></d-table-column>
+    <d-table-column width="300" property="address" label="address"></d-table-column>
+  </d-table>
   <d-button slot="reference">Click to activate</d-button>
-</el-popover>
+</d-popover>
 
 <script>
   export default {
@@ -111,7 +111,7 @@ Por supuesto, puedes anidar otras operaciones. Es más ligero que utilizar un `d
 
 :::demo
 ```html
-<el-popover
+<d-popover
   placement="top"
   width="160"
   v-model="visible">
@@ -121,7 +121,7 @@ Por supuesto, puedes anidar otras operaciones. Es más ligero que utilizar un `d
     <d-button type="primary" size="mini" @click="visible = false">confirm</d-button>
   </div>
   <d-button slot="reference">Delete</d-button>
-</el-popover>
+</d-popover>
 
 <script>
   export default {
@@ -146,7 +146,7 @@ Por supuesto, puedes anidar otras operaciones. Es más ligero que utilizar un `d
 | disabled       | si el popover está deshabilitado         | boolean        | —                                        | false                                    |
 | value / v-model | si el popover está visible               | Boolean        | —                                        | false                                    |
 | offset         | popover offset                           | number         | —                                        | 0                                        |
-| transition     | animación de transición del popover | string         | —                                        | el-fade-in-linear                        |
+| transition     | animación de transición del popover | string         | —                                        | d-fade-in-linear                        |
 | visible-arrow  | si una flecha del tooltip es mostrada o no. Para más información, por favor refiérase a [Vue-popper](https://github.com/element-component/vue-popper) | boolean        | —                                        | true                                     |
 | popper-options | parámetros para [popper.js](https://popper.js.org/documentation.html) | object         | por favor, refiérase a [popper.js](https://popper.js.org/documentation.html) | `{ boundariesElement: 'body', gpuAcceleration: false }` |
 | popper-class   | clase propia para popover                | string         | —                                        | —                                        |

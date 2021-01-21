@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-slider__button-wrapper"
+    class="d-slider__button-wrapper"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @mousedown="onButtonDown"
@@ -16,25 +16,25 @@
     @keydown.down.prevent="onLeftKeyDown"
     @keydown.up.prevent="onRightKeyDown"
   >
-    <el-tooltip
+    <d-tooltip
       placement="top"
       ref="tooltip"
       :popper-class="tooltipClass"
       :disabled="!showTooltip">
       <span slot="content">{{ formatValue }}</span>
-      <div class="el-slider__button" :class="{ 'hover': hovering, 'dragging': dragging }"></div>
-    </el-tooltip>
+      <div class="d-slider__button" :class="{ 'hover': hovering, 'dragging': dragging }"></div>
+    </d-tooltip>
   </div>
 </template>
 
 <script>
-  import ElTooltip from 'element-ui/packages/tooltip';
+  import DTooltip from 'element-ui/packages/tooltip';
 
   export default {
-    name: 'ElSliderButton',
+    name: 'DSliderButton',
 
     components: {
-      ElTooltip
+      DTooltip
     },
 
     props: {

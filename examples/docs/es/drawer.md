@@ -9,24 +9,24 @@ Llamada de un drawer temporal, desde varias direcciones
 :::demo Debe establecer `visible` para `Drawer` como lo hace `Dialog` para controlar la visibilidad. `visible` es del tipo `boolean`. `Drawer` tiene partes: `title` & `body`, el `title` es un slot con nombre, también puede establecer el título a través de un atributo llamado `title`, por defecto a una cadena vacía, la parte `body` es el área principal de `Drawer`, que contiene contenido definido por el usuario. Al abrir, `Drawer` se expande desde la **esquina derecha a la izquierda** cuyo tamaño es **30%** de la ventana del navegador por defecto. Puede cambiar ese comportamiento predeterminado estableciendo los atributos `direction` y `size`. Este caso de demostración también muestra cómo utilizar la API `before-close`, consulte la sección Atributos para obtener más detalles.
 
 ```html
-<el-radio-group v-model="direction">
-  <el-radio label="ltr">left to right</el-radio>
-  <el-radio label="rtl">right to left</el-radio>
-  <el-radio label="ttb">top to bottom</el-radio>
-  <el-radio label="btt">bottom to top</el-radio>
-</el-radio-group>
+<d-radio-group v-model="direction">
+  <d-radio label="ltr">left to right</d-radio>
+  <d-radio label="rtl">right to left</d-radio>
+  <d-radio label="ttb">top to bottom</d-radio>
+  <d-radio label="btt">bottom to top</d-radio>
+</d-radio-group>
 
 <d-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
 </d-button>
 
-<el-drawer
+<d-drawer
   title="I am the title"
   :visible.sync="drawer"
   :direction="direction"
   :before-close="handleClose">
   <span>Hi, there!</span>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {
@@ -61,12 +61,12 @@ Si no necesitas el titulo lo puedes eliminar del drawer.
   open
 </d-button>
 
-<el-drawer
+<d-drawer
   title="I am the title"
   :visible.sync="drawer"
   :with-header="false">
   <span>Hi there!</span>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {
@@ -89,19 +89,19 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
 ```html
 <d-button type="text" @click="table = true">Open Drawer with nested table</d-button>
 <d-button type="text" @click="dialog = true">Open Drawer with nested form</d-button>
-<el-drawer
+<d-drawer
   title="I have a nested table inside!"
   :visible.sync="table"
   direction="rtl"
   size="50%">
-   <el-table :data="gridData">
-      <el-table-column property="date" label="Date" width="150"></el-table-column>
-      <el-table-column property="name" label="Name" width="200"></el-table-column>
-      <el-table-column property="address" label="Address"></el-table-column>
-    </el-table>
-</el-drawer>
+   <d-table :data="gridData">
+      <d-table-column property="date" label="Date" width="150"></d-table-column>
+      <d-table-column property="name" label="Name" width="200"></d-table-column>
+      <d-table-column property="address" label="Address"></d-table-column>
+    </d-table>
+</d-drawer>
 
-<el-drawer
+<d-drawer
   title="I have a nested form inside!"
   :before-close="handleClose"
   :visible.sync="dialog"
@@ -110,23 +110,23 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
   ref="drawer"
   >
   <div class="demo-drawer__content">
-    <el-form :model="form">
-      <el-form-item label="Name" :label-width="formLabelWidth">
-        <el-input v-model="form.name" autocomplete="off"></el-input>
-      </el-form-item>
-      <el-form-item label="Area" :label-width="formLabelWidth">
-        <el-select v-model="form.region" placeholder="Please select activity area">
-          <el-option label="Area1" value="shanghai"></el-option>
-          <el-option label="Area2" value="beijing"></el-option>
-        </el-select>
-      </el-form-item>
-    </el-form>
+    <d-form :model="form">
+      <d-form-item label="Name" :label-width="formLabelWidth">
+        <d-input v-model="form.name" autocomplete="off"></d-input>
+      </d-form-item>
+      <d-form-item label="Area" :label-width="formLabelWidth">
+        <d-select v-model="form.region" placeholder="Please select activity area">
+          <d-option label="Area1" value="shanghai"></d-option>
+          <d-option label="Area2" value="beijing"></d-option>
+        </d-select>
+      </d-form-item>
+    </d-form>
     <div class="demo-drawer__footer">
       <d-button @click="cancelForm">Cancel</d-button>
       <d-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? 'Submitting ...' : 'Submit' }}</d-button>
     </div>
   </div>
-</el-drawer>
+</d-drawer>
 
 <script>
 export default {
@@ -206,21 +206,21 @@ También puede tener varias capas de `Drawer` al igual que con `Dialog`.
   open
 </d-button>
 
-<el-drawer
+<d-drawer
   title="I'm outer Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
    <d-button @click="innerDrawer = true">Click me!</d-button>
-   <el-drawer
+   <d-drawer
      title="I'm inner Drawer"
      :append-to-body="true"
      :before-close="handleClose"
      :visible.sync="innerDrawer">
      <p>_(:зゝ∠)_</p>
-   </el-drawer>
+   </d-drawer>
   </div>
-</el-drawer>
+</d-drawer>
 
 <script>
   export default {

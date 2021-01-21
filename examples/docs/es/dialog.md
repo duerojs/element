@@ -12,7 +12,7 @@ Dialog abre una caja de diálogo, y es bastante personalizable.
 ```html
 <d-button type="text" @click="dialogVisible = true">click to open the Dialog</d-button>
 
-<el-dialog
+<d-dialog
   title="Tips"
   :visible.sync="dialogVisible"
   width="30%"
@@ -22,7 +22,7 @@ Dialog abre una caja de diálogo, y es bastante personalizable.
     <d-button @click="dialogVisible = false">Cancel</d-button>
     <d-button type="primary" @click="dialogVisible = false">Confirm</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -62,34 +62,34 @@ El contenido del Diálogo puede ser cualquier cosa, incluso una tabla o un formu
 <!-- Table -->
 <d-button type="text" @click="dialogTableVisible = true">open a Table nested Dialog</d-button>
 
-<el-dialog title="Shipping address" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="Date" width="150"></el-table-column>
-    <el-table-column property="name" label="Name" width="200"></el-table-column>
-    <el-table-column property="address" label="Address"></el-table-column>
-  </el-table>
-</el-dialog>
+<d-dialog title="Shipping address" :visible.sync="dialogTableVisible">
+  <d-table :data="gridData">
+    <d-table-column property="date" label="Date" width="150"></d-table-column>
+    <d-table-column property="name" label="Name" width="200"></d-table-column>
+    <d-table-column property="address" label="Address"></d-table-column>
+  </d-table>
+</d-dialog>
 
 <!-- Form -->
 <d-button type="text" @click="dialogFormVisible = true">open a Form nested Dialog</d-button>
 
-<el-dialog title="Shipping address" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="Promotion name" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="Zones" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="Please select a zone">
-        <el-option label="Zone No.1" value="shanghai"></el-option>
-        <el-option label="Zone No.2" value="beijing"></el-option>
-      </el-select>
-    </el-form-item>
-  </el-form>
+<d-dialog title="Shipping address" :visible.sync="dialogFormVisible">
+  <d-form :model="form">
+    <d-form-item label="Promotion name" :label-width="formLabelWidth">
+      <d-input v-model="form.name" autocomplete="off"></d-input>
+    </d-form-item>
+    <d-form-item label="Zones" :label-width="formLabelWidth">
+      <d-select v-model="form.region" placeholder="Please select a zone">
+        <d-option label="Zone No.1" value="shanghai"></d-option>
+        <d-option label="Zone No.2" value="beijing"></d-option>
+      </d-select>
+    </d-form-item>
+  </d-form>
   <span slot="footer" class="dialog-footer">
     <d-button @click="dialogFormVisible = false">Cancel</d-button>
     <d-button type="primary" @click="dialogFormVisible = false">Confirm</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {
@@ -141,18 +141,18 @@ Si un diálogo está anidado en otro diálogo, se requiere append-to-body.
 <template>
   <d-button type="text" @click="outerVisible = true">open the outer Dialog</d-button>
   
-  <el-dialog title="Outer Dialog" :visible.sync="outerVisible">
-    <el-dialog
+  <d-dialog title="Outer Dialog" :visible.sync="outerVisible">
+    <d-dialog
         width="30%"
         title="Inner Dialog"
         :visible.sync="innerVisible"
         append-to-body>
-    </el-dialog>
+    </d-dialog>
     <div slot="footer" class="dialog-footer">
       <d-button @click="outerVisible = false">Cancel</d-button>
       <d-button type="primary" @click="innerVisible = true">open the inner Dialog</d-button>
     </div>
-  </el-dialog>
+  </d-dialog>
 </template>
 
 <script>
@@ -176,7 +176,7 @@ El contenido de Diálogo se puede centrar.
 ```html
 <d-button type="text" @click="centerDialogVisible = true">Click to open the Dialog</d-button>
 
-<el-dialog
+<d-dialog
   title="Warning"
   :visible.sync="centerDialogVisible"
   width="30%"
@@ -186,7 +186,7 @@ El contenido de Diálogo se puede centrar.
     <d-button @click="centerDialogVisible = false">Cancel</d-button>
     <d-button type="primary" @click="centerDialogVisible = false">Confirm</d-button>
   </span>
-</el-dialog>
+</d-dialog>
 
 <script>
   export default {

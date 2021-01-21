@@ -179,10 +179,10 @@
 
 :::demo
 ```html
-<el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-  <el-radio-button :label="false">展开</el-radio-button>
-  <el-radio-button :label="true">收起</el-radio-button>
-</el-radio-group>
+<d-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+  <d-radio-button :label="false">展开</d-radio-button>
+  <d-radio-button :label="true">收起</d-radio-button>
+</d-radio-group>
 <d-menu default-active="1-4-1" class="d-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
   <d-submenu index="1">
     <template slot="title">

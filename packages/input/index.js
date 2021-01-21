@@ -1,8 +1,8 @@
-import ElInput from './src/input';
+import DInput from './src/input';
 
 /* istanbul ignore next */
-ElInput.install = function(Vue) {
-  Vue.component(ElInput.name, ElInput);
+DInput.install = function(Vue) {
+  Vue.component(DInput.name, DInput);
 };
 
-export default ElInput;
+export default DInput;

@@ -2,14 +2,14 @@
   <div
     @dragstart.prevent
     :class="[
-      'el-input-number',
-      inputNumberSize ? 'el-input-number--' + inputNumberSize : '',
+      'd-input-number',
+      inputNumberSize ? 'd-input-number--' + inputNumberSize : '',
       { 'is-disabled': inputNumberDisabled },
       { 'is-without-controls': !controls },
       { 'is-controls-right': controlsAtRight }
     ]">
     <span
-      class="el-input-number__decrease"
+      class="d-input-number__decrease"
       role="button"
       v-if="controls"
       v-repeat-click="decrease"
@@ -18,7 +18,7 @@
       <i :class="`d-icon-${controlsAtRight ? 'arrow-down' : 'minus'}`"></i>
     </span>
     <span
-      class="el-input-number__increase"
+      class="d-input-number__increase"
       role="button"
       v-if="controls"
       v-repeat-click="increase"
@@ -26,7 +26,7 @@
       @keydown.enter="increase">
       <i :class="`d-icon-${controlsAtRight ? 'arrow-up' : 'plus'}`"></i>
     </span>
-    <el-input
+    <d-input
       ref="input"
       :value="displayValue"
       :placeholder="placeholder"
@@ -42,16 +42,16 @@
       @focus="handleFocus"
       @input="handleInput"
       @change="handleInputChange">
-    </el-input>
+    </d-input>
   </div>
 </template>
 <script>
-  import ElInput from 'element-ui/packages/input';
+  import DInput from 'element-ui/packages/input';
   import Focus from 'element-ui/src/mixins/focus';
   import RepeatClick from 'element-ui/src/directives/repeat-click';
 
   export default {
-    name: 'ElInputNumber',
+    name: 'DInputNumber',
     mixins: [Focus('input')],
     inject: {
       elForm: {
@@ -65,7 +65,7 @@
       repeatClick: RepeatClick
     },
     components: {
-      ElInput
+      DInput
     },
     props: {
       step: {

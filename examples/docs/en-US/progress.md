@@ -6,11 +6,11 @@ Progress is used to show the progress of current operation, and inform the user 
 
 :::demo Use `percentage` attribute to set the percentage. It's **required** and must be between `0-100`. You can custom text format by setting `format`.
 ```html
-<el-progress :percentage="50"></el-progress>
-<el-progress :percentage="100" :format="format"></el-progress>
-<el-progress :percentage="100" status="success"></el-progress>
-<el-progress :percentage="100" status="warning"></el-progress>
-<el-progress :percentage="50" status="exception"></el-progress>
+<d-progress :percentage="50"></d-progress>
+<d-progress :percentage="100" :format="format"></d-progress>
+<d-progress :percentage="100" status="success"></d-progress>
+<d-progress :percentage="100" status="warning"></d-progress>
+<d-progress :percentage="50" status="exception"></d-progress>
 
 <script>
   export default {
@@ -30,10 +30,10 @@ In this case the percentage takes no additional space.
 
 :::demo `stroke-width` attribute decides the `width` of progress bar, and use `text-inside` attribute to put description inside the progress bar.
 ```html
-<el-progress :text-inside="true" :stroke-width="26" :percentage="70"></el-progress>
-<el-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></el-progress>
-<el-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></el-progress>
-<el-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></el-progress>
+<d-progress :text-inside="true" :stroke-width="26" :percentage="70"></d-progress>
+<d-progress :text-inside="true" :stroke-width="24" :percentage="100" status="success"></d-progress>
+<d-progress :text-inside="true" :stroke-width="22" :percentage="80" status="warning"></d-progress>
+<d-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -44,11 +44,11 @@ You can use `color` attr to set the progress bar color. it accepts color string,
 :::demo
 
 ```html
-<el-progress :percentage="percentage" :color="customColor"></el-progress>
+<d-progress :percentage="percentage" :color="customColor"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColorMethod"></el-progress>
+<d-progress :percentage="percentage" :color="customColorMethod"></d-progress>
 
-<el-progress :percentage="percentage" :color="customColors"></el-progress>
+<d-progress :percentage="percentage" :color="customColors"></d-progress>
 <div>
   <d-button-group>
     <d-button icon="d-icon-minus" @click="decrease"></d-button>
@@ -103,11 +103,11 @@ You can use `color` attr to set the progress bar color. it accepts color string,
 
 :::demo You can specify `type` attribute to `circle` to use circular progress bar, and use `width` attribute to change the size of circle.
 ```html
-<el-progress type="circle" :percentage="0"></el-progress>
-<el-progress type="circle" :percentage="25"></el-progress>
-<el-progress type="circle" :percentage="100" status="success"></el-progress>
-<el-progress type="circle" :percentage="70" status="warning"></el-progress>
-<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+<d-progress type="circle" :percentage="0"></d-progress>
+<d-progress type="circle" :percentage="25"></d-progress>
+<d-progress type="circle" :percentage="100" status="success"></d-progress>
+<d-progress type="circle" :percentage="70" status="warning"></d-progress>
+<d-progress type="circle" :percentage="50" status="exception"></d-progress>
 ```
 :::
 
@@ -118,7 +118,7 @@ You also can specify `type` attribute to `dashboard` to use dashboard progress b
 :::demo
 
 ```html
-<el-progress type="dashboard" :percentage="percentage" :color="colors"></el-progress>
+<d-progress type="dashboard" :percentage="percentage" :color="colors"></d-progress>
 <div>
   <d-button-group>
     <d-button icon="d-icon-minus" @click="decrease"></d-button>

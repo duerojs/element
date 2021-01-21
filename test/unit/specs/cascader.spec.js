@@ -47,10 +47,10 @@ const options = [{
   }]
 }];
 
-const getMenus = el => el.querySelectorAll('.el-cascader-menu');
-const getOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.el-cascader-node');
+const getMenus = el => el.querySelectorAll('.d-cascader-menu');
+const getOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.d-cascader-node');
 const selectedValue = ['zhejiang', 'hangzhou', 'xihu'];
-const getCloseButton = el => el.querySelectorAll('i.el-tag__close');
+const getCloseButton = el => el.querySelectorAll('i.d-tag__close');
 
 describe('Cascader', () => {
   let vm;
@@ -77,10 +77,10 @@ describe('Cascader', () => {
   it('expand and check', async() => {
     vm = createTest({
       template: `
-        <el-cascader
+        <d-cascader
           ref="cascader"
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></d-cascader>
       `,
       data() {
         return {
@@ -124,9 +124,9 @@ describe('Cascader', () => {
   it('with default value', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></d-cascader>
       `,
       data() {
         return {
@@ -146,9 +146,9 @@ describe('Cascader', () => {
   it('async set selected value', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></d-cascader>
       `,
       data() {
         return {
@@ -169,9 +169,9 @@ describe('Cascader', () => {
   it('default value with async options', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
-          :options="options"></el-cascader>
+          :options="options"></d-cascader>
       `,
       data() {
         return {
@@ -192,10 +192,10 @@ describe('Cascader', () => {
   it('clearable', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
-          clearable></el-cascader>
+          clearable></d-cascader>
       `,
       data() {
         return {
@@ -207,7 +207,7 @@ describe('Cascader', () => {
 
     triggerEvent(vm.$el, 'mouseenter');
     await waitImmediate();
-    const closeBtn = vm.$el.querySelector('i.el-input__icon');
+    const closeBtn = vm.$el.querySelector('i.d-input__icon');
     expect(closeBtn).to.exist;
     closeBtn.click();
     await waitImmediate();
@@ -217,10 +217,10 @@ describe('Cascader', () => {
   it('show last level label', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
-          :show-all-levels="false"></el-cascader>
+          :show-all-levels="false"></d-cascader>
       `,
       data() {
         return {
@@ -240,11 +240,11 @@ describe('Cascader', () => {
   it('multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
           :disabled="disabled"
-          :props="props"></el-cascader>
+          :props="props"></d-cascader>
       `,
       data() {
         return {
@@ -258,19 +258,19 @@ describe('Cascader', () => {
       }
     }, true);
 
-    getOptions(document.body, 0)[0].querySelector('.el-checkbox input').click();
+    getOptions(document.body, 0)[0].querySelector('.d-checkbox input').click();
     await waitImmediate();
     expect(vm.value.length).to.equal(3);
     expect(getCloseButton(vm.$el).length).to.equal(3);
 
-    const tags = vm.$el.querySelectorAll('.el-tag');
-    const closeBtn = tags[0].querySelector('.el-tag__close');
+    const tags = vm.$el.querySelectorAll('.d-tag');
+    const closeBtn = tags[0].querySelector('.d-tag__close');
     expect(tags.length).to.equal(3);
     expect(closeBtn).to.exist;
     closeBtn.click();
     await waitImmediate();
     expect(vm.value.length).to.equal(2);
-    expect(vm.$el.querySelectorAll('.el-tag').length).to.equal(2);
+    expect(vm.$el.querySelectorAll('.d-tag').length).to.equal(2);
 
     vm.disabled = true;
     await waitImmediate();
@@ -280,11 +280,11 @@ describe('Cascader', () => {
   it('clearable in multiple mode', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
           :props="props"
-          clearable></el-cascader>
+          clearable></d-cascader>
       `,
       data() {
         return {
@@ -299,10 +299,10 @@ describe('Cascader', () => {
     }, true);
     vm.value = ['xihu', 'binjiang', 'jiangbei', 'jiangdong'];
     await waitImmediate();
-    expect(getOptions(document.body, 0)[0].querySelector('.el-checkbox.is-checked')).to.exist;
+    expect(getOptions(document.body, 0)[0].querySelector('.d-checkbox.is-checked')).to.exist;
     triggerEvent(vm.$el, 'mouseenter');
     await waitImmediate();
-    const closeBtn = vm.$el.querySelector('i.el-input__icon');
+    const closeBtn = vm.$el.querySelector('i.d-input__icon');
     expect(closeBtn).to.exist;
     closeBtn.click();
     await waitImmediate();
@@ -312,11 +312,11 @@ describe('Cascader', () => {
   it('collapse tags', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
           :props="props"
-          collapse-tags></el-cascader>
+          collapse-tags></d-cascader>
       `,
       data() {
         return {
@@ -330,30 +330,30 @@ describe('Cascader', () => {
       }
     }, true);
     await waitImmediate();
-    const tags = vm.$el.querySelectorAll('.el-tag');
+    const tags = vm.$el.querySelectorAll('.d-tag');
     expect(tags.length).to.equal(2);
-    expect(tags[0].querySelector('.el-tag__close')).to.exist;
-    expect(tags[1].querySelector('.el-tag__close')).to.be.null;
-    tags[0].querySelector('.el-tag__close').click();
+    expect(tags[0].querySelector('.d-tag__close')).to.exist;
+    expect(tags[1].querySelector('.d-tag__close')).to.be.null;
+    tags[0].querySelector('.d-tag__close').click();
     expect(tags[1].textContent).to.equal('+ 3');
     await waitImmediate();
     expect(vm.value.length).to.equal(3);
-    vm.$el.querySelector('.el-tag .el-tag__close').click();
+    vm.$el.querySelector('.d-tag .d-tag__close').click();
     await waitImmediate();
-    vm.$el.querySelector('.el-tag .el-tag__close').click();
+    vm.$el.querySelector('.d-tag .d-tag__close').click();
     await waitImmediate();
-    expect(vm.$el.querySelector('.el-tag')).to.exist;
+    expect(vm.$el.querySelector('.d-tag')).to.exist;
     // disabled tag can not be closed
-    expect(vm.$el.querySelector('.el-tag .el-tag__close')).to.be.null;
+    expect(vm.$el.querySelector('.d-tag .d-tag__close')).to.be.null;
   });
 
   it('filterable', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
-          filterable></el-cascader>
+          filterable></d-cascader>
       `,
       data() {
         return {
@@ -370,9 +370,9 @@ describe('Cascader', () => {
     input.value = 'Zhejiang';
     triggerEvent(input, 'input');
     await wait(300);
-    expect(body.querySelector('.el-cascader__suggestion-list')).to.exist;
-    expect(body.querySelectorAll('.el-cascader__suggestion-item').length).to.equal(3);
-    body.querySelectorAll('.el-cascader__suggestion-item')[0].click();
+    expect(body.querySelector('.d-cascader__suggestion-list')).to.exist;
+    expect(body.querySelectorAll('.d-cascader__suggestion-item').length).to.equal(3);
+    body.querySelectorAll('.d-cascader__suggestion-item')[0].click();
     await waitImmediate();
     expect(vm.value).to.deep.equal(selectedValue);
   });
@@ -380,11 +380,11 @@ describe('Cascader', () => {
   it('filter method', async() => {
     vm = createVue({
       template: `
-        <el-cascader
+        <d-cascader
           v-model="value"
           :options="options"
           :filter-method="filterMethod"
-          filterable></el-cascader>
+          filterable></d-cascader>
       `,
       data() {
         return {
@@ -407,10 +407,10 @@ describe('Cascader', () => {
     input.value = 'Zhejiang';
     triggerEvent(input, 'input');
     await wait(300);
-    expect(body.querySelectorAll('.el-cascader__suggestion-item').length).to.equal(3);
+    expect(body.querySelectorAll('.d-cascader__suggestion-item').length).to.equal(3);
     input.value = 'xihu';
     triggerEvent(input, 'input');
     await wait(300);
-    expect(body.querySelector('.el-cascader__suggestion-item').textContent).to.equal('Zhejiang / Hangzhou / West Lake');
+    expect(body.querySelector('.d-cascader__suggestion-item').textContent).to.equal('Zhejiang / Hangzhou / West Lake');
   });
 });

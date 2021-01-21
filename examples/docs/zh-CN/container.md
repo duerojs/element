@@ -166,26 +166,26 @@
   
   <d-container>
     <d-header style="text-align: right; font-size: 12px">
-      <el-dropdown>
+      <d-dropdown>
         <i class="d-icon-setting" style="margin-right: 15px"></i>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>查看</el-dropdown-item>
-          <el-dropdown-item>新增</el-dropdown-item>
-          <el-dropdown-item>删除</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+        <d-dropdown-menu slot="dropdown">
+          <d-dropdown-item>查看</d-dropdown-item>
+          <d-dropdown-item>新增</d-dropdown-item>
+          <d-dropdown-item>删除</d-dropdown-item>
+        </d-dropdown-menu>
+      </d-dropdown>
       <span>王小虎</span>
     </d-header>
     
     <d-main>
-      <el-table :data="tableData">
-        <el-table-column prop="date" label="日期" width="140">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="120">
-        </el-table-column>
-        <el-table-column prop="address" label="地址">
-        </el-table-column>
-      </el-table>
+      <d-table :data="tableData">
+        <d-table-column prop="date" label="日期" width="140">
+        </d-table-column>
+        <d-table-column prop="name" label="姓名" width="120">
+        </d-table-column>
+        <d-table-column prop="address" label="地址">
+        </d-table-column>
+      </d-table>
     </d-main>
   </d-container>
 </d-container>

@@ -1,10 +1,10 @@
 <template>
   <div
     v-show="ready"
-    class="el-carousel__item"
+    class="d-carousel__item"
     :class="{
       'is-active': active,
-      'el-carousel__item--card': $parent.type === 'card',
+      'd-carousel__item--card': $parent.type === 'card',
       'is-in-stage': inStage,
       'is-hover': hover,
       'is-animating': animating
@@ -14,7 +14,7 @@
     <div
       v-if="$parent.type === 'card'"
       v-show="!active"
-      class="el-carousel__mask">
+      class="d-carousel__mask">
     </div>
     <slot></slot>
   </div>
@@ -24,7 +24,7 @@
   import { autoprefixer } from 'element-ui/src/utils/util';
   const CARD_SCALE = 0.83;
   export default {
-    name: 'ElCarouselItem',
+    name: 'DCarouselItem',
 
     props: {
       name: String,

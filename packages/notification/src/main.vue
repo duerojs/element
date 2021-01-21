@@ -1,7 +1,7 @@
 <template>
-  <transition name="el-notification-fade">
+  <transition name="d-notification-fade">
     <div
-      :class="['el-notification', customClass, horizontalClass]"
+      :class="['d-notification', customClass, horizontalClass]"
       v-show="visible"
       :style="positionStyle"
       @mouseenter="clearTimer()"
@@ -10,20 +10,20 @@
       role="alert"
     >
       <i
-        class="el-notification__icon"
+        class="d-notification__icon"
         :class="[ typeClass, iconClass ]"
         v-if="type || iconClass">
       </i>
-      <div class="el-notification__group" :class="{ 'is-with-icon': typeClass || iconClass }">
-        <h2 class="el-notification__title" v-text="title"></h2>
-        <div class="el-notification__content" v-show="message">
+      <div class="d-notification__group" :class="{ 'is-with-icon': typeClass || iconClass }">
+        <h2 class="d-notification__title" v-text="title"></h2>
+        <div class="d-notification__content" v-show="message">
           <slot>
             <p v-if="!dangerouslyUseHTMLString">{{ message }}</p>
             <p v-else v-html="message"></p>
           </slot>
         </div>
         <div
-          class="el-notification__closeBtn d-icon-close"
+          class="d-notification__closeBtn d-icon-close"
           v-if="showClose"
           @click.stop="close"></div>
       </div>

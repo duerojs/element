@@ -9,34 +9,34 @@ Displays the amount of new messages.
 :::demo The amount is defined with `value` which accepts `Number` or `String`.
 
 ```html
-<el-badge :value="12" class="item">
+<d-badge :value="12" class="item">
   <d-button size="small">comments</d-button>
-</el-badge>
-<el-badge :value="3" class="item">
+</d-badge>
+<d-badge :value="3" class="item">
   <d-button size="small">replies</d-button>
-</el-badge>
-<el-badge :value="1" class="item" type="primary">
+</d-badge>
+<d-badge :value="1" class="item" type="primary">
   <d-button size="small">comments</d-button>
-</el-badge>
-<el-badge :value="2" class="item" type="warning">
+</d-badge>
+<d-badge :value="2" class="item" type="warning">
   <d-button size="small">replies</d-button>
-</el-badge>
+</d-badge>
 
-<el-dropdown trigger="click">
-  <span class="el-dropdown-link">
+<d-dropdown trigger="click">
+  <span class="d-dropdown-link">
     Click Me<i class="d-icon-caret-bottom d-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item class="clearfix">
+  <d-dropdown-menu slot="dropdown">
+    <d-dropdown-item class="clearfix">
       comments
-      <el-badge class="mark" :value="12" />
-    </el-dropdown-item>
-    <el-dropdown-item class="clearfix">
+      <d-badge class="mark" :value="12" />
+    </d-dropdown-item>
+    <d-dropdown-item class="clearfix">
       replies
-      <el-badge class="mark" :value="3" />
-    </el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+      <d-badge class="mark" :value="3" />
+    </d-dropdown-item>
+  </d-dropdown-menu>
+</d-dropdown>
 
 <style>
 .item {
@@ -54,12 +54,12 @@ You can customize the max value.
 :::demo The max value is defined by property `max` which is a `Number`. Note that it only works when `value` is also a `Number`.
 
 ```html
-<el-badge :value="200" :max="99" class="item">
+<d-badge :value="200" :max="99" class="item">
   <d-button size="small">comments</d-button>
-</el-badge>
-<el-badge :value="100" :max="10" class="item">
+</d-badge>
+<d-badge :value="100" :max="10" class="item">
   <d-button size="small">replies</d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {
@@ -77,12 +77,12 @@ Displays text content other than numbers.
 :::demo When `value` is a `String`, it can display customized text.
 
 ```html
-<el-badge value="new" class="item">
+<d-badge value="new" class="item">
   <d-button size="small">comments</d-button>
-</el-badge>
-<el-badge value="hot" class="item">
+</d-badge>
+<d-badge value="hot" class="item">
   <d-button size="small">replies</d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {
@@ -100,10 +100,10 @@ Use a red dot to mark content that needs to be noticed.
 :::demo Use the attribute `is-dot`. It is a `Boolean`.
 
 ```html
-<el-badge is-dot class="item">query</el-badge>
-<el-badge is-dot class="item">
+<d-badge is-dot class="item">query</d-badge>
+<d-badge is-dot class="item">
   <d-button class="share-button" icon="d-icon-share" type="primary"></d-button>
-</el-badge>
+</d-badge>
 
 <style>
 .item {

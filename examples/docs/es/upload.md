@@ -6,7 +6,7 @@ Carga archivos haciendo clic o arrastrándolos.
 
 :::demo Personalice el tipo y texto del botón utilizando la propiedad `slot`. Defina las propiedades `limit` y `on-exceed` para limitar el número máximo de archivos a subir y especifique un método para cuando el límite ha sido excedido.
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -16,8 +16,8 @@ Carga archivos haciendo clic o arrastrándolos.
   :on-exceed="handleExceed"
   :file-list="fileList">
   <d-button size="small" type="primary">Clic para subir archivo</d-button>
-  <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -47,7 +47,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="avatar-uploader"
   action="https://jsonplaceholder.typicode.com/posts/"
   :show-file-list="false"
@@ -55,17 +55,17 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
   <i v-else class="d-icon-plus avatar-uploader-icon"></i>
-</el-upload>
+</d-upload>
 
 <style>
-  .avatar-uploader .el-upload {
+  .avatar-uploader .d-upload {
     border: 1px dashed #d9d9d9;
     border-radius: 6px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
   }
-  .avatar-uploader .el-upload:hover {
+  .avatar-uploader .d-upload:hover {
     border-color: #409EFF;
   }
   .avatar-uploader-icon {
@@ -118,16 +118,16 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
 
 :::demo
 ```html
-<el-upload
+<d-upload
   action="https://jsonplaceholder.typicode.com/posts/"
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
   <i class="d-icon-plus"></i>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</d-upload>
+<d-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</d-dialog>
 <script>
   export default {
     data() {
@@ -156,43 +156,43 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
 
 :::demo
 ```html
-<el-upload
+<d-upload
   action="#"
   list-type="picture-card"
   :auto-upload="false">
     <i slot="default" class="d-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
-        class="el-upload-list__item-thumbnail"
+        class="d-upload-list__item-thumbnail"
         :src="file.url" alt=""
       >
-      <span class="el-upload-list__item-actions">
+      <span class="d-upload-list__item-actions">
         <span
-          class="el-upload-list__item-preview"
+          class="d-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
           <i class="d-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
-          class="el-upload-list__item-delete"
+          class="d-upload-list__item-delete"
           @click="handleDownload(file)"
         >
           <i class="d-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
-          class="el-upload-list__item-delete"
+          class="d-upload-list__item-delete"
           @click="handleRemove(file)"
         >
           <i class="d-icon-delete"></i>
         </span>
       </span>
     </div>
-</el-upload>
-<el-dialog :visible.sync="dialogVisible">
+</d-upload>
+<d-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
-</el-dialog>
+</d-dialog>
 <script>
   export default {
     data() {
@@ -223,7 +223,7 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -231,8 +231,8 @@ Use el `scoped-slot`  para cambiar el template por defecto del thumbnail.
   :file-list="fileList"
   list-type="picture">
   <d-button size="small" type="primary">Clic para subir archivo</d-button>
-  <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -259,14 +259,14 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
   <d-button size="small" type="primary">Clic para subir archivo</d-button>
-  <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
+</d-upload>
 <script>
   export default {
     data() {
@@ -296,7 +296,7 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   drag
   action="https://jsonplaceholder.typicode.com/posts/"
@@ -305,9 +305,9 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
   :file-list="fileList"
   multiple>
   <i class="d-icon-upload"></i>
-  <div class="el-upload__text">Suelta tu archivo aquí o <em>haz clic para cargar</em></div>
-  <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+  <div class="d-upload__text">Suelta tu archivo aquí o <em>haz clic para cargar</em></div>
+  <div slot="tip" class="d-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
+</d-upload>
 ```
 :::
 
@@ -315,15 +315,15 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
 
 :::demo
 ```html
-<el-upload
+<d-upload
   class="upload-demo"
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
   :auto-upload="false">
   <d-button slot="trigger" size="small" type="primary">Selecciona un archivo</d-button>
   <d-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Cargar al servidor</d-button>
-  <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
-</el-upload>
+  <div slot="tip" class="d-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
+</d-upload>
 <script>
   export default {
     methods: {

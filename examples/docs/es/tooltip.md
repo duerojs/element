@@ -10,49 +10,49 @@ Tooltip tiene 9 colocaciones.
 ```html
 <div class="box">
   <div class="top">
-    <el-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start">
+    <d-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start">
       <d-button>top-start</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Center prompts info" placement="top">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Top Center prompts info" placement="top">
       <d-button>top</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Right prompts info" placement="top-end">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Top Right prompts info" placement="top-end">
       <d-button>top-end</d-button>
-    </el-tooltip>
+    </d-tooltip>
   </div>
   <div class="left">
-    <el-tooltip class="item" effect="dark" content="Left Top prompts info" placement="left-start">
+    <d-tooltip class="item" effect="dark" content="Left Top prompts info" placement="left-start">
       <d-button>left-start</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Center prompts info" placement="left">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Left Center prompts info" placement="left">
       <d-button>left</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Bottom prompts info" placement="left-end">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Left Bottom prompts info" placement="left-end">
       <d-button>left-end</d-button>
-    </el-tooltip>
+    </d-tooltip>
   </div>
 
   <div class="right">
-    <el-tooltip class="item" effect="dark" content="Right Top prompts info" placement="right-start">
+    <d-tooltip class="item" effect="dark" content="Right Top prompts info" placement="right-start">
       <d-button>right-start</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Center prompts info" placement="right">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Right Center prompts info" placement="right">
       <d-button>right</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Bottom prompts info" placement="right-end">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Right Bottom prompts info" placement="right-end">
       <d-button>right-end</d-button>
-    </el-tooltip>
+    </d-tooltip>
   </div>
   <div class="bottom">
-    <el-tooltip class="item" effect="dark" content="Bottom Left prompts info" placement="bottom-start">
+    <d-tooltip class="item" effect="dark" content="Bottom Left prompts info" placement="bottom-start">
       <d-button>bottom-start</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Center prompts info" placement="bottom">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Bottom Center prompts info" placement="bottom">
       <d-button>bottom</d-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Right prompts info" placement="bottom-end">
+    </d-tooltip>
+    <d-tooltip class="item" effect="dark" content="Bottom Right prompts info" placement="bottom-end">
       <d-button>bottom-end</d-button>
-    </el-tooltip>
+    </d-tooltip>
   </div>
 </div>
 
@@ -83,8 +83,8 @@ Tooltip tiene 9 colocaciones.
       margin: 4px;
     }
 
-    .left .el-tooltip__popper,
-    .right .el-tooltip__popper {
+    .left .d-tooltip__popper,
+    .right .d-tooltip__popper {
       padding: 8px 10px;
     }
 
@@ -103,12 +103,12 @@ Tooltip tiene dos temas: `dark` y `light`.
 
 :::demo Establecer `effect` para modificar el tema, el valor por defecto es `dark`.
 ```html
-<el-tooltip content="Top center" placement="top">
+<d-tooltip content="Top center" placement="top">
   <d-button>Dark</d-button>
-</el-tooltip>
-<el-tooltip content="Bottom center" placement="bottom" effect="light">
+</d-tooltip>
+<d-tooltip content="Bottom center" placement="bottom" effect="light">
   <d-button>Light</d-button>
-</el-tooltip>
+</d-tooltip>
 ```
 :::
 
@@ -116,12 +116,12 @@ Tooltip tiene dos temas: `dark` y `light`.
 
 Despliegue múltiples líneas de texto y establezca su formato.
 
-:::demo Sobrescriba el atributo `content` del `el-tooltip` añadiendo un slot llamado `content`.
+:::demo Sobrescriba el atributo `content` del `d-tooltip` añadiendo un slot llamado `content`.
 ```html
-<el-tooltip placement="top">
+<d-tooltip placement="top">
   <div slot="content">multiple lines<br/>second line</div>
   <d-button>Top center</d-button>
-</el-tooltip>
+</d-tooltip>
 ```
 :::
 
@@ -129,7 +129,7 @@ Despliegue múltiples líneas de texto y establezca su formato.
 
 Adicional a los usos básicos, existen algunos atributos que permiten la personalización: 
 
-el atributo `transition` permite personalizar la animación con la que el Tooltip se muestra o se esconda, el valor por defecto es `el-fade-in-linear`.
+el atributo `transition` permite personalizar la animación con la que el Tooltip se muestra o se esconda, el valor por defecto es `d-fade-in-linear`.
 
 el atributo `disabled` permite deshabilitar `tooltip`. Solo es necesario definirlo como `true`.
 
@@ -138,9 +138,9 @@ De hecho, Tooltip es una extensión basada en [Vue-popper](https://github.com/el
 :::demo
 ```html
 <template>
-  <el-tooltip :disabled="disabled" content="click to close tooltip function" placement="bottom" effect="light">
+  <d-tooltip :disabled="disabled" content="click to close tooltip function" placement="bottom" effect="light">
     <d-button @click="disabled = !disabled">click to {{disabled ? 'active' : 'close'}} tooltip function</d-button>
-  </el-tooltip>
+  </d-tooltip>
 </template>
 
 <script>
@@ -185,7 +185,7 @@ Es necesario envolver los elementos de forma deshabilitados en un elemento conte
 | value / v-model | visibilidad del Tooltip                  | boolean | —                                        | false                                    |
 | disabled       | saber si el Tooltip se encuentra deshabilitado | boolean | —                                        | false                                    |
 | offset         | offset del Tooltip                       | number  | —                                        | 0                                        |
-| transition     | nombre de animación                      | string  | —                                        | el-fade-in-linear                        |
+| transition     | nombre de animación                      | string  | —                                        | d-fade-in-linear                        |
 | visible-arrow  | si una flecha es mostrada. Para mayor información, revisar la página de [Vue-popper](https://github.com/element-component/vue-popper) | boolean | —                                        | true                                     |
 | popper-options | parámetros de [popper.js](https://popper.js.org/documentation.html) | Object  | referirse a la documentación de [popper.js](https://popper.js.org/documentation.html) | `{ boundariesElement: 'body', gpuAcceleration: false }` |
 | open-delay     | retraso de la apariencia, en mili segundos | number  | —                                        | 0                                        |

@@ -1,35 +1,35 @@
 <template>
-  <transition name="el-zoom-in-top" @after-leave="$emit('dodestroy')">
+  <transition name="d-zoom-in-top" @after-leave="$emit('dodestroy')">
     <div
       v-show="visible"
-      class="el-picker-panel el-date-range-picker el-popper"
+      class="d-picker-panel d-date-range-picker d-popper"
       :class="[{
         'has-sidebar': $slots.sidebar || shortcuts
       }, popperClass]">
-      <div class="el-picker-panel__body-wrapper">
-        <slot name="sidebar" class="el-picker-panel__sidebar"></slot>
-        <div class="el-picker-panel__sidebar" v-if="shortcuts">
+      <div class="d-picker-panel__body-wrapper">
+        <slot name="sidebar" class="d-picker-panel__sidebar"></slot>
+        <div class="d-picker-panel__sidebar" v-if="shortcuts">
           <button
             type="button"
-            class="el-picker-panel__shortcut"
+            class="d-picker-panel__shortcut"
             v-for="(shortcut, key) in shortcuts"
             :key="key"
             @click="handleShortcutClick(shortcut)">{{shortcut.text}}</button>
         </div>
-        <div class="el-picker-panel__body">
-          <div class="el-picker-panel__content el-date-range-picker__content is-left">
-            <div class="el-date-range-picker__header">
+        <div class="d-picker-panel__body">
+          <div class="d-picker-panel__content d-date-range-picker__content is-left">
+            <div class="d-date-range-picker__header">
               <button
                 type="button"
                 @click="leftPrevYear"
-                class="el-picker-panel__icon-btn d-icon-d-arrow-left"></button>
+                class="d-picker-panel__icon-btn d-icon-d-arrow-left"></button>
               <button
                 type="button"
                 v-if="unlinkPanels"
                 @click="leftNextYear"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="el-picker-panel__icon-btn d-icon-d-arrow-right"></button>
+                class="d-picker-panel__icon-btn d-icon-d-arrow-right"></button>
               <div>{{ leftLabel }}</div>
             </div>
             <month-table
@@ -44,19 +44,19 @@
               @pick="handleRangePick">
             </month-table>
           </div>
-          <div class="el-picker-panel__content el-date-range-picker__content is-right">
-            <div class="el-date-range-picker__header">
+          <div class="d-picker-panel__content d-date-range-picker__content is-right">
+            <div class="d-date-range-picker__header">
               <button
                 type="button"
                 v-if="unlinkPanels"
                 @click="rightPrevYear"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="el-picker-panel__icon-btn d-icon-d-arrow-left"></button>
+                class="d-picker-panel__icon-btn d-icon-d-arrow-left"></button>
               <button
                 type="button"
                 @click="rightNextYear"
-                class="el-picker-panel__icon-btn d-icon-d-arrow-right"></button>
+                class="d-picker-panel__icon-btn d-icon-d-arrow-right"></button>
               <div>{{ rightLabel }}</div>
             </div>
             <month-table
@@ -88,8 +88,8 @@
   import Clickoutside from 'element-ui/src/utils/clickoutside';
   import Locale from 'element-ui/src/mixins/locale';
   import MonthTable from '../basic/month-table';
-  import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import DInput from 'element-ui/packages/input';
+  import DButton from 'element-ui/packages/button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {
@@ -284,6 +284,6 @@
       }
     },
 
-    components: { MonthTable, ElInput, ElButton }
+    components: { MonthTable, DInput, DButton }
   };
 </script>

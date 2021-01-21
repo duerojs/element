@@ -1,12 +1,12 @@
 import Pager from './pager.vue';
-import ElSelect from 'element-ui/packages/select';
-import ElOption from 'element-ui/packages/option';
-import ElInput from 'element-ui/packages/input';
+import DSelect from 'element-ui/packages/select';
+import DOption from 'element-ui/packages/option';
+import DInput from 'element-ui/packages/input';
 import Locale from 'element-ui/src/mixins/locale';
 import { valueEquals } from 'element-ui/src/utils/util';
 
 export default {
-  name: 'ElPagination',
+  name: 'DPagination',
 
   props: {
     pageSize: {
@@ -71,9 +71,9 @@ export default {
     if (!layout) return null;
     if (this.hideOnSinglePage && (!this.internalPageCount || this.internalPageCount === 1)) return null;
 
-    let template = <div class={['el-pagination', {
+    let template = <div class={['d-pagination', {
       'is-background': this.background,
-      'el-pagination--small': this.small
+      'd-pagination--small': this.small
     }] }></div>;
     const TEMPLATE_MAP = {
       prev: <prev></prev>,
@@ -85,7 +85,7 @@ export default {
       total: <total></total>
     };
     const components = layout.split(',').map((item) => item.trim());
-    const rightWrapper = <div class="el-pagination__rightwrapper"></div>;
+    const rightWrapper = <div class="d-pagination__rightwrapper"></div>;
     let haveRightWrapper = false;
 
     template.children = template.children || [];
@@ -170,8 +170,8 @@ export default {
 
       render(h) {
         return (
-          <span class="el-pagination__sizes">
-            <el-select
+          <span class="d-pagination__sizes">
+            <d-select
               value={ this.$parent.internalPageSize }
               popperClass={ this.$parent.popperClass || '' }
               size="mini"
@@ -179,20 +179,20 @@ export default {
               disabled={ this.$parent.disabled }>
               {
                 this.pageSizes.map(item =>
-                  <el-option
+                  <d-option
                     value={ item }
                     label={ item + this.t('el.pagination.pagesize') }>
-                  </el-option>
+                  </d-option>
                 )
               }
-            </el-select>
+            </d-select>
           </span>
         );
       },
 
       components: {
-        ElSelect,
-        ElOption
+        DSelect,
+        DOption
       },
 
       methods: {
@@ -210,7 +210,7 @@ export default {
     Jumper: {
       mixins: [Locale],
 
-      components: { ElInput },
+      components: { DInput },
 
       data() {
         return {
@@ -245,10 +245,10 @@ export default {
 
       render(h) {
         return (
-          <span class="el-pagination__jump">
+          <span class="d-pagination__jump">
             { this.t('el.pagination.goto') }
-            <el-input
-              class="el-pagination__editor is-in-pagination"
+            <d-input
+              class="d-pagination__editor is-in-pagination"
               min={ 1 }
               max={ this.$parent.internalPageCount }
               value={ this.userInput !== null ? this.userInput : this.$parent.internalCurrentPage }
@@ -269,7 +269,7 @@ export default {
       render(h) {
         return (
           typeof this.$parent.total === 'number'
-            ? <span class="el-pagination__total">{ this.t('el.pagination.total', { total: this.$parent.total }) }</span>
+            ? <span class="d-pagination__total">{ this.t('el.pagination.total', { total: this.$parent.total }) }</span>
             : ''
         );
       }

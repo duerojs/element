@@ -7,7 +7,7 @@ Card includes title, content and operations.
 
 :::demo Card is made up of `header` and `body`. `header` is optional, and its content distribution depends on a named slot.
 ```html
-<el-card class="box-card">
+<d-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
     <d-button style="float: right; padding: 3px 0" type="text">Operation button</d-button>
@@ -15,7 +15,7 @@ Card includes title, content and operations.
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</d-card>
 
 <style>
   .text {
@@ -48,11 +48,11 @@ The header part can be omitted.
 
 :::demo
 ```html
-<el-card class="box-card">
+<d-card class="box-card">
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</d-card>
 
 <style>
   .text {
@@ -78,7 +78,7 @@ Display richer content by adding some configs.
 ```html
 <d-row>
   <d-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card :body-style="{ padding: '0px' }">
+    <d-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
         <span>Yummy hamburger</span>
@@ -87,7 +87,7 @@ Display richer content by adding some configs.
           <d-button type="text" class="button">Operating</d-button>
         </div>
       </div>
-    </el-card>
+    </d-card>
   </d-col>
 </d-row>
 
@@ -143,19 +143,19 @@ You can define when to show the card shadows
 ```html
 <d-row :gutter="12">
   <d-col :span="8">
-    <el-card shadow="always">
+    <d-card shadow="always">
       Always
-    </el-card>
+    </d-card>
   </d-col>
   <d-col :span="8">
-    <el-card shadow="hover">
+    <d-card shadow="hover">
       Hover
-    </el-card>
+    </d-card>
   </d-col>
   <d-col :span="8">
-    <el-card shadow="never">
+    <d-card shadow="never">
       Never
-    </el-card>
+    </d-card>
   </d-col>
 </d-row>
 ```

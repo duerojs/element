@@ -1,7 +1,7 @@
 <template>
-  <form class="el-form" :class="[
-    labelPosition ? 'el-form--label-' + labelPosition : '',
-    { 'el-form--inline': inline }
+  <form class="d-form" :class="[
+    labelPosition ? 'd-form--label-' + labelPosition : '',
+    { 'd-form--inline': inline }
   ]">
     <slot></slot>
   </form>
@@ -10,9 +10,9 @@
   import objectAssign from 'element-ui/src/utils/merge';
 
   export default {
-    name: 'ElForm',
+    name: 'DForm',
 
-    componentName: 'ElForm',
+    componentName: 'DForm',
 
     provide() {
       return {

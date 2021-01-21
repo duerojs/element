@@ -1,108 +1,108 @@
 ## Container
 Les composants Container servent à structurer la page:
 
-`<el-container>`: Conteneur de wrapping. Quand il est placé à l'intérieur de `<el-header>` ou `<el-footer>`, tous les éléments enfants seront placés verticalement. Dans le cas contraire ils seront placés horizontalement.
+`<d-container>`: Conteneur de wrapping. Quand il est placé à l'intérieur de `<d-header>` ou `<d-footer>`, tous les éléments enfants seront placés verticalement. Dans le cas contraire ils seront placés horizontalement.
 
-`<el-header>`: Conteneur pour headers.
+`<d-header>`: Conteneur pour headers.
 
-`<el-aside>`: Conteneur pour section latérale (en général un menu).
+`<d-aside>`: Conteneur pour section latérale (en général un menu).
 
-`<el-main>`: Conteneur pour la section principal.
+`<d-main>`: Conteneur pour la section principal.
 
-`<el-footer>`: Conteneur pour footers.
+`<d-footer>`: Conteneur pour footers.
 
 :::tip
-Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette fonctionnalité. De plus, les éléments enfants directs de `<el-container>` doivent être un des quatre éléments précédents, leur élément père devant obligatoirement être `<el-container>`.
+Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette fonctionnalité. De plus, les éléments enfants directs de `<d-container>` doivent être un des quatre éléments précédents, leur élément père devant obligatoirement être `<d-container>`.
 :::
 
 ### Mises en page habituelles
 
 :::demo
 ```html
-<el-container>
-  <el-header>Header</el-header>
-  <el-main>Main</el-main>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-main>Main</d-main>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-main>Main</el-main>
-  <el-footer>Footer</el-footer>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-main>Main</d-main>
+  <d-footer>Footer</d-footer>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-main>Main</el-main>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-main>Main</d-main>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-container>
-    <el-aside width="200px">Aside</el-aside>
-    <el-main>Main</el-main>
-  </el-container>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-container>
+    <d-aside width="200px">Aside</d-aside>
+    <d-main>Main</d-main>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-container>
-    <el-aside width="200px">Aside</el-aside>
-    <el-container>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
-  </el-container>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-container>
+    <d-aside width="200px">Aside</d-aside>
+    <d-container>
+      <d-main>Main</d-main>
+      <d-footer>Footer</d-footer>
+    </d-container>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
-  </el-container>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-container>
+    <d-header>Header</d-header>
+    <d-main>Main</d-main>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
-    <el-footer>Footer</el-footer>
-  </el-container>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-container>
+    <d-header>Header</d-header>
+    <d-main>Main</d-main>
+    <d-footer>Footer</d-footer>
+  </d-container>
+</d-container>
 
 <style>
-  .el-header, .el-footer {
+  .d-header, .d-footer {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
     line-height: 60px;
   }
 
-  .el-aside {
+  .d-aside {
     background-color: #D3DCE6;
     color: #333;
     text-align: center;
     line-height: 200px;
   }
 
-  .el-main {
+  .d-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
     line-height: 160px;
   }
 
-  body > .el-container {
+  body > .d-container {
     margin-bottom: 40px;
   }
 
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
+  .d-container:nth-child(5) .d-aside,
+  .d-container:nth-child(6) .d-aside {
     line-height: 260px;
   }
 
-  .el-container:nth-child(7) .el-aside {
+  .d-container:nth-child(7) .d-aside {
     line-height: 320px;
   }
 </style>
@@ -113,8 +113,8 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
 
 :::demo
 ```html
-<el-container style="height: 500px; border: 1px solid #eee">
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+<d-container style="height: 500px; border: 1px solid #eee">
+  <d-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <el-menu :default-openeds="['1', '3']">
       <el-submenu index="1">
         <template slot="title"><i class="d-icon-message"></i>Navigator One</template>
@@ -162,10 +162,10 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
         </el-submenu>
       </el-submenu>
     </el-menu>
-  </el-aside>
+  </d-aside>
 
-  <el-container>
-    <el-header style="text-align: right; font-size: 12px">
+  <d-container>
+    <d-header style="text-align: right; font-size: 12px">
       <el-dropdown>
         <i class="d-icon-setting" style="margin-right: 15px"></i>
         <el-dropdown-menu slot="dropdown">
@@ -175,9 +175,9 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
         </el-dropdown-menu>
       </el-dropdown>
       <span>Tom</span>
-    </el-header>
+    </d-header>
 
-    <el-main>
+    <d-main>
       <el-table :data="tableData">
         <el-table-column prop="date" label="Date" width="140">
         </el-table-column>
@@ -186,18 +186,18 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
         <el-table-column prop="address" label="Address">
         </el-table-column>
       </el-table>
-    </el-main>
-  </el-container>
-</el-container>
+    </d-main>
+  </d-container>
+</d-container>
 
 <style>
-  .el-header {
+  .d-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
   }
 
-  .el-aside {
+  .d-aside {
     color: #333;
   }
 </style>
@@ -222,7 +222,7 @@ Ces composants utilisent flexbox, assurez vous que le navigateur supporte cette 
 ### Attributs de Container
 | Attribut      | Description          | Type      | Valeurs acceptées       | Défaut  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| direction | Direction d'affichage pour les éléments enfants. | string | horizontal / vertical | vertical quand dans `el-header` ou `el-footer`; horizontal sinon |
+| direction | Direction d'affichage pour les éléments enfants. | string | horizontal / vertical | vertical quand dans `d-header` ou `d-footer`; horizontal sinon |
 
 ### Attributs de Header
 | Attribut      | Description          | Type      | Valeurs acceptées       | Défaut  |

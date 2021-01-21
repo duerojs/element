@@ -1,108 +1,108 @@
 ## Container 布局容器
 用于布局的容器组件，方便快速搭建页面的基本结构：
 
-`<el-container>`：外层容器。当子元素中包含 `<el-header>` 或 `<el-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
+`<d-container>`：外层容器。当子元素中包含 `<d-header>` 或 `<d-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
 
-`<el-header>`：顶栏容器。
+`<d-header>`：顶栏容器。
 
-`<el-aside>`：侧边栏容器。
+`<d-aside>`：侧边栏容器。
 
-`<el-main>`：主要区域容器。
+`<d-main>`：主要区域容器。
 
-`<el-footer>`：底栏容器。
+`<d-footer>`：底栏容器。
 
 :::tip
-以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<el-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<el-container>`。
+以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<d-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<d-container>`。
 :::
 
 ### 常见页面布局
 
 :::demo
 ```html
-<el-container>
-  <el-header>Header</el-header>
-  <el-main>Main</el-main>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-main>Main</d-main>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-main>Main</el-main>
-  <el-footer>Footer</el-footer>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-main>Main</d-main>
+  <d-footer>Footer</d-footer>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-main>Main</el-main>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-main>Main</d-main>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-container>
-    <el-aside width="200px">Aside</el-aside>
-    <el-main>Main</el-main>
-  </el-container>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-container>
+    <d-aside width="200px">Aside</d-aside>
+    <d-main>Main</d-main>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-header>Header</el-header>
-  <el-container>
-    <el-aside width="200px">Aside</el-aside>
-    <el-container>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
-  </el-container>
-</el-container>
+<d-container>
+  <d-header>Header</d-header>
+  <d-container>
+    <d-aside width="200px">Aside</d-aside>
+    <d-container>
+      <d-main>Main</d-main>
+      <d-footer>Footer</d-footer>
+    </d-container>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
-  </el-container>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-container>
+    <d-header>Header</d-header>
+    <d-main>Main</d-main>
+  </d-container>
+</d-container>
 
-<el-container>
-  <el-aside width="200px">Aside</el-aside>
-  <el-container>
-    <el-header>Header</el-header>
-    <el-main>Main</el-main>
-    <el-footer>Footer</el-footer>
-  </el-container>
-</el-container>
+<d-container>
+  <d-aside width="200px">Aside</d-aside>
+  <d-container>
+    <d-header>Header</d-header>
+    <d-main>Main</d-main>
+    <d-footer>Footer</d-footer>
+  </d-container>
+</d-container>
 
 <style>
-  .el-header, .el-footer {
+  .d-header, .d-footer {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
     line-height: 60px;
   }
   
-  .el-aside {
+  .d-aside {
     background-color: #D3DCE6;
     color: #333;
     text-align: center;
     line-height: 200px;
   }
   
-  .el-main {
+  .d-main {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
     line-height: 160px;
   }
   
-  body > .el-container {
+  body > .d-container {
     margin-bottom: 40px;
   }
   
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
+  .d-container:nth-child(5) .d-aside,
+  .d-container:nth-child(6) .d-aside {
     line-height: 260px;
   }
   
-  .el-container:nth-child(7) .el-aside {
+  .d-container:nth-child(7) .d-aside {
     line-height: 320px;
   }
 </style>
@@ -113,8 +113,8 @@
 
 :::demo
 ```html
-<el-container style="height: 500px; border: 1px solid #eee">
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+<d-container style="height: 500px; border: 1px solid #eee">
+  <d-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <el-menu :default-openeds="['1', '3']">
       <el-submenu index="1">
         <template slot="title"><i class="d-icon-message"></i>导航一</template>
@@ -162,10 +162,10 @@
         </el-submenu>
       </el-submenu>
     </el-menu>
-  </el-aside>
+  </d-aside>
   
-  <el-container>
-    <el-header style="text-align: right; font-size: 12px">
+  <d-container>
+    <d-header style="text-align: right; font-size: 12px">
       <el-dropdown>
         <i class="d-icon-setting" style="margin-right: 15px"></i>
         <el-dropdown-menu slot="dropdown">
@@ -175,9 +175,9 @@
         </el-dropdown-menu>
       </el-dropdown>
       <span>王小虎</span>
-    </el-header>
+    </d-header>
     
-    <el-main>
+    <d-main>
       <el-table :data="tableData">
         <el-table-column prop="date" label="日期" width="140">
         </el-table-column>
@@ -186,18 +186,18 @@
         <el-table-column prop="address" label="地址">
         </el-table-column>
       </el-table>
-    </el-main>
-  </el-container>
-</el-container>
+    </d-main>
+  </d-container>
+</d-container>
 
 <style>
-  .el-header {
+  .d-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
   }
   
-  .el-aside {
+  .d-aside {
     color: #333;
   }
 </style>
@@ -222,7 +222,7 @@
 ### Container Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |
 |---------|----------|---------|-------------|--------|
-| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `el-header` 或 `el-footer` 时为 vertical，否则为 horizontal |
+| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `d-header` 或 `d-footer` 时为 vertical，否则为 horizontal |
 
 ### Header Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |
